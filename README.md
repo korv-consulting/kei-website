@@ -32,3 +32,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Project kei-app-frontweb structure
+
+```js
++-- .next // Source build
++-- components // The directory containing components divided in groups
+|   +-- auth // Folder containing Login, Signup, Password recovery components
+|   +-- layouts // Folder containing landing(presentation) and app(admin and team side) templates
+|   +-- partials // Folder containg components for different parts of a general page(template)
+|   |   +-- app // Folder containg components for different parts for a app template(admin and team side) like Header, Footer, Sidebar, etc
+|   |   +-- base // Folder containg components for different parts for a base template(prensentation) like Header, Footer, etc
+|   +-- utils // Folder containing small components like Button, Div, TextInput, Form, .etc
++-- core //  Directory for functions calling API(services)
++-- lib  // Directory for events founction and others
++-- node_modules // dependencies file
+|   pages // Direcory containing the pages of our application
+|   |   +-- _app.js // The natural template page our application
+|   |   +-- index.js // The main page and route of our application
+|   +-- public // Folder containing images
+|   +-- styles // Folder containing css files of our application
++-- .gitignore // File whose content is ignored by git
++-- Dockerfile //Docker file for mouning image of our application
++-- next.config.js // Configuration file for nextjs environment
++-- package.json //  Core to the Node.js ecosystem and is a fundamental part of understanding and working with Node.js,
+```
