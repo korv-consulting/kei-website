@@ -1,0 +1,113 @@
+.main {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.col_title {
+    width: max-content;
+   align-content: flex-end;
+}
+.title{
+    font-size: 55px;
+    font-weight: bold;
+    color: #11467e;
+    font-family: 'Segoe UI';
+    width: max-content;
+    text-align: left;
+}
+
+.col_image {
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.image{
+    height: max-content;
+    width: max-content;
+}
+
+.btn,
+.btn:hover{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    width: 130%;
+    height: max-content;
+    margin-top: 1%;
+    color: #effaff;
+    background-color: #11467e;
+    border-color: transparent;
+}
+
+.btn:hover{
+    box-shadow:  3px 3px 1px 1px #11467e;
+}
+/* Button for Download KEI App */
+
+.description{
+    font-size: 25px;
+    color: #11467e;
+    text-align: justify;
+    margin-top: 3%;
+}
+
+.btn_download,
+.btn_download:hover{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 60%;
+    height: 80px;
+    margin-top: 3%;
+    color: #effaff;
+    background-color: #03dac5;
+    border-color: transparent;
+    opacity: 1;
+}
+
+.btn_download:hover{
+    box-shadow:  3px 3px 1px 1px #03dac5;
+}
+
+.btn_watch_demo,
+.btn_watch_demo:hover{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 40%;
+    height: 80px;
+    margin-top: 3%;
+    color: #03dac5;
+    background-color: #effaff;
+    border-color: #03dac5;
+    opacity: 1;
+    align-self: center;
+}
+
+.btn_watch_demo:hover{
+    box-shadow:  3px 3px 1px 1px #03dac5;
+}
+
+.btn_play,
+.btn_play:hover{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 12%;
+    height: 120px;
+    margin-top: 3%;
+    color: #03dac5;
+    background-color: #effaff;
+    border-color: #03dac5;
+    border-width: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    opacity: 1;
+    border-radius: 30em;
+}
+
+/* .btn_play:hover{
+    box-shadow:  3px 3px 1px 1px #03dac5;
+} */

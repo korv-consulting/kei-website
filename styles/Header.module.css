@@ -1,0 +1,77 @@
+.navbar {
+    margin-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: 0 3px 0 #e2f4f2;
+
+}
+
+/* The logo of our application */
+.logo {
+    /* margin-left: 15em; */
+    /* margin-right: 5em; */
+}
+
+.menu {
+    font-size: x-large;
+    text-underline-offset: 15;
+   padding-left: 5%;
+}
+
+.menu_item{
+    color: #11467e;
+    opacity: 1;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.active{
+    color: #03dac5;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-underline-offset: 15%;
+}
+
+.menu_item:hover{
+    color: #03dac5;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-underline-offset: 15%;
+}
+
+.menu_item:active{
+    color: #03dac5;
+    line-height: 1.5;
+    text-decoration:underline;
+    text-underline-offset: 15%;
+}
+
+/* Common Style for Login and Sign up buttons */
+.login_btn, .signup_btn {
+    font-size: 20px;
+    width: 190px;
+    height: 42px;
+    opacity: 1;
+}
+
+/* Login Button */
+.login_btn,
+.login_btn:hover {
+    background-color: white;
+    color: #11467e;
+    border-color: #03dac5;
+    margin-right: 5%;
+}
+
+.login_btn:hover,
+.signup_btn:hover{
+    box-shadow: 3px 3px 1px 1px #03dac5;
+}
+
+/* Signup Button */
+.signup_btn,
+.signup_btn:hover {
+    background-color: #03dac5;
+    color: #11467e;
+    border-color: transparent;
+}

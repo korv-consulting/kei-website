@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/layouts/*": ["components/layouts/*"],
+            "@/partials/*": ["components/partials/*"],
+            "@/styles/*": ["styles/*"]
+        }
+    }
+} 
