@@ -17,7 +17,7 @@
 }
 
 /* Style to center item */
-.devices_img,.text_app, .download_btn, .store_btn {
+.devices_img, .text_app, .download_btn, .store_btn {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -58,7 +58,7 @@
 }
 
 .store_btn:hover {
-     box-shadow: 1px 1px 1px 1px white;
+    box-shadow: 1px 1px 1px 1px white;
 }
 
 .store_img {

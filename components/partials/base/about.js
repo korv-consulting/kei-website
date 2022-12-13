@@ -5,13 +5,15 @@ function About() {
 
     return(
         <Container fluid className={styles.main}>
-            <Row>
+            {/* <div className={styles.bg_image}></div> */}
+            <Image fluid src="/skyscraper.png" className={styles.background} alt="Sky Crappers"/>
+            <Row className={styles.global_row}>
                 <Col>
                     <Row className={styles.title}>
                         Vous avez les clefs pour améliorer votre
                     </Row>
                     <Row>
-                        <Button className={styles.btn}>Gestion Locative</Button>
+                        <div className={styles.btn_rent_mnt}>Gestion Locative</div>
                     </Row>
                     <Row>
                         <p className={styles.description}>

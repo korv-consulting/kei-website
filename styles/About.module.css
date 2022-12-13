@@ -1,14 +1,46 @@
+/* The whole structure  of the About part */
 .main {
     padding-left: 6%;
     padding-right: 6%;
+    padding-bottom: 10%;
 }
 
+/* .global_row {
+    border-width: 50%;
+    border-radius: 50%;
+    border-color: #da0335;
+    background-color: #03dac5;
+} */
+
+.background {
+    position: absolute;
+    background-color: white;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
+    backdrop-filter: blur(5px);
+    filter: blur(5px);
+    border-width: 50%;
+    border-radius: 24px;
+}
+
+
+/* Column of the Title */
 .col_title {
     width: max-content;
-   align-content: flex-end;
+    align-content: flex-end;
 }
+
+/* The title of the block */
 .title{
-    font-size: 55px;
+    font-size: 70px;
     font-weight: bold;
     color: #11467e;
     font-family: 'Segoe UI';
@@ -16,48 +48,57 @@
     text-align: left;
 }
 
+/* Colum for Image */
 .col_image {
+    padding-top: 8%;
     align-content: flex-start;
     align-items: flex-start;
     align-self: flex-start;
+    margin-left: -25%;
 }
 
+/* Image to illustrate a person working on KEI App */
 .image{
     height: max-content;
-    width: max-content;
+    width: 130%;
 }
 
-.btn,
-.btn:hover{
+/* Button Renting Management */
+.btn_rent_mnt,
+.btn_rent_mnt:hover{
+    background-image: url('/mini_icon.svg');
+    opacity: 2px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 70px;
     text-align: center;
-    width: 130%;
-    height: max-content;
+    align-items: center;
+    align-content: center;
+    width: 85%;
+    /* height: 2em; */
     margin-top: 1%;
     color: #effaff;
-    background-color: #11467e;
+    /* background-color: #11467e; */
     border-color: transparent;
+    border-radius: 8px;
 }
 
-.btn:hover{
-    box-shadow:  3px 3px 1px 1px #11467e;
-}
-/* Button for Download KEI App */
-
+/* Description for the goal of the application */
 .description{
-    font-size: 25px;
+    font-size: 30px;
     color: #11467e;
     text-align: justify;
+    font-weight: bold;
+    width: 85%;
     margin-top: 3%;
 }
 
+/* Button for Downloading KEI App */
 .btn_download,
 .btn_download:hover{
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    width: 60%;
+    width: 50%;
     height: 80px;
     margin-top: 3%;
     color: #effaff;
@@ -70,31 +111,36 @@
     box-shadow:  3px 3px 1px 1px #03dac5;
 }
 
+/* Button for Watching demo of the application */
 .btn_watch_demo,
 .btn_watch_demo:hover{
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    width: 40%;
-    height: 80px;
+    width: 30%;
+    height: 60px;
     margin-top: 3%;
+    /* margin-left: -15px; */
     color: #03dac5;
     background-color: #effaff;
     border-color: #03dac5;
     opacity: 1;
     align-self: center;
+    border-left-color: transparent;
+    border-left-width: 15%;
 }
 
 .btn_watch_demo:hover{
     box-shadow:  3px 3px 1px 1px #03dac5;
 }
 
+/* Button for Playing demo of the application */
 .btn_play,
 .btn_play:hover{
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    width: 12%;
+    width: 120px;
     height: 120px;
     margin-top: 3%;
     color: #03dac5;
@@ -102,10 +148,10 @@
     border-color: #03dac5;
     border-width: 10px;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -12px;
     display: block;
     opacity: 1;
-    border-radius: 30em;
+    border-radius: 100%;
 }
 
 /* .btn_play:hover{

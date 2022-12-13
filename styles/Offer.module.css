@@ -1,0 +1,23 @@
+.main {
+    margin-top: -4.5%;
+}
+
+.hr_bar{
+    background-color: #def4ff;
+    border-radius: 3%;
+    opacity: 1;
+    height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.first_row{
+    background-color: transparent;
+
+    height: 30em;
+}
+
+.second_row{
+    background-color: #11467e;
+    height: 40em;
+}

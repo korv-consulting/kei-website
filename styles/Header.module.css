@@ -1,4 +1,5 @@
 .navbar {
+    /* position:relative; */
     margin-top: 1%;
     padding-left: 5%;
     padding-right: 5%;
@@ -63,6 +64,10 @@
     margin-right: 5%;
 }
 
+.login_btn:hover{
+    color: #03dac5;
+}
+
 .login_btn:hover,
 .signup_btn:hover{
     box-shadow: 3px 3px 1px 1px #03dac5;
@@ -74,4 +79,8 @@
     background-color: #03dac5;
     color: #11467e;
     border-color: transparent;
+}
+
+.signup_btn:hover{
+    color: #e2f4f2;
 }
