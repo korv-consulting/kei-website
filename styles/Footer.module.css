@@ -32,8 +32,8 @@
 
 .download_btn,
 .download_btn:hover {
-    background-color: #03dac5;
-    border-color: transparent;
+    background-color: #03dac5 !important;
+    border-color: transparent !important;
     height: 18%;
     width: 100%;
     text-align: center;
@@ -51,9 +51,9 @@
 
 .store_btn,
 .store_btn:hover {
-    background-color: transparent;
+    background-color: transparent !important;
     border-radius: 25px;
-    border-color: white;
+    border-color: white !important;
 
 }
 

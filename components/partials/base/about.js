@@ -13,7 +13,9 @@ function About() {
                         Vous avez les clefs pour améliorer votre
                     </Row>
                     <Row>
-                        <div className={styles.btn_rent_mnt}>Gestion Locative</div>
+                        <div className={styles.btn_rent_mnt}>
+                            Gestion Locative
+                        </div>
                     </Row>
                     <Row>
                         <p className={styles.description}>
@@ -21,7 +23,7 @@ function About() {
                         </p>
                     </Row>
                     <Row>
-                        <Button className={styles.btn_download}>Télécharger l'Application KEI</Button>
+                        <Button className={styles.btn_download} variant="" id="btn_download">Télécharger l'Application KEI</Button>
                     </Row>
                     <Row>
                         {/* <ButtonGroup aria-label="Basic example"> */}

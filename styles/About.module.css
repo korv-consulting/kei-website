@@ -23,12 +23,11 @@
     z-index: -1;
     width: 100%;
     height: 120%;
-    background-size: cover;
+    /* background-size: cover; */
+    background-repeat: repeat-x;
     /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
     backdrop-filter: blur(5px);
-    filter: blur(5px);
-    border-width: 50%;
-    border-radius: 24px;
+    filter: blur(10px);
 }
 
 
@@ -51,15 +50,12 @@
 /* Colum for Image */
 .col_image {
     padding-top: 8%;
-    align-content: flex-start;
-    align-items: flex-start;
-    align-self: flex-start;
     margin-left: -25%;
 }
 
 /* Image to illustrate a person working on KEI App */
 .image{
-    height: max-content;
+    height: 100%;
     width: 130%;
 }
 
@@ -67,7 +63,7 @@
 .btn_rent_mnt,
 .btn_rent_mnt:hover{
     background-image: url('/mini_icon.svg');
-    opacity: 2px;
+    opacity: 0.97;
     font-weight: bold;
     font-size: 70px;
     text-align: center;
@@ -81,6 +77,7 @@
     border-color: transparent;
     border-radius: 8px;
 }
+
 
 /* Description for the goal of the application */
 .description{
@@ -101,9 +98,10 @@
     width: 50%;
     height: 80px;
     margin-top: 3%;
-    color: #effaff;
-    background-color: #03dac5;
-    border-color: transparent;
+    color: #effaff !important;
+    background-color: #03dac5 !important;
+    border-color: transparent !important;
+    cursor: pointer;
     opacity: 1;
 }
 
@@ -121,9 +119,9 @@
     height: 60px;
     margin-top: 3%;
     /* margin-left: -15px; */
-    color: #03dac5;
-    background-color: #effaff;
-    border-color: #03dac5;
+    color: #03dac5 !important;
+    background-color: #effaff !important;
+    border-color: #03dac5 !important;
     opacity: 1;
     align-self: center;
     border-left-color: transparent;
@@ -131,7 +129,7 @@
 }
 
 .btn_watch_demo:hover{
-    box-shadow:  3px 3px 1px 1px #03dac5;
+    box-shadow:  3px 3px 1px 1px #03dac5 !important;
 }
 
 /* Button for Playing demo of the application */
@@ -140,15 +138,15 @@
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-top: 3%;
-    color: #03dac5;
-    background-color: #effaff;
-    border-color: #03dac5;
+    color: #03dac5 !important;
+    background-color: #effaff !important;
+    border-color: #03dac5 !important;
     border-width: 10px;
     margin-left: 0;
-    margin-right: -12px;
+    /* margin-right: -10px; */
     display: block;
     opacity: 1;
     border-radius: 100%;

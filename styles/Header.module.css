@@ -10,7 +10,7 @@
 .menu {
     font-size: x-large;
     text-underline-offset: 15;
-   padding-left: 5%;
+    padding-left: 5%;
 }
 
 .menu_item{
@@ -20,22 +20,26 @@
     margin-right: 25px;
 }
 
+.menu_item:visited{
+    color: #11467e !important;
+}
+
 .active{
-    color: #03dac5;
+    color: #03dac5 !important;
     line-height: 1.5;
     text-decoration: underline;
     text-underline-offset: 15%;
 }
 
 .menu_item:hover{
-    color: #03dac5;
+    color: #03dac5 !important;
     line-height: 1.5;
     text-decoration: underline;
     text-underline-offset: 15%;
 }
 
 .menu_item:active{
-    color: #03dac5;
+    color: #03dac5 !important;
     line-height: 1.5;
     text-decoration:underline;
     text-underline-offset: 15%;
@@ -52,29 +56,29 @@
 /* Login Button */
 .login_btn,
 .login_btn:hover {
-    background-color: white;
-    color: #11467e;
-    border-color: #03dac5;
+    background-color: white !important;
+    color: #11467e !important;
+    border-color: #03dac5 !important;
     margin-right: 5%;
 }
 
 .login_btn:hover{
-    color: #03dac5;
+    color: #03dac5 !important;
 }
 
 .login_btn:hover,
 .signup_btn:hover{
-    box-shadow: 3px 3px 1px 1px #03dac5;
+    box-shadow: 3px 3px 1px 1px #03dac5 !important;
 }
 
 /* Signup Button */
 .signup_btn,
 .signup_btn:hover {
-    background-color: #03dac5;
-    color: #11467e;
-    border-color: transparent;
+    background-color: #03dac5 !important;
+    color: #11467e !important;
+    border-color: transparent !important;
 }
 
 .signup_btn:hover{
-    color: #e2f4f2;
+    color: #e2f4f2 !important;
 }

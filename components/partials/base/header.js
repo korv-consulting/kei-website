@@ -3,7 +3,6 @@ import styles from '@/styles/Header.module.css'
 
 function Header() {
 
-
     return(
         <Navbar bg="white" expand="lg" className={`${styles.navbar}`}>
             <Container fluid>

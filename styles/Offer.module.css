@@ -2,22 +2,157 @@
     margin-top: -4.5%;
 }
 
-.hr_bar{
-    background-color: #def4ff;
-    border-radius: 3%;
+.hr_bar {
+    background-color: #ffffff;
+    border-radius: 2%;
     opacity: 1;
     height: 1.5em;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.first_row{
+.first_row {
     background-color: transparent;
-
-    height: 30em;
+    height: 35em;
 }
 
-.second_row{
+.second_row {
+    background-color: aqua;
+    /* background-color: #11467e; */
+    height: 45em;
+    align-items: center;
+    /* padding-left: 12%; */
+}
+
+.card{
+    width: 25%;
+    height: 50em;
+    margin-top: -25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 1;
+    border-width: 0.75em;
+    border-color: #def4ff;
+}
+
+.card:hover{
+    width: 30%;
+    height: 57em;
+    border-width: 0.50em;
+    border-color: #03dac5;
+    cursor: pointer;
+}
+
+.title{
+    text-align: center;
+    color: #1583d8;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 4%;
+}
+
+.card:hover .title{
+    color: #03dac5;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+.hr_card{
+    background-color: #def4ff;
+    height: 0.25em;
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-top: 8%;
+}
+
+.card:hover .hr_card{
+    background-color: #03dac5;
+    margin-left: -3%;
+    margin-right: -3%;
+}
+
+.description{
+    text-align: center;
+    color: #56a0c5;
+    font-size: 20px;
+    margin-top: 4%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover .description{
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.row_detail{
+    align-items: center;
+    padding-left: 23%;
+}
+
+.card:hover .row_detail{
+    padding-left: 30%;
+}
+
+.col_checkbox{
+    width: 4%;
+    margin-right: 3%;
+}
+
+.checkbox {
+    margin-left: 15%;
+    margin-right: 0;
+    margin-bottom: 1.5%;
+    width: 1.25em;
+}
+
+.col_detail{
+    width: auto;
+}
+
+.detail{
+    color: #1583d8;
+    font-size: 30px;
+}
+
+.btn_subscription,
+.btn_subscription:hover {
+    text-align: center;
+    font-size: 20px;
+    color: #2db6fe;
+    background-color: #def4ff;
+    height: 3em;
+    width: 65%;
+    margin-bottom: -60%;
+    margin-left: 17%;
+    margin-right: auto;
+    opacity: 1;
+    border-width: 4px;
+    border-color: #2db6fe;
+}
+
+.card:hover .btn_subscription{
+    color: white;
+    background-color: #03dac5;
+    border-color: transparent;
+    margin-bottom: -70%;
+}
+
+.row_contact{
     background-color: #11467e;
-    height: 40em;
+}
+
+.contact{
+    color: #95dafe;
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.card:hover .contact{
+
 }
