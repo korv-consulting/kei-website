@@ -23,15 +23,15 @@ function About() {
                         </p>
                     </Row>
                     <Row>
-                        <Button className={styles.btn_download} variant="" id="btn_download">Télécharger l'Application KEI</Button>
+                        <Button className={styles.btn_download} id="btn_download">Télécharger l'Application KEI</Button>
                     </Row>
-                    <Row>
-                        {/* <ButtonGroup aria-label="Basic example"> */}
-                            <Button className={styles.btn_play}>
-                                 <Image src='/play.png' />
-                            </Button>
-                            <Button className={styles.btn_watch_demo}>Regarder une DEMO ?</Button>
-                        {/* </ButtonGroup> */}
+                    <Row className={styles.row_demo}>
+                        <Button className={styles.btn_watch_demo} id="btn_watch_demo">
+                            Regarder une DEMO ?
+                        </Button>
+                        <Button className={styles.btn_play} id="btn_play">
+                            <Image src='/play.png' className={styles.img_play}/>
+                        </Button>
                     </Row>
                 </Col>
                 <Col className={`d-flex ${styles.col_image}`}>
