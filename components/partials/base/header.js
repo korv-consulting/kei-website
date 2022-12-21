@@ -1,7 +1,11 @@
 import { Container, Nav, Navbar, Form, Button, Image } from "react-bootstrap"
 import styles from '@/styles/Header.module.css'
+import {useRouter} from "next/router"
 
 function Header() {
+
+    const router = useRouter();
+   console.log(router.asPath);
 
     return(
         <Navbar bg="white" expand="lg" className={`${styles.navbar}`}>
@@ -13,13 +17,13 @@ function Header() {
                 <Navbar.Collapse id="navbarScroll">
                 <Nav
                     className={`me-auto my-2 my-lg-0 ${styles.menu}`}
-                    navbarScroll
+                    navbarScroll defaultActiveKey="2"
                 >
                     
-                    <Nav.Link href="#home" id="home" className={`${styles.menu_item} ${styles.active}`}>ACCUEIL</Nav.Link>
-                    <Nav.Link href="#about" className={styles.menu_item}>A PROPOS</Nav.Link>
-                    <Nav.Link href="#offers" className={styles.menu_item}>OFFRES</Nav.Link>
-                    <Nav.Link href="#contact" className={styles.menu_item}>CONTACT</Nav.Link>
+                    <Nav.Link href="#home" className={router.asPath === "/#home" ? styles.active : styles.menu_item}>ACCUEIL</Nav.Link>
+                    <Nav.Link href="#about" className={router.asPath === "/#about" ? styles.active : styles.menu_item}>A PROPOS</Nav.Link>
+                    <Nav.Link href="#offers" className={ router.asPath === "/#offers" ? styles.active : styles.menu_item }>OFFRES</Nav.Link>
+                    <Nav.Link href="#contact" className={ router.asPath === "/#contact" ? styles.active : styles.menu_item }>CONTACT</Nav.Link>
                    
                 </Nav>
                 <Form className="d-flex">

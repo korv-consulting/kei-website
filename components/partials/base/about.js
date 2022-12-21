@@ -23,7 +23,11 @@ function About() {
                         </p>
                     </Row>
                     <Row>
-                        <Button className={styles.btn_download} id="btn_download">Télécharger l'Application KEI</Button>
+                        <Button className={styles.btn_download} id="btn_download">
+                            Télécharger l'Application KEI
+                            <Image src='/arrow.png' className={styles.img_arrow} />
+                            <Image src='/u_icon.png'className={styles.img_u_icon} />
+                        </Button>
                     </Row>
                     <Row className={styles.row_demo}>
                         <Button className={styles.btn_watch_demo} id="btn_watch_demo">

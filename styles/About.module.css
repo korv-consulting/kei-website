@@ -27,7 +27,8 @@
     background-repeat: repeat-x;
     /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
     backdrop-filter: blur(5px);
-    filter: blur(11px);
+    filter: blur(14px);
+    opacity: 1;
 }
 
 
@@ -78,7 +79,6 @@
     border-radius: 8px;
 }
 
-
 /* Description for the goal of the application */
 .description{
     font-size: 30px;
@@ -93,9 +93,9 @@
 .btn_download,
 .btn_download:hover{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
-    width: 50%;
+    width: 46%;
     height: 80px;
     margin-top: 3%;
     color: #effaff !important;
@@ -106,8 +106,35 @@
 }
 
 .btn_download:hover{
-    box-shadow:  3px 3px 1px 1px #03dac5;
+    font-size: 35px;
+    transition-delay: 500ms;
 }
+
+.img_u_icon{
+    visibility: hidden;
+    margin-bottom: -2%;
+}
+
+.btn_download:hover .img_u_icon{
+    visibility: visible;
+    transition-delay: 400ms;
+}
+
+.img_arrow{
+    visibility: hidden;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-right: -4.28%;
+}
+
+.btn_download:hover .img_arrow{
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+/* .btn_download:hover{
+    box-shadow:  3px 3px 1px 1px #03dac5;
+} */
 
 .row_demo{
     padding-left: 3%;
@@ -119,12 +146,13 @@
     font-weight: bold;
     font-size:27px;
     text-align: center;
-    width: 30%;
+    width: 28%;
     height: 50px;
-    padding-left: 2em;
-    padding-right: 1em;
+    /* padding-left: 1.5em; */
+    /* padding-right: 1em; */
     margin-top: 3%;
     margin-left: 2%;
+    padding-left: 2%;
     color: #03dac5 !important;
     background-color: #effaff !important;
     border-color: #03dac5 !important;
@@ -134,10 +162,20 @@
     cursor: pointer;
 }
 
-#btn_play:hover ~ #btn_watch_demo{
-   width: 32%;
+.btn_watch_demo:hover{
+    /* position:static; */
+    margin-left: -2%;
+    padding-left: 8%;
+    width: 32%;
+    transition-delay: 500ms;
 }
 
+.btn_play:hover ~ .btn_watch_demo {
+    margin-left: -3%;
+    padding-left: 7%;
+    width: 34%;
+    transition-delay: 500ms;
+}
 
 /* Button for Playing demo of the application */
 .btn_play,
@@ -152,19 +190,39 @@
     background-color: #effaff !important;
     border-color: #03dac5 !important;
     border-width: 8px;
-    margin-left: -35%;
+    padding-left: 1%;
+    margin-left: -34%;
     /* margin-right: -15px; */
     display: block;
     opacity: 1;
     border-radius: 100%;
 }
 
-.btn_play:hover{
+.btn_play:hover {
     background-color: #03dac5 !important;
     border-color: #effaff !important;
     padding-left: 3%;
 }
 
-.btn_play:hover .img_play{
+.btn_watch_demo:hover ~ .btn_play {
+    background-color: #03dac5 !important;
+    border-color: #effaff !important;
+    padding-left: 3%;
+}
+
+.img_play{
+    width: 32px;
+}
+
+/* Change the play button color to white when mouse is 
+over the circle button (Play) */
+.btn_play:hover .img_play {
+    content:url("/play_withe.png");
+    width: 32px;
+}
+
+/* Change the play button color to white when mouse is 
+over the button Watch a demo(Regarder une DEMO?) */
+.btn_watch_demo:hover ~ .btn_play .img_play {
     content:url("/play_withe.png");
 }

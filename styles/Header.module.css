@@ -14,7 +14,7 @@
 }
 
 .menu_item{
-    color: #11467e;
+    color: #11467e !important;
     opacity: 1;
     text-decoration: none;
     margin-right: 25px;
@@ -29,6 +29,8 @@
     line-height: 1.5;
     text-decoration: underline;
     text-underline-offset: 15%;
+    margin-right: 25px;
+    opacity: 1;
 }
 
 .menu_item:hover{
