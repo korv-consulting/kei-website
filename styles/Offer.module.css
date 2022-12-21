@@ -17,8 +17,8 @@
 }
 
 .second_row {
-    background-color: aqua;
-    /* background-color: #11467e; */
+    /* background-color: aqua; */
+    background-color: #11467e;
     height: 45em;
     align-items: center;
     /* padding-left: 12%; */
