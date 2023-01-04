@@ -1,0 +1,63 @@
+
+    .item{
+        width: 100%;
+        height: 5%;
+        border-radius: 5px;
+        padding: 2%;
+        margin: 1%;
+        border: solid #2DB6FE 
+    }
+    
+    .item:focus{
+      
+        border: solid #2DB6FE !important;
+    }
+    
+    .errorMsg{
+        color: red;
+        width: 100%;
+        padding: 1%;
+        margin-top: -40px;
+        margin-bottom: 2.5%;
+        z-index: 1;
+    }
+    
+    .text{
+        margin-left: 10px;
+        size: 3ch;
+        font-family:  'Arial Narrow', Arial, sans-serif;
+    }
+    
+    
+    .section{
+        width: 100%;
+        height: 80%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-top: solid #2DB6FE;
+        border-bottom: solid #2DB6FE;
+        background-color: #fff;
+    
+    }
+
+    .card{
+        margin-left: -210px;
+        margin-top: 230px;
+    }
+    
+    .submit{
+        width: 100%;
+        height: 5%;
+        border-radius: 5px;
+        padding: 2%;
+        margin-top: 15%;
+        border: 2px solid #ffff;
+        box-shadow: 2px 2px  #2DB6FE;
+        background-color: rgb(3,218,197);
+        color: #ffff;
+    }
+    
+    
+.disable{
+    display: none;
+}
