@@ -33,14 +33,16 @@ function Header() {
                     className="me-2"
                     aria-label="Search"
                     /> */}
-                    <Nav.Link href="#home" className={router.asPath === "/connexion" ? styles.active : styles.menu_item}>
+                    <Nav.Link href="/signup" className={router.asPath === "/signin" ? styles.active : styles.menu_item}>
                         <Button className={styles.login_btn} id="btn_login">
                         Connexion
                         </Button>
                     </Nav.Link>
-                    <Button className={styles.signup_btn}>
-                        Souscrire
-                    </Button>
+                    <Nav.Link href="/signup" className={router.asPath === "/signup" ? styles.active : styles.menu_item}>
+                        <Button className={styles.signup_btn}>
+                            Souscrire
+                        </Button>
+                    </Nav.Link>
                 </Form>
                 </Navbar.Collapse>
             </Container>

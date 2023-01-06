@@ -7,7 +7,7 @@ function Language() {
         <Nav className={`justify-content-end ${styles.main}`} >
           <Image src="/flags/France.png" width="2.5%" rounded alt="France Flag"/>
           {/* <Nav.Item>
-            <Image src="/flags/France.png" width="20%" roundedCircle alt="KEI Logo"/>
+            <Image src="/flags/France.png" width="20%" roundedCircle alt="KEI Logo"/> 
             <Form.Select>
               <option>
                 <div style={{ backgroundImage: "url('/logo-kei.png')" }}>Yes</div>
