@@ -7,7 +7,7 @@ import React from "react";
 function StepOneSignup() {
 
 
-    React.useEffect(() => { 
+    React.useEffect(() => {
 
         const stepper = new Stepper(document.querySelector('#stepper1'), {
             linear: false,
@@ -31,7 +31,7 @@ function StepOneSignup() {
             <Row className={styles.global_row}>
 
                 <Col sm={2} ></Col>
-                <Col sm={8} className={styles.box}>
+                <Col sm={8} className={styles.box}> 
                     <div className={styles.bigcontainer}>
                         <div className={styles.titlecontainer}>Veuillez choisir l'option qui vous correspond  </div>
                         <div className={styles.flexcontainer}>
@@ -50,9 +50,9 @@ function StepOneSignup() {
                             </div>
                             <div className={styles.imgright}>
                                 <div className={styles.imgright_card}>
-                                    <Image src='/signup/3.png' className={styles.img_arrow} />
-                                    <Image src='/signup/4.png' className={styles.img_arrow} />
-                                    <Image src='/signup/5.png' className={styles.img_arrow} />
+                                    <Image src='/signup/3.png' className={styles.img3_arrow} />
+                                    <Image src='/signup/4.png' className={styles.img4_arrow} />
+                                    <Image src='/signup/5.png' className={styles.img5_arrow} />
 
                                 </div>
 
@@ -109,21 +109,21 @@ function StepOneSignup() {
                         <form onSubmit={onSubmit}>
                             <div id="test-l-1" class="content">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
+                                    <label htmlFor="exampleInputEmail1">Email address</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
                                 </div>
                                 <button class="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
                             </div>
                             <div id="test-l-2" class="content">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
+                                    <label htmlFor="exampleInputPassword1">Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
                                 </div>
                                 <button class="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
                             </div>
                             <div id="test-l-3" class="content">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Confirm Password</label>
+                                    <label htmlFor="exampleInputPassword1">Confirm Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" />
                                 </div>
                                 <button class="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>

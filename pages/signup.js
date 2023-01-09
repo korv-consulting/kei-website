@@ -14,8 +14,7 @@ import React, { useState, useEffect } from 'react'
 import Logo from "../components/Logo"
 import ProgressBar from "../components/ProgressBar"
 
-
-export default function Signup() {
+function Signup() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -88,3 +87,6 @@ export default function Signup() {
   )
 
 }
+
+
+export default Signup

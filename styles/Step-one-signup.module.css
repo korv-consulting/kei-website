@@ -79,28 +79,39 @@ border: solid white;
     margin-right: 21%;
     margin-left: 3.5%;
     margin-top: 15%;
-    transition: ease-in-out;
+    transition: all 0.3s;
 }
-.imgleft_card{
-    height: 15%;
-    display: flex;
-    background-color: pink;
 
+.imgleft_card:hover{
+  transform: scale(1.2);
+   
+}
+
+
+
+
+
+
+.imgleft_card{
+    height: 290px;
+    width: 280px;
+    display: flex;
+    margin-left: 11%;
+    outline: none;
+    transition: all 0.3s;
   
 }
 
-.imgleft:hover{
- scale: 1.2;
-}
 
 .subtitleleft{
     background-color: #F2FBFF;
     width: 380px;
     height: 50px;
-    margin-top: 72%;
     padding-top: 4%;
     border:2px solid #03DAC5;
     border-radius: 6px;
+    transition: all 0.3s;
+
 }
 
 .txtleleft{
@@ -118,30 +129,34 @@ border: solid white;
     width: 395px;
     height: 324px;
     margin-top: 15%;
-    transition: ease-in-out;
+    transition: all 0.3s;
 }
 
 .imgright_card{
-    height: 6px;
+    height: 290px;
+    width: 395px;
     display: flex;
-    background-color: pink;
+    margin-left: 0%;
+    transition: all 0.3s;
    
 }
 
-.imgright:hover{
-    scale: 1.2;
-
-}
+.imgright_card:hover{
+    transform: scale(1.2);
+     
+  }
+  
 
 
 .subtitleright{
     background-color: #F2FBFF;
     width: 395px;
     height: 50px;
-    margin-top: 72%;
     padding-top: 4%;
     border:2px solid #03DAC5;
     border-radius: 6px;
+    transition: all 0.3s;
+
 }
 
 .txtright{
@@ -168,9 +183,72 @@ border: solid white;
 }
 
 .img1_arrow{
+opacity: 0.7;
+transition: all 0.3s;
+  
+} 
 
+.imgleft_card:hover  .img1_arrow{
+    opacity: 1;
+    transform: translate(-30px);  
 }
-/* The whole structure  of the step-one signup part */
-.main {
 
+.imgleft_card:hover  .img2_arrow{
+    opacity: 1;
+    transform: translate(30px);  
 }
+    
+.imgleft_card:hover + .subtitleleft {
+    transform: scaleX(1.2)
+
+}    
+
+.imgright_card:hover + .subtitleright {
+    transform: scale(1.15)
+}    
+
+.img2_arrow{
+    z-index: 2;
+    margin-left: -10%;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+
+   
+
+.img3_arrow{
+    z-index: 2;
+    margin-left: 3%;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.img4_arrow{
+    z-index: 4;
+    margin-left: -10%;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.img5_arrow{
+    z-index: 3;
+    margin-left: -10%;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.imgright_card:hover  .img3_arrow{
+    opacity: 1;
+    transform: translate(-29px);  
+}
+
+.imgright_card:hover  .img4_arrow{
+    opacity: 1;    
+}  
+
+.imgright_card:hover  .img5_arrow{
+    opacity: 1;
+    transform: translate(30px);  
+}
+    
