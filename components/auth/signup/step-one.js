@@ -1,20 +1,18 @@
 import { Button, ButtonGroup, Col, Container, Image, Row } from "react-bootstrap"
 import styles from "@/styles/Step-one-signup.module.css"
-import 'bs-stepper/dist/css/bs-stepper.min.css';
-import Stepper from 'bs-stepper';
-import React from "react";
+import React, { useState, useEffect } from 'react'
 
 function StepOneSignup() {
 
+    const [filled, setFilled] = useState(33)
+    const [added, setAdded] = useState(filled - 30)
 
-    React.useEffect(() => {
+    const [isRunning, setIsRunning] = useState(true)
 
-        const stepper = new Stepper(document.querySelector('#stepper1'), {
-            linear: false,
-            animation: true
-        })
+    useEffect(() => {
 
-    }, []);
+    }, [])
+
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -23,120 +21,179 @@ function StepOneSignup() {
     };
 
 
+    const next = (step, filled) => {
+        switch (step) {
+            case 1:
+                setFilled(210)
+                setAdded(210- 30)
+
+                break;
+            case 2:
+                setFilled(390)
+                setAdded(390- 30)
+
+                break;
+            case 3:
+                setFilled(570)
+                setAdded(570- 30)
+
+                break;
+            default:
+                setFilled(filled)
+                setAdded(filled - 30)
+
+        }
+
+
+    };
+
+    const preview = (step, filled) => {
+        switch (step) {
+
+            case 2:
+                setFilled(33)
+                setAdded(33 - 30)
+
+                break;
+            case 3:
+                setFilled(210)
+                setAdded(210 - 30)
+
+                break;
+            case 4:
+                setFilled(390)
+                setAdded(390 - 30)
+
+                break;
+            default:
+                setFilled(filled)
+                setAdded(filled - 30)
+
+        }
+
+
+    };
+
+
+
 
 
     return (
         <Container fluid className={styles.main}>
             <Image fluid src="/signup/immeuble.png" className={styles.background} alt="Sky Crappers" />
-            <Row className={styles.global_row}>
+            <div className={styles.global_box}>
+                <Row className={styles.global_row}>
 
-                <Col sm={2} ></Col>
-                <Col sm={8} className={styles.box}> 
-                    <div className={styles.bigcontainer}>
-                        <div className={styles.titlecontainer}>Veuillez choisir l'option qui vous correspond  </div>
-                        <div className={styles.flexcontainer}>
-                            <div className={styles.imgleft}>
-                                <div className={styles.imgleft_card}>
-                                    <Image src='/signup/1.png' className={styles.img1_arrow} />
-                                    <Image src='/signup/2.png' className={styles.img2_arrow} />
+                    <Col sm={2} ></Col>
+                    <Col sm={8} className={styles.box}>
+                        <div className={styles.bigcontainer}>
+                            <div className={styles.titlecontainer}>Veuillez choisir le profil  qui vous correspond  </div>
+                            <div className={styles.flexcontainer}>
+                                <div className={styles.imgleft}>
+                                    <div className={styles.imgleft_card}>
+                                        <Image src='/signup/1.png' className={styles.img1_arrow} />
+                                        <Image src='/signup/2.png' className={styles.img2_arrow} />
+
+                                    </div>
+
+                                    <div className={styles.subtitleleft}>
+                                        <center>
+                                            <div className={styles.txtleleft} onClick={e=>{next(5, filled)}} >Particulier</div>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div className={styles.imgright}>
+                                    <div className={styles.imgright_card}>
+                                        <Image src='/signup/3.png' className={styles.img3_arrow} />
+                                        <Image src='/signup/4.png' className={styles.img4_arrow} />
+                                        <Image src='/signup/5.png' className={styles.img5_arrow} />
+
+                                    </div>
+
+                                    <div className={styles.subtitleright}>
+                                        <center>
+                                            <div className={styles.txtright} onClick={e=>{next(2, filled)}} >Professionnel</div>
+                                        </center>
+
+                                    </div>
 
                                 </div>
-
-                                <div className={styles.subtitleleft}>
-                                    <center>
-                                        <div className={styles.txtleleft}>Particulier</div>
-                                    </center>
-                                </div>
-                            </div>
-                            <div className={styles.imgright}>
-                                <div className={styles.imgright_card}>
-                                    <Image src='/signup/3.png' className={styles.img3_arrow} />
-                                    <Image src='/signup/4.png' className={styles.img4_arrow} />
-                                    <Image src='/signup/5.png' className={styles.img5_arrow} />
-
-                                </div>
-
-                                <div className={styles.subtitleright}>
-                                    <center>
-                                        <div className={styles.txtright}>Professionnel</div>
-                                    </center>
-
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-                    <div className={styles.smallcontainer}>
+                        <div className={styles.smallcontainer}>
 
-                    </div>
-                </Col>
-                <Col sm={2} ></Col>
+                        </div>
+                    </Col>
+                    <Col sm={2} ></Col>
 
-            </Row>
-            <div className={styles.box_stepper}>
+                </Row>
 
-                <div id="stepper1" class="bs-stepper">
-                    <div class="bs-stepper-header">
-                        <div class="step" data-target="#test-l-1">
-                            <button class="step-trigger">
-                                <span class="bs-stepper-circle">1</span>
-                                <span class="bs-stepper-label">Email</span>
-                            </button>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step" data-target="#test-l-2">
-                            <button class="step-trigger">
-                                <span class="bs-stepper-circle">2</span>
-                                <span class="bs-stepper-label">Password</span>
-                            </button>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step" data-target="#test-l-3">
-                            <button class="step-trigger">
-                                <span class="bs-stepper-circle">3</span>
-                                <span class="bs-stepper-label">Confirm Password</span>
-                            </button>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step" data-target="#test-l-4">
-                            <button class="step-trigger">
-                                <span class="bs-stepper-circle">4</span>
-                                <span class="bs-stepper-label">Validate</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bs-stepper-content">
-                        <form onSubmit={onSubmit}>
-                            <div id="test-l-1" class="content">
-                                <div class="form-group">
-                                    <label htmlFor="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+
+
+                <Container className={styles.box_container_number} >
+                    <Row>
+                        <Col sm={4} ></Col>
+                        <Col sm={4} className={styles.box_number}>
+                            <div className={styles.number} >1 </div>
+                            <div className={styles.linear} ></div>
+                            <div className={styles.number} >2 </div>
+                            <div className={styles.linear} ></div>
+                            <div className={styles.number} >3</div>
+                            <div className={styles.linear} ></div>
+                            <div className={styles.number} >4 </div>
+
+                        </Col>
+                        <Col sm={4}></Col>
+                    </Row>
+                </Container>
+
+
+                <Container className={styles.box_progress} >
+                    <Row>
+                        <Col sm={4} ></Col>
+                        <Col sm={4} className={styles.col_progress}>
+                            <div className={styles.progress} >
+                                <div className={styles.progress_bar} style={{ width: `${added}px` }} >
                                 </div>
-                                <button class="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
                             </div>
-                            <div id="test-l-2" class="content">
-                                <div class="form-group">
-                                    <label htmlFor="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                            <div className={styles.box_stepper}>
+
+
+                                <div style={{
+                                    height: "100%",
+                                    width: `${filled}px`,
+                                    backgroundColor: "#2DB6FE",
+                                    transition: "width 0.1s",
+                                    borderRadius: "500px 500px 500px 500px"
+                                }}>
                                 </div>
-                                <button class="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
-                            </div>
-                            <div id="test-l-3" class="content">
-                                <div class="form-group">
-                                    <label htmlFor="exampleInputPassword1">Confirm Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" />
+                                <div style={{
+                                    borderTop: "12px solid #fff",
+                                    borderBottom: "15px solid #fff",
+                                    borderLeft: "15px solid #fff",
+                                    borderRight: "12px solid #fff",
+                                    backgroundColor: "#fff",
+                                    transition: "width 0.1s",
+                                    borderRadius: "100%",
+                                    marginLeft: "-6%",
+                                    width: "40px",
+                                    zIndex: "1",
+                                    marginTop: "-27px",
+                                    transform: `translate(${filled}px, 0px)`
+
+                                }}>
+
                                 </div>
-                                <button class="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
+
+
                             </div>
-                            <div id="test-l-4" class="content text-center">
-                                <button type="submit" class="btn btn-primary mt-5">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+
+                        </Col>
+                        <Col sm={4}></Col>
+                    </Row>
+                </Container>
 
             </div>
-
 
 
         </Container>

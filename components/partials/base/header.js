@@ -33,7 +33,7 @@ function Header() {
                     className="me-2"
                     aria-label="Search"
                     /> */}
-                    <Nav.Link href="/signup" className={router.asPath === "/signin" ? styles.active : styles.menu_item}>
+                    <Nav.Link href="/signin" className={router.asPath === "/signin" ? styles.active : styles.menu_item}>
                         <Button className={styles.login_btn} id="btn_login">
                         Connexion
                         </Button>

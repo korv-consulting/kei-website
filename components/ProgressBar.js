@@ -10,7 +10,7 @@ function ProgressBar() {
             setTimeout(()=>setFilled(prev => prev += 4),86)
         }
     },[filled,isRunning])
- 
+  
     return (
     <>      
       <div className={styles.progressbar} >

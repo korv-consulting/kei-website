@@ -366,11 +366,6 @@
   dependencies:
     "fill-range" "^7.0.1"
 
-"bs-stepper@^1.7.0":
-  "integrity" "sha512-+DX7UKKgw2GI6ucsSCRd19VHYrxf/8znRCLs1lQVVLxz+h7EqgIOxoHcJ0/QTaaNoR9Cwg78ydo6hXIasyd3LA=="
-  "resolved" "https://registry.npmjs.org/bs-stepper/-/bs-stepper-1.7.0.tgz"
-  "version" "1.7.0"
-
 "call-bind@^1.0.0", "call-bind@^1.0.2":
   "integrity" "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA=="
   "resolved" "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz"

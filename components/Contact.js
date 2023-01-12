@@ -25,9 +25,14 @@ function Contact() {
         setSubmitted(true)
 
         const nodeList = document.getElementsByClassName(style.label);
-        for (let i = 0; i < nodeList.length; i++) {
+
+        for (let i = 0; i <= nodeList.length; i++) {
             nodeList[i].className = style.label_set;
+            console.log("elmt:" + nodeList[i])
         }
+
+        var company_label = document.getElementById("company_label")
+        company_label.className = style.label_set;
 
         var form = document.getElementById("form")
         form.className = `was-validated ${styles.form}`
@@ -38,7 +43,7 @@ function Contact() {
 
 
 
-            var mail = document.getElementById("mail")
+            var mail = document.getElementById("mail") 
             if (mail.checkValidity() === false) {
                 var umail = document.getElementById("umail")
                 umail.className = style.label_set
@@ -138,6 +143,21 @@ function Contact() {
                                     </span>
                                 </div>
                                 <div>
+                                    <input type="text" id='tel' placeholder='TEL' className={`form-control ${style.input_text_simple}`}  name="tel"
+                                        title="Veuillez saisir votre numéro de téléphone"
+                                    />
+                                    <label htmlFor='tel'  className={style.label}>Téléphone</label>
+                                  
+                                </div>
+                                <div>
+                                    <input type="text" id='company' placeholder='Nom de la société' className={`form-control ${style.input_text_simple}`}  name="company"
+                                        title="Veuillez saisir le nom de la société"
+                                    />
+                                    <label htmlFor='company' id='company_label' className={style.label}>Nom de la société</label>
+                                  
+                                </div>
+                             
+                                <div>
                                     <input type="text" id='obj' placeholder='Objet du message' className={`form-control ${style.input_text}`} required name="objet"
                                         title="Veuillez saisir l'objet de votre message"
                                     />
@@ -155,10 +175,12 @@ function Contact() {
                                         Veuillez saisir votre Message
                                     </span>
                                 </div>
-                                <Recaptcha onReCAPTCHAChange={onReCAPTCHAChange} />
-                                <span className={recaptcha == false && submitted == true ? `${styles.errorMsg}` : `${styles.disable}`} >
-                                    Veuillez d'abord résoudre l'enygme du recaptcha
-                                </span>
+                                <div className={style.recaptcha_box} >
+                                    <Recaptcha onReCAPTCHAChange={onReCAPTCHAChange} />
+                                    <span className={recaptcha == false && submitted == true ? `${styles.errorMsg}` : `${styles.disable}`} >
+                                        Veuillez d'abord résoudre l'enygme du recaptcha
+                                    </span>
+                                </div>
 
                             </div>
 

@@ -71,7 +71,7 @@ export default function Home() {
 
               <Header />
               <main className={styles.main}>
-                <Image src='/mini_icon.svg' className={styles.background} />
+                <Image src='/mini_icon.svg' alt='mini_icon' className={styles.background} />
                 <Language />
                 <About />
                 <MiddleBar />

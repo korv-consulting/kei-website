@@ -6,6 +6,12 @@
     margin-left: 1%;
 }
 
+.recaptcha_box{
+    margin-left: 12%;
+}
+
+
+/* css for  required input fields */
 
 .label{
     position: relative;
@@ -17,7 +23,14 @@
     padding: 4px;
 }
 
+.input_text + .label::after{
+   content:"*" ;
+}
 
+.input_text + .label_area::after{
+    content:"*" ;
+ }
+ 
 .label_set{
     position: relative;
     left:15px;
@@ -73,9 +86,11 @@
 
 
 
+
 .input_text:focus{
     border:2px solid  #2DB6FE
 }
+
 
 
 .input_text:focus + .label{
@@ -86,6 +101,7 @@
     opacity: 1;
     scale: 0.9;
 }
+
 
 .input_text:focus + .label_set{
     top:-73px;
@@ -115,12 +131,15 @@
 
 
 
+
 .input_text:not(:placeholder-shown) + .label{
     top:-75px;
     font-size: 15px;
     background: #fff;
 
 }
+
+
 
 
 .input_text:not(:placeholder-shown) + .label_set{
@@ -207,6 +226,7 @@
 
 }
 
+
 .input_text:focus::placeholder{
     opacity: 0.5;
 }
@@ -217,6 +237,116 @@
     color: transparent;
   }
 
+
 .input_text:focus::placeholder {
     color: #BABABA;
   }
+
+
+
+
+
+
+/* css for not required input fields */
+
+
+.input_text_simple{
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2db6fe;
+    border-radius: 4px;
+    background: #fff!important;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+    margin-bottom: 11px;
+    color: black;
+
+}
+
+
+.input_text_simple:focus{
+    border:2px solid  #2DB6FE
+}
+
+.input_text_simple:focus + .label{
+    top:-73px;
+    color:  #2DB6FE;
+    font-size: 15px;
+    background: #fff;
+    opacity: 1;
+    scale: 0.9;
+}
+
+.input_text_simple:focus + .label_set{
+    top:-73px;
+    color:  green;
+    font-size: 15px;
+    background: #fff;
+    opacity: 1;
+    scale: 0.9;
+}
+
+
+/*
+.input_text_simple:valid + .label_set{
+    top:-75px;
+    color:  green;
+    font-size: 15px;
+    background: #fff;
+
+}
+*/
+
+.input_text_simple:not(:placeholder-shown) + .label{
+    top:-75px;
+    font-size: 15px;
+    background: #fff;
+
+}
+
+.input_text_simple:not(:placeholder-shown) + .label_set{
+    top:-75px;
+    font-size: 15px;
+    background: #fff;
+
+}
+
+.input_text_simple::placeholder{
+    font-size: 15px;
+    opacity: 1;
+    transition: all 0.3s;
+    color: #2DB6FE;
+
+}
+
+
+.input_text_simple:focus::placeholder{
+    opacity: 0.5;
+}
+
+
+.input_text_simple::placeholder {
+    color: transparent;
+  }
+
+.input_text_simple:focus::placeholder {
+    color: #BABABA;
+  }
+
+  /* redefinition of label_set */
+
+.input_text_simple ~ .label_set{
+    position: relative;
+    left:15px;
+    top:-50px;
+    size: 15px;
+    transition: all 0.9s;
+    z-index: 1;
+    color: green;
+    background-color: #fff;
+    padding: 4px;
+
+}
+

@@ -15,6 +15,7 @@ import React, { useState, useEffect } from 'react'
 import Logo from "../components/Logo"
 import ProgressBar from "../components/ProgressBar"
 import Contact from '../components/Contact'
+import StepTwoSignup from '../components/auth/signup/step-two'
 
 
 export default function Signin() {
@@ -64,7 +65,7 @@ export default function Signin() {
 
             <div className={styles.container}>
               <Head>
-                <title>KEI - Home</title>
+                <title>KEI - Home</title> 
                 <meta name="description" content="KORV Estatement Inventory" />
                 <link rel="icon" href="/logo-kei.png" />
               </Head>
@@ -73,6 +74,8 @@ export default function Signin() {
               <main className={styles.main}>
                 <Image src='/mini_icon.svg' className={styles.background} />
                 <Language />
+                <StepTwoSignup /> 
+
                 
 
               </main>
