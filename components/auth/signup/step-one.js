@@ -29,19 +29,28 @@ function StepOneSignup() {
                 setAdded(210- 30)
                 setActive(2)
                 colorLineStepper(step)
+                bgCicleNumber(step)
+
                 break;
             case 2:
                 setFilled(390)
                 setAdded(390- 30)
                 setActive(3)
                 colorLineStepper(step)
+                bgCicleNumber(step)
+
                 break;
             case 3:
                 setFilled(570)
                 setAdded(570- 30)
                 setActive(4)
                 colorLineStepper(step)
+                bgCicleNumber(step)
 
+                break;
+            case 4:
+                bgCicleNumber(step)
+                alert("Bravo!!! , vous avez reuissi à toute les étapes")
                 break;
             default:
                 setFilled(33)
@@ -62,6 +71,7 @@ function StepOneSignup() {
                 setAdded(33 - 30)
                 setActive(1)
                 removeColorLineStepper(step)
+                removebgCicleNumber(step)
 
                 break;
             case 3:
@@ -69,6 +79,7 @@ function StepOneSignup() {
                 setAdded(210 - 30)
                 setActive(2)
                 removeColorLineStepper(step)
+                removebgCicleNumber(step)
 
                 break;
             case 4:
@@ -76,6 +87,8 @@ function StepOneSignup() {
                 setAdded(390 - 30)
                 setActive(3)
                 removeColorLineStepper(step)
+                removebgCicleNumber(step)
+
 
                 break;
             default:
@@ -97,6 +110,27 @@ function StepOneSignup() {
 
         }
 
+    }
+
+    const bgCicleNumber = (step) => {
+        for(let i=4;i<=step+3;i++){
+            let element = document.getElementById(i)
+            element.style.backgroundColor = "#03DAC5"
+           // console.log(element)
+
+        }
+
+        if(step+4<=7){
+        document.getElementById(step+4).style.backgroundColor = "white"
+        }
+    }
+
+    const removebgCicleNumber = (step) => {
+       let element1 = document.getElementById(step+3)
+       element1.style.backgroundColor = "transparent"
+       let element2 = document.getElementById(step+2)
+       element2.style.backgroundColor = "white"
+    
     }
 
     const removeColorLineStepper = (step) => {
@@ -127,7 +161,7 @@ function StepOneSignup() {
 
                                     <div className={styles.subtitleleft}>
                                         <center>
-                                            <div className={styles.txtleleft} onClick={e=>{preview(3)}} >Particulier</div>
+                                            <div className={styles.txtleleft} onClick={e=>{next(2)}} >Particulier</div>
                                         </center>
                                     </div>
                                 </div>
@@ -141,7 +175,7 @@ function StepOneSignup() {
 
                                     <div className={styles.subtitleright}>
                                         <center>
-                                            <div className={styles.txtright} onClick={e=>{preview(4)}} >Professionnel</div>
+                                            <div className={styles.txtright} onClick={e=>{preview(2)}} >Professionnel</div>
                                         </center>
 
                                     </div>
@@ -163,13 +197,16 @@ function StepOneSignup() {
                     <Row>
                         <Col sm={4} ></Col>
                         <Col sm={4} className={styles.box_number}>
-                            <div  className={active==1? styles.number_active : styles.number} >1 </div>
+                            <div id="4" className={active==1? styles.number_active : styles.number} >1 </div>
                             <div id="1" className={styles.linear} ></div>
-                            <div className={active==2? styles.number_active : styles.number} >2 </div>
+
+                            <div id="5" className={active==2? styles.number_active : styles.number} >2 </div>
                             <div id="2" className={styles.linear} ></div>
-                            <div className={active==3? styles.number_active : styles.number} >3</div>
+
+                            <div id="6" className={active==3? styles.number_active : styles.number} >3</div>
                             <div id="3" className={styles.linear} ></div>
-                            <div className={active==4? styles.number_active : styles.number} >4 </div>
+
+                            <div id="7" className={active==4? styles.number_active : styles.number} >4 </div>
 
                         </Col>
                         <Col sm={4}></Col>
