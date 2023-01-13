@@ -1,23 +1,35 @@
 .navbar {
     /* position:relative; */
-    margin-top: 1%;
+    /* margin-top: 1%; */
+    padding-top: 1%;
+    padding-bottom: 1%;
     padding-left: 5%;
     padding-right: 5%;
-    box-shadow: 0 3px 0 #e2f4f2;
+    box-shadow: 0 3px 0 #e2f4f2; /* Line for the Header */
+    overflow: hidden !important;
+    position: fixed !important;
+    top: 0 !important;
+    width: 100%;
+    z-index: 9999;
+}
 
+.logo{
+    margin-right: 5em;
 }
 
 .menu {
     font-size: x-large;
-    text-underline-offset: 15;
-    padding-left: 5%;
+    padding-left: 2%; 
+    /* padding-bottom: -10%; */
+    box-shadow: 0 2px 0 #03dac5; /* Line for menu items */
 }
 
 .menu_item{
     color: #11467e !important;
     opacity: 1;
     text-decoration: none;
-    margin-right: 25px;
+    margin-right: 70px;
+    margin-bottom: -2%;
 }
 
 .menu_item:visited{
@@ -27,25 +39,24 @@
 .active{
     color: #03dac5 !important;
     line-height: 1.5;
-    text-decoration: underline;
-    text-underline-offset: 15%;
-    margin-right: 25px;
+    margin-right: 70px;
+    margin-bottom: 2px;
+    box-shadow: 0 6px 0 #03dac5; /*Line for active menu item */
     opacity: 1;
 }
 
 .menu_item:hover{
     color: #03dac5 !important;
     line-height: 1.5;
-    text-decoration: underline;
     text-underline-offset: 15%;
 }
 
-.menu_item:active{
+/* .menu_item:active{
     color: #03dac5 !important;
     line-height: 1.5;
-    text-decoration:underline;
     text-underline-offset: 15%;
-}
+    box-shadow: 0 6px 0 #03dac5 !important;
+} */
 
 /* Common Style for Login and Sign up buttons */
 .login_btn, .signup_btn {
@@ -70,7 +81,7 @@
 
 .login_btn:hover,
 .signup_btn:hover{
-    box-shadow: 3px 3px 1px 1px #03dac5 !important;
+    box-shadow: 0 3px 0  #acf9f2 !important;
 }
 
 /* Signup Button */

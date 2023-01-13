@@ -26,7 +26,7 @@ function About() {
                         <Button className={styles.btn_download} id="btn_download">
                             Télécharger l'Application KEI
                             <Image src='/arrow.png' className={styles.img_arrow} />
-                            <Image src='/u_icon.png'className={styles.img_u_icon} />
+                            <Image src='/u_icon.png' className={styles.img_u_icon} />
                         </Button>
                     </Row>
                     <Row className={styles.row_demo}>

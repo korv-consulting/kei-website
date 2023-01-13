@@ -1,11 +1,10 @@
 import { Container, Nav, Navbar, Form, Button, Image } from "react-bootstrap"
 import styles from '@/styles/Header.module.css'
-import {useRouter} from "next/router"
+import { useState } from "react";
 
 function Header() {
 
-    const router = useRouter();
-   console.log(router.asPath);
+    let [isActive, setIsActive] = useState(1);
 
     return(
         <Navbar bg="white" expand="lg" className={`${styles.navbar}`}>
@@ -20,10 +19,10 @@ function Header() {
                     navbarScroll defaultActiveKey="2"
                 >
                     
-                    <Nav.Link href="#home" className={router.asPath === "/#home" ? styles.active : styles.menu_item}>ACCUEIL</Nav.Link>
-                    <Nav.Link href="#about" className={router.asPath === "/#about" ? styles.active : styles.menu_item}>A PROPOS</Nav.Link>
-                    <Nav.Link href="#offers" className={ router.asPath === "/#offers" ? styles.active : styles.menu_item }>OFFRES</Nav.Link>
-                    <Nav.Link href="#contact" className={ router.asPath === "/#contact" ? styles.active : styles.menu_item }>CONTACT</Nav.Link>
+                    <Nav.Link href="#home" onClick={() => setIsActive(1)} className={ isActive === 1 ? styles.active : styles.menu_item }>ACCUEIL</Nav.Link>
+                    <Nav.Link href="#about" onClick={() => setIsActive(2)} className={ isActive === 2 ? styles.active : styles.menu_item }>A PROPOS</Nav.Link>
+                    <Nav.Link href="#offers" onClick={() => setIsActive(3)} className={ isActive === 3 ? styles.active : styles.menu_item }>OFFRES</Nav.Link>
+                    <Nav.Link href="#contact" onClick={() => setIsActive(4)} className={ isActive === 4 ? styles.active : styles.menu_item }>CONTACT</Nav.Link>
                    
                 </Nav>
                 <Form className="d-flex">
