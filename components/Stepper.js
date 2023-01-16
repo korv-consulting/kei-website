@@ -8,7 +8,7 @@ function Stepper({filled,added,active}) {
 
       <Container className={styles.box_container_number} >
         <Row> 
-          <Col sm={4} ></Col>
+          <Col sm={4} ></Col> 
           <Col sm={4} className={styles.box_number}>
             <div id="4" className={active == 1 ? styles.number_active : styles.number} >1 </div>
             <div id="1" className={styles.linear} ></div>

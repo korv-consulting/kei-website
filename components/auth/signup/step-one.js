@@ -9,7 +9,7 @@ function StepOneSignup({next,preview}) {
 
     return ( 
         <>
-            <Image fluid src="/signup/immeuble.png" className={styles.background} alt="Sky Crappers" />
+            <Image fluid src="/signup/immeuble2.png" className={styles.background} alt="Sky Crappers" />
             <div className={styles.global_box}>
                 <Row className={styles.global_row}>
 

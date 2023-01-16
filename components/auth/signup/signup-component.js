@@ -1,6 +1,6 @@
 import { Button, ButtonGroup, Col, Container, Image, Row } from "react-bootstrap"
 import styles from "@/styles/Signup-component.module.css"
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react' 
 import Stepper from "components/Stepper"
 import StepOneSignup from './step-one'
 
@@ -134,7 +134,7 @@ function Signup_component() {
        let element2 = document.getElementById(step+2)
        element2.style.backgroundColor = "white"
     
-    }
+    } 
 
     const removeColorLineStepper = (step) => {
        let element = document.getElementById(step-1)
