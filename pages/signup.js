@@ -4,7 +4,7 @@ import Header from '@/partials/base/header'
 import Language from '@/partials/base/language'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css' 
-import StepOneSignup from '../components/auth/signup/step-one'
+import Signup_component from '../components/auth/signup/signup-component'
 
 import { Image } from 'react-bootstrap'
 
@@ -70,11 +70,7 @@ function Signup() {
               <main className={styles.main}>
                 <Image src='/mini_icon.svg' className={styles.background} />
                 <Language />
-                <StepOneSignup /> 
-                
-                
-
-
+                <Signup_component /> 
               </main>
 
               <Footer /> 
