@@ -4,7 +4,7 @@ import styles from "@/styles/Offer.module.css"
 function Offer(){
 
     return (
-    <Container fluid className={styles.main}>
+    <Container fluid className={styles.main} id={`offers`}>
 
       <Row className={styles.hr_bar}/>
 
@@ -189,7 +189,7 @@ function Offer(){
           </Card>
         </Row>
       </Row>
-      <Row className={styles.row_contact}>
+      <Row className={styles.row_contact} id="contact">
         <h1 className={styles.contact}>CONTACT US</h1>
       </Row>
 

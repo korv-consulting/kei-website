@@ -4,7 +4,7 @@ import styles from "@/styles/About.module.css"
 function About() {
 
     return(
-        <Container fluid className={styles.main}>
+        <Container fluid className={styles.main} id="about">
             {/* <div className={styles.bg_image}></div> */}
             <Image fluid src="/skyscraper.png" className={styles.background} alt="Sky Crappers"/>
             <Row className={styles.global_row}>
