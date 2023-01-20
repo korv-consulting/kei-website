@@ -4,10 +4,9 @@ import styles from "@/styles/About.module.css"
 function About() {
 
     return(
-        <Container fluid className={styles.main} id="about">
-            {/* <div className={styles.bg_image}></div> */}
+        <Container fluid className={styles.main} id="home">
             <Image fluid src="/skyscraper.png" className={styles.background} alt="Sky Crappers"/>
-            <Row className={styles.global_row}>
+            <Row className={styles.global_row} id="about">
                 <Col>
                     <Row className={styles.title}>
                         Vous avez les clefs pour améliorer votre

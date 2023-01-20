@@ -37,54 +37,62 @@ function Language() {
     return(
         <Nav className={`${styles.main}`}>
           <Col className={styles.container}>
-            <Row onClick={ handleClickActiveLang } 
-              className={`${styles.active_lang} ${showActiveLang == false ? styles.hidden_active_lang : ''}`}>
+            
+            <Row onClick={ handleClickActiveLang } className={`${styles.active_lang} 
+              ${showActiveLang == false ? styles.hidden_active_lang : ''}`}>
               <Image src={activeLang.url} className={styles.selected_lang} alt="France Flag"/>
             </Row>
+
             <Row>
               <ListGroup className={`${styles.list_lang} ${showListLang == false ? styles.hidden_list_lang : ''}`} >
-               <ListGroup.Item action onClick={ () => { setActiveLang({"name": "Fr", "url": "/flags/France.png"}), 
-                handleClickListLang() }} className={`${styles.lang}`}>
-                  <Button className={`${styles.btn_lang} ${activeLang.name == 'Fr'? 
-                        styles.dark_blue : styles.dark_blue_hover}`}>
-                    <Image src="/flags/France.png" className={styles.flag} alt="France Flag"/> Fr
-                  </Button>
-                </ListGroup.Item>
-                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "En", "url": "/flags/UK.png"}), 
+               
+               <ListGroup.Item action onClick={ () => { setActiveLang({"name": "FR", "url": "/flags/France.png"}), 
                   handleClickListLang() }} className={`${styles.lang}`}>
-                    <Button className={`${styles.btn_lang} ${activeLang.name == 'En'? 
+                  <Button className={`${styles.btn_lang} ${activeLang.name == 'FR'? 
                         styles.dark_blue : styles.dark_blue_hover}`}>
-                      <Image src="/flags/UK.png" className={styles.flag} alt="UK Flag"/> En
+                    <Image src="/flags/France.png" className={styles.flag} alt="France Flag"/> FR
                   </Button>
                 </ListGroup.Item>
-                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "Es", "url": "/flags/Spain.png"}), 
+
+                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "EN", "url": "/flags/UK.png"}), 
+                  handleClickListLang() }} className={`${styles.lang}`}>
+                    <Button className={`${styles.btn_lang} ${activeLang.name == 'EN'? 
+                        styles.dark_blue : styles.dark_blue_hover}`}>
+                      <Image src="/flags/UK.png" className={styles.flag} alt="UK Flag"/> EN
+                  </Button>
+                </ListGroup.Item>
+
+                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "ES", "url": "/flags/Spain.png"}), 
                   handleClickListLang() }} className={styles.lang}>
-                  <Button className={`${styles.btn_lang} ${activeLang.name == 'Es'? 
+                  <Button className={`${styles.btn_lang} ${activeLang.name == 'ES'? 
                         styles.dark_red : styles.dark_red_hover}`}>
-                    <Image src="/flags/Spain.png" className={styles.flag} alt="Spain Flag"/> Es
+                    <Image src="/flags/Spain.png" className={styles.flag} alt="Spain Flag"/> ES
                    </Button>
                 </ListGroup.Item>
-                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "De", "url": "/flags/Germany.png"}), 
+                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "GE", "url": "/flags/Germany.png"}), 
                   handleClickListLang() }} className={styles.lang}>
-                  <Button className={`${styles.btn_lang} ${activeLang.name == 'De'? 
+                  <Button className={`${styles.btn_lang} ${activeLang.name == 'GE'? 
                         styles.dark_yellow : styles.dark_yellow_hover}`}>
-                    <Image src="/flags/Germany.png" className={styles.flag} alt="Germany Flag"/> De
+                    <Image src="/flags/Germany.png" className={styles.flag} alt="Germany Flag"/> GE
                    </Button>
                 </ListGroup.Item>
-                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "It", "url": "/flags/Italy.png"}), 
+
+                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "IT", "url": "/flags/Italy.png"}), 
                   handleClickListLang() }} className={styles.lang}>
-                  <Button className={`${styles.btn_lang} ${activeLang.name == 'It'? 
+                  <Button className={`${styles.btn_lang} ${activeLang.name == 'IT'? 
                         styles.green : styles.green_hover}`}>
-                    <Image src="/flags/Italy.png" className={styles.flag} alt="Italy Flag"/> It
+                    <Image src="/flags/Italy.png" className={styles.flag} alt="Italy Flag"/> IT
                   </Button>
                 </ListGroup.Item>
-                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "Ja", "url": "/flags/Japan.png"}), 
+
+                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "JA", "url": "/flags/Japan.png"}), 
                   handleClickListLang() }} className={styles.lang}>
-                  <Button className={`${styles.btn_lang} ${activeLang.name == 'Ja'? 
+                  <Button className={`${styles.btn_lang} ${activeLang.name == 'JA'? 
                         styles.dark_red : styles.dark_red_hover}`}>
-                    <Image src="/flags/Japan.png" className={styles.flag} alt="Japan Flag"/> Ja
+                    <Image src="/flags/Japan.png" className={styles.flag} alt="Japan Flag"/> JA
                   </Button>
                 </ListGroup.Item>
+
               </ListGroup>
             </Row>
           </Col>
