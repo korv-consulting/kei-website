@@ -1,7 +1,9 @@
-
-
 /* --------------- Begin stepper card -------------- */
 
+.main{
+    margin-right: -10%;
+    margin-top: -47%;
+}
 
 
 /* css for progress bar */
@@ -41,10 +43,10 @@
 }
 
 .progress {
-    height: 7px;
+    height: 10%;
     background: none;
     border-radius: 0;
-    margin-bottom: -13px;
+    margin-bottom: -2%;
     overflow: visible;
     box-shadow: none;
     margin-left: 5%;
@@ -59,20 +61,21 @@
     position: relative;
     -webkit-animation: animate-positive 2s;
     animation: animate-positive 2s;
-    transition: all 0.9s;
+    transition: ease-in-out 0.5s;
+    max-width: 100vmax;
 
 }
 
 .progress .progress_bar:before {
     content: "";
-    border-bottom: 39px solid #03DAC5;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
+    border-bottom: 2.63vw solid #03DAC5;
+    border-left: 0.9vw solid transparent;
+    border-right: 0.9vw solid transparent;
     position: absolute;
-    bottom: -4px;
-    right: -2px;
+    bottom: -0.20vw;
+    right: -68.5%;
     transform: rotate(180deg);
-    transition: all 0.9s;
+    transition: ease-in-out  0.9s;
 
 }
 
@@ -88,16 +91,17 @@
     height: 5%;
     display: flex;
     padding: 1%;
+    max-width: 40vw;
 
 }
- 
+
 .box_container_number {
     margin-left: 30%;
     margin-top: 50%;
     margin-bottom: 4.5%;
 }
 
-.linear {
+.linear {  
     width: 150px;
     border: 2px solid black;
     height: 2px;
@@ -105,11 +109,11 @@
 }
 
 .number {
-    font-size: 20px;
+    font-size: 1.1vw;
     margin-top: -2%;
     border-radius: 100%;
-    width: 30px;
-    height: 30px;
+    width: 1.5vw;
+    height: 1.5vw;
     text-align: center;
 }
 
@@ -135,36 +139,41 @@
 
 .box_progress {
     margin-left: 30%;
-    margin-top: 1%;
+    margin-top: -0.46%;
     margin-bottom: 8%;
 }
 
 .col_progress {
 
     position: absolute;
-    height: 5%; 
-  
+    height: 5%;
+    max-width: 40vw;
+
+
 }
 
 .box_stepper {
     height: 25px;
-    background-color:#F2FBFF;
+    background-color: #F2FBFF;
     margin-top: 1%;
     padding-top: 3px;
     padding-bottom: 3px;
-    width: 97%;
+    width: 97.8%;
     border-radius: 90px;
-    margin-left: 9px;
+    margin-left: 0.6%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
     border: 2px solid #03DAC5;
+    max-width: 40vw;
 }
 
 .number_active {
-    font-size: 20px;
+    font-size: 1.1vw;
     margin-top: -2%;
-    border: 3px solid #03DAC5;
+    border: 0.13vw solid #03DAC5;
     border-radius: 100%;
-    width: 30px;
-    height: 30px;
+    width: 1.7vw;
+    height: 1.7vw;
     background-color: #fff;
     transform: scale(1.4);
     text-align: center;

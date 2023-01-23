@@ -40,25 +40,26 @@ export default function Home() {
     <>
       {
         loading ?
-          (<div className={stylesplash.App}>
+          (
+            <div className={stylesplash.App}>
 
-            <div className={stylesplash.parent} >
-              <div className={stylesplash.dot} onLoad={(e) => handleScale()} >
-              </div>
+                <div className={stylesplash.parent} >
+                  <div className={stylesplash.dot} onLoad={(e) => handleScale()} >
+                  </div>
 
-              <div className={stylesplash.boxsplash}>
-                <Logo />
-                <ProgressBar />
-                <div className={stylesplash.description}>
-                  <p>
-                    Petite description sur l'entreprise <br />
-                    ou simple ou simple message d'accueil
-                  </p>
+                  <div className={stylesplash.boxsplash}>
+                    <Logo />
+                    <ProgressBar />
+                    <div className={stylesplash.description}>
+                      <p>
+                        Petite description sur l'entreprise <br />
+                        ou simple ou simple message d'accueil
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
-
             </div>
-          </div>
           )
           : (
 

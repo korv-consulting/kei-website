@@ -2,13 +2,13 @@
 import styles from '../styles/Stepper.module.css'
 import { Button, ButtonGroup, Col, Container, Image, Row } from "react-bootstrap"
 
-function Stepper({filled,added,active}) {
-  return ( 
-    <>
+function Stepper({ filled, added, active, reduced }) {
+  return (
+    <div className={styles.main}> 
 
       <Container className={styles.box_container_number} >
-        <Row> 
-          <Col sm={4} ></Col> 
+        <Row>
+          <Col sm={4} ></Col>
           <Col sm={4} className={styles.box_number}>
             <div id="4" className={active == 1 ? styles.number_active : styles.number} >1 </div>
             <div id="1" className={styles.linear} ></div>
@@ -32,7 +32,7 @@ function Stepper({filled,added,active}) {
           <Col sm={4} ></Col>
           <Col sm={4} className={styles.col_progress}>
             <div className={styles.progress} >
-              <div className={styles.progress_bar} style={{ width: `${filled}%` }} >
+              <div className={styles.progress_bar} style={{ width: `${reduced}%` }} > 
               </div>
             </div>
             <div className={styles.box_stepper}>
@@ -42,22 +42,29 @@ function Stepper({filled,added,active}) {
                 height: "100%",
                 width: `${filled}%`,
                 backgroundColor: "#03DAC5",
-                transition: "width 0.3s",
+                transition: "ease-in-out width 0.3s",
                 marginLeft: "1%",
-                borderRadius: "500px 500px 500px 500px"
+                transitionDuration: "0.5s",
+                borderRadius: "500px 500px 500px 500px",
+                maxWidth: "100vw"
+
               }}>
               </div>
               <div style={{
-                border: "2px solid #2DB6FE",
+                border: "1% solid #2DB6FE",
                 backgroundColor: "#DEF4FF",
-                transition: "all 0.3s",
+                transition: "ease-in-out 0.3s",
                 borderRadius: "100%",
-                marginLeft: "0.4%",
+                marginLeft: "0.5%",
                 width: "18px",
                 height: "18px",
-                zIndex: "1", 
-                marginTop: "-17px",
-                transform: `translate(${added}%, 0%)`
+                zIndex: "1",
+                marginTop: "-3%",
+                transitionDuration: "0.5s",
+                transform: `translate(${added}%, 0%)`,
+                maxWidth: "100vw",
+                maxHeight: "100vw"
+
 
               }}>
 
@@ -71,7 +78,7 @@ function Stepper({filled,added,active}) {
       </Container>
 
 
-    </>
+    </div>
 
 
   )

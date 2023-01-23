@@ -165,7 +165,7 @@ function Contact() {
                                     <span id="objet" className={`invalid-feedback ${styles.errorMsg}`} >
                                         Veuillez saisir l'objet de votre message
                                     </span>
-                                </div>
+                                </div> 
                                 <div>
                                     <textarea cols={50} rows={8} id='msg' placeholder='...' required className={`form-control ${style.input_text}`} name="message"
                                         title="Veuillez saisir  votre message"

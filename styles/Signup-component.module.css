@@ -1,11 +1,21 @@
 /* The whole structure  of the Signup page */
 .main {
-    padding-left: 6%;
-    padding-right: 6%;
+  /*  padding-left: 6%;
+    padding-right: 6%;*/
     background-color: rgba(255, 255, 255, 0.1);
-    margin-bottom: -1%;
+    margin-bottom: -5%;
     height: 800%;
-    
+    margin-top: -20%;
+    margin-left: -1%;
+    width: 102%;
 
 }
 
+.stepper_one{
+  margin-top: -41%;
+}
+
+.stepper_two{
+  margin-top: -82%;
+  margin-left: 2%;
+}
