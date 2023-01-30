@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar, Form, Button, Image } from "react-bootstrap"
 import styles from '@/styles/Header.module.css'
 import { useState } from "react";
-import {useRouter} from "next/router"
+// import {useRouter} from "next/router"
 
 function Header() {
 
@@ -17,7 +17,7 @@ function Header() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll"/>
                 <Navbar.Collapse id="navbarScroll">
-                <Nav className={`me-auto my-2 my-lg-0 ${styles.menu}`} navbarScroll defaultActiveKey="2">
+                <Nav className={`me-auto my-2 my-lg-0  ${styles.menu}`} navbarScroll defaultActiveKey="2">
                     
                     <Nav.Link href="#home" onClick={() => setIsActive(1)} className={ isActive === 1 ? styles.active : styles.menu_item }> ACCUEIL </Nav.Link>
 

@@ -22,12 +22,28 @@ function Footer() {
               <Row>
                 <Col className={styles.store_col}>
                     <Button className={styles.store_btn}>
-                      <Image src='/app-store.png' className={styles.store_img}/> Télécharger sur App Store
+                      <Row>
+                        <Col md="2" className={styles.col_store_img}>
+                          <Image src='/app-store.png' className={styles.store_img}/>
+                        </Col>
+                        <Col md="8" className={styles.col_store_name}>
+                          <span className={styles.store_title}>Télécharger sur </span>
+                          <label className={styles.store_name}>App Store</label>
+                        </Col>
+                      </Row>
                     </Button>
                 </Col>
                 <Col className={styles.store_col}>
                   <Button className={styles.store_btn}>
-                      <Image src='/playstore.png' className={styles.store_img} /> Télécharger sur Playstore
+                    <Row>
+                      <Col md="2" className={styles.col_store_img}>
+                        <Image src='/playstore.png' className={styles.store_img} />
+                      </Col>
+                      <Col md="8" className={styles.col_store_name}>
+                        <span className={styles.store_title}>Télécharger sur </span>
+                        <label className={styles.store_name}>Playstore</label>
+                      </Col>
+                    </Row>
                     </Button>
                 </Col>
               </Row>

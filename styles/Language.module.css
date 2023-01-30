@@ -1,5 +1,5 @@
 .main {
-    margin-top: 2%;
+    margin-top: 2% !important;
     /* margin-right: 5% !important; */
     margin-left: 82%;
     padding: 5% !important;
@@ -20,73 +20,75 @@
     /* width: 5%; */
     /* align-items: center; */
     margin-left: 4em !important;
-    margin-top: -38%;
+    margin-top: -35%;
     height: 20px !important;
     /* float: right; */
+    transition-delay: 200ms;
+    transform-origin: top;
+    transition-property: height, top, bottom;
 }
 
 .btn_lang {
-    height: 70%;
-    width: 100%;
+    height: 75%;
+    width: 80%;
     padding-bottom: 25%;
     border-radius: 5em!important;
-    font-size: 30px;
+    /* font-size: 30px !important; */
     color: transparent;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: transparent;
-    border-color: transparent;
+    border-color: transparent !important;
 }
 
-.btn_lang:hover {
-    border-color: transparent;
+.btn_lang:hover{
+    border-color: transparent !important;
 }
 
 .active_lang {
-    width: 40% !important;
+    width: 45% !important;
     margin-left: 30%;
+    /* transition-delay: 200ms; */
 }
 
 .lang {
    background-color: transparent !important;
-   height: 70px;
-   align-items: flex-start !important;
-   align-content: center !important;
+   height: 55px;
+   /* align-items: flex-start !important; */
+   /* align-content: center !important; */
    border-color: transparent;
    
 }
 
 .lang_name{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 1% !important;
+    padding-left: 5%;
     width: 50%;
     height: 60%;
-}
-
-.fr:hover{
-    background-color: blue !important;
+    margin-top: -10%;
 }
 
 .selected_lang{
     border-radius: 100% !important;
-    height: 50px;
+    height: 45px;
     margin-right: 20% !important;
     cursor: pointer !important;
+    
 }
 
 .flag {
-    width: 40%;
-    height: 50px;
-    border-radius: 100%;
-    margin-right: 5%;
-    margin-top: -12%;
+    width: 42px;
+    height: 42px;
+    /* margin-right: 5%; */
+    margin-top: -18%;
     /* margin-bottom: 14%; */
-    margin-left: -45%;
+    margin-left: -32%;
 }
 
 .hidden_active_lang{
     visibility: hidden;
-     margin-top: 5% !important;
+    margin-top: 5% !important;
 }
 
 .hidden_list_lang{
