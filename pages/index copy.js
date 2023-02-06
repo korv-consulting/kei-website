@@ -10,7 +10,7 @@ import Offer from '@/partials/base/offer'
 import { Image } from 'react-bootstrap'
 
 export default function Home() {
-    const [loading,setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
     // setLoading(true)

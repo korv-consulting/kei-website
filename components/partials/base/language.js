@@ -38,7 +38,7 @@ function Language() {
         <Nav className={`${styles.main}`}>
           <Col className={styles.container}>
             
-            <Row onClick={ handleClickActiveLang } className={`${styles.active_lang} 
+            <Row onClick={ handleClickActiveLang } className={`${styles.row_selected_lang} 
               ${showActiveLang == false ? styles.hidden_active_lang : ''}`}>
               <Image src={activeLang.url} className={styles.selected_lang} alt="France Flag"/>
             </Row>

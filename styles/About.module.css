@@ -30,10 +30,9 @@
     background-repeat: repeat-x;
     /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
     /* backdrop-filter: blur(5px); */
-    filter: blur(12px);
+    filter: blur(10px);
     opacity: 1;
 }
-
 
 /* Column of the Title */
 .col_title {

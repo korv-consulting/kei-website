@@ -17,15 +17,28 @@ function Header() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll"/>
                 <Navbar.Collapse id="navbarScroll">
-                <Nav className={`me-auto my-2 my-lg-0  ${styles.menu}`} navbarScroll defaultActiveKey="2">
+                <Nav className={`me-auto my-2 my-lg-0  ${styles.menu}`} navbarScroll 
+                    defaultActiveKey="2">
                     
-                    <Nav.Link href="#home" onClick={() => setIsActive(1)} className={ isActive === 1 ? styles.active : styles.menu_item }> ACCUEIL </Nav.Link>
+                    <Nav.Link href="#home" onClick={() => setIsActive(1)} className={`${ isActive === 1 ? 
+                        styles.active : styles.menu_item } ${styles.menu_item_space}`}> 
+                        ACCUEIL 
+                    </Nav.Link>
 
-                    <Nav.Link href="#about" onClick={() => setIsActive(2)} className={ isActive === 2 ? styles.active : styles.menu_item }> A PROPOS </Nav.Link>
+                    <Nav.Link href="#about" onClick={() => setIsActive(2)} className={`${ isActive === 2 ? 
+                        styles.active : styles.menu_item } ${styles.menu_item_space}`}> 
+                        A PROPOS 
+                    </Nav.Link>
 
-                    <Nav.Link href="#offers" onClick={() => setIsActive(3)} className={ isActive === 3? styles.active : styles.menu_item }> OFFRES </Nav.Link>
+                    <Nav.Link href="#offers" onClick={() => setIsActive(3)} className={`${ isActive === 3? 
+                        styles.active : styles.menu_item } ${styles.menu_item_space}`}> 
+                        OFFRES 
+                    </Nav.Link>
 
-                    <Nav.Link href="#contact" onClick={() => setIsActive(4)} className={ isActive === 4 ? styles.active : styles.menu_item }> CONTACT </Nav.Link>
+                    <Nav.Link href="#contact" onClick={() => setIsActive(4)} className={`${ isActive === 4 ? 
+                        styles.active : styles.menu_item }`}> 
+                        CONTACT 
+                    </Nav.Link>
                    
                 </Nav>
                 <Form className="d-flex">

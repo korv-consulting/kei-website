@@ -18,34 +18,32 @@
     width: 25%;
 }
 
+/* Style for menu */
 .menu {
     font-size: 135%;
+    text-align: center;
     white-space: nowrap;
-    padding-left: 3%; 
+    padding-left: 2%;
+    padding-right: 2%;
     /* padding-bottom: -10%; */
     box-shadow: 0 2px 0 #03dac5; /* Line for menu items */
-    align-content: center !important;
 }
 
+/* Style for the space between menu items */
+.menu_item_space{
+    margin-right: 50px;
+}
+
+/* Style for menu items(Home, About, Offers, Contact) */
 .menu_item{
     color: #11467e !important;
     opacity: 1;
     text-decoration: none;
-    margin-right: 50px;
     margin-bottom: 0;
 }
 
 .menu_item:visited{
     color: #11467e !important;
-}
-
-.active{
-    color: #03dac5 !important;
-    line-height: 1.5;
-    margin-right: 50px;
-    margin-bottom: 2px;
-    box-shadow: 0 6px 0 #03dac5; /*Line for active menu item */
-    opacity: 1;
 }
 
 .menu_item:hover{
@@ -54,12 +52,15 @@
     text-underline-offset: 15%;
 }
 
-/* .menu_item:active{
+/* Style for the active menu item */
+.active{
     color: #03dac5 !important;
     line-height: 1.5;
-    text-underline-offset: 15%;
-    box-shadow: 0 6px 0 #03dac5 !important;
-} */
+    margin-bottom: 2px;
+    box-shadow: 0 6px 0 #03dac5; /*Line for active menu item */
+    opacity: 1;
+}
+
 
 /* Common Style for Login and Sign up buttons */
 .login_btn, .signup_btn {
@@ -99,6 +100,7 @@
     color: #e2f4f2 !important;
 }
 
+/* This part is reserved for Responsive */
 /* @media (max-width: 991px) {
 
 }
@@ -107,7 +109,7 @@
     
 } */
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
 
     .navbar {
         /* position:relative; */
@@ -117,21 +119,22 @@
         position: fixed !important;
         top: 0 !important;
         width: 100%;
-        z-index: 9999;
+        display: flex;
     }
 
     .menu {
+        /* display: flex; */
         font-size: 15px;
         white-space: nowrap;
-        padding-left: 0%; 
+        /* padding-left: 0%;  */
         /* padding-bottom: -10%; */
-        box-shadow: 0 2px 0 #03dac5; /* Line for menu items */
+         box-shadow:none;
     }
 
     .active{
-        color: #03dac5 !important;
+        /* color: #03dac5 !important; */
         line-height: 1.5;
-        margin-right: 5%;
+        /* margin-right: 5%; */
         margin-bottom: 2px;
         opacity: 1;
     }

@@ -1,3 +1,4 @@
+/* The style of the element(Nav) */
 .main {
     margin-top: 2% !important;
     /* margin-right: 5% !important; */
@@ -15,6 +16,23 @@
     width: 100%;
 } */
 
+/* Style for Row containing active lang */
+.row_selected_lang {
+    width: 45% !important;
+    margin-left: 35%;
+    margin-bottom: 6%;
+    /* transition-delay: 200ms; */
+}
+
+/* The selected language image */
+.selected_lang{
+    border-radius: 100% !important;
+    height: 45px;
+    margin-right: 20% !important;
+    cursor: pointer !important; 
+}
+
+/* The list of of languages containing their names and images */
 .list_lang{
     background-color: transparent !important;
     /* width: 5%; */
@@ -28,6 +46,7 @@
     transition-property: height, top, bottom;
 }
 
+/* Button containing image and name*/
 .btn_lang {
     height: 75%;
     width: 80%;
@@ -44,12 +63,7 @@
     border-color: transparent !important;
 }
 
-.active_lang {
-    width: 45% !important;
-    margin-left: 30%;
-    /* transition-delay: 200ms; */
-}
-
+/* Style for list item */
 .lang {
    background-color: transparent !important;
    height: 55px;
@@ -59,6 +73,7 @@
    
 }
 
+/* Style for label(language name) */
 .lang_name{
     font-size: 30px;
     font-weight: bold;
@@ -69,14 +84,7 @@
     margin-top: -10%;
 }
 
-.selected_lang{
-    border-radius: 100% !important;
-    height: 45px;
-    margin-right: 20% !important;
-    cursor: pointer !important;
-    
-}
-
+/* The language image */
 .flag {
     width: 42px;
     height: 42px;
@@ -86,16 +94,20 @@
     margin-left: -32%;
 }
 
+/* Style to hide active language */
 .hidden_active_lang{
     visibility: hidden;
     margin-top: 5% !important;
 }
 
+/* Style to hide the list of languages */
 .hidden_list_lang{
     visibility: hidden;
     /* margin-bottom: 4% !important; */
 }
 
+/* Styles to make the background of the images and color of text name
+    of the languages when hovering or showing active language*/
 .dark_blue, .dark_blue:hover {
     background-color: #11467e !important;
     color: white;
