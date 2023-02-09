@@ -1,15 +1,24 @@
 import { Button, ButtonGroup, Col, Container, Image, Row } from "react-bootstrap"
 import styles from "@/styles/Signup-component.module.css"
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react' 
 import Stepper from "components/Stepper"
-import StepOneSignup from './step-one'
+import StepOneSignup from './step-one' 
 import StepTwoSignup from './step-two'
+import StepThreeSignup from './step-three'
+import StepThreeCompanySignup from './step-three-company'
+import StepFourSignup from './step-four' 
+import ConfirmationComponentSignup from './confirmation-component' 
+
 
 
 function Signup_component() {
     // Defines the first state to start
-    const [step, setStep] = useState(2)
+    const [step, setStep] = useState(1)
 
+    // Memorises the status of the user 
+    const [isprofessinal, setIsprofessinal] = useState('')
+
+    // states stapperbar Initialisation
     const [active, setActive] = useState(1)
     const [filled, setFilled] = useState(1) 
     const [added, setAdded] = useState(filled + 0)
@@ -29,18 +38,30 @@ function Signup_component() {
         alert(`Hey, onSubmiting...`);
 
     };
+
+    const handleProfessional = () => {
+        setIsprofessinal(1)  // if the user chose profile professional
+
+    };
+ 
+    const handleParticular = () => {
+        setIsprofessinal(0)  // if the user chose profile particular
+
+    };
  
 
-    const next = (step) => { 
-        switch (step) {
+    const next = (step_arg) => { 
+
+
+        switch (step_arg) {
             case 1:
                 setFilled(33.5)
                 setAdded(33.5 + 960)
                 setReduced(33.5 - 13.65)
                 setActive(2)
                 setStep(2)
-                colorLineStepper(step)
-                bgCicleNumber(step)
+                colorLineStepper(step_arg)
+                bgCicleNumber(step_arg)
 
                 break;
             case 2:
@@ -48,24 +69,31 @@ function Signup_component() {
                 setAdded(66 + 969 * 2)
                 setReduced(66 - 13.64 * 2 + 0.1)
                 setActive(3)
-                setStep(3)
-                colorLineStepper(step)
-                bgCicleNumber(step)
+
+                if(isprofessinal == 1){
+                    setStep(-3)
+                }else{
+                    setStep(3)
+
+                }
+                colorLineStepper(step_arg)
+                bgCicleNumber(step_arg)
 
                 break;
             case 3:
                 setFilled(98)
-                setAdded(98 + 969 * 3)
-                setReduced(98 - 13.64 * 3 + 0.7)
+                setAdded(98 + 969 * 3 -30)
+                setReduced(98 - 13.64 * 3 + 0.3)
                 setActive(4)
                 setStep(4)
-                colorLineStepper(step)
-                bgCicleNumber(step)
+                colorLineStepper(step_arg)
+                bgCicleNumber(step_arg)
 
                 break;
             case 4:
-                bgCicleNumber(step)
-                alert("Bravo!!! , vous avez reuissi à toute les étapes")
+                bgCicleNumber(step_arg)
+                setStep(5)
+                alert("Bravo!!! , vous avez reuissi à toute les étapes",step)
                 break;
             default:
                 setFilled(1)
@@ -80,8 +108,9 @@ function Signup_component() {
 
     };
 
-    const preview = (step) => {
-        switch (step) {
+    const preview = (step_arg) => {
+
+        switch (step_arg) {
 
             case 2:
                 setFilled(1)
@@ -89,8 +118,8 @@ function Signup_component() {
                 setReduced(1)
                 setActive(1)
                 setStep(1)
-                removeColorLineStepper(step)
-                removebgCicleNumber(step)
+                removeColorLineStepper(step_arg)
+                removebgCicleNumber(step_arg)
 
                 break;
             case 3:
@@ -99,8 +128,8 @@ function Signup_component() {
                 setReduced(33.5 - 13.65)
                 setActive(2)
                 setStep(2)
-                removeColorLineStepper(step)
-                removebgCicleNumber(step)
+                removeColorLineStepper(step_arg)
+                removebgCicleNumber(step_arg)
 
                 break;
             case 4:
@@ -108,9 +137,15 @@ function Signup_component() {
                 setAdded(66 + 969 * 2)
                 setReduced(66 - 13.64 * 2 + 0.1)
                 setActive(3)
-                setStep(3)
-                removeColorLineStepper(step)
-                removebgCicleNumber(step)
+
+                if(isprofessinal == 1){
+                    setStep(-3)
+                }else{
+                    setStep(3)
+
+                }
+                removeColorLineStepper(step_arg)
+                removebgCicleNumber(step_arg)                
 
                 break;
             default:
@@ -174,6 +209,8 @@ function Signup_component() {
                                 <StepOneSignup
                                     next={next}
                                     preview={preview}
+                                    handleProfessional={handleProfessional}
+                                    handleParticular={handleParticular}
                                 />
                                 <div className={styles.stepper_one}>
 
@@ -205,7 +242,80 @@ function Signup_component() {
                             </>
 
                         );
-                    default:
+                        case 3:
+                            return (
+                                <>
+                                    <StepThreeSignup
+                                        next={next}
+                                        preview={preview}
+                                    />
+                                    <div className={styles.stepper_three}>
+                                        <Stepper
+                                            filled={filled}
+                                            added={added}
+                                            active={active}
+                                            reduced={reduced}
+                                        />
+                                    </div>
+                                </>
+    
+                            );
+                            case -3:
+
+                                return (
+                                    <>
+                                        <StepThreeCompanySignup
+                                            next={next}
+                                            preview={preview}
+                                        />
+                                        <div className={styles.stepper_two}>
+                                            <Stepper
+                                                filled={filled}
+                                                added={added}
+                                                active={active}
+                                                reduced={reduced}
+                                            />
+                                        </div>
+                                    </>
+        
+                                );
+                        case 4:
+                            return (
+                            <>
+                                <StepFourSignup
+                                    next={next}
+                                    preview={preview}
+                                />
+                                <div className={styles.stepper_four}>
+                                    <Stepper
+                                        filled={filled}
+                                        added={added}
+                                        active={active}
+                                        reduced={reduced}
+                                    />
+                                </div>
+                            </>
+
+                        ); 
+                        case 5:
+                            return (
+                            <>
+                                <ConfirmationComponentSignup
+                                    next={next}
+                                    preview={preview}
+                                />
+                                <div className={styles.stepper_five}>
+                                    <Stepper
+                                        filled={filled}
+                                        added={added}
+                                        active={active}
+                                        reduced={reduced}
+                                    />
+                                </div>
+                            </>
+
+                        );
+                default:
                         return <></>;
                 }
             },)
@@ -215,7 +325,8 @@ function Signup_component() {
             return (
                 <Container fluid className={styles.main}>
                      {renderContent()}
-                 </Container>)
+                </Container>
+                )
 
 }
 export default Signup_component

@@ -184,12 +184,13 @@ function Contact() {
 
                             </div>
 
-                            <button type="submit" className={styles.submit} >Envoyer
+                            <button type="submit" className={styles.submit} >
+                                <span className={loadSpiner == true && submitted == true ? styles.disable : styles.spinner}>Envoyer</span>
                                 <div className={loadSpiner == true && submitted == true ? `spinner-border mr-12 ${styles.spinner}` : `${styles.disable}`} role="status">
                                     <span className={`visually-hidden`} >Loading...</span>
                                 </div>
                             </button>
-                        </form>
+                        </form> 
                     </div>
                     <div className="col-sm-4" > </div>
 

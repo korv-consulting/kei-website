@@ -89,11 +89,12 @@
 
 .row_center {
     margin-top: 5%;
+    margin-bottom: -12%;
 }
 
 .box_flex {
     display: flex;
-    height: 11%;
+    height: 18%;
     margin-bottom: 10%;
 }
 
@@ -102,12 +103,17 @@
     max-height: 100%;
 }
 
+.box_adress{
+    height: 18%;
+    margin-bottom: 5%;
+}
 
 .box_bottom {
     width: 63%;
     height: 70%;
     margin-bottom: 5%;
     display: block;
+    margin-left: -1.5%;
 
 }
 
@@ -232,9 +238,123 @@
 
 
 
+
+/*--------Elements of step 2 signnup */
+/*
+.label{
+    position: relative;
+    left:15px;
+    bottom:50px;
+    transition: all 0.9s;
+    z-index: 1;
+    color: #2db6fe;
+    padding: 4px;
+}
+
+.input_text_simple{
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2db6fe;
+    border-radius: 4px;
+    background: #fff!important;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+    margin-bottom: 11px;
+    color: black;
+
+}
+
+
+.input_text_simple:focus{
+    border:2px solid  #2DB6FE;
+    height: 15vw;
+}
+
+.input_text_simple:focus + .label{
+    top:-73px;
+    color:  #2DB6FE;
+    font-size: 15px;
+    background: #fff;
+    opacity: 1;
+    scale: 0.9;
+}
+
+.input_text_simple:not(:placeholder-shown) + .label{
+    top:-75px;
+    font-size: 15px;
+    background: #fff;
+
+}
+
+.input_text_simple::placeholder{
+    font-size: 15px;
+    opacity: 1;
+    transition: all 0.3s;
+    color: #2DB6FE;
+
+}
+
+
+.input_text_simple:focus::placeholder{
+    opacity: 0.5;
+}
+
+
+.input_text_simple::placeholder {
+    color: transparent;
+}
+
+
+.input_text_simple:focus + .label + .box_select {
+    border: 2px solid #2DB6FE;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: -19%;
+    display: flex;
+    height: 190%;
+    background-color: red;
+
+
+}
+.input_text_simple:focus + .label + .box_select + .select{
+  
+    background-color: green;
+
+
+}
+
+.box_select{
+    border: 2px solid #2DB6FE;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: -19%;
+    display: none;
+    height: 190%;
+    background-color: #fff;
+
+}
+*/
+/*--------End Elements of step 2 signnup */
+
 .box_select{
     width: 100%;
     height: auto;
+    border-radius: 5px;
+
+}
+
+.container_select{
+    width: 100%;
+    height: 4vw;
+    border: 2px solid #2DB6FE;
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: -15%;
+    transition: ease-in-out 0.5s;
 }
 
 .box_help{
@@ -242,8 +362,9 @@ margin-bottom: 15%;
 }
 
 .select {
-    max-width: 100%;
-    width: 100%;
+    max-width: 90%;
+    width: 90%;
+    margin-left: 5%;
     margin-bottom: 2%;
     border: 2px solid #2DB6FE;
     max-height: 99%;

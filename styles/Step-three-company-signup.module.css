@@ -1,0 +1,48 @@
+.background {
+    position: absolute;
+    background-color: white;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0px;
+    top: 0px;
+    z-index: -1; 
+    width: 100%;
+    height: 145%;
+    /* background-size: cover; */
+    background-repeat: repeat-x;
+    /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
+    backdrop-filter: blur(5px);
+    opacity: 1;
+    min-height: 100%;
+    max-width: 100vw;
+
+}
+
+/* The whole structure  of the Signup page */
+.main {
+  background-color:rgba(189, 206, 229, 0.7);
+  height: 135vh;
+  margin-top: -42%;
+  margin-bottom: -70%;
+  width: 100%;
+
+
+} 
+
+
+.global_row {
+    margin-top: 39%;
+    padding-top: 2%;
+}
+
+
+.bigcontainer {
+    height: 38vw;
+    margin-bottom: 1.3%;
+    border: 2px solid #2DB6FE;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 5%;
+    min-height: 125%;
+}

@@ -6,12 +6,12 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import About from '@/partials/base/about'
 import MiddleBar from '@/partials/base/middleBar'
-import Offer from '@/partials/base/offer' 
-import { Image } from 'react-bootstrap'
+import Offer from '@/partials/base/offer'
+import { Col, Container, Image, Row } from "react-bootstrap"
 
 //import Image from 'next/image'
 import stylesplash from '../styles/Splash.module.css'
-import React, { useState, useEffect } from 'react' 
+import React, { useState, useEffect } from 'react'
 import Logo from "../components/Logo"
 import ProgressBar from "../components/ProgressBar"
 import Contact from '../components/Contact'
@@ -41,6 +41,7 @@ export default function Home() {
       {
         loading ?
           (
+            /*
             <div className={stylesplash.App}>
 
                 <div className={stylesplash.parent} >
@@ -60,6 +61,26 @@ export default function Home() {
 
                 </div>
             </div>
+
+            
+            */
+
+            <div className={stylesplash.container_splash}>
+              <Container>
+                <Row className={`mx-auto ${stylesplash.main_splash}`}  >
+                  <Col></Col>
+                  <Col >
+                    <div className={`mx-auto mx-1 `}>
+                      <video src="./splash/splash-screen2.mp4" autoPlay muted className="h-[100%] w-[100%] " ></video>
+                    </div>
+                  </Col>
+                  <Col></Col>
+                </Row>
+              </Container>
+
+            </div>
+
+
           )
           : (
 
@@ -81,7 +102,7 @@ export default function Home() {
 
               </main>
 
-              <Footer /> 
+              <Footer />
             </div>
           )
       }

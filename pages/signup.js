@@ -5,10 +5,7 @@ import Language from '@/partials/base/language'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css' 
 import Signup_component from '../components/auth/signup/signup-component'
-
-import { Image } from 'react-bootstrap'
-
-//import Image from 'next/image'
+import { Col, Container, Image, Row } from "react-bootstrap"
 import stylesplash from '../styles/Splash.module.css'
 import React, { useState, useEffect } from 'react' 
 import Logo from "../components/Logo"
@@ -37,25 +34,43 @@ function Signup() {
     <>
       {
         loading ?
-          (<div className={stylesplash.App}>
+            ( /*
+            <div className={stylesplash.App}>
 
-            <div className={stylesplash.parent} >
-              <div className={stylesplash.dot} onLoad={(e) => handleScale()} >
-              </div>
+                    <div className={stylesplash.parent} >
+                      <div className={stylesplash.dot} onLoad={(e) => handleScale()} >
+                      </div>
 
-              <div className={stylesplash.boxsplash}>
-                <Logo />
-                <ProgressBar />
-                <div className={stylesplash.description}>
-                  <p>
-                    Petite description sur l'entreprise <br />
-                    ou simple ou simple message d'accueil
-                  </p>
+                      <div className={stylesplash.boxsplash}>
+                        <Logo />
+                        <ProgressBar />
+                        <div className={stylesplash.description}>
+                          <p>
+                            Petite description sur l'entreprise <br />
+                            ou simple ou simple message d'accueil
+                          </p>
+                        </div>
+                      </div>
+
+                    </div> 
+                  </div>
+                  */
+                  <div className={stylesplash.container_splash}>
+                  <Container>
+                    <Row className={`mx-auto ${stylesplash.main_splash}`}  >
+                      <Col></Col>
+                      <Col >
+                        <div className={`mx-auto mx-1 `}>
+                          <video src="./splash/splash-screen2.mp4" autoPlay muted className="h-[100%] w-[100%] " ></video>
+                        </div>
+                      </Col>
+                      <Col></Col>
+                    </Row>
+                  </Container>
+    
                 </div>
-              </div>
-
-            </div> 
-          </div>
+    
+    
           )
           : (
 

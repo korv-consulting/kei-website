@@ -97,6 +97,13 @@
     margin-bottom: 10%;
 }
 
+.box_flex_last{
+    display: flex;
+    height: 11%;
+    margin-bottom: -10%;
+}
+
+
 .box_left {
     margin-right: 2%;
     max-height: 100%;
@@ -115,6 +122,7 @@
     display: flex;
     height: 2vw;
     width: 100%;
+    margin: 0 auto;
 
 }
 
@@ -123,7 +131,7 @@
     height: 100%;
     min-height: 100%;
     margin-right: 5%;
-    margin-left: 24%;
+    margin-left: 23%;
     width: 25%;
     border: 2px solid #03DAC5;
     border-radius: 5px;
@@ -232,31 +240,109 @@
 
 
 
-.box_select{
+
+/*--------Elements of step 2 signnup */
+/*
+.label{
+    position: relative;
+    left:15px;
+    bottom:50px;
+    transition: all 0.9s;
+    z-index: 1;
+    color: #2db6fe;
+    padding: 4px;
+}
+
+.input_text_simple{
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2db6fe;
+    border-radius: 4px;
+    background: #fff!important;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+    margin-bottom: 11px;
+    color: black;
+
+}
+
+
+.input_text_simple:focus{
+    border:2px solid  #2DB6FE;
+    height: 15vw;
+}
+
+.input_text_simple:focus + .label{
+    top:-73px;
+    color:  #2DB6FE;
+    font-size: 15px;
+    background: #fff;
+    opacity: 1;
+    scale: 0.9;
+}
+
+.input_text_simple:not(:placeholder-shown) + .label{
+    top:-75px;
+    font-size: 15px;
+    background: #fff;
+
+}
+
+.input_text_simple::placeholder{
+    font-size: 15px;
+    opacity: 1;
+    transition: all 0.3s;
+    color: #2DB6FE;
+
+}
+
+
+.input_text_simple:focus::placeholder{
+    opacity: 0.5;
+}
+
+
+.input_text_simple::placeholder {
+    color: transparent;
+}
+
+
+.input_text_simple:focus + .label + .box_select {
+    border: 2px solid #2DB6FE;
     width: 100%;
     height: auto;
+    border-radius: 5px;
+    margin-top: -19%;
+    display: flex;
+    height: 190%;
+    background-color: red;
+
+
+}
+.input_text_simple:focus + .label + .box_select + .select{
+  
+    background-color: green;
+
+
 }
 
-.box_help{
-margin-bottom: 15%;
-}
-
-.select {
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 2%;
+.box_select{
     border: 2px solid #2DB6FE;
-    max-height: 99%;
-    color: #2DB6FE;
-    margin-top: -12%;
-    
-}
-
-.select:focus + .container_select {
-
-    height: 10vw;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: -19%;
+    display: none;
+    height: 190%;
+    background-color: #fff;
 
 }
+*/
+/*--------End Elements of step 2 signnup */
+
+
 
 .label_select{
     position: relative;

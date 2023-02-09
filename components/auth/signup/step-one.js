@@ -3,7 +3,21 @@ import styles from "@/styles/Step-one-signup.module.css"
 import React, { useState, useEffect } from 'react'
 import Stepper from "components/Stepper"
 
-function StepOneSignup({next,preview}) {
+function StepOneSignup({next,preview,handleProfessional,handleParticular}) {
+
+
+    const professional = () => {
+        handleProfessional()
+        next(1)
+    }
+
+
+
+    const particular = () => {
+        handleParticular()
+        next(1)
+    }
+
 
 
  
@@ -25,7 +39,7 @@ function StepOneSignup({next,preview}) {
 
                                     </div>
 
-                                    <div className={styles.subtitleleft} onClick={()=>{next(1)}}  > 
+                                    <div className={styles.subtitleleft} onClick={()=>{particular()}}  > 
                                         <center>
                                             <div className={styles.txtleleft} >Particulier</div>
                                         </center>
@@ -39,9 +53,9 @@ function StepOneSignup({next,preview}) {
 
                                     </div>
 
-                                    <div className={styles.subtitleright} onClick={()=>{next(1)}}>
+                                    <div className={styles.subtitleright} onClick={()=>{professional()}}>
                                         <center>
-                                            <div className={styles.txtright}  >Professionnel</div>
+                                            <div className={styles.txtright}>Professionnel</div>
                                         </center>
 
                                     </div> 

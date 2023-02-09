@@ -1,0 +1,53 @@
+
+.box_top{
+    text-align: center;
+    font-size: 1.5vw;
+    color: #1583D8;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+.icon{
+    margin-left: 2%;
+}
+.box_center{
+    margin-bottom: 5%;
+    display: block;
+
+}
+
+.title{
+    text-align: center;
+    font-size: 2vw;
+    color: #1583D8;
+    font-weight: bold;
+}
+
+.subtitle{
+text-align: center;
+font-size: 1vw;
+color: #56A0C5;
+font-weight: bold;
+
+}
+
+.describtion{
+text-align: center;
+font-size: 1vw;
+color: #56A0C5;
+}
+
+.box_bottom{
+    display: flex;
+}
+
+.picture{
+    width: 60%;
+    height: 85%;
+    z-index: 1;
+}
+
+.envelop{
+    margin-left: -99%;
+}
+

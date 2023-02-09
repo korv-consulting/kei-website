@@ -1,0 +1,96 @@
+.main{
+  margin-top: -1.7vw;
+  width: 100%;
+  height: 55vw;
+background-color:rgba(107, 133, 167, 0.4); 
+
+
+}
+
+.background {
+  position: absolute;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0px;
+  top: 9%;
+  z-index: -1; 
+  width: 100%;
+  height: 100%;
+  /* background-size: cover; */
+  background-repeat: repeat-x;
+  /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
+  backdrop-filter: blur(5px);
+  opacity: 1;
+  min-height: 100%;
+  max-width: 100vw;
+
+}
+
+
+.picture{
+    margin-top: 15%;
+    margin-bottom:8%;
+    margin-left: 17vw;
+}
+
+.box_btn{
+  margin-top: 45.2%;
+
+}
+
+.btn_welcome_back{
+ background-color:rgba(60,158,164,0.8) ;
+ border-radius: 40px ;
+ border: 2px solid #F2FBFF;
+ padding: 2%;
+ width: 40%;
+ font-weight: bold;
+}
+
+/* ---------------- Begind  Responsive Management -------------------------  */
+
+/*  Tablet  Mode */
+@media only screen and (min-width: 361px) and (max-width: 549px) {    
+  .main{
+    height: 144vw;
+    margin-top: auto;
+
+  }
+    
+  .picture{
+    width: 10%;
+    height: 10%;
+    margin-top: 3%;
+    margin-bottom:3%;
+    margin-left: 45%;
+  }
+  
+  .box_btn{
+    margin-top: 2%;
+
+  }
+     
+}
+
+/*  phone  Mode */
+@media only screen and (max-width: 360px) {
+  .main{
+    height: 204vw; 
+  }
+
+  .picture{
+    width: 10%;
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom:5%;
+    margin-left: 45%;
+  }
+
+  .box_btn{
+    margin-top: 1%;
+  }
+     
+}
+
+/* ---------------- End  Responsive Management -------------------------  */

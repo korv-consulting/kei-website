@@ -62,7 +62,7 @@
 
 
 .disable {
-    display: none;
+    display: none; 
 }
 
 /*--------------end imported css form ---------------------*/
@@ -89,25 +89,48 @@
 
 .row_center {
     margin-top: 5%;
+    margin-bottom: -12%;
 }
 
-.box_flex {
-    display: flex;
-    height: 11%;
-    margin-bottom: 10%;
+.eye_icon{
+   margin-top: -8.5vw;
+   margin-left: 90%;
+   
 }
 
-.box_left {
-    margin-right: 2%;
-    max-height: 100%;
+@media only screen and ((min-width: 1024px) and (max-width:1450px)) {
+
+    .eye_icon{
+        margin-top: -16.5vw;
+        margin-left: 90%;
+        color: red;
+     }
+     
 }
 
+
+
+@media only screen and (max-width: 1023px) {
+
+    .eye_icon{
+        margin-top: -29.5vw;
+        margin-left: 90%;
+        color: rgb(204, 0, 255);
+
+     }
+     
+}
+
+.box_pwd{
+    height: 14%;
+}
 
 .box_bottom {
     width: 63%;
     height: 70%;
     margin-bottom: 5%;
     display: block;
+    margin-left: -1.5%;
 
 }
 
@@ -215,7 +238,7 @@
 
 
 }
-
+ 
 .txt_blue {
     color: #2DB6FE;
     width: 60%;
@@ -223,47 +246,37 @@
 
 }
 
+.txt_blue_check {
+    color: #2DB6FE;
+    width: 60%;
+    font-size: larger;
+    margin-left: 2%;
+    margin-right: 1%;
+
+}
+
+
 .txt_green {
     color: #03DAC5;
     font-size: larger;
     width: 40%;
 }
 
-
-
-
-.box_select{
-    width: 100%;
-    height: auto;
-}
-
-.box_help{
-margin-bottom: 15%;
-}
-
-.select {
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 2%;
-    border: 2px solid #2DB6FE;
-    max-height: 99%;
-    color: #2DB6FE;
-    margin-top: -12%;
-    
-}
-
-.select:focus + .container_select {
-
-    height: 10vw;
+.checkbox{
+    width: 5%;
 
 }
 
-.label_select{
-    position: relative;
-    left:15px;
-    bottom:50px;
-    transition: all 0.9s;
-    z-index: 2;
-    color: #2db6fe;
-    padding: 4px;
+.box_flex{
+    display: flex;
+}
+
+.box_right{
+    width: 95%;
+}
+
+.hide{
+    display:none;
+
+
 }

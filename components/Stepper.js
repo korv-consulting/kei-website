@@ -48,7 +48,7 @@ function Stepper({ filled, added, active, reduced }) {
                 borderRadius: "500px 500px 500px 500px",
                 maxWidth: "100vw"
 
-              }}>
+              }}> 
               </div>
               <div style={{
                 border: "1% solid #2DB6FE",

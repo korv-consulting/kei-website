@@ -1,3 +1,21 @@
+
+/*---- Begin styles for splash screen ---------  */
+.container_splash{
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10%;
+  
+}
+
+
+
+
+/*----End styles for splash screen ---------  */
+
+
+
+
+
 .App {
     text-align: center;
     display:flex;

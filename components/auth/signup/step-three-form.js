@@ -1,12 +1,13 @@
 import { Button, ButtonGroup, Card, Col, Container, Image, Row } from "react-bootstrap"
-import styles from '../../../styles/Step-two-form-signup.module.css'
+import styles from '../../../styles/Step-three-form-signup.module.css'
 import style from '../../../styles/Floating-label.module.css'
 import React, { useState, useEffect } from 'react';
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 
 
-function StepTwoFormSignup({ next, preview }) {
+function StepThreeFormSignup({ next, preview }) {
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -44,53 +45,37 @@ function StepTwoFormSignup({ next, preview }) {
                 <Row className={styles.row_center}  >
                     <Col xs={2}></Col>
                     <Col xs={8} className={styles.box_center} >
+                       
+                        <div className={styles.box_adress}>
+                            <input type="adress" id='adress' placeholder='BP: 237' className={`form-control ${style.input_text}`} required name="adress"
+                                title="Adresse"
+                            />
+                            <label htmlFor='adress' id='uadress' className={style.label}>Adresse</label>
+                            <span id="adress" className={`invalid-feedback ${styles.errorMsg}`} >
+                                Veuillez saisir votre Adresse
+                            </span>
+                        </div>
                         <div className={styles.box_flex}>
                             <div className={styles.box_left} >
-                                <input type="text" id='username' placeholder='Entrer votre nom' className={`form-control ${style.input_text}`} required name="name"
-                                    title=" Veuillez saisir votre nom"
+                                <input type="text" id='city' placeholder='Entrer votre ville' className={`form-control ${style.input_text_simple}`}  name="city"
+                                    title=" Veuillez saisir votre ville"
                                 />
-                                <label htmlFor='username' id='uname' className={style.label}>Nom</label>
+                                <label htmlFor='city' id='city' className={style.label}>Ville</label>
                                 <span id="name" className={`invalid-feedback ${styles.errorMsg}`} >
-                                    Veuillez saisir votre nom
+                                    Veuillez saisir votre ville
                                 </span>
                             </div>
                             <div>
-                                <input type="text" id='username' placeholder='Entrer votre Prénom' className={`form-control ${style.input_text}`} required name="name"
-                                    title=" Veuillez saisir votre prénom"
+                                <input type="text" id='country' placeholder='Entrer votre Pays' className={`form-control ${style.input_text}`} required name="country"
+                                    title=" Veuillez saisir votre Pays"
                                 />
-                                <label htmlFor='username' id='uname' className={style.label}>Prénom</label>
+                                <label htmlFor='country' id='uname' className={style.label}>Pays</label>
                                 <span id="name" className={`invalid-feedback ${styles.errorMsg}`} >
-                                    Veuillez saisir votre Prénom
+                                    Veuillez saisir votre Pays
                                 </span>
                             </div>
                         </div>
-                        <div>
-                            <input type="email" id='mail' placeholder='example@gmail.com' className={`form-control ${style.input_text}`} required name="email"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                title="L'E-Mail doit contenir au moins le caractere @"
-                            />
-                            <label htmlFor='mail' id='umail' className={style.label}>E-MAIL</label>
-                            <span id="email" className={`invalid-feedback ${styles.errorMsg}`} >
-                                Veuillez saisir votre E-MAIL
-                            </span>
-                        </div>
-                        <div className={styles.box_help}>
-                            <input type="text" id='tel' placeholder='TEL' className={`form-control ${style.input_text_simple}`} name="tel"
-                                title="Veuillez saisir votre numéro de téléphone"
-                            />
-                            <label htmlFor='tel' className={style.label}>Téléphone</label>
-
-                        </div>
-
-                        <div className={styles.box_select} >
-                            <Form.Select size="lg" className={styles.select} aria-label="Default select example">
-                                <option > Choix de l'offre tarifaire</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
-
-                        </div>
+                      
 
                     </Col>
                     <Col xs={2}></Col>
@@ -100,12 +85,12 @@ function StepTwoFormSignup({ next, preview }) {
                     <Col ></Col>
                     <Col xs={4} className={styles.box_bottom} >
                         <div className={styles.box_button}>
-                            <div className={styles.btn_left} onClick={() => { preview(2) }} >
+                            <div className={styles.btn_left} onClick={() => { preview(3) }} >
                                 <BsArrowLeft className={styles.icon} />
                                 <span className={styles.txt_hidded} >Précédent</span>
 
                             </div>
-                            <div className={styles.btn_right} onClick={() => { next(2) }} >
+                            <div className={styles.btn_right} onClick={() => { next(3) }} >
                                 <BsArrowRight className={styles.icon} />
                                 <span className={styles.txt_hidded} >Suivant</span>
                             </div>
@@ -130,4 +115,4 @@ function StepTwoFormSignup({ next, preview }) {
     )
 }
 
-export default StepTwoFormSignup
+export default StepThreeFormSignup
