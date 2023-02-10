@@ -61,3 +61,24 @@
 .disable{
     display: none;
 }
+
+@media (max-width: 725px) {
+
+    /* Style to hide the KEI logo displayed in the Contact section */
+    .hide_img_col{
+        display: none;
+    }
+
+    /* Stryle for the submission Button */
+    .submit {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
+
+    .section {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+}

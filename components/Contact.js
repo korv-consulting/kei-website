@@ -109,7 +109,7 @@ function Contact() {
  
             <div className={`container`} >
                 <div className={`row`}>
-                    <div className={`col-sm-2`}  > 
+                    <div className={`col-sm-2 ${styles.hide_img_col}`}  > 
                         <Image src='/KEI.png'  className={styles.card} />
                     </div>
                     <div className={`col-sm-2`}  > 

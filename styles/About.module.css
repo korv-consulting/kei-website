@@ -4,6 +4,7 @@
     padding-left: 6%;
     padding-right: 6%;
     padding-bottom: 8%;
+    background-color: transparent ;
 }
 
 /* .global_row {
@@ -25,7 +26,7 @@
     top: 0;
     z-index: -1;
     width: 100% !important;
-    height: 127%;
+    height: 125%;
     /* background-size: cover; */
     background-repeat: repeat-x;
     /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
@@ -36,13 +37,14 @@
 
 /* Column of the Title */
 .col_title {
-    width: max-content;
+    width: auto;
+    display: flex;
     align-content: flex-end;
 }
 
 /* The title of the block */
 .title{
-    font-size: 328%;
+    font-size: 320%;
     font-weight: bolder;
     color: #11467e;
     font-family: 'Segoe UI';
@@ -53,13 +55,13 @@
 /* Colum for Image */
 .col_image {
     padding-top: 8%;
-    margin-left: -25%;
+    margin-left: -25% !important;
 }
 
 /* Image to illustrate a person working on KEI App */
 .image{
-    height: 100%;
-    width: 100%;
+    height: 120%;
+    width: 120%;
 }
 
 /* Button Renting Management */
@@ -100,7 +102,8 @@
     width: 50%;
     height: 80px;
     margin-top: 3%;
-    padding-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1% !important;
     padding-left: 4%;
     color: #effaff !important;
     background-color: #03dac5 !important;
@@ -237,8 +240,206 @@ over the button Watch a demo(Regarder une DEMO?) */
     content:url("/play_withe.png");
 }
 
-@media (max-width: 375px) {
-    .title{
-        font-size: 35px;
+@media (max-width: 725px) {
+
+    .main {
+        margin-top: 15%;
+        padding-left: 8%;
+        padding-right: 6%;
+        padding-bottom: 8%;
     }
+
+    .background {
+        position: absolute;
+        background-color: white;
+        padding-top: 5%;
+        /* margin-top: 8%; */
+        margin-top: 5%;
+        margin-right: auto;
+        margin-left: auto;
+        left: 0;
+        /* right: 0; */
+        top: 0;
+        z-index: -1;
+        width: 110% !important;
+        height: 125%;
+        /* background-size: cover; */
+        background-repeat: repeat-x;
+        filter: blur(10px);
+        opacity: 1;
+    }
+
+    /* Column of the Title */
+    .col_title {
+        width: auto;
+        display: inline-flex;
+        align-content: center;
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bolder;
+        width: fit-content;
+        text-align: justify;
+        margin-top: 5%;
+    }
+
+    /* Colum for Image */
+    .col_image {
+        padding-top: 2%;
+        margin-left: -15% !important;
+    }
+
+    /* Image to illustrate a person working on KEI App */
+    .image {
+        height: 120%;
+        width: 120%;
+    }
+
+    /* Button Renting Management */
+    .btn_rent_mnt,
+    .btn_rent_mnt:hover {
+        background-image: url('/mini_icon.svg');
+        background-size: 70%;
+        opacity: 0.85;
+        font-weight: bolder;
+        font-size: 30px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        width: 90%;
+        /* height: 2em; */
+        margin-top: 1%;
+        padding-top: 2%;
+        border-radius: 8px;
+    }
+
+    /* Description for the goal of the application */
+    .description{
+        font-size: 18px;
+        text-align: justify;
+        font-weight: bold;
+        width: 90%;
+        margin-top: 3%;
+    }
+
+    .btn_download,
+    .btn_download:hover{
+        font-size: 17px;
+        text-align: center;
+        width: 80%;
+        height: 60px;
+        margin-top: 3%;
+        padding-top: 2%;
+        padding-bottom: 1% !important;
+        padding-left: 4%;
+    }
+
+    .btn_download:hover{
+        padding-top: 1%;
+        padding-left: 3%;
+        font-size: 15px;
+    }
+
+    .img_u_icon{
+        visibility: hidden;
+        margin-bottom: -2%;
+        width: 20px;
+    }
+
+    .btn_download:hover .img_u_icon{
+        visibility: visible;
+        transition-delay: 600ms;
+    }
+
+    .img_arrow{
+        visibility: hidden;
+        margin-left: 5%;
+        margin-bottom: 3.5%;
+        margin-right: -5.48%;
+        width: 12px;
+    }
+
+    .row_demo{
+        padding-left: 8%;
+    }
+
+    /* Button for Watching demo of the application */
+    .btn_watch_demo,
+    .btn_watch_demo:hover{
+        font-size: 16px;
+        text-align: center;
+        width: 58%;
+        height: 35px;
+        margin-top: 3%;
+        margin-left: 2%;
+        align-self: center;
+    }
+
+    .btn_watch_demo:hover{
+        margin-left: -4%;
+        padding-left: 10%;
+        padding-right: 2%;
+        width: 60%;
+        transition-delay: 500ms;
+    }
+
+    .btn_play:hover ~ .btn_watch_demo {
+        margin-left: -3%;
+        padding-left: 7%;
+        width: 34%;
+        transition-delay: 500ms;
+    }
+
+    /* Button for Playing demo of the application */
+    .btn_play,
+    .btn_play:hover{
+        /* visibility: hidden; */
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-top: 3%;
+        border-width: 5px;
+        padding-left: 5%;
+        margin-left: -70%;
+        display: block;
+        opacity: 1;
+        border-radius: 100%;
+    }
+
+    .btn_play:hover {
+        background-color: #03dac5 !important;
+        border-color: #effaff !important;
+        padding-left: 3.2%;
+    }
+
+    .btn_watch_demo:hover ~ .btn_play {
+        padding-left: 3.5%;
+    }
+
+    .img_play{
+        margin-bottom: 35%;
+        width: 22px;
+    }
+
+    /* Change the play button color to white when mouse is 
+    over the circle button (Play) */
+    .btn_play:hover .img_play {
+        content:url("/play_withe.png");
+        width: 25px;
+    }
+
+    /* Change the play button color to white when mouse is 
+    over the button Watch a demo(Regarder une DEMO?) */
+    .btn_watch_demo:hover ~ .btn_play .img_play {
+        content:url("/play_withe.png");
+    }
+}
+
+@media (max-width: 1200px){
+
 }

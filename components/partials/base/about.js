@@ -7,7 +7,7 @@ function About() {
         <Container fluid className={styles.main} id="home">
             <Image fluid src="/skyscraper.png" className={styles.background} alt="Sky Crappers"/>
             <Row className={styles.global_row} id="about">
-                <Col>
+                <Col md="8" style={{ alignContent: 'center', alignItems: 'center' }}>
                     <Row className={styles.title}>
                         Vous avez les clefs pour améliorer votre
                     </Row>
@@ -37,7 +37,7 @@ function About() {
                         </Button>
                     </Row>
                 </Col>
-                <Col className={`d-flex ${styles.col_image}`}>
+                <Col md="6" className={`d-flex ${styles.col_image}`}>
                     <Image src='/agent.png' className={styles.image} />
                 </Col>
             </Row>

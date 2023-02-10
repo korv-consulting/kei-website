@@ -79,7 +79,6 @@ export default function Home() {
                 <MiddleBar />
                 <Offer />
                 <Contact />
-
               </main>
 
               <Footer />

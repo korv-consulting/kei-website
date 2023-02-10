@@ -31,7 +31,7 @@
 
 /* Style for the space between menu items */
 .menu_item_space{
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 /* Style for menu items(Home, About, Offers, Contact) */
@@ -109,12 +109,56 @@
     
 } */
 
-@media (max-width: 425px) {
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding-top: 1%;
+        padding-bottom: 0.8%;
+        padding-left: 2%;
+        padding-right: 2%;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .logo{
+        margin-right: 3em;
+        width: 25%;
+    }
+
+    /* Style for menu */
+    .menu {
+        font-size: 120%;
+        text-align: center;
+        white-space: nowrap;
+        padding-left: 2%;
+        padding-right: 2%;
+        /* padding-bottom: -10%; */
+        box-shadow: 0 2px 0 #03dac5; /* Line for menu items */
+    }
+
+    .menu_item_space{
+        margin-right: 20px;
+    }
+
+    /* Common Style for Login and Sign up buttons */
+    .login_btn, .signup_btn {
+        font-size: 17px;
+        width: 120px;
+        height: 35px;
+        padding-bottom: 1.7em;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 990px) {
 
     .navbar {
         /* position:relative; */
         /* margin-top: 1%; */
-        padding-top: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        padding-bottom: 3%;
         overflow: hidden !important;
         position: fixed !important;
         top: 0 !important;
@@ -122,20 +166,56 @@
         display: flex;
     }
 
+    .menu_icon {
+        color: transparent !important;
+        border-color: #11467e !important;
+    }
+
+    .menu_item:visited {
+        color: transparent !important;
+        border-color: transparent !important;
+    }
+
     .menu {
+        padding-left: 0%;
+        padding-right: 0%;
         /* display: flex; */
-        font-size: 15px;
+        font-size: 17px;
+        text-align: justify;
         white-space: nowrap;
         /* padding-left: 0%;  */
         /* padding-bottom: -10%; */
-         box-shadow:none;
+        box-shadow: none;
+        width: 40%;
     }
 
-    .active{
+    .active {
         /* color: #03dac5 !important; */
         line-height: 1.5;
         /* margin-right: 5%; */
         margin-bottom: 2px;
         opacity: 1;
+        box-shadow: none;
+    }
+
+    /* Common Style for Login and Sign up buttons */
+    .login_btn, .signup_btn {
+        font-size: 15px;
+        width: 120px;
+        height: 30px;
+        opacity: 1;
+        padding-bottom: 1.7em;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .logo{
+        margin-right: 2em;
+        width: 30%;
+    }
+
+    .menu{
+        margin-right: 5% !important;
     }
 }
