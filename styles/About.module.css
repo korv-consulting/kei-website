@@ -59,7 +59,7 @@
 }
 
 /* Image to illustrate a person working on KEI App */
-.image{
+.image {
     height: 120%;
     width: 120%;
 }
@@ -133,9 +133,9 @@
 .img_arrow{
     visibility: hidden;
     margin-left: 5%;
-    margin-bottom: 3.5%;
-    margin-right: -5.4%;
-    width: 18px;
+    margin-bottom: 3%;
+    margin-right: -5%;
+    width: 16px;
 }
 
 .btn_download:hover .img_arrow{
@@ -156,13 +156,13 @@
 .btn_watch_demo:hover{
     font-weight: bold;
     font-size: 23px;
-    text-align: center;
-    width: 32%;
+    text-align: left;
+    width: 30%;
     height: 45px;
-    /* padding-left: 1.5em; */
+    padding-left: 5%;
     /* padding-right: 1em; */
     margin-top: 3%;
-    margin-left: 2%;
+    margin-left: 1%;
     /* padding-left: 1%; */
     color: #03dac5 !important;
     background-color: #effaff !important;
@@ -175,18 +175,18 @@
 
 .btn_watch_demo:hover{
     /* position:static; */
-    margin-left: -4%;
-    padding-left: 10%;
+    /* margin-left: -2%; */
+    padding-left: 7%;
     padding-right: 2%;
-    width: 38%;
-    transition-delay: 500ms;
+    width: 32%;
+    transition-delay: 700ms;
 }
 
 .btn_play:hover ~ .btn_watch_demo {
-    margin-left: -3%;
+    /* margin-left: -3%; */
     padding-left: 7%;
-    width: 34%;
-    transition-delay: 500ms;
+    width: 32%;
+    transition-delay: 700ms;
 }
 
 /* Button for Playing demo of the application */
@@ -202,9 +202,9 @@
     color: #03dac5 !important;
     background-color: #effaff !important;
     border-color: #03dac5 !important;
-    border-width: 8px;
+    border-width: 6px;
     padding-left: 2%;
-    margin-left: -39%;
+    margin-left: -35%;
     /* margin-right: -15px; */
     display: block;
     opacity: 1;
@@ -214,13 +214,14 @@
 .btn_play:hover {
     background-color: #03dac5 !important;
     border-color: #effaff !important;
-    padding-left: 3.2%;
+    padding-left: 3.5%;
 }
 
 .btn_watch_demo:hover ~ .btn_play {
     background-color: #03dac5 !important;
     border-color: #effaff !important;
     padding-left: 3.5%;
+    margin-left: -37%;
 }
 
 .img_play{
@@ -240,10 +241,12 @@ over the button Watch a demo(Regarder une DEMO?) */
     content:url("/play_withe.png");
 }
 
+/* Starting of Responsive */
+
 @media (max-width: 725px) {
 
     .main {
-        margin-top: 15%;
+        margin-top: 20%;
         padding-left: 8%;
         padding-right: 6%;
         padding-bottom: 8%;
@@ -300,7 +303,7 @@ over the button Watch a demo(Regarder une DEMO?) */
     .btn_rent_mnt,
     .btn_rent_mnt:hover {
         background-image: url('/mini_icon.svg');
-        background-size: 70%;
+        background-size: 100%;
         opacity: 0.85;
         font-weight: bolder;
         font-size: 30px;
@@ -310,7 +313,7 @@ over the button Watch a demo(Regarder une DEMO?) */
         width: 90%;
         /* height: 2em; */
         margin-top: 1%;
-        padding-top: 2%;
+        padding-top: 1%;
         border-radius: 8px;
     }
 
@@ -336,9 +339,9 @@ over the button Watch a demo(Regarder une DEMO?) */
     }
 
     .btn_download:hover{
-        padding-top: 1%;
+        padding-top: 2%;
         padding-left: 3%;
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .img_u_icon{
@@ -367,10 +370,10 @@ over the button Watch a demo(Regarder une DEMO?) */
     /* Button for Watching demo of the application */
     .btn_watch_demo,
     .btn_watch_demo:hover{
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
-        width: 58%;
-        height: 35px;
+        width: 55%;
+        height: 34px;
         margin-top: 3%;
         margin-left: 2%;
         align-self: center;
@@ -378,7 +381,7 @@ over the button Watch a demo(Regarder une DEMO?) */
 
     .btn_watch_demo:hover{
         margin-left: -4%;
-        padding-left: 10%;
+        padding-left: 14%;
         padding-right: 2%;
         width: 60%;
         transition-delay: 500ms;
@@ -405,7 +408,7 @@ over the button Watch a demo(Regarder une DEMO?) */
         margin-top: 3%;
         border-width: 5px;
         padding-left: 5%;
-        margin-left: -70%;
+        margin-left: -65%;
         display: block;
         opacity: 1;
         border-radius: 100%;
@@ -414,11 +417,12 @@ over the button Watch a demo(Regarder une DEMO?) */
     .btn_play:hover {
         background-color: #03dac5 !important;
         border-color: #effaff !important;
-        padding-left: 3.2%;
+        padding-left: 6%;
     }
 
     .btn_watch_demo:hover ~ .btn_play {
-        padding-left: 3.5%;
+        padding-left: 6%;
+        margin-left: -65%;
     }
 
     .img_play{

@@ -11,6 +11,7 @@ function Language() {
 
     const [activeLang, setActiveLang] = useState({"name": "FR", "url": "/flags/fr.png"});
 
+    console.log(window.innerWidth)
     const handleClickActiveLang = () => {
 
       // Set active language to false
@@ -40,11 +41,11 @@ function Language() {
             
             <Row onClick={ handleClickActiveLang } className={`${styles.row_selected_lang} 
               ${showActiveLang == false ? styles.hidden_active_lang : ''}`}>
-              <Image src={activeLang.url} className={styles.selected_lang} alt="France Flag"/>
+              <Image src={activeLang.url} className={styles.selected_lang} alt={activeLang.name}/>
             </Row>
 
             <Row>
-              <ListGroup className={`${styles.list_lang} ${showListLang == false ? styles.hidden_list_lang : ''}`} >
+              <ListGroup className={`${styles.list_lang} ${ showListLang == false ? styles.hidden_list_lang : ''}`} >
                
                <ListGroup.Item action onClick={ () => { setActiveLang({"name": "FR", "url": "/flags/fr.png"}), 
                   handleClickListLang() }} className={`${styles.lang}`}>

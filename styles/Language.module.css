@@ -51,7 +51,7 @@
     height: 75%;
     width: 80%;
     padding-bottom: 25%;
-    border-radius: 5em!important;
+    border-radius: 5em !important;
     /* font-size: 30px !important; */
     color: transparent;
     /* font-weight: bold; */
@@ -144,3 +144,88 @@
     background-color: green !important;
 }
 
+@media (max-width: 725px) {
+
+    /* The style of the element(Nav) */
+    .main {
+        margin-left: 68%;
+        padding: 5% !important;
+        margin-top: 10% !important;
+        position: fixed;
+        top: 0;
+        width: 15%;
+        /* display: none; */
+    }
+
+    /* Style for Row containing active lang */
+    .row_selected_lang {
+        width: 40% !important;
+        margin-left: 35%;
+        margin-bottom: 6%;
+        /* transition-delay: 200ms; */
+    }
+
+    /* The selected language image */
+    .selected_lang{
+        border-radius: 100% !important;
+        height: 40%;
+        margin-right: 20% !important;
+        cursor: pointer !important; 
+    }
+
+    /* The list of of languages containing their names and images */
+    .list_lang{
+        background-color: transparent !important;
+        margin-left: 4em !important;
+        margin-top: -35%;
+        height: 20px !important;
+        transition-delay: 200ms;
+        transform-origin: top;
+        transition-property: height, top, bottom;
+    }
+
+    /* Button containing image and name*/
+    .btn_lang {
+        height: 90% !important;
+        width: 55%;
+        padding-bottom: 25%;
+        border-radius: 5em!important;
+        /* font-size: 30px !important; */
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent !important;
+    }
+
+    .btn_lang:hover{
+        border-color: transparent !important;
+    }
+
+    /* Style for list item */
+    .lang {
+        background-color: transparent !important;
+        height: 45px;
+        border-color: transparent;
+    
+    }
+
+    /* Style for label(language name) */
+    .lang_name{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 1% !important;
+        padding-left: 5%;
+        width: 50%;
+        height: 60%;
+        margin-top: -10%;
+    }
+
+    /* The language image */
+    .flag {
+        width: 35px;
+        height: 35px;
+        /* margin-right: 5%; */
+        margin-top: -12.75%;
+        /* margin-bottom: 14%; */
+        margin-left: -35%;
+    }
+}
