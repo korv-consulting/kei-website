@@ -15,15 +15,15 @@
 
 .label{
     position: relative;
-    left:15px;
-    bottom:50px;
+    right:72%;
+    top:10px;
     transition: all 0.9s;
-    z-index: 1;
+    z-index: 99;
     color: #2db6fe;
     padding: 4px;
 }
 
-.input_text + .label::after{
+.input_text + .span + .label::after{
    content:"*" ;
 }
 
@@ -48,7 +48,7 @@
 
 .label_area{
     position: relative;
-    left:15px;
+    left:14px;
     bottom:210px;
     transition: all 0.9s;
     z-index: 1;
@@ -76,10 +76,9 @@
     border-radius: 4px;
     background: #fff!important;
     font-size: 15px;
-    outline: none;
     transition: all 0.3s;
-    margin-bottom: 11px;
     color: black;
+    max-width: 69%;
 
 }
 
@@ -90,16 +89,26 @@
     border:2px solid  #2DB6FE
 }
 
+.span{
+        border-top: 2px solid #2db6fe;
+        border-bottom: 2px solid #2db6fe;
+        border-right: 2px solid #2db6fe;
+        height: 46.5px;
+}
 
-
-.input_text:focus + .label{
-    top:-73px;
+.input_text:focus + .span + .label{
+    top:-17px;
     color:  #2DB6FE;
     font-size: 15px;
     background: #fff;
+    height: 35px;
     opacity: 1;
-    scale: 0.9;
+    z-index: 99;
+
 }
+
+
+
 
 
 .input_text:focus + .label_set{
@@ -112,8 +121,8 @@
 }
 
 
-.input_text:valid + .label{
-    top:-75px;
+.input_text:valid + .span + .label{
+    top:-17px;
     color:  #03DAC5;
     font-size: 15px;
     background: #fff;
@@ -131,10 +140,11 @@
 
 
 
-.input_text:not(:placeholder-shown) + .label{
-    top:-75px;
+.input_text:not(:placeholder-shown)+ .span + .label{
+    top:-17px;
     font-size: 15px;
     background: #fff;
+    height: 1%;
 
 }
 
@@ -152,8 +162,8 @@
 
 
 
-.input_text:focus:valid + .label{
-    top:-75px;
+.input_text:focus:valid + .span + .label{
+    top:-17px;
     color:  #03DAC5;
     font-size: 15px;
     background: #fff;
@@ -269,7 +279,7 @@
     border:2px solid  #2DB6FE
 }
 
-.input_text_simple:focus + .label{
+.input_text_simple:focus + .span + .label{
     top:-73px;
     color:  #2DB6FE;
     font-size: 15px;
@@ -298,7 +308,7 @@
 }
 */
 
-.input_text_simple:not(:placeholder-shown) + .label{
+.input_text_simple:not(:placeholder-shown) + .span + .label{
     top:-75px;
     font-size: 15px;
     background: #fff;
@@ -350,4 +360,46 @@
 }
 
 
+/* Begin responsive */
 
+/*  phone  Mode */
+@media only screen and (max-width: 360px) {
+    .label{
+        right:60%; 
+    }
+    
+
+}
+
+/*  Tablet  Mode */
+@media only screen and (min-width: 360px) and (max-width: 711px) {
+
+    .label{
+        right:57%; 
+    }
+    
+
+
+}
+
+/*  Tablet  Nexus */
+@media only screen and (min-width: 711px) and (max-width: 991px) {
+
+
+   
+
+
+}
+
+ /* medium pc */
+ @media only screen and (min-width: 991px) and (max-width: 1500px) {
+
+
+  
+  
+}
+  
+
+
+
+/* End responsive */

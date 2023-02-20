@@ -1,8 +1,9 @@
 .main{
   margin-top: -1.7vw;
   width: 100%;
-  height: 55vw;
-background-color:rgba(107, 133, 167, 0.4); 
+  background-color:#ffff; 
+  min-width: 255px;
+
 
 
 }
@@ -24,14 +25,25 @@ background-color:rgba(107, 133, 167, 0.4);
   opacity: 1;
   min-height: 100%;
   max-width: 100vw;
+}
+
+.section{
+ background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/skyscraper.png') center center fixed no-repeat;
+ background-size: cover;
+ width: 100%;
+ height: 100%;
+ padding-bottom: 2%;
+
+
 
 }
 
-
 .picture{
-    margin-top: 15%;
-    margin-bottom:8%;
+    margin-top: 8%;
+    margin-bottom:5%;
     margin-left: 17vw;
+    width: 10%;
+    height: 8%;
 }
 
 .box_btn{
@@ -48,19 +60,61 @@ background-color:rgba(107, 133, 167, 0.4);
  font-weight: bold;
 }
 
+
 /* ---------------- Begind  Responsive Management -------------------------  */
 
-/*  Tablet  Mode */
-@media only screen and (min-width: 361px) and (max-width: 549px) {    
-  .main{
-    height: 144vw;
-    margin-top: auto;
+ /* medium pc */
+ @media only screen and (min-width: 991px) and (max-width: 1500px) {
 
-  }
-    
   .picture{
     width: 10%;
-    height: 10%;
+    height: 7%;
+ 
+  }
+
+
+  .box_btn{
+    margin-top: 2%;
+
+  }
+
+  .section{
+    padding-bottom: 5%;
+   }
+   
+
+
+}
+
+ /*  Tablet  Mode Nexus 10 */
+ @media only screen and (min-width: 712px) and (max-width: 991px) {
+
+  .picture{
+    width: 9%;
+    height: 9%;
+    margin-top: 3%;
+    margin-bottom:3%;
+    margin-left: 45%;
+  }
+
+
+  .box_btn{
+    margin-top: 2%;
+
+  }
+
+
+}
+
+
+
+/*  Tablet  Mode */
+@media only screen and (min-width: 361px) and (max-width: 711px) {    
+ 
+    
+  .picture{
+    width: 9%;
+    height: 5%;
     margin-top: 3%;
     margin-bottom:3%;
     margin-left: 45%;
@@ -70,18 +124,20 @@ background-color:rgba(107, 133, 167, 0.4);
     margin-top: 2%;
 
   }
-     
+
+
+   
 }
+
+
+
 
 /*  phone  Mode */
 @media only screen and (max-width: 360px) {
-  .main{
-    height: 204vw; 
-  }
 
   .picture{
     width: 10%;
-    height: 10%;
+    height: 5%;
     margin-top: 5%;
     margin-bottom:5%;
     margin-left: 45%;
@@ -90,6 +146,9 @@ background-color:rgba(107, 133, 167, 0.4);
   .box_btn{
     margin-top: 1%;
   }
+
+
+  
      
 }
 
