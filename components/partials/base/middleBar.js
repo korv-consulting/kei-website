@@ -3,13 +3,17 @@ import styles from '@/styles/Home.module.css'
 
 function MiddleBar(){
     return (
-        <Container fluid>
-            <Row>
-                <Col className={styles.col_offers}>
-                    <div className={styles.btn_offers}>NOS OFFRES</div>
-                </Col>
-            </Row>
-        </Container>
+        <>
+            <div className={`container-fluid`}>
+                <div className={`row`}>
+                    <div className="col-md-2"></div>
+                    <div className={`d-flex col-md-8`}>
+                        <div className={`w-100 ${styles.btn_offers}`}>NOS OFFRES</div>
+                    </div>
+                    <div className="col-md-2"></div>
+                </div>
+            </div>
+        </>
     )
 }
 

@@ -1,13 +1,14 @@
 import { Container, Row, Col, Card, Button, Image, Carousel } from "react-bootstrap";
 import styles from "@/styles/Offer.module.css"
+import MiddleBar from "./middleBar";
 
 function Offer(){
 
     return (
     <Container fluid className={styles.main} id={`offers`}>
 
-      <Row className={styles.hr_bar}/>
-
+      {/* <Row className={styles.hr_bar}/> */}
+      <MiddleBar/>
       <Row className={styles.first_row}/>
 
       <Row className={styles.second_row}>
@@ -194,7 +195,6 @@ function Offer(){
       <Row className={styles.row_contact} id="contact">
         <h1 className={styles.contact}>CONTACT US</h1>
       </Row>
-
     </Container>
     )
 }

@@ -73,10 +73,10 @@ export default function Home() {
               <Header />
               <Language />
               <main className={styles.main}>
-                <Image src='/mini_icon.svg' className={styles.background} />
+                <Image src='' className={styles.background} />
                 {/* <Language /> */}
                 <About />
-                <MiddleBar />
+                {/* <MiddleBar /> */}
                 <Offer />
                 <Contact />
               </main>

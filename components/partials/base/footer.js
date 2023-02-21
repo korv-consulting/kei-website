@@ -7,109 +7,68 @@ import styles from '@/styles/Footer.module.css'
 
 function Footer() {
 
+    let widthScreen = window.innerWidth
+
+    console.log(widthScreen)
+
     return(
         <>
-          {/* <Container fluid className={styles.container}>
-            <Row>
-              <Col md="4"></Col>
-              <Col md="4"></Col>
-              <Col md="4" className={`${styles.main_col}`}>
-                <Image src='/devices.png' fluid className={styles.devices_img}/>
-                <label className={styles.text_app}>
-                  L'application KEI est disponible sur toutes les plateformes
-                </label>
-                <Button size="lg" className={styles.download_btn}>
-                  Télécharger
-                </Button>
-                <Row className={`${styles.store_row}`}>
-                  <Col className={`${styles.store_col} ${styles.align_left}`}>
-                      <Button className={styles.store_btn}>
-                        <Row>
-                          <Col md="3" className={styles.col_store_img}>
-                            <Image src='/app-store.png' className={styles.store_img}/>
-                          </Col>
-                          <Col md="6" className={styles.col_store_name}>
-                            <span className={styles.store_title}>Télécharger sur </span><br/>
-                            <label className={styles.store_name}>App Store</label>
-                          </Col>
-                        </Row>
-                      </Button>
-                  </Col>
-                  <Col className={`${styles.store_col} ${styles.align_righ}`}>
-                    <Button className={styles.store_btn}>
-                      <Row>
-                        <Col md="3" className={styles.col_store_img}>
-                          <Image src='/playstore.png' className={styles.store_img} />
-                        </Col>
-                        <Col md="6" className={styles.col_store_name}>
-                          <span className={styles.store_title}>Télécharger sur </span><br/>
-                          <label className={styles.store_name}>Playstore</label>
-                        </Col>
-                      </Row>
-                      </Button>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Container> */}
 
           <div className={`container-fluid pt-2 ${styles.container}`}>
-            <footer className="py-5">
+            <footer className="pb-4 pt-5">
 
               <div className="row">
 
-                <div className="col-6 col-md-2 mb-3">
+                <div className="col-md-2 mb-3">
                   {/* First Column */}
                 </div>
 
-                <div className="col-6 col-md-2 mb-3">
+                <div className="col-md-2 mb-3">
                   {/* Second Column */}
                 </div>
 
-                <div className="col-6 col-md-2 mb-3">
+                <div className="col-md-2 mb-3">
                  {/* Third Column */}
                 </div>
 
-                <div className="col-md-5 offset-md-1 mb-2">
+                <div className={`col-md-5 offset-md-1 mb-2 ${styles.download_section}`}>
 
                     <div className="d-flex justify-content-center">
-                      <Image src="/devices.png" className="w-25"/>
+                      <Image src="/devices.png" className="w-50"/>
                     </div>
-
-
-                    <p className={`text-center mt-2 mb-3 h6`}>
+                    <p className={`text-center mt-2 mb-3 ${styles.text_app}`}>
                       L'application KEI est disponible sur toutes les plateformes
                     </p>
 
-                    <div className="d-flex  justify-content-center my-2">
-                      <Button className={`py-3 w-50 ${styles.download_btn}`}>Télécharger</Button>
+                    <div className="d-flex justify-content-center my-2 px-2">
+                      <Button className={`py-3 w-100 ${styles.download_btn}`}>Télécharger</Button>
                     </div>
                     
-                    <div className="d-flex flex-sm-row justify-content-center gap-2">
-                      <Button className={`py-1 w-25 ${styles.store_btn}`}>
+                    <div className={`d-flex flex-sm-row justify-content-center ${styles.store} px-2`}>
+                      <Button className={`py-2 w-50 ${styles.store_btn}`}>
                         <div className={`row`}>
                           <div className={`col-4 d-flex justify-content-center`}>
-                            <Image src='/app-store.png' className={`my-2`}/>
+                            <Image src='/app-store.svg' className={`my-2`}/>
                           </div>
                           <div className={`col-8`}>
                             <span className={`text-center text-nowrap ${styles.store_title}`}>
                               Télécharger sur 
                             </span><br/>
-                            <label className={`text-nowrap text-center ${styles.store_name}`}>App Store</label>
+                            <label className={`text-nowrap ${styles.store_name}`}>App Store</label>
                           </div>
                         </div>
                       </Button>
 
-                      <Button className={`py-1 w-25 ${styles.store_btn}`}>
+                      <Button className={`py-2 w-50 ${styles.store_btn}`}>
                         <div className={`row`}>
                           <div className={`col-4 d-flex justify-content-center`}>
-                            <Image src='/playstore.png' className={`my-2`}/>
+                            <Image src='/playstore.svg' className={`my-2`}/>
                           </div>
                           <div className={`col-8`}>
                             <span className={`text-center text-nowrap ${styles.store_title}`}>
                               Télécharger sur 
                             </span><br/>
-                            <label className={`text-center text-nowrap ${styles.store_name}`}>Playstore</label>
+                            <label className={`text-nowrap ${styles.store_name}`}>Playstore</label>
                           </div>
                         </div>
                       </Button>
