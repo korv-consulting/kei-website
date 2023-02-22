@@ -1,12 +1,12 @@
 import { Container, Nav, Navbar, Form, Button, Image } from "react-bootstrap"
 import styles from '@/styles/Header.module.css'
 import { useState } from "react";
-// import {useRouter} from "next/router"
+import {useRouter} from "next/router"
 
 function Header() {
 
     let [isActive, setIsActive] = useState(1);
-    //  const router = useRouter();
+    const router = useRouter();
     //  console.log(router.asPath); 
 
     return(

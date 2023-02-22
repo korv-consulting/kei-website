@@ -21,8 +21,8 @@ function StepOneSignup({next,handleProfessional,handleParticular}) {
 
  
     return (  
-        <>
-            <section className={styles.global_box}>
+        <section className={styles.main}>
+            <div className={styles.global_box}>
                 <Row className={styles.global_row}>
 
                     <Col sm={2} ></Col>
@@ -70,10 +70,10 @@ function StepOneSignup({next,handleProfessional,handleParticular}) {
                 </Row>
 
                
-            </section>
+            </div>
             
         
-        </>
+        </section>
     )
 }
 

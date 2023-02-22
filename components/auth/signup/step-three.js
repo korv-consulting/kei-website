@@ -1,8 +1,6 @@
 import { Button, ButtonGroup,Card, Col, Container, Image, Row } from "react-bootstrap"
-import styles_step from "@/styles/Step-two-signup.module.css"
 import styles from '../../../styles/Step-three-signup.module.css'
-import style from '../../../styles/Floating-label.module.css'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import StepThreeFormSignup from './step-three-form'
 
 function StepThreeSignup({next,preview}) {
@@ -15,13 +13,12 @@ function StepThreeSignup({next,preview}) {
 
 
     return(
-        <Container fluid className={styles_step.main}>
-            <Image fluid src="/skyscraper.png" className={styles_step.background} alt="Sky Crappers" />
-            <Row className={styles_step.global_row}>
+        <Container fluid className={styles.main}> 
+            <Row className={styles.global_row}>
 
                 <Col></Col>
                 <Col  xs={5}  >  
-                    <Card >
+                    <Card > 
                          <StepThreeFormSignup 
                               next={next}
                               preview={preview}

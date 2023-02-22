@@ -73,28 +73,29 @@
 }
 
 .picture {
-    margin-top: 20%;
-    margin-left: 30%;
     opacity: 0.4;
 }
+
+
 
 .title {
     font-size: large;
     color: #2DB6FE;
     font-size: larger;
-    margin-top: 25%;
+    margin-top: 3%;
     font-weight: bolder;
-    text-align: center;
 }
-
+ 
 .row_center {
     margin-top: 5%;
-    margin-bottom: -12%;
+    margin-bottom: -1%;
 }
 
 .eye_icon{
    margin-top: -8.5vw;
    margin-left: 90%;
+   background-color: pink;
+   display: flex;
    
 }
 
@@ -122,7 +123,7 @@
 }
 
 .box_pwd{
-    height: 14%;
+    height: 20%;
 }
 
 .box_bottom {

@@ -9,18 +9,18 @@ function StepTwoSignup({next,preview}) {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        alert(`Hey, onSubmiting...`);
+        alert(`Hey, onSubmiting...`); 
 
-    };
+    }; 
 
-
+ 
     return(
-        <Container fluid className={styles_step.main}> 
+        <Container fluid className={styles_step.main}>  
             <Row className={styles_step.global_row}>
 
                 <Col></Col>
                 <Col  md={12} lg={5} >  
-                    <Card >
+                    <Card > 
                          <StepTwoFormSignup 
                               next={next}
                               preview={preview}

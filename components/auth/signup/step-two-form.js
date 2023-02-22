@@ -28,7 +28,7 @@ function StepTwoFormSignup({ next, preview }) {
         <form className={styles.form} id="form" method="post" noValidate onSubmit={onSubmit}>
             <div className={styles.container}>
                
-                    <p  className={`text-center mt-4  ${styles.box_top}`} >
+                    <p  className={`text-center mt-4`} >
                         <Image fluid src="logo-kei.png" className={`${styles.picture}`}   alt="Sky Crappers" />
                         <h3 className={` ${styles.title}`} >
                             Souscrire
@@ -43,7 +43,7 @@ function StepTwoFormSignup({ next, preview }) {
                     <Col xs={8}  >
                         <Row className={styles.box_flex}>
                             <Col xs={12} lg={6} className={styles.box_left} >
-                                <input type="text" id='username' placeholder='Entrer votre nom' className={`form-control ${style.input_text}`} required name="name"
+                                <input type="text" id='username' placeholder='Entrer votre nom' className={`form-control  ${style.input_text}`} required name="name"
                                     title=" Veuillez saisir votre nom"
                                 />
                                 <label htmlFor='username' id='uname' className={style.label}>Nom</label>
@@ -61,8 +61,8 @@ function StepTwoFormSignup({ next, preview }) {
                                 </span>
                             </Col>
                         </Row>
-                        <div>
-                            <input type="email" id='mail' placeholder='example@gmail.com' className={`form-control ${style.input_text}`} required name="email"
+                        <div >
+                            <input type="email" id='mail' placeholder='example@gmail.com' className={`form-control pb-3 ${style.input_text}`} required name="email"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 title="L'E-Mail doit contenir au moins le caractere @"
                             />

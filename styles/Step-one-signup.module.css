@@ -18,9 +18,19 @@
     max-width: 100vw;
 
 }
+.main{
+
+height: 50vw;
+margin-top: -43%;
+padding-top: 0.1%;
+background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url('/signup/immeuble2.png') center center fixed no-repeat;
+background-size: cover; 
+
+
+}
 
 .global_box{
-    margin-top: 25%;
+    margin-top: -7%;
     
 }
 

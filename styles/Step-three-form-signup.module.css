@@ -73,19 +73,19 @@
 }
 
 .picture {
-    margin-top: 20%;
-    margin-left: 30%;
     opacity: 0.4;
 }
+
+
 
 .title {
     font-size: large;
     color: #2DB6FE;
     font-size: larger;
-    margin-top: 25%;
+    margin-top: 3%;
     font-weight: bolder;
-    text-align: center;
 }
+
 
 .row_center {
     margin-top: 5%;
@@ -94,8 +94,8 @@
 
 .box_flex {
     display: flex;
-    height: 18%;
-    margin-bottom: 10%;
+    height: 19%;
+    margin-bottom: 12%;
 }
 
 .box_left {
@@ -104,8 +104,8 @@
 }
 
 .box_adress{
-    height: 18%;
-    margin-bottom: 5%;
+    height: 20%;
+    margin-bottom: 8%;
 }
 
 .box_bottom {

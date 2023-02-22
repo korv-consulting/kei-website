@@ -28,20 +28,16 @@ function StepThreeFormSignup({ next, preview }) {
 
         <form className={styles.form} id="form" method="post" noValidate onSubmit={onSubmit}>
             <div className={styles.container}>
-                <Row>
-                    <Col xs={5}></Col>
-                    <Col xs={2} className={styles.box_top}>
-                        <div>
-                            <Image fluid src="logo-kei.png" className={styles.picture} alt="Sky Crappers" />
-                        </div>
-                        <div className={styles.title}>
+           
+
+                <p  className={`text-center mt-4 `} >
+                        <Image fluid src="logo-kei.png" className={`${styles.picture}`}   alt="Sky Crappers" />
+                        <h3 className={` ${styles.title}`} >
                             Souscrire
-                        </div>
+                        </h3>
 
-                    </Col>
-                    <Col xs={5}></Col>
-
-                </Row>
+                </p>
+                    
                 <Row className={styles.row_center}  >
                     <Col xs={2}></Col>
                     <Col xs={8} className={styles.box_center} >

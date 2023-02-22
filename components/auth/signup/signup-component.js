@@ -6,7 +6,7 @@ import StepOneSignup from './step-one'
 import StepTwoSignup from './step-two'
 import StepThreeSignup from './step-three'
 import StepThreeCompanySignup from './step-three-company'
-import StepFourSignup from './step-four' 
+import StepFourSignup from './step-four'  
 import ConfirmationComponentSignup from './confirmation-component' 
 
 
@@ -239,12 +239,12 @@ function Signup_component() {
                                         reduced={reduced}
                                     />
                                 </div>
-                            </section>
+                            </section> 
 
                         );
                         case 3:
                             return (
-                                <>
+                                <section className={`${styles.section}`}>
                                     <StepThreeSignup
                                         next={next}
                                         preview={preview}
@@ -257,13 +257,13 @@ function Signup_component() {
                                             reduced={reduced}
                                         />
                                     </div>
-                                </>
+                                </section>
     
                             );
                             case -3:
 
                                 return (
-                                    <>
+                                    <section className={`${styles.section}`}>
                                         <StepThreeCompanySignup
                                             next={next}
                                             preview={preview}
@@ -276,12 +276,12 @@ function Signup_component() {
                                                 reduced={reduced}
                                             />
                                         </div>
-                                    </>
+                                    </section>
         
                                 );
                         case 4:
                             return (
-                            <>
+                            <section className={`${styles.section}`}>
                                 <StepFourSignup
                                     next={next}
                                     preview={preview}
@@ -294,12 +294,12 @@ function Signup_component() {
                                         reduced={reduced}
                                     />
                                 </div>
-                            </>
+                            </section>
 
                         ); 
                         case 5:
                             return (
-                            <>
+                            <section className={`${styles.section}`}>
                                 <ConfirmationComponentSignup
                                     next={next}
                                     preview={preview}
@@ -312,7 +312,7 @@ function Signup_component() {
                                         reduced={reduced}
                                     />
                                 </div>
-                            </>
+                            </section>
 
                         );
                 default:

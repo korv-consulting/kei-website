@@ -1,6 +1,6 @@
-/* The whole structure  of the Signup page */
+  /* The whole structure  of the Signup page */
 .main {
-    background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('/signup/immeuble2.png') center center fixed no-repeat;
+  /*   background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('/signup/immeuble2.png') center center fixed no-repeat;*/
     background-size: cover;
     margin-bottom: -9%;
     padding-top: 1%;
@@ -15,17 +15,17 @@ background-color: white;
 
 .section{
 
- margin-top: -10%;
+ margin-top: 50%;
 
  
  }
  
 .stepper_one{
-  margin-top: -41%;
+  margin-top: -71%; 
 }
 
 .stepper_two{
-  margin-top: -82%;
+  margin-top: -79%;
   margin-left: 2%;
   margin-bottom: 11%;
 }

@@ -10,7 +10,7 @@ import stylesplash from '../styles/Splash.module.css'
 
 
 export default function Signin() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true) 
 
   useEffect(() => {
     // setLoading(true)
@@ -59,7 +59,7 @@ export default function Signin() {
 
                 
 
-              </main>
+              </main>   
 
               <Footer /> 
             </div>

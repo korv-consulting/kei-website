@@ -9,12 +9,11 @@ function StepThreeCompanySignup({next,preview}) {
         event.preventDefault();
         alert(`Hey, onSubmiting...`);
 
-    };
+    }; 
 
 
     return(
-        <Container fluid className={styles_step.main}>
-            <Image fluid src="/skyscraper.png" className={styles_step.background} alt="Sky Crappers" />
+        <Container fluid className={styles_step.main}> 
             <Row className={styles_step.global_row}>
 
                 <Col></Col>

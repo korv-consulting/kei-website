@@ -21,7 +21,8 @@
 
 /* The whole structure  of the Signup page */
 .main {
-  background-color:rgba(189, 206, 229, 0.7);
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/skyscraper.png') center center fixed no-repeat;
+  background-size: cover; 
   height: 135vh;
   margin-top: -42%;
   margin-bottom: -70%;

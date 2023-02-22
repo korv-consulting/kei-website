@@ -1,6 +1,6 @@
 import { Button, ButtonGroup,Card, Col, Container, Image, Row } from "react-bootstrap"
 import styles from '../../../styles/Confirmation-component-signup.module.css'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ConfirmationSignup from './confirmation'
 
 function ConfirmationComponentSignup({next,preview}) { 
@@ -10,11 +10,10 @@ function ConfirmationComponentSignup({next,preview}) {
         alert(`Hey, onSubmiting...`);
 
     };
-
+ 
 
     return(
         <Container fluid className={styles.main}>
-            <Image fluid src="/skyscraper.png" className={styles.background} alt="Sky Crappers" />
             <Row className={styles.global_row}>
 
                 <Col></Col>

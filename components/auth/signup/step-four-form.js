@@ -3,7 +3,6 @@ import styles from '../../../styles/Step-four-form-signup.module.css'
 import style from '../../../styles/Floating-label.module.css'
 import React, { useState, useEffect } from 'react';
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { BiShow, BiHide } from "react-icons/bi";
 import ShowHideEyeIcon from './show-hide-eye-icon'
 
 
@@ -71,21 +70,14 @@ function StepFourFormSignup({ next, preview }) {
 
         <form className={styles.form} id="form" method="post" noValidate onSubmit={onSubmit}>
             <div className={styles.container}>
-                <Row>
-                    <Col xs={5}></Col>
-                    <Col xs={2} className={styles.box_top}>
-                        <div>
-                            <Image fluid src="logo-kei.png" className={styles.picture} alt="Sky Crappers" />
-                        </div>
-                        <div className={styles.title}>
+                <p  className={`text-center mt-4 `} >
+                        <Image fluid src="logo-kei.png" className={`${styles.picture}`}   alt="Sky Crappers" />
+                        <h3 className={` ${styles.title}`} >
                             Souscrire
-                        </div> 
+                        </h3>
+
+                </p>
                     
-
-                    </Col>
-                    <Col xs={5}></Col>
-
-                </Row>
                 <Row className={styles.row_center}  >
                     <Col xs={2}></Col>
                     <Col xs={8} className={styles.box_center} >
@@ -122,12 +114,12 @@ function StepFourFormSignup({ next, preview }) {
                             <input type="checkbox" id='' className={` ${styles.checkbox}`} required name="checkbox"
                                 title="Cochez la case"
                             />
-                            <div className={styles.box_right}>
+                            <span className={styles.box_right}>
                                 <span className={styles.txt_blue_check} >J'ai lu et j'accepte la</span>
                                 <span className={styles.txt_green}>
                                     politique de confidentialité
                                 </span>
-                            </div>
+                            </span>
                         </div>
                             
                     </Col>
