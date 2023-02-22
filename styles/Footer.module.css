@@ -1,68 +1,102 @@
 /* Refer to the container of this component */
 .container {
-    height: auto;
     background-color: #11467e;
     color: white;
 }
 
-/* Main Column */
-.main_col{
-    margin-bottom: 2%;
-}
-
-/* Devices image */
-.devices_img {
-    margin-top: 10%;
-    margin-bottom: 2%;
-}
-
-/* Style to center item */
-.devices_img, .text_app, .download_btn, .store_btn {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-/* Text below devices image */
+/* Text at the bottom of devices image */
 .text_app {
-    text-align: center;
-    margin-bottom: 5%;
-
+    /* font-size:medium; */
+    font-weight: bold;
+    cursor: text;
 }
 
+/* Style for Download button  */
 .download_btn,
 .download_btn:hover {
     background-color: #03dac5 !important;
     border-color: transparent !important;
-    height: 18%;
-    width: 100%;
     text-align: center;
+    /* font-size: 22px; */
     font-weight: bold;
+    border-radius: 18px;
 }
 
 .download_btn:hover {
-     box-shadow: 3px 3px 1px 1px #03dac5;
-     margin-bottom: 1%;
+    box-shadow: 0 2px 0  #acf9f2 !important;
 }
 
-.store_col {
-    margin-top: 2%;
+/* Style for Store section */
+.store {
+    gap: 2%;
 }
 
+/* Style for the Store buttons(App Store and Playstore) */
 .store_btn,
 .store_btn:hover {
     background-color: transparent !important;
-    border-radius: 25px;
-    border-color: white !important;
-
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #ffffff !important;
+    border-style: solid;
 }
 
 .store_btn:hover {
-    box-shadow: 1px 1px 1px 1px white;
+    box-shadow: 0 2px 0 white;
 }
+
 
 .store_img {
     margin-right: 5%;
-    margin-top: 5%;
+    width: 150%;
+}
 
+.store_title {
+    font-size:smaller;
+}
+
+.store_name {
+    text-align: center;
+    font-size:larger;
+    /* white-space: nowrap; */
+}
+
+@media (max-width:725px){
+
+    .download_section{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .store_title{
+        font-size: 2vw;
+    }
+
+    .store_name{
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:760px){
+
+    .store_title{
+        font-size: 0.9vw;
+    }
+
+    .store_name{
+        font-size: 1.9vw;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px){
+
+    .download_section{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .store{
+        gap: 5% !important;
+    }
 }

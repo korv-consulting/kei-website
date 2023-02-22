@@ -1,5 +1,5 @@
 .main {
-    margin-top: -4.5%;
+    /* margin-top: -5%; */
 }
 
 .hr_bar {
@@ -7,89 +7,100 @@
     border-radius: 2%;
     opacity: 1;
     height: 1.5em;
-    margin-top: 0;
+    margin-top: 1%;
     margin-bottom: 0;
 }
 
 .first_row {
     background-color: transparent;
-    height: 35em;
+    height: 30em;
 }
 
 .second_row {
     /* background-color: aqua; */
     background-color: #11467e;
-    height: 45em;
+    height: 35em;
     align-items: center;
     /* padding-left: 12%; */
 }
 
+/* Style for row containing cards */
 .row_card {
     width: 100%;
     height: 100%;
-    /* padding-left:10%; */
-    /* margin-left: auto;
-    margin-right: -2%; */
-    margin: 0 auto;
-    display: inline-flex;
-    align-items: center;
-   justify-content: center;
+    margin-left: auto ;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
 }
 
+.col_card {
+    display: flex;
+    align-items: center;
+    margin-top: -40%;
+    width: 27%;
+}
+
+/* Style for a card representing an offer */
 .card{
-    width: 25%;
-    height: 50em;
-    margin-top: -25%;
+    width: 70%;
+    height: 38em;
+    /* margin-top: -40%; */
     align-items: center;
     padding-left: 0;
     padding-right: auto;
-    margin-right: 2%;
+    margin-right: auto;
     opacity: 1;
     border-width: 0.75em;
     border-color: #def4ff;
+    flex: auto;
+
 }
 
 .card:hover{
-    width: 28%;
-    height: 55em;
+    width: 100%;
+    height: 40em;
     border-width: 0.50em;
     border-color: #03dac5;
     cursor: pointer;
 }
 
+/* Style for the title of a card */
 .title{
     text-align: center;
     color: #1583d8;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     margin-top: 4%;
 }
 
 .card:hover .title{
     color: #03dac5;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bolder;
 }
 
+/* Horizontal line separating title and the of rest of card informations */
 .hr_card{
     background-color: #def4ff;
     height: 0.25em;
     margin-left: -5%;
-    margin-right: -6%;
+    margin-right: -7%;
     margin-top: 8%;
 }
 
 .card:hover .hr_card{
     background-color: #03dac5;
-    margin-left: -7%;
-    margin-right: -8.5%;
+    margin-left: -5%;
+    margin-right: -5%;
     justify-self: center;
 }
 
+/* Style for the description of a card */
 .description{
     text-align: center;
     color: #56a0c5;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 4%;
     width: 70%;
     margin-left: auto;
@@ -97,10 +108,12 @@
 }
 
 .card:hover .description{
-    margin-top: 5%;
+    font-size: 18px;
+    margin-top: 7%;
     margin-bottom: 8%;
 }
 
+/*  */
 .row_detail{
     align-items: center;
     padding-left: 27%;
@@ -119,7 +132,7 @@
     margin-left: 15%;
     margin-right: 0;
     margin-bottom: 1.5%;
-    width: 1.25em;
+    width: 1.20em;
 }
 
 .col_detail{
@@ -128,39 +141,236 @@
 
 .detail{
     color: #1583d8;
-    font-size: 30px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.btn_subscription{
+    width: 60%;
+    margin-left: 22%;
+    margin-bottom: -45%;
 }
 
 .btn_subscription,
 .btn_subscription:hover {
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     color: #2db6fe !important;
     background-color: #def4ff !important;
-    height: 3em;
-    width: 65%;
-    margin-bottom: -60%;
-    margin-left: 17%;
+    height: 2.8em;
     margin-right: auto;
     opacity: 1;
     border-width: 4px;
     border-color: #2db6fe !important;
 }
 
-.card:hover .btn_subscription{
+.card:hover .btn_subscription {
     color: white !important;
     background-color: #03dac5 !important;
     border-color: transparent !important;
-    margin-bottom: -70%;
+    margin-bottom: -45%;
+    margin-left: 17%;
+    width: 70%;
 }
 
-.row_contact{
+.row_contact {
     background-color: #11467e;
 }
 
-.contact{
+.contact {
     color: #95dafe;
     text-align: center;
     font-weight: bold;
     font-size: 48px;
+}
+
+@media (max-width: 725px) {
+
+    .main {
+        margin-top: -1%;
+    }
+
+    .hr_bar {
+        background-color: #ffffff;
+        border-radius: 2%;
+        opacity: 1;
+        height: 1em;
+        margin-top: 1%;
+        margin-bottom: 0;
+    }
+
+    .first_row {
+        background-color: #11467e;
+        height: 30em;
+    }
+
+    .second_row {
+        /* background-color: aqua; */
+        background-color: #11467e;
+        height: 70em;
+        align-items: center;
+        /* padding-left: 12%; */
+    }
+
+    /* Style for row containing cards */
+    .row_card {
+        width: 100%;
+        height: 100%;
+        margin-left: auto ;
+        margin-right: 0;
+        display:flex;
+        justify-content: center;
+        margin-top: -55em;
+    }
+
+    .col_card {
+        display:flex;
+        align-items: center;
+        /* margin-top: -5%; */
+        width: 25em;
+        margin-top: 5%;
+    }
+
+    /* Style for a card representing an offer */
+    .card{
+        width: 100%;
+        height: 30em;
+        /* margin-top: -40%; */
+        align-items: center;
+        padding-left: 0;
+        padding-right: auto;
+        margin-right: auto;
+        opacity: 1;
+        border-width: 0.65em;
+        border-color: #def4ff;
+        flex:none;
+    }
+
+    .card:hover{
+        width: 100%;
+        height: 32em;
+        border-width: 0.50em;
+        border-color: #03dac5;
+        cursor: pointer;
+    }
+
+    /* Style for the title of a card */
+    .title{
+        text-align: center;
+        color: #1583d8;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 4%;
+    }
+
+    .card:hover .title{
+        color: #03dac5;
+        font-size: 50px;
+        font-weight: bolder;
+    }
+
+    /* Horizontal line separating title and the of rest of card informations */
+    .hr_card{
+        background-color: #def4ff;
+        height: 0.25em;
+        margin-left: -5%;
+        margin-right: -7%;
+        margin-top: 8%;
+    }
+
+    .card:hover .hr_card{
+        background-color: #03dac5;
+        margin-left: -5%;
+        margin-right: -5%;
+        justify-self: center;
+    }
+
+    /* Style for the description of a card */
+    .description{
+        text-align: center;
+        color: #56a0c5;
+        font-size: 15px;
+        margin-top: 4%;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card:hover .description{
+        font-size: 15px;
+        margin-top: 7%;
+        margin-bottom: 8%;
+    }
+
+    /*  */
+    .row_detail{
+        align-items: center;
+        padding-left: 32%;
+    }
+
+    /* .card:hover .row_detail{
+        padding-left: 30%;
+    } */
+
+    .col_checkbox{
+        width: 4%;
+        margin-right: 0%;
+    }
+
+    .checkbox {
+        margin-left: 15%;
+        margin-right: 0;
+        margin-top: -8px;
+        width: 1em;
+    }
+
+    .col_detail{
+        width: auto;
+    }
+
+    .detail{
+        color: #1583d8;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn_subscription{
+        width: 60%;
+        margin-left: 22%;
+        margin-bottom: -45%;
+    }
+
+    .btn_subscription,
+    .btn_subscription:hover {
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        color: #2db6fe !important;
+        background-color: #def4ff !important;
+        height: 2.8em;
+        margin-right: auto;
+        opacity: 1;
+        border-width: 4px;
+        border-color: #2db6fe !important;
+    }
+
+    .card:hover .btn_subscription {
+        color: white !important;
+        background-color: #03dac5 !important;
+        border-color: transparent !important;
+        margin-bottom: -45%;
+        margin-left: 17%;
+        width: 65%;
+    }
+
+    .row_contact {
+        background-color: #11467e;
+    }
+
+    .contact {
+        color: #95dafe;
+        text-align: center;
+        font-weight: bold;
+        font-size: 45px;
+    }
 }

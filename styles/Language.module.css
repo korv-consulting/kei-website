@@ -1,9 +1,231 @@
+/* The style of the element(Nav) */
 .main {
-    /* position:fixed; */
-    margin-top: 2%;
-    margin-right: 6%;
+    margin-top: 2% !important;
+    /* margin-right: 5% !important; */
+    margin-left: 82%;
+    padding: 5% !important;
+    margin-top: 1%;
+    /* direction: rtl; */
+    position: fixed;
+    top: 0;
+    width: 18%;
+    /* z-index: 9999; */
 }
 
+/* .container {
+    width: 100%;
+} */
+
+/* Style for Row containing active lang */
+.row_selected_lang {
+    width: 45% !important;
+    margin-left: 35%;
+    margin-bottom: 6%;
+    /* transition-delay: 200ms; */
+}
+
+/* The selected language image */
+.selected_lang{
+    border-radius: 100% !important;
+    height: 45px;
+    margin-right: 20% !important;
+    cursor: pointer !important; 
+}
+
+/* The list of of languages containing their names and images */
+.list_lang{
+    background-color: transparent !important;
+    /* width: 5%; */
+    /* align-items: center; */
+    margin-left: 4em !important;
+    margin-top: -35%;
+    height: 20px !important;
+    /* float: right; */
+    transition-delay: 200ms;
+    transform-origin: top;
+    transition-property: height, top, bottom;
+}
+
+/* Button containing image and name*/
+.btn_lang {
+    height: 75%;
+    width: 80%;
+    padding-bottom: 25%;
+    border-radius: 5em !important;
+    /* font-size: 30px !important; */
+    color: transparent;
+    /* font-weight: bold; */
+    background-color: transparent;
+    border-color: transparent !important;
+}
+
+.btn_lang:hover{
+    border-color: transparent !important;
+}
+
+/* Style for list item */
+.lang {
+   background-color: transparent !important;
+   height: 55px;
+   /* align-items: flex-start !important; */
+   /* align-content: center !important; */
+   border-color: transparent;
+   
+}
+
+/* Style for label(language name) */
+.lang_name{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1% !important;
+    padding-left: 5%;
+    width: 50%;
+    height: 60%;
+    margin-top: -10%;
+}
+
+/* The language image */
 .flag {
-    background-image: url('/public/logo-kei.png');
+    width: 42px;
+    height: 42px;
+    /* margin-right: 5%; */
+    margin-top: -18%;
+    /* margin-bottom: 14%; */
+    margin-left: -32%;
+}
+
+/* Style to hide active language */
+.hidden_active_lang{
+    visibility: hidden;
+    margin-top: 5% !important;
+}
+
+/* Style to hide the list of languages */
+.hidden_list_lang{
+    visibility: hidden;
+    /* margin-bottom: 4% !important; */
+}
+
+/* Styles to make the background of the images and color of text name
+    of the languages when hovering or showing active language*/
+.dark_blue, .dark_blue:hover {
+    background-color: #11467e !important;
+    color: white;
+}
+
+.dark_red, .dark_red:hover {
+    background-color: rgb(168, 3, 3) !important;
+    color: white;
+}
+
+.dark_yellow, .dark_yellow:hover {
+    background-color: rgb(246, 196, 70) !important;
+    color: white;
+}
+
+.green, .green:hover {
+    background-color: green !important;
+    color: white;
+}
+
+.dark_blue_hover:hover {
+    background-color: #11467e !important;
+}
+
+.dark_red_hover:hover {
+    background-color: rgb(168, 3, 3) !important;
+}
+
+.dark_yellow_hover:hover {
+    background-color: rgb(246, 196, 70) !important;
+}
+
+.green_hover:hover {
+    background-color: green !important;
+}
+
+@media (max-width: 725px) {
+
+    /* The style of the element(Nav) */
+    .main {
+        margin-left: 68%;
+        padding: 5% !important;
+        margin-top: 10% !important;
+        position: fixed;
+        top: 0;
+        width: 15%;
+        /* display: none; */
+    }
+
+    /* Style for Row containing active lang */
+    .row_selected_lang {
+        width: 40% !important;
+        margin-left: 35%;
+        margin-bottom: 6%;
+        /* transition-delay: 200ms; */
+    }
+
+    /* The selected language image */
+    .selected_lang{
+        border-radius: 100% !important;
+        height: 40%;
+        margin-right: 20% !important;
+        cursor: pointer !important; 
+    }
+
+    /* The list of of languages containing their names and images */
+    .list_lang{
+        background-color: transparent !important;
+        margin-left: 4em !important;
+        margin-top: -35%;
+        height: 20px !important;
+        transition-delay: 200ms;
+        transform-origin: top;
+        transition-property: height, top, bottom;
+    }
+
+    /* Button containing image and name*/
+    .btn_lang {
+        height: 90% !important;
+        width: 55%;
+        padding-bottom: 25%;
+        border-radius: 5em!important;
+        /* font-size: 30px !important; */
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent !important;
+    }
+
+    .btn_lang:hover{
+        border-color: transparent !important;
+    }
+
+    /* Style for list item */
+    .lang {
+        background-color: transparent !important;
+        height: 45px;
+        border-color: transparent;
+    
+    }
+
+    /* Style for label(language name) */
+    .lang_name{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 1% !important;
+        padding-left: 5%;
+        width: 50%;
+        height: 60%;
+        margin-top: -10%;
+    }
+
+    /* The language image */
+    .flag {
+        width: 35px;
+        height: 35px;
+        /* margin-right: 5%; */
+        margin-top: -12.75%;
+        /* margin-bottom: 14%; */
+        margin-left: -35%;
+    }
 }

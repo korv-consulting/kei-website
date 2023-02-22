@@ -87,19 +87,20 @@ export default function Home() {
             <div className={styles.container}>
               <Head>
                 <title>KEI - Home</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta name="description" content="KORV Estatement Inventory" />
                 <link rel="icon" href="/logo-kei.png" />
               </Head>
 
               <Header />
+              <Language />
               <main className={styles.main}>
                 <Image src='/mini_icon.svg' alt='mini_icon' className={styles.background} />
                 <Language />
                 <About />
-                <MiddleBar />
+                {/* <MiddleBar /> */}
                 <Offer />
                 <Contact />
-
               </main>
 
               <Footer />
