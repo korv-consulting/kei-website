@@ -1,9 +1,8 @@
 import { Button, ButtonGroup, Col, Container, Image, Row } from "react-bootstrap"
 import styles from "@/styles/Step-one-signup.module.css"
 import React, { useState, useEffect } from 'react'
-import Stepper from "components/Stepper"
 
-function StepOneSignup({next,preview,handleProfessional,handleParticular}) {
+function StepOneSignup({next,handleProfessional,handleParticular}) {
 
 
     const professional = () => {
@@ -14,7 +13,7 @@ function StepOneSignup({next,preview,handleProfessional,handleParticular}) {
 
 
     const particular = () => {
-        handleParticular()
+        handleParticular() 
         next(1)
     }
 
@@ -23,8 +22,7 @@ function StepOneSignup({next,preview,handleProfessional,handleParticular}) {
  
     return (  
         <>
-            <Image fluid src="/signup/immeuble2.png" className={styles.background} alt="Sky Crappers" />
-            <div className={styles.global_box}>
+            <section className={styles.global_box}>
                 <Row className={styles.global_row}>
 
                     <Col sm={2} ></Col>
@@ -72,7 +70,7 @@ function StepOneSignup({next,preview,handleProfessional,handleParticular}) {
                 </Row>
 
                
-            </div>
+            </section>
             
         
         </>

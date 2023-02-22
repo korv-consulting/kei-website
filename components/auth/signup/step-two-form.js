@@ -27,25 +27,22 @@ function StepTwoFormSignup({ next, preview }) {
 
         <form className={styles.form} id="form" method="post" noValidate onSubmit={onSubmit}>
             <div className={styles.container}>
-                <Row>
-                    <Col xs={5}></Col>
-                    <Col xs={2} className={styles.box_top}>
-                        <div>
-                            <Image fluid src="logo-kei.png" className={styles.picture} alt="Sky Crappers" />
-                        </div>
-                        <div className={styles.title}>
+               
+                    <p  className={`text-center mt-4  ${styles.box_top}`} >
+                        <Image fluid src="logo-kei.png" className={`${styles.picture}`}   alt="Sky Crappers" />
+                        <h3 className={` ${styles.title}`} >
                             Souscrire
-                        </div>
+                        </h3>
 
-                    </Col>
-                    <Col xs={5}></Col>
+                    </p>
+                    
 
-                </Row>
+              
                 <Row className={styles.row_center}  >
                     <Col xs={2}></Col>
-                    <Col xs={8} className={styles.box_center} >
-                        <div className={styles.box_flex}>
-                            <div className={styles.box_left} >
+                    <Col xs={8}  >
+                        <Row className={styles.box_flex}>
+                            <Col xs={12} lg={6} className={styles.box_left} >
                                 <input type="text" id='username' placeholder='Entrer votre nom' className={`form-control ${style.input_text}`} required name="name"
                                     title=" Veuillez saisir votre nom"
                                 />
@@ -53,8 +50,8 @@ function StepTwoFormSignup({ next, preview }) {
                                 <span id="name" className={`invalid-feedback ${styles.errorMsg}`} >
                                     Veuillez saisir votre nom
                                 </span>
-                            </div>
-                            <div>
+                            </Col> 
+                            <Col lg={6} className={styles.box_right}>
                                 <input type="text" id='username' placeholder='Entrer votre Prénom' className={`form-control ${style.input_text}`} required name="name"
                                     title=" Veuillez saisir votre prénom"
                                 />
@@ -62,8 +59,8 @@ function StepTwoFormSignup({ next, preview }) {
                                 <span id="name" className={`invalid-feedback ${styles.errorMsg}`} >
                                     Veuillez saisir votre Prénom
                                 </span>
-                            </div>
-                        </div>
+                            </Col>
+                        </Row>
                         <div>
                             <input type="email" id='mail' placeholder='example@gmail.com' className={`form-control ${style.input_text}`} required name="email"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -74,7 +71,7 @@ function StepTwoFormSignup({ next, preview }) {
                                 Veuillez saisir votre E-MAIL
                             </span>
                         </div>
-                        <div className={styles.box_help}>
+                        <div className={styles.box_phone}>
                             <input type="text" id='tel' placeholder='TEL' className={`form-control ${style.input_text_simple}`} name="tel"
                                 title="Veuillez saisir votre numéro de téléphone"
                             />
@@ -99,7 +96,7 @@ function StepTwoFormSignup({ next, preview }) {
                 <Row>
                     <Col ></Col>
                     <Col xs={4} className={styles.box_bottom} >
-                        <div className={styles.box_button}>
+                        <ButtonGroup className={styles.box_button}>
                             <div className={styles.btn_left} onClick={() => { preview(2) }} >
                                 <BsArrowLeft className={styles.icon} />
                                 <span className={styles.txt_hidded} >Précédent</span>
@@ -110,13 +107,13 @@ function StepTwoFormSignup({ next, preview }) {
                                 <span className={styles.txt_hidded} >Suivant</span>
                             </div>
 
-                        </div>
-                        <div className={styles.txt} >
-                            <span className={styles.txt_blue} >Vous avez deja un compte ? </span>
-                            <span className={styles.txt_green}>
+                        </ButtonGroup>
+                        <Row className={`mx-auto text-center ${styles.txt}`}  >
+                            <Col xs={12} lg={6}  className={styles.txt_blue} >Vous avez deja un compte ? </Col>
+                            <Col  lg={6}  className={styles.txt_green}>
                                 Connexion
-                            </span>
-                        </div>
+                            </Col>
+                        </Row>
 
 
                     </Col>

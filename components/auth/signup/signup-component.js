@@ -205,28 +205,28 @@ function Signup_component() {
                 switch (step) {
                     case 1:
                         return (
-                            <>
-                                <StepOneSignup
-                                    next={next}
-                                    preview={preview}
-                                    handleProfessional={handleProfessional}
-                                    handleParticular={handleParticular}
-                                />
-                                <div className={styles.stepper_one}>
-
-                                    <Stepper
-                                        filled={filled}
-                                        added={added}
-                                        active={active}
-                                        reduced={reduced}
+                                <section className={`${styles.section}`}>
+                                    <StepOneSignup
+                                        next={next}
+                                        preview={preview}
+                                        handleProfessional={handleProfessional}
+                                        handleParticular={handleParticular}
                                     />
-                                </div>
-                            </>
+                                    <div className={styles.stepper_one}>
+
+                                        <Stepper
+                                            filled={filled}
+                                            added={added}
+                                            active={active}
+                                            reduced={reduced}
+                                        />
+                                    </div>
+                                </section>
 
                         );
                     case 2:
                         return (
-                            <>
+                            <section className={`${styles.section}`}>
                                 <StepTwoSignup
                                     next={next}
                                     preview={preview}
@@ -239,7 +239,7 @@ function Signup_component() {
                                         reduced={reduced}
                                     />
                                 </div>
-                            </>
+                            </section>
 
                         );
                         case 3:
@@ -323,9 +323,11 @@ function Signup_component() {
 
         
             return (
-                <Container fluid className={styles.main}>
-                     {renderContent()}
-                </Container>
+                <section className={`${styles.background}`} >
+                    <Container fluid className={styles.main}>
+                        {renderContent()}
+                    </Container>
+                </section>
                 )
 
 }

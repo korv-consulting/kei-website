@@ -82,14 +82,13 @@ function Signup() {
               </Head>
 
               <Header />
-              <main className={styles.main}>
-                <Image src='/mini_icon.svg' className={styles.background} />
+              <main>
                 <Language />
                 <Signup_component /> 
               </main>
 
               <Footer /> 
-            </div>
+            </div> 
           )
       }
 

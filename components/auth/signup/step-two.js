@@ -15,12 +15,11 @@ function StepTwoSignup({next,preview}) {
 
 
     return(
-        <Container fluid className={styles_step.main}>
-            <Image fluid src="/skyscraper.png" className={styles_step.background} alt="Sky Crappers" />
+        <Container fluid className={styles_step.main}> 
             <Row className={styles_step.global_row}>
 
                 <Col></Col>
-                <Col  xs={5}  >  
+                <Col  md={12} lg={5} >  
                     <Card >
                          <StepTwoFormSignup 
                               next={next}

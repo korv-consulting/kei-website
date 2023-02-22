@@ -1,16 +1,25 @@
 /* The whole structure  of the Signup page */
 .main {
-  /*  padding-left: 6%;
-    padding-right: 6%;*/
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-bottom: -5%;
-    height: 80%;
-    margin-top: -20%;
-    margin-left: -1%;
-    width: 102%;
-
+    background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('/signup/immeuble2.png') center center fixed no-repeat;
+    background-size: cover;
+    margin-bottom: -9%;
+    padding-top: 1%;
+    margin-top: -4%;
+    padding-bottom: 5%;
+    min-width: 240px;
 }
 
+.background{
+background-color: white;
+}
+
+.section{
+
+ margin-top: -10%;
+
+ 
+ }
+ 
 .stepper_one{
   margin-top: -41%;
 }
@@ -53,3 +62,316 @@
      }
      
 }
+
+
+/* ---------------- Begind  Responsive Management -------------------------  */
+
+ /* medium pc */
+ @media only screen and (min-width: 991px) and (max-width: 1500px) {
+  
+
+
+}
+
+ @media only screen and (min-width: 912px) and (max-width: 990px) {
+
+  .main {
+    padding-bottom: 45.8%;
+ }
+
+.section{
+  margin-top: -1%;
+  
+  }
+
+
+/* Begind  for step two */
+.stepper_two{
+  margin-top: -90%;
+  margin-bottom: -29%;
+}
+
+/* End  for step two */
+   
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 911px) {
+
+  .main {
+    padding-bottom: 34%;
+ }
+
+.section{
+  margin-top: -1%;
+  
+  }
+
+
+/* Begind  for step two */
+  .stepper_two{
+    margin-top: -90%;
+    margin-bottom: -25%;
+  }
+
+/* End  for step two */
+     
+   
+   
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 819px) {
+
+  .main {
+    padding-bottom: 51%;
+ }
+
+.section{
+  margin-top: -1%;
+  
+  }
+
+/* Begind  for step two */
+  .stepper_two{
+    margin-top: -85%;
+    margin-bottom: -42%;
+  }
+
+/* End  for step two */
+}
+
+ @media only screen and (min-width: 768px) and (max-width: 799px) {
+
+  .main {
+    padding-bottom: 17%;
+}
+
+.section{
+  margin-top: -1%;
+  
+  }
+
+/* Begind  for step two */
+.stepper_two{
+  margin-top: -90%;
+  margin-bottom: -8%;
+}
+
+/* End  for step two */
+   
+
+  
+
+}
+
+@media only screen and (min-width: 712px) and (max-width: 767px) {
+
+  .main {
+    padding-bottom: 44%;
+}
+
+.section{
+  margin-top: -1%;
+  
+  
+  }
+
+/* Begind  for step two */
+
+  .stepper_two{
+    margin-top: -85%;
+    margin-bottom: -38%;
+  }
+    /* End  for step two */
+
+}
+
+
+
+/*  Tablet  Mode */
+@media only screen and (min-width: 540px) and (max-width: 711px) {    
+  .main {
+
+    padding-bottom: 10%;
+
+}
+
+.section{
+  margin-top: -10%;
+  
+  }
+
+
+/* Begind  for step two */
+.stepper_two{
+  margin-top: -100%;
+  margin-bottom: 10%;
+}
+
+/* End  for step two */
+   
+
+   
+}
+
+@media only screen and (min-width: 414px) and (max-width: 539px) {    
+  .main {
+
+    padding-bottom: 51%;
+
+}
+
+.section{
+  margin-top: 40%;
+  
+  }
+
+   /* Begind  for step two */
+   .stepper_two{
+    margin-top: -96%;
+    margin-bottom: -44%;
+  }
+
+/* End  for step two */
+     
+   
+}
+
+
+
+
+/*  phone  Mode */
+@media only screen and (min-width: 412px) and (max-width: 413px) {
+
+  .main {
+
+    padding-bottom: 56%;
+
+}
+
+.section{
+  margin-top: 40%;
+  
+  }
+
+  /* Begind  for step two */
+  .stepper_two{
+    margin-top: -80%;
+    margin-bottom: -40%;
+  }
+
+/* End  for step two */
+     
+   
+   
+     
+}
+
+@media only screen and (min-width: 390px) and (max-width: 411px) {
+
+  .main {
+
+    padding-bottom: 55%;
+
+}
+
+.section{
+  margin-top: 30%;
+  
+  }
+   
+  /* Begind  for step two */
+     .stepper_two{
+      margin-top: -85%;
+      margin-bottom: -44%;
+    }
+  
+  /* End  for step two */
+       
+     
+}
+
+@media only screen and (min-width: 375px) and (max-width: 389px) {
+
+  .main {
+
+    padding-bottom: 16%;
+
+}
+
+.section{
+  margin-top: -1%;
+  
+  }
+   
+  /* Begind  for step two */
+  .stepper_two{
+    margin-top: -85%;
+    margin-bottom: -42%;
+  }
+
+/* End  for step two */
+     
+}
+
+@media only screen and (min-width: 361px) and (max-width: 374px) {
+
+  .main {
+
+    padding-bottom: 20%;
+
+}
+
+.section{
+  margin-top: -1%;
+  
+  }
+   
+     
+}
+
+
+
+@media only screen and  (min-width: 280px) and (max-width: 360px) {
+
+  .main {
+
+    padding-bottom: 22.9%;
+
+}
+
+.section{
+  margin-top: -1%;
+  
+  }
+   
+     
+/* Begind  for step two */
+  .stepper_two{
+    margin-top: -90%;
+    margin-bottom: -10%;
+  }
+
+/* End  for step two */
+     
+     
+}
+
+@media only screen and (max-width: 279px) {
+
+  .main {
+
+    padding-bottom: 100%;
+
+}
+
+.section{
+  margin-top: 38%;
+  
+  }
+   
+     
+}
+
+/* ---------------- End  Responsive Management -------------------------  */
