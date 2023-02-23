@@ -58,7 +58,7 @@ function StepOneSignup({next,handleProfessional,handleParticular}) {
 
                                     </div> 
 
-                                </div>
+                                </div> 
                             </div>
                         </div>
                         <div className={styles.smallcontainer}>
