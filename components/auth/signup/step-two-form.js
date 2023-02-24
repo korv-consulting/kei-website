@@ -13,7 +13,7 @@ function StepTwoFormSignup({ next, preview }) {
         alert(`Hey, onSubmiting...`);
 
     };
-
+ 
     const handleSelect = (event) => {
         let label_select = document.getElementsByClassName(styles.label_select)
         label_select.style.color = "red"
@@ -23,7 +23,7 @@ function StepTwoFormSignup({ next, preview }) {
 
 
 
-    return (
+    return (  
 
         <form className={styles.form} id="form" method="post" noValidate onSubmit={onSubmit}>
             <div className={styles.container}>

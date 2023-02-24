@@ -47,3 +47,108 @@
     margin-top: 5%;
     min-height: 125%;
 }
+
+
+
+
+/* ---------------- Begind  Responsive Management -------------------------  */
+
+/* medium pc */
+
+@media only screen and (min-width: 991px) and (max-width: 1500px) {
+
+
+
+
+}
+
+@media only screen and (min-width: 912px) and (max-width: 990px) {
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 911px) {
+
+
+
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 819px) {
+  
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+
+
+
+
+}
+
+@media only screen and (min-width: 712px) and (max-width: 767px) {
+
+   
+
+}
+
+
+
+/*  Tablet  Mode */
+@media only screen and (min-width: 540px) and (max-width: 711px) {
+
+
+
+}
+
+@media only screen and (min-width: 414px) and (max-width: 539px) {
+
+
+
+
+
+}
+
+
+
+/*  phone  Mode */
+@media only screen and (min-width: 412px) and (max-width: 413px) {
+
+
+
+}
+
+@media only screen and (min-width: 390px) and (max-width: 411px) {
+
+
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 389px) {
+
+
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+
+}
+
+
+
+@media only screen and (min-width: 280px) and (max-width: 359px) {
+
+
+
+}
+
+@media only screen and (max-width: 279px) {}
+
+@media only screen and (max-width: 800px) {
+
+ 
+
+
+}
+
+/* ---------------- End  Responsive Management -------------------------  */

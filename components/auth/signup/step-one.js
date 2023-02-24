@@ -21,12 +21,12 @@ function StepOneSignup({next,handleProfessional,handleParticular}) {
 
  
     return (  
-        <section className={styles.main}>
+        <section className={styles.main}> 
             <div className={styles.global_box}>
                 <Row className={styles.global_row}>
 
                     <Col sm={2} ></Col>
-                    <Col sm={8} className={styles.box}> 
+                    <Col sm={8} className={styles.box}>  
                         <div className={styles.bigcontainer}>
                             <div className={styles.titlecontainer}>Veuillez choisir le profil  qui vous correspond  </div>
                             <div className={styles.flexcontainer}>

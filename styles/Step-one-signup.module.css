@@ -18,20 +18,21 @@
     max-width: 100vw;
 
 }
-.main{
 
-height: 50vw;
-margin-top: -43%;
-padding-top: 0.1%;
-background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url('/signup/immeuble2.png') center center fixed no-repeat;
-background-size: cover; 
+.main {
+
+    height: 50vw;
+    margin-top: -43%;
+    padding-top: 0.1%;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/signup/immeuble2.png') center center fixed no-repeat;
+    background-size: cover;
 
 
 }
 
-.global_box{
+.global_box {
     margin-top: -7%;
-    
+
 }
 
 .global_row {
@@ -108,7 +109,7 @@ background-size: cover;
 
 .txtleleft {
     background-color: aliceblue;
-   
+
     font-weight: 600;
     color: #11467E;
     font-size: 1.4vw;
@@ -278,3 +279,209 @@ background-size: cover;
 .imgright:hover .imgright_card {
     transform: scale(1.2);
 }
+
+
+
+
+/* ---------------- Begind  Responsive Management -------------------------  */
+
+/* medium pc */
+
+@media only screen and (min-width: 991px) and (max-width: 1500px) {}
+
+@media only screen and (min-width: 912px) and (max-width: 990px) {
+    .main {
+        margin-top: 16%;
+        height: 150vw;
+ 
+    }
+
+    .global_box {
+        margin-top: 20%;
+    }
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 911px) {
+    .main {
+
+        margin-top: 16%;
+        height: 142vw;
+
+    }
+
+    .global_box {
+        margin-top: 0%;
+
+
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1500px) {}
+
+
+@media only screen and (min-width: 800px) and (max-width: 819px) {
+    .main {
+
+        margin-top: 16%;
+        height: 142vw;
+
+    }
+
+    .global_box {
+        margin-top: 0%;
+
+
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+    .main {
+        margin-top: 16%;
+        height: 137vw;
+
+    }
+
+    .global_box {
+        margin-top: 20%;
+    }
+
+}
+
+@media only screen and (min-width: 712px) and (max-width: 767px) {
+    .main {
+        margin-top: 17%;
+        height: 112vw;
+
+    }
+
+    .global_box {
+        margin-top: 20%;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 540px) and (max-width: 711px) {
+    .main {
+        margin-top: 18%;
+        height: 140vw;
+
+    }
+
+    .global_box {
+        margin-top: 28%;
+    }
+
+
+  }
+
+@media only screen and (min-width: 414px) and (max-width: 539px) {
+    .main {
+
+        margin-top: -18%;
+
+    }
+
+    .global_box {
+        margin-top: 0%;
+
+
+    }
+
+
+
+}
+
+
+
+
+/*  phone  Mode */
+@media only screen and (min-width: 412px) and (max-width: 413px) {
+    .main {
+
+        margin-top: -18%;
+        height: 200vw;
+
+    }
+
+    .global_box {
+        margin-top: 30%;
+
+
+    }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 411px) {
+    .main {
+
+        margin-top: -8%;
+        height: 200vw;
+
+    }
+
+    .global_box {
+        margin-top: 30%;
+
+
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 389px) {
+    .main {
+
+        margin-top: 16%;
+        height: 170vw;
+
+    }
+
+    .global_box {
+        margin-top: 30%;
+
+
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+    .main {
+
+        margin-top: 16%;
+        height: 200vw;
+
+    }
+
+    .global_box {
+        margin-top: 30%;
+
+
+    }
+}
+
+
+
+@media only screen and (min-width: 280px) and (max-width: 359px) {
+    .main {
+
+        margin-top: 16%;
+        height: 200vw;
+
+    }
+
+    .global_box {
+        margin-top: 30%;
+
+
+    }
+}
+
+@media only screen and (max-width: 279px) {}
+
+/* ---------------- End  Responsive Management -------------------------  */

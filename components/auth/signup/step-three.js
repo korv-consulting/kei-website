@@ -10,14 +10,14 @@ function StepThreeSignup({next,preview}) {
         alert(`Hey, onSubmiting...`);
 
     };
+ 
 
-
-    return(
+    return( 
         <Container fluid className={styles.main}> 
             <Row className={styles.global_row}>
 
                 <Col></Col>
-                <Col  xs={5}  >  
+                <Col md={12} lg={5}  >  
                     <Card > 
                          <StepThreeFormSignup 
                               next={next}

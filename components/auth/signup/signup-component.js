@@ -268,7 +268,7 @@ function Signup_component() {
                                             next={next}
                                             preview={preview}
                                         />
-                                        <div className={styles.stepper_two}>
+                                        <div className={styles.stepper_three_company}>
                                             <Stepper
                                                 filled={filled}
                                                 added={added}

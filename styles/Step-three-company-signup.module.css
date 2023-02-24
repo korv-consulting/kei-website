@@ -23,7 +23,7 @@
 .main {
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/skyscraper.png') center center fixed no-repeat;
   background-size: cover; 
-  height: 135vh;
+  height: 70vw;
   margin-top: -42%;
   margin-bottom: -70%;
   width: 100%;
@@ -47,3 +47,172 @@
     margin-top: 5%;
     min-height: 125%;
 }
+
+
+
+
+/* ---------------- Begind  Responsive Management -------------------------  */
+
+/* medium pc */
+
+@media only screen and (min-width: 991px) and (max-width: 1500px) {
+    .main {
+        height: 180vw;
+        padding-top: 1%;
+      } 
+
+
+
+
+}
+
+@media only screen and (min-width: 912px) and (max-width: 990px) {
+    .main {
+        height: 230vw;
+        padding-top: 30%;
+      } 
+
+      
+}
+
+@media only screen and (min-width: 820px) and (max-width: 911px) {
+    .main {
+        height: 270vw;
+        padding-top: 30%;
+      } 
+
+      
+
+
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 819px) {
+    .main {
+        height: 230vw;
+        padding-top: 30%;
+      } 
+
+      
+      
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+    .main {
+        height: 270vw;
+        padding-top: 30%;
+      } 
+
+
+
+
+
+}
+
+@media only screen and (min-width: 712px) and (max-width: 767px) {
+    .main {
+        height: 295vw;
+        padding-top: 30%;
+      } 
+
+
+      
+   
+
+}
+
+
+
+/*  Tablet  Mode */
+@media only screen and (min-width: 540px) and (max-width: 711px) {
+    .main {
+        height: 308vw;
+        padding-top: 32%;
+      } 
+
+
+
+
+}
+
+@media only screen and (min-width: 414px) and (max-width: 539px) {
+    .main {
+        height: 310vw;
+        padding-top: 5%;
+      } 
+
+
+
+
+
+}
+
+
+
+/*  phone  Mode */
+@media only screen and (min-width: 412px) and (max-width: 413px) {
+    .main {
+        height: 420vw;
+        padding-top: 12%;
+      } 
+
+
+
+
+}
+
+@media only screen and (min-width: 390px) and (max-width: 411px) {
+    .main {
+        height: 310vw;
+        padding-top: 12%;
+      } 
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 389px) {
+    .main {
+        height: 390vw;
+        padding-top: 45%;
+      } 
+
+
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+    .main {
+        height: 460vw;
+        padding-top: 45%;
+      } 
+
+
+}
+
+
+
+@media only screen and (min-width: 280px) and (max-width: 359px) {
+    .main {
+        height: 470vw;
+        padding-top: 65%;
+      } 
+
+ 
+
+}
+
+@media only screen and (max-width: 279px) {}
+
+@media only screen and (max-width: 800px) {
+
+ 
+
+
+}
+
+/* ---------------- End  Responsive Management -------------------------  */

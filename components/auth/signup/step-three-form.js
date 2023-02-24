@@ -38,11 +38,9 @@ function StepThreeFormSignup({ next, preview }) {
 
                 </p>
                     
-                <Row className={styles.row_center}  >
-                    <Col xs={2}></Col>
-                    <Col xs={8} className={styles.box_center} >
+                <div className={styles.row_center}  >
                        
-                        <div className={styles.box_adress}>
+                        <div  className={`mx-5 ${styles.box_adress}`} >
                             <input type="adress" id='adress' placeholder='BP: 237' className={`form-control ${style.input_text}`} required name="adress"
                                 title="Adresse"
                             />
@@ -51,7 +49,7 @@ function StepThreeFormSignup({ next, preview }) {
                                 Veuillez saisir votre Adresse
                             </span>
                         </div>
-                        <div className={styles.box_flex}>
+                        <div className={`mx-5 ${styles.box_flex}`}>
                             <div className={styles.box_left} >
                                 <input type="text" id='city' placeholder='Entrer votre ville' className={`form-control ${style.input_text_simple}`}  name="city"
                                     title=" Veuillez saisir votre ville"
@@ -61,7 +59,7 @@ function StepThreeFormSignup({ next, preview }) {
                                     Veuillez saisir votre ville
                                 </span>
                             </div>
-                            <div>
+                            <div className={styles.box_right}>
                                 <input type="text" id='country' placeholder='Entrer votre Pays' className={`form-control ${style.input_text}`} required name="country"
                                     title=" Veuillez saisir votre Pays"
                                 />
@@ -73,37 +71,32 @@ function StepThreeFormSignup({ next, preview }) {
                         </div>
                       
 
-                    </Col>
-                    <Col xs={2}></Col>
 
-                </Row>
-                <Row>
-                    <Col ></Col>
-                    <Col xs={4} className={styles.box_bottom} >
-                        <div className={styles.box_button}>
-                            <div className={styles.btn_left} onClick={() => { preview(3) }} >
-                                <BsArrowLeft className={styles.icon} />
-                                <span className={styles.txt_hidded} >Précédent</span>
-
-                            </div>
-                            <div className={styles.btn_right} onClick={() => { next(3) }} >
-                                <BsArrowRight className={styles.icon} />
-                                <span className={styles.txt_hidded} >Suivant</span>
-                            </div>
+                </div>
+               
+                <div   className={styles.box_bottom} >
+                    <div className={styles.box_button}>
+                        <div className={styles.btn_left} onClick={() => { preview(3) }} >
+                            <BsArrowLeft className={styles.icon} />
+                            <span className={styles.txt_hidded} >Précédent</span>
 
                         </div>
-                        <div className={styles.txt} >
-                            <span className={styles.txt_blue} >Vous avez deja un compte ? </span>
-                            <span className={styles.txt_green}>
-                                Connexion
-                            </span>
+                        <div className={styles.btn_right} onClick={() => { next(3) }} >
+                            <BsArrowRight className={styles.icon} />
+                            <span className={styles.txt_hidded} >Suivant</span>
                         </div>
 
+                    </div>
+                    <Row className={styles.txt} >
+                        <Col xs={12} lg={6} className={styles.txt_blue} >Vous avez deja un compte ? </Col>
+                        <Col lg={6} className={styles.txt_green}>
+                            Connexion
+                        </Col>
+                    </Row>
 
-                    </Col>
-                    <Col></Col>
 
-                </Row>
+                </div>
+              
 
             </div>
         </form>

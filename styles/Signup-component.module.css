@@ -1,377 +1,556 @@
   /* The whole structure  of the Signup page */
-.main {
-  /*   background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('/signup/immeuble2.png') center center fixed no-repeat;*/
+  .main {
+    /*   background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('/signup/immeuble2.png') center center fixed no-repeat;*/
     background-size: cover;
     margin-bottom: -9%;
     padding-top: 1%;
     margin-top: -4%;
     padding-bottom: 5%;
     min-width: 240px;
-}
+  }
 
-.background{
-background-color: white;
-}
+  .background {
+    background-color: white;
+  }
 
-.section{
+  .section {
 
- margin-top: 50%;
-
- 
- }
- 
-.stepper_one{
-  margin-top: -71%; 
-}
-
-.stepper_two{
-  margin-top: -79%;
-  margin-left: 2%;
-  margin-bottom: 11%;
-}
-
-.stepper_three{
-  margin-top: -93%;
-  margin-left: 2%;
-  margin-bottom: 22%;
-
-}
-
-.stepper_four{
-  margin-top: -90%;
-  margin-left: 2%;
-  margin-bottom: 21%;
-
-}
-
-.stepper_five{
-  margin-top: -75%;
-  margin-left: 2%;
-  margin-bottom: 21%;
-
-}
+    margin-top: 50%;
 
 
-@media only screen and (max-width: 384px) {
+  }
 
-    .stepper_five{
+  .stepper_one {
+    margin-top: -71%;
+  }
+
+  .stepper_two {
+    margin-top: -79%;
+    margin-left: 2%;
+    margin-bottom: 11%;
+  }
+
+  .stepper_three {
+    margin-top: -93%;
+    margin-left: 2%;
+    margin-bottom: 18%;
+
+  }
+
+  .stepper_three_company{
+    margin-top: -79%;
+    margin-left: 1%;
+    margin-bottom: 11%;
+  }
+
+  .stepper_four {
+    margin-top: -90%;
+    margin-left: 2%;
+    margin-bottom: 21%;
+
+  }
+
+  .stepper_five {
+    margin-top: -75%;
+    margin-left: 2%;
+    margin-bottom: 21%;
+
+  }
+
+
+  @media only screen and (max-width: 384px) {
+
+    .stepper_five {
       margin-top: -290%;
       margin-left: 2%;
       margin-bottom: 22%
-    
-     }
-     
-}
+    }
 
-
-/* ---------------- Begind  Responsive Management -------------------------  */
-
- /* medium pc */
- @media only screen and (min-width: 991px) and (max-width: 1500px) {
-  
-
-
-}
-
- @media only screen and (min-width: 912px) and (max-width: 990px) {
-
-  .main {
-    padding-bottom: 45.8%;
- }
-
-.section{
-  margin-top: -1%;
-  
   }
 
 
-/* Begind  for step two */
-.stepper_two{
-  margin-top: -90%;
-  margin-bottom: -29%;
-}
+  /* ---------------- Begind  Responsive Management -------------------------  */
 
-/* End  for step two */
+  /* medium pc */
+  @media only screen and (min-width: 1280px) and (max-width: 1500px) {
+    .stepper_three_company{
+      margin-top: -120%;
+      margin-bottom: 45%;
+
+
+    }
+
+  }
+  @media only screen and (min-width: 991px) and (max-width: 1279px) {
+    .stepper_three_company{
+      margin-top: -118%;
+      margin-bottom: 25%;
+
+
+    }
+
+  }
+
+  @media only screen and (min-width: 912px) and (max-width: 990px) {
+
+    .main {
+      padding-bottom: 45.8%;
+    }
+
+    .section {
+      margin-top: -1%;
+
+    }
+
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -130%;
+      margin-bottom: -18%;
+    }
+
+    .stepper_two {
+      margin-top: -90%;
+      margin-bottom: -29%;
+    }
+
+    .stepper_three {
+      margin-top: -96%;
+      margin-bottom: -30%;
+    }
+    .stepper_three_company{
+      margin-bottom: -28%;
+
+    }
+
+
+    /* End  for step  */
+
+
+  }
+
+  @media only screen and (min-width: 820px) and (max-width: 911px) {
+
+    .main {
+      padding-bottom: 34%;
+    }
+
+    .section {
+      margin-top: -1%;
+
+    }
+
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -130%;
+      margin-bottom: 18%;
+    }
+
+    .stepper_two {
+      margin-top: -130%;
+      margin-bottom: -5%;
+    }
+
+    .stepper_three {
+      margin-top: -96%;
+      margin-bottom: -18%;
+    }
+    .stepper_three_company{
+      margin-top: -115%;
+      margin-bottom: -5%;
+
+    }
+
+
+    /* End  for step  */
+
+
+
+  }
+
+
+  @media only screen and (min-width: 800px) and (max-width: 819px) {
+
+    .main {
+      padding-bottom: 51%;
+    }
+
+    .section {
+      margin-top: -1%;
+
+    }
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -110%;
+      margin-bottom: -29%;
+    }
+
+    .stepper_two {
+      margin-top: -85%;
+      margin-bottom: -42%;
+    }
+
+    .stepper_three {
+      margin-top: -125%;
+      margin-bottom: -32%;
+    }
+
+    .stepper_three_company{
+      margin-bottom: -32%;
+    }
+
+
+    /* End  for step  */
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 799px) {
+
+    .main {
+      padding-bottom: 17%;
+    }
+
+    .section {
+      margin-top: -1%;
+
+    }
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -130%;
+      margin-bottom: 1%;
+    }
+
+    .stepper_two {
+      margin-top: -110%;
+      margin-bottom: -1%;
+    }
+    .stepper_three_company{
+      margin-top: -115%;
+      margin-bottom: -5%;
+
+    }
+
+    /* End  for step  */
+
+
+
+
+  }
+
+  @media only screen and (min-width: 712px) and (max-width: 767px) {
+
+    .main {
+      padding-bottom: -10%;
+    }
+
+    .section {
+      margin-top: -1%;
+
+
+    }
+
+    /* Begind  for steps  */
+    .stepper_one {
+      margin-top: -100%;
+      margin-bottom: 28%;
+    }
+
+    .stepper_two {
+      margin-top: -135%;
+      margin-bottom: 20%;
+    }
+    .stepper_three_company{
+      margin-top: -135%;
+      margin-bottom: 20%;
+    }
+
    
 
-}
+    /* End  for step  */
 
-@media only screen and (min-width: 820px) and (max-width: 911px) {
-
-  .main {
-    padding-bottom: 34%;
- }
-
-.section{
-  margin-top: -1%;
-  
   }
 
 
-/* Begind  for step two */
-  .stepper_two{
-    margin-top: -90%;
-    margin-bottom: -25%;
-  }
 
-/* End  for step two */
-     
-   
-   
-}
+  /*  Tablet  Mode */
+  @media only screen and (min-width: 540px) and (max-width: 711px) {
+    .main {
+
+      padding-bottom: 10%;
+
+    }
+
+    .section {
+      margin-top: -10%;
+
+    }
 
 
-@media only screen and (min-width: 800px) and (max-width: 819px) {
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -139%;
+    }
 
-  .main {
-    padding-bottom: 51%;
- }
+    .stepper_two {
+      margin-top: -190%;
+      margin-bottom: 26%;
+    }
 
-.section{
-  margin-top: -1%;
-  
-  }
-
-/* Begind  for step two */
-  .stepper_two{
-    margin-top: -85%;
-    margin-bottom: -42%;
-  }
-
-/* End  for step two */
-}
-
- @media only screen and (min-width: 768px) and (max-width: 799px) {
-
-  .main {
-    padding-bottom: 17%;
-}
-
-.section{
-  margin-top: -1%;
-  
-  }
-
-/* Begind  for step two */
-.stepper_two{
-  margin-top: -90%;
-  margin-bottom: -8%;
-}
-
-/* End  for step two */
-   
+    .stepper_three_company{
+      margin-top: -110%;
+      margin-bottom: 15%;
+    }
 
   
 
-}
+    /* End  for step  */
 
-@media only screen and (min-width: 712px) and (max-width: 767px) {
 
-  .main {
-    padding-bottom: 44%;
-}
 
-.section{
-  margin-top: -1%;
-  
-  
   }
 
-/* Begind  for step two */
+  @media only screen and (min-width: 414px) and (max-width: 539px) {
+    .main {
 
-  .stepper_two{
-    margin-top: -85%;
-    margin-bottom: -38%;
+      padding-bottom: 51%;
+
+    }
+
+    .section {
+      margin-top: 40%;
+
+    }
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -51%;
+    }
+
+    .stepper_two {
+      margin-top: -96%;
+      margin-bottom: -34%;
+    }
+
+    .stepper_three {
+      margin-top: -96%;
+      margin-bottom: -34%;
+    }
+
+    .stepper_three_company{
+      margin-top: -100%;
+      margin-bottom: -35%;
+    }
+
+
+    /* End  for step  */
+
+
   }
+
+
+
+
+  /*  phone  Mode */
+  @media only screen and (min-width: 412px) and (max-width: 413px) {
+
+    .main {
+ 
+      padding-bottom: 56%;
+
+    }
+
+    .section {
+      margin-top: 40%;
+
+    }
+
+    /* Begind  for step two */
+    .stepper_one {
+      margin-top: -170%;
+      margin-bottom: 10%;
+    }
+
+    .stepper_two {
+      margin-top: -200%;
+      margin-bottom: -25%;
+    }
+    .stepper_three {
+      margin-top: -96%;
+      margin-bottom: -34%;
+    }
+    .stepper_three_company{
+      margin-top: -200%;
+      margin-bottom: -30%;
+    }
+
+
     /* End  for step two */
 
-}
 
 
 
-/*  Tablet  Mode */
-@media only screen and (min-width: 540px) and (max-width: 711px) {    
-  .main {
-
-    padding-bottom: 10%;
-
-}
-
-.section{
-  margin-top: -10%;
-  
   }
 
+  @media only screen and (min-width: 390px) and (max-width: 411px) {
 
-/* Begind  for step two */
-.stepper_two{
-  margin-top: -100%;
-  margin-bottom: 10%;
-}
+    .main {
 
-/* End  for step two */
-   
+      padding-bottom: 55%;
 
-   
-}
+    }
 
-@media only screen and (min-width: 414px) and (max-width: 539px) {    
-  .main {
+    .section {
+      margin-top: 30%;
 
-    padding-bottom: 51%;
+    }
 
-}
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -160%;
+      margin-bottom: 0%;
+    }
 
-.section{
-  margin-top: 40%;
-  
-  }
-
-   /* Begind  for step two */
-   .stepper_two{
-    margin-top: -96%;
-    margin-bottom: -44%;
-  }
-
-/* End  for step two */
-     
-   
-}
-
-
-
-
-/*  phone  Mode */
-@media only screen and (min-width: 412px) and (max-width: 413px) {
-
-  .main {
-
-    padding-bottom: 56%;
-
-}
-
-.section{
-  margin-top: 40%;
-  
-  }
-
-  /* Begind  for step two */
-  .stepper_two{
-    margin-top: -80%;
-    margin-bottom: -40%;
-  }
-
-/* End  for step two */
-     
-   
-   
-     
-}
-
-@media only screen and (min-width: 390px) and (max-width: 411px) {
-
-  .main {
-
-    padding-bottom: 55%;
-
-}
-
-.section{
-  margin-top: 30%;
-  
-  }
-   
-  /* Begind  for step two */
-     .stepper_two{
-      margin-top: -85%;
+    .stepper_two {
+      margin-top: -75%;
       margin-bottom: -44%;
     }
-  
-  /* End  for step two */
-       
-     
-}
 
-@media only screen and (min-width: 375px) and (max-width: 389px) {
+    .stepper_three {
+      margin-top: -96%;
+      margin-bottom: -34%;
+    }
 
-  .main {
+    .stepper_three_company{
+      margin-bottom: -40%;
+    }
 
-    padding-bottom: 16%;
 
-}
 
-.section{
-  margin-top: -1%;
-  
-  }
-   
-  /* Begind  for step two */
-  .stepper_two{
-    margin-top: -85%;
-    margin-bottom: -42%;
+    /* End  for step  */
+
+
   }
 
-/* End  for step two */
-     
-}
+  @media only screen and (min-width: 375px) and (max-width: 389px) {
 
-@media only screen and (min-width: 361px) and (max-width: 374px) {
+    .main {
 
-  .main {
+      padding-bottom: 16%;
 
-    padding-bottom: 20%;
+    }
 
-}
+    .section {
+      margin-top: -1%;
 
-.section{
-  margin-top: -1%;
-  
-  }
-   
-     
-}
+    }
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -150%;
+      margin-bottom: 10%;
+    }
+
+    .stepper_two {
+      margin-top: -120%;
+      margin-bottom: 2%;
+    }
+
+    .stepper_three_company{
+      margin-top: -115%;
+    }
 
 
+    /* End  for step  */
 
-@media only screen and  (min-width: 280px) and (max-width: 360px) {
-
-  .main {
-
-    padding-bottom: 22.9%;
-
-}
-
-.section{
-  margin-top: -1%;
-  
-  }
-   
-     
-/* Begind  for step two */
-  .stepper_two{
-    margin-top: -90%;
-    margin-bottom: -10%;
   }
 
-/* End  for step two */
-     
-     
-}
+  @media only screen and (min-width: 360px) and (max-width: 374px) {
 
-@media only screen and (max-width: 279px) {
+    .main {
 
-  .main {
+      padding-bottom: 20%;
 
-    padding-bottom: 100%;
+    }
 
-}
+    .section {
+      margin-top: -1%;
 
-.section{
-  margin-top: 38%;
-  
+    }
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -170%;
+      margin-bottom: 10%;
+    }
+
+    .stepper_two {
+      margin-top: -175%;
+      margin-bottom: 15%;
+    }
+    .stepper_three_company{
+      margin-top: -180%;
+    }
+
+
+    
+
+
   }
-   
-     
-}
 
-/* ---------------- End  Responsive Management -------------------------  */
+
+
+  @media only screen and (min-width: 280px) and (max-width: 359px) {
+
+    .main {
+
+      padding-bottom: 22.9%;
+
+    }
+
+    .section {
+      margin-top: -1%;
+
+    }
+
+
+
+
+    /* Begind  for step  */
+    .stepper_one {
+      margin-top: -199%;
+    }
+
+    .stepper_two {
+      margin-top: -149%;
+      margin-bottom: 10%;
+    }
+
+    .stepper_three_company{
+      margin-top: -90%;
+      margin-bottom: 15%;
+    }
+
+    /* End  for step  */
+
+
+  }
+
+  @media only screen and (max-width: 279px) {
+
+    .main {
+
+      padding-bottom: 100%;
+
+    }
+
+    .section {
+      margin-top: 38%;
+
+    }
+
+
+  }
+
+  /* ---------------- End  Responsive Management -------------------------  */

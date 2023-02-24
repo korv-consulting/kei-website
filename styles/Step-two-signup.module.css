@@ -34,18 +34,30 @@
 /* ---------------- Begind  Responsive Management -------------------------  */
 
  /* medium pc */
- @media only screen and (min-width: 991px) and (max-width: 1500px) {
-  
+ @media only screen and (min-width: 1280px) and (max-width: 1500px) {
+    .main {
+        height: 87vw;  
+        
+    } 
+ }
+
+ @media only screen and (min-width: 991px) and (max-width: 1279px) {
+    .main {
+        height: 100vw;  
+        
+    } 
+
 
 
  }
  
   @media only screen and (min-width: 912px) and (max-width: 990px) {
     .main {
-     
-        height: 80vh;  
-      
+        height: 180vw;  
+        margin-top: -20%;
+        padding-top: 1%;  
     } 
+
 
   
 
@@ -53,11 +65,12 @@
  
  @media only screen and (min-width: 820px) and (max-width: 911px) {
     .main {
-     
-        height: 89vh;  
-      
+        height: 235vw;  
+        margin-top: -20%;
+        padding-top: 1%;  
     } 
 
+    
  
  }
  
@@ -65,8 +78,10 @@
  @media only screen and (min-width: 800px) and (max-width: 819px) {
   
     .main {
-     
-        height: 80vh;  
+        height: 190vw;  
+        margin-top: -23%;
+        padding-top: 6%;
+
       
     } 
       
@@ -75,11 +90,12 @@
  
   @media only screen and (min-width: 768px) and (max-width: 799px) {
     .main {
-     
-        height: 95vh;  
-      
+        height: 215vw;  
+        margin-top: -20%;
+        padding-top: 1%;  
     } 
 
+    
   
  
  }
@@ -88,7 +104,10 @@
  
     .main {
      
-        height: 80vh;  
+        height: 260vw;  
+        margin-top: -23%;
+        padding-top: 6%;
+
       
     } 
       
@@ -103,9 +122,9 @@
  /*  Tablet  Mode */
  @media only screen and (min-width: 540px) and (max-width: 711px) {    
     .main {
-     
-        height: 125vh;  
-      
+        height: 340vw;  
+        margin-top: -20%;
+        padding-top: 6%;  
     } 
 
     
@@ -113,9 +132,9 @@
  
  @media only screen and (min-width: 414px) and (max-width: 539px) {    
     .main {
-     
-        height: 80vh;  
-      
+        height: 235vw;  
+        margin-top: -20%;
+        padding-top: 0%;  
     } 
 
     
@@ -127,21 +146,21 @@
  /*  phone  Mode */
  @media only screen and (min-width: 412px) and (max-width: 413px) {
     .main {
-     
-        height: 75vh;  
-      
+        height: 370vw;  
+        margin-top: -20%;
+        padding-top: 1%;  
     } 
 
-
+    
     
       
  }
  
  @media only screen and (min-width: 390px) and (max-width: 411px) {
     .main {
-     
-        height: 80vh;  
-      
+        height: 260vw;  
+        margin-top: -20%;
+        padding-top: 1%;  
     } 
 
     
@@ -152,8 +171,10 @@
  
  @media only screen and (min-width: 375px) and (max-width: 389px) {
      .main {
-     
-        height: 80vh;  
+        height: 320vw;  
+        margin-top: -23%;
+        padding-top: 15%;
+
       
     } 
 
@@ -161,22 +182,33 @@
       
  }
  
- @media only screen and (min-width: 361px) and (max-width: 374px) {
- 
+ @media only screen and (min-width: 360px) and (max-width: 374px) {
+    .main {
+        height: 380vw;  
+        margin-top: -20%;
+        padding-top: 12%;  
+        
+    } 
+
+    
 
       
  }
  
  
  
- @media only screen and  (min-width: 280px) and (max-width: 360px) {
+ @media only screen and  (min-width: 280px) and (max-width: 359px) {
  
     .main {
-     
-        height: 105vh;  
-      
+        height: 435vw;  
+        margin-top: -20%;
+        padding-top: 20%;  
+        width: 110%;
+        margin-left: -5%;
+
     } 
 
+    
     
     
       

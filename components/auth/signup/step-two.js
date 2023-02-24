@@ -1,22 +1,14 @@
 import { Button, ButtonGroup,Card, Col, Container, Image, Row } from "react-bootstrap"
-import styles_step from "@/styles/Step-two-signup.module.css"
-import styles from '../../../styles/Step-two-form-signup.module.css'
-import style from '../../../styles/Floating-label.module.css'
-import React, { useState, useEffect } from 'react';
+import styles from "@/styles/Step-two-signup.module.css"
+import React from 'react';
 import StepTwoFormSignup from './step-two-form'
 
 function StepTwoSignup({next,preview}) {
 
-    const onSubmit = (event) => {
-        event.preventDefault();
-        alert(`Hey, onSubmiting...`); 
-
-    }; 
-
  
-    return(
-        <Container fluid className={styles_step.main}>  
-            <Row className={styles_step.global_row}>
+    return( 
+        <Container fluid className={styles.main}>  
+            <Row className={styles.global_row}>
 
                 <Col></Col>
                 <Col  md={12} lg={5} >  
