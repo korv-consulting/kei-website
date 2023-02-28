@@ -62,14 +62,15 @@
 
 
 .disable {
-    display: none; 
+    display: none;
 }
 
 /*--------------end imported css form ---------------------*/
 
 
-.form{
-    min-width: 40vw;
+.form {
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .picture {
@@ -85,60 +86,28 @@
     margin-top: 3%;
     font-weight: bolder;
 }
- 
+
 .row_center {
     margin-top: 5%;
     margin-bottom: -1%;
 }
 
-.eye_icon{
-   margin-top: -8.5vw;
-   margin-left: 90%;
-   background-color: pink;
-   display: flex;
-   
+.eye_icon {
+    margin-top: 3%;
+    margin-left: 62%;
 }
 
-@media only screen and ((min-width: 1024px) and (max-width:1450px)) {
-
-    .eye_icon{
-        margin-top: -16.5vw;
-        margin-left: 90%;
-        color: red;
-     }
-     
-}
-
-
-
-@media only screen and (max-width: 1023px) {
-
-    .eye_icon{
-        margin-top: -29.5vw;
-        margin-left: 90%;
-        color: rgb(204, 0, 255);
-
-     }
-     
-}
-
-.box_pwd{
-    height: 20%;
-}
-
-.box_bottom {
-    width: 63%;
-    height: 70%;
-    margin-bottom: 5%;
-    display: block;
-    margin-left: -1.5%;
+.box_pwd .eye_icon {
+    position: absolute;
 
 }
+
 
 .box_button {
     display: flex;
     height: 2vw;
     width: 100%;
+    justify-content: center;
 
 }
 
@@ -147,7 +116,6 @@
     height: 100%;
     min-height: 100%;
     margin-right: 5%;
-    margin-left: 24%;
     width: 25%;
     border: 2px solid #03DAC5;
     border-radius: 5px;
@@ -165,42 +133,17 @@
 .btn_left:hover .icon {
     transform: scale(1);
     margin-right: 75%;
- 
+
 }
 
-.btn_left:hover .icon + .txt_hidded {
+.btn_left:hover .icon+.txt_hidded {
     display: flex;
     margin-top: -18%;
     margin-left: 20%;
     transform: scaleX(0.7);
- 
-  
- }
- 
- 
 
 
-.btn_right:hover {
-    transform: scaleX(1.5);
-    transform-origin: left center;
 }
-
-.btn_right:hover .icon {
-    transform: scale(1);
-    margin-left: 75%;
- 
-}
-
-
-.btn_right:hover .icon + .txt_hidded {
-   display: flex;
-   margin-top: -18%;
-   margin-left: 20%;
-   transform: scaleX(0.7);
-
- 
-}
-
 
 
 .btn_right {
@@ -214,35 +157,55 @@
     align-items: center;
     justify-content: center;
     min-width: 25%;
-    
+}
+
+
+.btn_right:hover {
+    transform: scaleX(1.5);
+    transform-origin: left center;
+}
+
+.btn_right:hover .icon {
+    transform: scale(1);
+    margin-left: 75%;
 
 }
+
+
+.btn_right:hover .icon+.txt_hidded {
+    display: flex;
+    margin-top: -18%;
+    margin-left: 20%;
+    transform: scaleX(0.7);
+
+
+}
+
+
+
 
 .icon {
     transform: scale(2);
     margin-top: 8%;
-    
+
 
 }
 
-.txt_hidded{
+.txt_hidded {
     display: none;
 }
 
 
 .txt {
-    display: flex;
-    margin-right: 20%;
     width: 100%;
     margin-top: 10%;
     height: 50%;
-
+    margin-bottom: 5%;
 
 }
- 
+
 .txt_blue {
     color: #2DB6FE;
-    width: 60%;
     font-size: larger;
 
 }
@@ -260,24 +223,23 @@
 .txt_green {
     color: #03DAC5;
     font-size: larger;
-    width: 40%;
 }
 
-.checkbox{
+.checkbox {
     width: 5%;
 
 }
 
-.box_flex{
+.box_flex {
     display: flex;
 }
 
-.box_right{
+.box_right {
     width: 95%;
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 
 
 }
@@ -286,55 +248,93 @@
 
 
 /* ---------------- Begind  Responsive Management -------------------------  */
+/*Begind Special responsive management icon */
+@media only screen and (min-width: 992px) and (max-width: 1300px) {
+    .eye_icon {
+        margin-top: 5.4%;
+        margin-left: 57%;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    .eye_icon {
+        margin-top: 5%;
+        margin-left: 57%;
+    }
+}
+
+/*End Special responsive management icon */
+
 
 /* medium pc */
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+    .box_right {
+        height: 2.5vw;
+    }
 
-@media only screen and (min-width: 991px) and (max-width: 1500px) {
+    .box_flex {
+        margin-bottom: 15vh;
+    }
 
+    .checkbox {
+        width: 7%;
+    }
 
-
-
-}
-
-@media only screen and (min-width: 912px) and (max-width: 990px) {
-
-}
-
-@media only screen and (min-width: 820px) and (max-width: 911px) {
-
-
-
-}
-
-
-@media only screen and (min-width: 800px) and (max-width: 819px) {
-  
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 799px) {
-
-
+    .txt_green,
+    .txt_blue {
+        width: 100%;
+    }
 
 
 }
 
-@media only screen and (min-width: 712px) and (max-width: 767px) {
+@media only screen and (min-width: 991px) and (max-width: 1023px) {}
 
-   
 
-}
+@media only screen and (min-width: 912px) and (max-width: 990px) {}
+
+@media only screen and (min-width: 820px) and (max-width: 911px) {}
+
+
+@media only screen and (min-width: 800px) and (max-width: 819px) {}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {}
+
+@media only screen and (min-width: 712px) and (max-width: 767px) {}
 
 
 
 /*  Tablet  Mode */
 @media only screen and (min-width: 540px) and (max-width: 711px) {
+    .box_right {
+        height: 6vw;
+    }
+
+    .box_flex {
+        margin-bottom: 15vh;
+    }
+
+    .checkbox {
+        width: 7%;
+    }
+
 
 
 
 }
 
 @media only screen and (min-width: 414px) and (max-width: 539px) {
+    .box_right {
+        height: 6vw;
+    }
+
+    .box_flex {
+        margin-bottom: 15vh;
+    }
+
+    .checkbox {
+        width: 10%;
+    }
 
 
 
@@ -346,12 +346,36 @@
 
 /*  phone  Mode */
 @media only screen and (min-width: 412px) and (max-width: 413px) {
+    .box_right {
+        height: 6vw;
+    }
+
+    .box_flex {
+        margin-bottom: 15vh;
+    }
+
+    .checkbox {
+        width: 10%;
+    }
 
 
 
 }
 
 @media only screen and (min-width: 390px) and (max-width: 411px) {
+    .box_right {
+        height: 6vw;
+    }
+
+    .box_flex {
+        margin-bottom: 15vh;
+    }
+
+    .checkbox {
+        width: 10%;
+    }
+
+
 
 
 
@@ -359,18 +383,51 @@
 }
 
 @media only screen and (min-width: 375px) and (max-width: 389px) {
+    .box_right {
+        height: 6vw;
+    }
 
+    .box_flex {
+        margin-bottom: 15vh;
+    }
 
+    .checkbox {
+        width: 10%;
+    }
 
 }
 
 @media only screen and (min-width: 360px) and (max-width: 374px) {
+    .box_right {
+        height: 6vw;
+    }
+
+    .box_flex {
+        margin-bottom: 15vh;
+    }
+
+    .checkbox {
+        width: 10%;
+    }
+
 
 }
 
 
 
 @media only screen and (min-width: 280px) and (max-width: 359px) {
+    .box_right {
+        height: 6vw;
+    }
+
+    .box_flex {
+        margin-bottom: 25vh;
+    }
+
+    .checkbox {
+        width: 7%;
+    }
+
 
 
 
@@ -378,11 +435,6 @@
 
 @media only screen and (max-width: 279px) {}
 
-@media only screen and (max-width: 800px) {
-
- 
-
-
-}
+@media only screen and (max-width: 800px) {}
 
 /* ---------------- End  Responsive Management -------------------------  */

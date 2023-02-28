@@ -23,7 +23,7 @@
 .main {
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/skyscraper.png') center center fixed no-repeat;
   background-size: cover;  
-  height: 135vh;
+  height: 75vw;
   margin-top: -42%;
   margin-bottom: -70%;
   width: 100%;
@@ -54,8 +54,17 @@
 /* ---------------- Begind  Responsive Management -------------------------  */
 
 /* medium pc */
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+    .main{
+        padding-top: 1%;
+        height: 185vw;
+    }
 
-@media only screen and (min-width: 991px) and (max-width: 1500px) {
+
+
+
+}
+@media only screen and (min-width: 991px) and (max-width: 1023px) {
 
 
 
@@ -63,10 +72,19 @@
 }
 
 @media only screen and (min-width: 912px) and (max-width: 990px) {
+    .main{
+        padding-top: 27%;
+        height: 185vw;
+    }
 
 }
 
 @media only screen and (min-width: 820px) and (max-width: 911px) {
+    .main{
+        padding-top: 27%;
+        height: 190vw;
+    }
+
 
 
 
@@ -74,11 +92,20 @@
 
 
 @media only screen and (min-width: 800px) and (max-width: 819px) {
-  
+    .main{
+        padding-top: 30%;
+        height: 175vw;
+    }
+       
+    
 
 }
 
 @media only screen and (min-width: 768px) and (max-width: 799px) {
+    .main{
+        padding-top: 27%;
+        height: 190vw;
+    }
 
 
 
@@ -86,7 +113,12 @@
 }
 
 @media only screen and (min-width: 712px) and (max-width: 767px) {
+.main{
+    padding-top: 30%;
+    height: 195vw;
 
+
+}
    
 
 }
@@ -94,13 +126,21 @@
 
 
 /*  Tablet  Mode */
-@media only screen and (min-width: 540px) and (max-width: 711px) {
+@media only screen and (min-width: 540px) and (max-width: 711px) { 
+    .main{
+        padding-top: 40%;
+        height: 240vw;
+    }
 
 
 
 }
 
 @media only screen and (min-width: 414px) and (max-width: 539px) {
+    .main{
+        padding-top: 20%;
+        height: 280vw;
+    }
 
 
 
@@ -112,12 +152,20 @@
 
 /*  phone  Mode */
 @media only screen and (min-width: 412px) and (max-width: 413px) {
+    .main{
+        padding-top: 20%;
+        height: 287vw;
+    }
 
 
 
 }
 
 @media only screen and (min-width: 390px) and (max-width: 411px) {
+    .main{
+        padding-top: 20%;
+        height: 299vw;
+    }
 
 
 
@@ -125,19 +173,31 @@
 }
 
 @media only screen and (min-width: 375px) and (max-width: 389px) {
-
+    .main{
+        padding-top: 55%;
+        height: 310vw;
+    
+    
+    }
 
 
 }
 
 @media only screen and (min-width: 360px) and (max-width: 374px) {
+    .main{
+        padding-top: 60%;
+        height: 323vw;
+    }
 
 }
 
 
 
 @media only screen and (min-width: 280px) and (max-width: 359px) {
-
+    .main{
+        padding-top: 75%;
+        height: 453vw;
+    }
 
 
 }

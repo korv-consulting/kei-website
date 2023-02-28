@@ -9,7 +9,7 @@ function StepFourSignup({next,preview}) {
         event.preventDefault();
         alert(`Hey, onSubmiting...`);
 
-    };
+    }; 
 
 
     return(
@@ -17,7 +17,7 @@ function StepFourSignup({next,preview}) {
             <Row className={styles.global_row}>
 
                 <Col></Col>
-                <Col  xs={5}  >  
+                <Col md={12} lg={5}  >  
                     <Card >
                          <StepFourFormSignup 
                               next={next}

@@ -1,6 +1,6 @@
 import styles from '../styles/Contact.module.css'
 import Recaptcha from './Recaptcha'
-import style from '../styles/Floating-label.module.css'
+import style from '../styles/Floating-label-contact.module.css'
 import React, { useState, useEffect } from 'react';
 import { Image } from 'react-bootstrap'
 
@@ -114,13 +114,13 @@ function Contact() {
  
             <div className={`container`} >
                 <div className={`row`}>
-                    <div className={`col-sm-2 ${styles.hide_img_col}`}  > 
+                    <div className={`col-lg-2 d-sm-none d-lg-block ${styles.hide_img_col}`}  > 
                         <Image src='/KEI.png'  className={styles.card} />
                     </div>
-                    <div className={`col-sm-2`}  > 
+                    <div className={`col-lg-2`}  > 
                     </div>
 
-                    <div className="col-sm-4" >
+                    <div className="col-lg-4 col-sm-12" >
                         <form className={styles.form} id="form" method="post" noValidate onSubmit={handleSubmit}>
                             <div className={style.container}>
                                 <div>
@@ -192,7 +192,7 @@ function Contact() {
                             </button>
                         </form> 
                     </div>
-                    <div className="col-sm-4" > </div>
+                    <div className="col-lg-4" > </div>
 
                 </div>
             </div>

@@ -56,7 +56,7 @@ function StepThreeCompanyFormSignup({ next, preview }) {
                             </Col>
                         </Row>
                         <Row>
-                            <Col xs={12} lg={6} className={styles.box_left} >
+                            <Col xs={12} xlg={6} className={styles.box_left} >
                                 <input type="text" id='size' placeholder="Taille société" className={`form-control ${style.input_text}`} required name="name"
                                     title=" Veuillez saisir la taille de la société"
                                 />

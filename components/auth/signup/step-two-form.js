@@ -94,7 +94,7 @@ function StepTwoFormSignup({ next, preview }) {
 
                 </Row>
                 <Row>
-                    <Col ></Col>
+                    <Col ></Col> 
                     <Col xs={4} className={styles.box_bottom} >
                         <ButtonGroup className={styles.box_button}>
                             <div className={styles.btn_left} onClick={() => { preview(2) }} >

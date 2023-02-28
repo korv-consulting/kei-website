@@ -2,7 +2,7 @@
   .main {
     /*   background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('/signup/immeuble2.png') center center fixed no-repeat;*/
     background-size: cover;
-    margin-bottom: -9%;
+    margin-bottom: -12%;
     padding-top: 1%;
     margin-top: -4%;
     padding-bottom: 5%;
@@ -22,38 +22,42 @@
 
   .stepper_one {
     margin-top: -71%;
+    justify-content: center;
+    margin-bottom: 11%;
+
+
   }
 
   .stepper_two {
     margin-top: -79%;
-    margin-left: 2%;
+    justify-content: center;
     margin-bottom: 11%;
   }
 
   .stepper_three {
     margin-top: -93%;
-    margin-left: 2%;
+    justify-content: center;
     margin-bottom: 18%;
 
   }
 
   .stepper_three_company{
-    margin-top: -79%;
-    margin-left: 1%;
+    margin-top: -60%;
+    justify-content: center;
     margin-bottom: 11%;
   }
 
   .stepper_four {
     margin-top: -90%;
-    margin-left: 2%;
+    justify-content: center;
     margin-bottom: 21%;
 
   }
 
   .stepper_five {
     margin-top: -75%;
-    margin-left: 2%;
     margin-bottom: 21%;
+    justify-content: center;
 
   }
 
@@ -62,7 +66,6 @@
 
     .stepper_five {
       margin-top: -290%;
-      margin-left: 2%;
       margin-bottom: 22%
     }
 
@@ -81,7 +84,21 @@
     }
 
   }
-  @media only screen and (min-width: 991px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .stepper_three_company{
+      margin-top: -108%;
+      margin-bottom: 25%;
+    }
+
+     .stepper_five {
+      margin-top: -110%;
+
+    }
+  
+
+  }
+
+  @media only screen and (min-width: 991px) and (max-width: 1023px) {
     .stepper_three_company{
       margin-top: -118%;
       margin-bottom: 25%;
@@ -122,7 +139,16 @@
       margin-bottom: -28%;
 
     }
+    .stepper_four {
+      margin-bottom: -27%;
+  
+    }
 
+    .stepper_five {
+      margin-bottom: -20%;
+      margin-top:-110% ;
+    }
+  
 
     /* End  for step  */
 
@@ -162,7 +188,15 @@
 
     }
 
-
+    .stepper_four {
+      margin-bottom: -22%;
+  
+    }
+    .stepper_five {
+      margin-bottom: -15%;
+      margin-top:-100% ;
+    }
+  
     /* End  for step  */
 
 
@@ -200,7 +234,15 @@
     .stepper_three_company{
       margin-bottom: -32%;
     }
+    .stepper_four {
+      margin-top: -75%;
+      margin-bottom: -41%;
+  
+    }
 
+    .stepper_five {
+      margin-bottom: -35%
+    }
 
     /* End  for step  */
   }
@@ -232,6 +274,16 @@
 
     }
 
+    .stepper_four {
+      margin-bottom: -2%;
+  
+    }
+
+    .stepper_five {
+      margin-bottom: 10%;
+      margin-top:-110% ;
+    }
+  
     /* End  for step  */
 
 
@@ -242,7 +294,7 @@
   @media only screen and (min-width: 712px) and (max-width: 767px) {
 
     .main {
-      padding-bottom: -10%;
+      padding-top: 50%;
     }
 
     .section {
@@ -303,6 +355,13 @@
       margin-bottom: 15%;
     }
 
+    .stepper_five {
+      margin-bottom: 17%;
+
+    }
+  
+
+
   
 
     /* End  for step  */
@@ -339,8 +398,17 @@
     }
 
     .stepper_three_company{
-      margin-top: -100%;
+      margin-top: -90%;
       margin-bottom: -35%;
+    }
+
+    .stepper_four {
+      margin-bottom: -22%;
+  
+    }
+    .stepper_five {
+    margin-bottom: -10%;
+    margin-top: -170%;
     }
 
 
@@ -381,9 +449,21 @@
       margin-bottom: -34%;
     }
     .stepper_three_company{
-      margin-top: -200%;
-      margin-bottom: -30%;
+      margin-top: -180%;
+      margin-bottom: -25%;
     }
+
+    .stepper_four {
+      margin-bottom: -27%;
+  
+    }
+
+    .stepper_five {
+      margin-bottom: -15%;
+      margin-top:-100% ;
+    }
+  
+
 
 
     /* End  for step two */
@@ -423,9 +503,18 @@
     }
 
     .stepper_three_company{
-      margin-bottom: -40%;
+      margin-bottom: -47%;
+      margin-top: 10%;
     }
-
+    .stepper_four {
+      margin-bottom: -27%;
+  
+    }
+    .stepper_five {
+      margin-bottom: -10%;
+      margin-top: -110%;
+    }
+  
 
 
     /* End  for step  */
@@ -461,6 +550,11 @@
       margin-top: -115%;
     }
 
+    .stepper_five {
+      margin-bottom: 30%;
+      margin-top: -185%;
+    }
+
 
     /* End  for step  */
 
@@ -477,7 +571,7 @@
     .section {
       margin-top: -1%;
 
-    }
+    } 
 
     /* Begind  for step  */
     .stepper_one {
@@ -493,8 +587,16 @@
       margin-top: -180%;
     }
 
+    .stepper_four {
+      margin-bottom: 20%;
+  
+    }
 
-    
+    .stepper_five {
+      margin-bottom: 25%;
+      margin-top:-200% ;
+    }
+  
 
 
   }
@@ -525,12 +627,24 @@
     .stepper_two {
       margin-top: -149%;
       margin-bottom: 10%;
-    }
+    } 
 
     .stepper_three_company{
       margin-top: -90%;
       margin-bottom: 15%;
     }
+    .stepper_four {
+      margin-bottom: 56%;
+      margin-top: -130%;
+  
+    }
+
+    .stepper_five {
+      margin-bottom: 70%;
+      margin-top: -300%;
+
+    }
+  
 
     /* End  for step  */
 

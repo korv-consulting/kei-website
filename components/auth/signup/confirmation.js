@@ -35,21 +35,21 @@ function ConfirmationSignup({ next, preview }) {
             <div className={styles.container}>
          
                         <div className={styles.box_top}>
-                            <span className={styles.header}>Confirmation du mail</span>
+                            <h2 className={styles.header}>Confirmation du mail</h2>
                             <span className={styles.icon}>
                             <Image fluid src="signup/envelop.png"  alt="Envelop" />
                             </span>
                         </div>
                         <div className={styles.box_center}>
-                            <div className={styles.title}>
+                            <h3 className={styles.title}>
                                 On y est presque <b>!</b>
-                            </div>
-                            <div className={styles.subtitle}>
+                            </h3>
+                            <p className={styles.subtitle}>
                                 Vérifiez votre boite de réception.
-                            </div>
-                            <div className={styles.describtion}>
+                            </p>
+                            <p className={styles.describtion}>
                             Confirmez votre identité en cliquant sur le lien que nous vous envoyons à example@gmail.com
-                            </div>
+                            </p>
                         </div>
  
                         <div className={styles.box_bottom}> 

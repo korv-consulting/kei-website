@@ -208,7 +208,7 @@ function Signup_component() {
                                 <section className={`${styles.section}`}>
                                     <StepOneSignup
                                         next={next}
-                                        preview={preview}
+                                        preview={preview} 
                                         handleProfessional={handleProfessional}
                                         handleParticular={handleParticular}
                                     />

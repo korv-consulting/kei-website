@@ -5,6 +5,7 @@ import styles from '../../../styles/Step-four-form-signup.module.css'
 
 
 function ShowHideEyeIcon({handleClickPwd, state }) {
+
     const renderContent = React.useCallback( () => {
         switch (state) {
             case false:
@@ -13,13 +14,14 @@ function ShowHideEyeIcon({handleClickPwd, state }) {
 
                 );
             case true:
+
                 return (
                     <BiShow onClick={handleClickPwd} className={styles.eye_icon} />
 
                 );
                 
         default:
-                return <></>;
+                return <>    alert=('Great')</>;
         }
     },)
 
