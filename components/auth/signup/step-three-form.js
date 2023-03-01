@@ -74,7 +74,7 @@ function StepThreeFormSignup({ next, preview }) {
 
                 </div>
                
-                <div   className={styles.box_bottom} >
+                <div  className={`m-auto ${styles.box_bottom}`} >
                     <div className={styles.box_button}>
                         <div className={styles.btn_left} onClick={() => { preview(3) }} >
                             <BsArrowLeft className={styles.icon} />
@@ -87,9 +87,9 @@ function StepThreeFormSignup({ next, preview }) {
                         </div>
 
                     </div>
-                    <Row className={styles.txt} >
-                        <Col xs={12} lg={6} className={styles.txt_blue} >Vous avez deja un compte ? </Col>
-                        <Col lg={6} className={styles.txt_green}>
+                    <Row className={`mx-auto mb-5 text-center ${styles.txt}`} >
+                        <Col xs={12} lg={7} className={styles.txt_blue} >Vous avez deja un compte ? </Col>
+                        <Col lg={5} className={styles.txt_green}>
                             Connexion
                         </Col>
                     </Row>

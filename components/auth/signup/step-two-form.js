@@ -13,7 +13,7 @@ function StepTwoFormSignup({ next, preview }) {
         alert(`Hey, onSubmiting...`);
 
     };
- 
+
     const handleSelect = (event) => {
         let label_select = document.getElementsByClassName(styles.label_select)
         label_select.style.color = "red"
@@ -23,21 +23,21 @@ function StepTwoFormSignup({ next, preview }) {
 
 
 
-    return (  
+    return (
 
         <form className={styles.form} id="form" method="post" noValidate onSubmit={onSubmit}>
             <div className={styles.container}>
-               
-                    <p  className={`text-center mt-4`} >
-                        <Image fluid src="logo-kei.png" className={`${styles.picture}`}   alt="Sky Crappers" />
-                        <h3 className={` ${styles.title}`} >
-                            Souscrire
-                        </h3>
 
-                    </p>
-                    
+                <p className={`text-center mt-4`} >
+                    <Image fluid src="logo-kei.png" className={`${styles.picture}`} alt="Sky Crappers" />
+                    <h3 className={` ${styles.title}`} >
+                        Souscrire
+                    </h3>
 
-              
+                </p>
+
+
+
                 <Row className={styles.row_center}  >
                     <Col xs={2}></Col>
                     <Col xs={8}  >
@@ -50,7 +50,7 @@ function StepTwoFormSignup({ next, preview }) {
                                 <span id="name" className={`invalid-feedback ${styles.errorMsg}`} >
                                     Veuillez saisir votre nom
                                 </span>
-                            </Col> 
+                            </Col>
                             <Col lg={6} className={styles.box_right}>
                                 <input type="text" id='username' placeholder='Entrer votre Prénom' className={`form-control ${style.input_text}`} required name="name"
                                     title=" Veuillez saisir votre prénom"
@@ -93,33 +93,30 @@ function StepTwoFormSignup({ next, preview }) {
                     <Col xs={2}></Col>
 
                 </Row>
-                <Row>
-                    <Col ></Col> 
-                    <Col xs={4} className={styles.box_bottom} >
-                        <ButtonGroup className={styles.box_button}>
-                            <div className={styles.btn_left} onClick={() => { preview(2) }} >
-                                <BsArrowLeft className={styles.icon} />
-                                <span className={styles.txt_hidded} >Précédent</span>
 
-                            </div>
-                            <div className={styles.btn_right} onClick={() => { next(2) }} >
-                                <BsArrowRight className={styles.icon} />
-                                <span className={styles.txt_hidded} >Suivant</span>
-                            </div>
+                <div className={`m-auto ${styles.box_bottom}`}  >
+                    <ButtonGroup className={styles.box_button}>
+                        <div className={styles.btn_left} onClick={() => { preview(2) }} >
+                            <BsArrowLeft className={styles.icon} />
+                            <span className={styles.txt_hidded} >Précédent</span>
 
-                        </ButtonGroup>
-                        <Row className={`mx-auto text-center ${styles.txt}`}  >
-                            <Col xs={12} lg={6}  className={styles.txt_blue} >Vous avez deja un compte ? </Col>
-                            <Col  lg={6}  className={styles.txt_green}>
-                                Connexion
-                            </Col>
-                        </Row>
+                        </div>
+                        <div className={` ${styles.btn_right}`} onClick={() => { next(2) }} >
+                            <BsArrowRight className={`${styles.icon}`} />
+                            <span className={styles.txt_hidded} >Suivant</span>
+                        </div>
+
+                    </ButtonGroup>
+                    <Row className={`mx-auto mb-5 text-center ${styles.txt}`}  >
+                        <Col xs={12} lg={7} className={styles.txt_blue} >Vous avez deja un compte ? </Col>
+                        <Col lg={5} className={styles.txt_green}>
+                            Connexion
+                        </Col>
+                    </Row>
 
 
-                    </Col>
-                    <Col></Col>
+                </div>
 
-                </Row>
 
             </div>
         </form>

@@ -127,25 +127,28 @@ function StepFourFormSignup({ next, preview }) {
  
                 </div>
                 
-                <div className={styles.box_button}>
-                    <div className={styles.btn_left} onClick={() => { preview(4) }} >
-                        <BsArrowLeft className={styles.icon} />
-                        <span className={styles.txt_hidded} >Précédent</span>
+                <div  className={`m-auto ${styles.box_bottom}`} >
+                    <ButtonGroup className={styles.box_button}>
+                        <div className={styles.btn_left} onClick={() => { preview(4) }} >
+                            <BsArrowLeft className={styles.icon} />
+                            <span className={styles.txt_hidded} >Précédent</span>
 
-                    </div>
-                    <div className={styles.btn_right} onClick={() => { checkPwd()}} >
-                        <BsArrowRight className={styles.icon} />
-                        <span className={styles.txt_hidded} >Suivant</span>
-                    </div>
+                        </div>
+                        <div className={styles.btn_right} onClick={() => { checkPwd()}} >
+                            <BsArrowRight className={styles.icon} />
+                            <span className={styles.txt_hidded} >Suivant</span>
+                        </div>
+                    </ButtonGroup>
 
-                </div>
-                <Row className={styles.txt} >
-                    <Col xs={12} lg={7}  className={styles.txt_blue} >Vous avez deja un compte ? </Col>
-                    <Col lg={5}  className={styles.txt_green}>
-                        Connexion
-                    </Col>
-                </Row>
+                    <Row className={`mx-auto mb-5 text-center ${styles.txt}`}  >
+                        <Col xs={12} lg={7}  className={styles.txt_blue} >Vous avez deja un compte ? </Col>
+                        <Col lg={5}  className={styles.txt_green}>
+                            Connexion
+                        </Col>
+                    </Row>
                 
+                </div>
+              
 
 
               

@@ -121,9 +121,8 @@
 
 .box_button {
     display: flex;
-    height: 2vw;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;
 
 }
 
@@ -145,12 +144,16 @@
 .btn_left:hover {
     transform: scaleX(1.5);
     transform-origin: right center;
+    height: 100%;
+    padding-top: 1%;
+
 }
 
 .btn_left:hover .icon {
     transform: scale(1);
     margin-right: 75%;
- 
+    margin-top: -5%;
+
 }
 
 .btn_left:hover .icon + .txt_hidded {
@@ -173,6 +176,8 @@
 .btn_right:hover .icon {
     transform: scale(1);
     margin-left: 75%;
+    margin-top: -5%;
+
  
 }
 
@@ -205,11 +210,13 @@
 
 .icon {
     transform: scale(2);
-    margin-top: 8%;
 }
 
 .txt_hidded{
     display: none;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
 }
 
 

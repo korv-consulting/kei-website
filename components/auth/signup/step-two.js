@@ -23,12 +23,6 @@ function StepTwoSignup({next,preview}) {
                 <Col></Col>
 
             </Row>
-            
-
-           
-
-
-
         </Container>
     )
 }

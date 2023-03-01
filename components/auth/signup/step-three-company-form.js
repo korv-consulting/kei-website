@@ -107,8 +107,8 @@ function StepThreeCompanyFormSignup({ next, preview }) {
                         </Row>
                     </div>
                 
-                    <div  className={` ${styles.box_bottom}`}   >
-                        <div className={styles.box_button}>
+                    <div  className={`m-auto ${styles.box_bottom}`}   >
+                        <ButtonGroup className={styles.box_button}>
                             <div className={styles.btn_left} onClick={() => { preview(3) }} >
                                 <BsArrowLeft className={styles.icon} />
                                 <span className={styles.txt_hidded} >Précédent</span>
@@ -119,10 +119,10 @@ function StepThreeCompanyFormSignup({ next, preview }) {
                                 <span className={styles.txt_hidded} >Suivant</span>
                             </div>
 
-                        </div>
-                        <Row className={styles.txt} >
-                            <Col xs={12} lg={6} className={styles.txt_blue} >Vous avez deja un compte ? </Col>
-                            <Col className={styles.txt_green}>
+                        </ButtonGroup>
+                        <Row className={`mx-auto mb-5 text-center ${styles.txt}`} >
+                            <Col xs={12} lg={7} className={styles.txt_blue} >Vous avez deja un compte ? </Col>
+                            <Col lg={5} className={styles.txt_green}>
                                 Connexion
                             </Col>
                         </Row>
