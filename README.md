@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+If you come from [kei-app-frontweb](https://github.com/korv-consulting/kei-app-frontweb), you will need to change your remote like this:
+
+`git remote git remote set-url origin git@github.com:korv-consulting/kei-website.git`
+
 First, run the development server:
 
 ```bash
