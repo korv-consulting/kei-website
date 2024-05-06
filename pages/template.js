@@ -76,8 +76,9 @@ export default function Home() {
           <LandingPage />
           <About />
           <Description />
-          <PricingOffer />
           <Feature />
+          <PricingOffer />
+          
           <Faq />
           <Contact />
           <Footer />
