@@ -541,7 +541,6 @@
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: var(--heading-font);
 }
 
 .footer .footer_contact p {
@@ -727,7 +726,7 @@
     position: relative;
 }
 
-.section_title h2:before {
+/* .section_title h2:before {
     content: "";
     position: absolute;
     display: block;
@@ -738,15 +737,15 @@
     right: 0;
     bottom: 1px;
     margin: auto;
-}
+} */
 
 .section_title h2::after {
     content: "";
     position: absolute;
     display: block;
-    width: 60px;
+    width: 100px;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--success);
     left: 0;
     right: 0;
     bottom: 0;
@@ -795,7 +794,6 @@
 .hero .btn_get_started {
     color: var(--contrast-color);
     background: var(--accent-color);
-    font-family: var(--heading-font);
     font-weight: 500;
     font-size: 15px;
     letter-spacing: 1px;
@@ -914,7 +912,6 @@
 
 .about .read_more {
     color: var(--accent-color);
-    font-family: var(--heading-font);
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -1098,7 +1095,6 @@
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: var(--heading-font);
 }
 
 .skills .progress .skill .val {
@@ -1219,7 +1215,6 @@
 }
 
 .call-to-action .cta-btn {
-    font-family: var(--heading-font);
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -1260,7 +1255,6 @@
     margin-bottom: 5px;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-    font-family: var(--heading-font);
 }
 
 .portfolio .portfolio-filters li:hover,
@@ -1480,22 +1474,23 @@
     background-color: var(--contrast-color);
     box-shadow: 0 3px 20px -2px rgba(var(--default-color-rgb), 0.1);
     border-top: 4px solid var(--background-color);
-    padding: 60px 40px;
+    padding: 40px 40px;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
+    border-top: 5px solid var(--primary);
 }
 
 .pricing h3 {
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 20px;
+    color : var(--primary) !important
 }
 
 .pricing h4 {
-    color: var(--accent-color);
+    color: var(--success);
     font-size: 48px;
     font-weight: 400;
-    font-family: var(--heading-font);
     margin-bottom: 0;
 }
 
@@ -1540,22 +1535,28 @@
     text-decoration: line-through;
 }
 
-.pricing .buy_btn {
-    color: var(--accent-color);
-    background-color: var(--background-color);
-    display: inline-block;
+.pricing .check{
+    color: var(--success);
+}
+
+.buy_btn {
+    /* color: var(--accent-color);
+    background-color: var(--background-color); */
+    color: var(--primary) ;
+    background-color:white ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 35px 10px 35px;
     border-radius: 50px;
     transition: none;
     font-size: 16px;
-    font-weight: 500;
-    font-family: var(--heading-font);
     transition: 0.3s;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--primary) !important;
 }
 
 .pricing .buy_btn:hover {
-    background: var(--accent-color);
+    background: var(--primary);
     color: var(--contrast-color);
 }
 

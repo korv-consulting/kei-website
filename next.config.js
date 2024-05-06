@@ -1,5 +1,8 @@
 module.exports = {
   reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_apiUrl: "http://kei-app-back.local",
+  },
   experimental: {
     outputStandalone: true,
   },
