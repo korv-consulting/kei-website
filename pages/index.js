@@ -1,19 +1,16 @@
 // import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
-import Footer from '@/partials/base/footer'
-import Header from '@/partials/base/header'
-import Language from '@/partials/base/language'
+import Footer from 'components/oldPartials/base/footer'
+import Header from 'components/oldPartials/base/header'
+import Language from 'components/oldPartials/base/language'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import About from '@/partials/base/about'
-import MiddleBar from '@/partials/base/middleBar'
-import Offer from '@/partials/base/offer'
+import About from 'components/oldPartials/base/about'
+import Offer from 'components/oldPartials/base/offer'
 import { Col, Container, Image, Row } from "react-bootstrap"
 
 //import Image from 'next/image'
 import stylesplash from '../styles/Splash.module.css'
 import React, { useState, useEffect } from 'react'
-import Logo from "../components/Logo"
-import ProgressBar from "../components/ProgressBar"
 import Contact from '../components/Contact'
 
 
@@ -41,30 +38,6 @@ export default function Home() {
       {
         loading ?
           (
-            /*
-            <div className={stylesplash.App}>
-
-                <div className={stylesplash.parent} >
-                  <div className={stylesplash.dot} onLoad={(e) => handleScale()} >
-                  </div>
-
-                  <div className={stylesplash.boxsplash}>
-                    <Logo />
-                    <ProgressBar />
-                    <div className={stylesplash.description}>
-                      <p>
-                        Petite description sur l'entreprise <br />
-                        ou simple ou simple message d'accueil
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-            </div>
-
-            
-            */
-
             <div className={stylesplash.container_splash}>
               <Container>
                 <Row className={`mx-auto ${stylesplash.main_splash}`}  >

@@ -1,7 +1,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
-import Footer from '@/partials/base/footer'
-import Header from '@/partials/base/header'
-import Language from '@/partials/base/language'
+import Footer from 'components/oldPartials/base/footer'
+import Header from 'components/oldPartials/base/header'
+import Language from 'components/oldPartials/base/language'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css' 
 import Signup_component from '../components/auth/signup/signup-component'
