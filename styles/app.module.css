@@ -756,6 +756,30 @@
     margin-bottom: 0;
 }
 
+.featureIcon{
+width: 10%;
+height: 10%;
+color: var(--heading-color);
+}
+
+.titleCard{
+    color: var(--heading-color);
+ 
+}
+
+.featureCard:hover{
+
+    bottom: 20px;
+    
+
+}
+/* 
+.featureCard{
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 5s;
+
+} */
 
 /*--------------------------------------------------------------
   # Hero Section
