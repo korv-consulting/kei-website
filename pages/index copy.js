@@ -1,12 +1,12 @@
 // import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
-import Footer from '@/partials/base/footer'
-import Header from '@/partials/base/header'
-import Language from '@/partials/base/language'
+import Footer from 'components/oldPartials/base/footer'
+import Header from 'components/oldPartials/base/header'
+import Language from 'components/oldPartials/base/language'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import About from '@/partials/base/about'
-import MiddleBar from '@/partials/base/middleBar'
-import Offer from '@/partials/base/offer'
+import About from 'components/oldPartials/base/about'
+import MiddleBar from 'components/oldPartials/base/middleBar'
+import Offer from 'components/oldPartials/base/offer'
 import { Image } from 'react-bootstrap'
 
 export default function Home() {
