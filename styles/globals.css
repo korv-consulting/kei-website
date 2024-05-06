@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 html {
   scroll-behavior: smooth;
   /*Adds smooth scrolling instead of snapping to element*/
@@ -5,9 +6,10 @@ html {
 
 /* Fonts */
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Jost", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif; */
+  --font-family: "Inter", sans-serif;
 }
 
 /* Global Colors */
@@ -22,6 +24,16 @@ html {
   --accent-color-rgb: 71, 178, 228;
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
+  --primary : #11467e;
+  --success : #008543;
+  --secondary: #1583D8;
+  --primary-rgb : 17, 70, 126;
+
+  --solo : #efb60a;
+  --standard : #2DB6FE;
+  --medium : var(--success);
+  --premium : #5752D1
+
 }
 
 /* Nav Menu Colors */
@@ -44,7 +56,9 @@ html {
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--font-family) !important;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -64,8 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {

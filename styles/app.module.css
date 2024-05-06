@@ -541,7 +541,6 @@
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: var(--heading-font);
 }
 
 .footer .footer_contact p {
@@ -727,7 +726,7 @@
     position: relative;
 }
 
-.section_title h2:before {
+/* .section_title h2:before {
     content: "";
     position: absolute;
     display: block;
@@ -738,15 +737,15 @@
     right: 0;
     bottom: 1px;
     margin: auto;
-}
+} */
 
 .section_title h2::after {
     content: "";
     position: absolute;
     display: block;
-    width: 60px;
+    width: 100px;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--success);
     left: 0;
     right: 0;
     bottom: 0;
@@ -819,7 +818,6 @@ color: var(--heading-color);
 .hero .btn_get_started {
     color: var(--contrast-color);
     background: var(--accent-color);
-    font-family: var(--heading-font);
     font-weight: 500;
     font-size: 15px;
     letter-spacing: 1px;
@@ -938,7 +936,6 @@ color: var(--heading-color);
 
 .about .read_more {
     color: var(--accent-color);
-    font-family: var(--heading-font);
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -1122,7 +1119,6 @@ color: var(--heading-color);
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: var(--heading-font);
 }
 
 .skills .progress .skill .val {
@@ -1243,7 +1239,6 @@ color: var(--heading-color);
 }
 
 .call-to-action .cta-btn {
-    font-family: var(--heading-font);
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -1284,7 +1279,6 @@ color: var(--heading-color);
     margin-bottom: 5px;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-    font-family: var(--heading-font);
 }
 
 .portfolio .portfolio-filters li:hover,
@@ -1502,25 +1496,57 @@ color: var(--heading-color);
 
 .pricing .pricing_item {
     background-color: var(--contrast-color);
-    box-shadow: 0 3px 20px -2px rgba(var(--default-color-rgb), 0.1);
+    box-shadow: 0 3px 5px -2px rgba(var(--default-color-rgb), 0.1);
     border-top: 4px solid var(--background-color);
-    padding: 60px 40px;
+    padding: 40px 40px;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
+    
 }
+.pricing .pricing_item:hover{
+    box-shadow: 0 3px 20px -2px #def4ff;
+}
+
+.pricing .pricing_item_solo{
+    border-top: 5px solid var(--solo);
+}
+.pricing .pricing_item_standard{
+    border-top: 5px solid var(--standard);
+}
+.pricing .pricing_item_medium{
+    /* border-top: 5px solid var(--success); */
+    border-top: 5px solid var(--medium);
+}
+.pricing .pricing_item_premium{
+    border-top: 5px solid var(--premium);
+
+}
+
+
 
 .pricing h3 {
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 20px;
+    color : var(--primary) !important
 }
 
 .pricing h4 {
-    color: var(--accent-color);
     font-size: 48px;
     font-weight: 400;
-    font-family: var(--heading-font);
     margin-bottom: 0;
+}
+.pricing .solo_title{
+    color: var(--solo); 
+}
+.pricing .standard_title{
+    color: var(--standard); 
+}
+.pricing .medium_title{
+    color: var(--medium); 
+}
+.pricing .premium_title{
+    color: var(--premium); 
 }
 
 .pricing h4 sup {
@@ -1564,33 +1590,42 @@ color: var(--heading-color);
     text-decoration: line-through;
 }
 
-.pricing .buy_btn {
-    color: var(--accent-color);
-    background-color: var(--background-color);
-    display: inline-block;
-    padding: 8px 35px 10px 35px;
+.pricing .solo_check{
+    color: var(--solo);
+}
+.pricing .standard_check{
+    color: var(--standard);
+}
+.pricing .medium_check{
+    color: var(--medium);
+}
+.pricing .premium_check{
+    color: var(--premium);
+}
+
+
+.buy_btn {
+    /* color: var(--accent-color);
+    background-color: var(--background-color); */
+    color: var(--primary) ;
+    background-color:white ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 8px 35px 10px 35px; */
     border-radius: 50px;
     transition: none;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: var(--heading-font);
+    padding: 8px 20px;
+    /* font-size: 16px; */
     transition: 0.3s;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--primary) !important;
 }
 
 .pricing .buy_btn:hover {
-    background: var(--accent-color);
+    background: var(--primary);
     color: var(--contrast-color);
 }
 
-.pricing .featured {
-    border-top-color: var(--accent-color);
-}
-
-.pricing .featured .buy_btn {
-    background: var(--accent-color);
-    color: var(--contrast-color);
-}
 
 @media (max-width: 992px) {
     .pricing .box {
@@ -1814,10 +1849,16 @@ color: var(--heading-color);
 
 .contact .info_wrap {
     box-shadow: 0px 0px 20px rgba(var(--default-color-rgb), 0.1);
-    border-top: 3px solid var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
+    /* border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color); */
     padding: 30px;
     height: 100%;
+    /* background-color : var(--primary);
+    color : white */
+}
+.contact span{
+    color : var(--primary);
+    font-size: 14px;
 }
 
 @media (max-width: 575px) {
@@ -1827,21 +1868,22 @@ color: var(--heading-color);
 }
 
 .contact .info_item {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
-.contact .info_item i {
-    font-size: 20px;
-    color: var(--accent-color);
-    background: rgba(var(--accent-color-rgb), 0.08);
-    width: 44px;
-    height: 44px;
+.contact .info_item .i {
+    font-size: 20px; 
+    color: var(--primary);
+     background: rgba(128, 128, 128, 0.301); 
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     margin-right: 15px;
+    padding : 10px 10px
 }
 
 .contact .info_item h3 {
@@ -1865,8 +1907,8 @@ color: var(--heading-color);
 .contact .php_email_form {
     height: 100%;
     padding: 30px;
-    border-top: 3px solid var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
+    /* border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color); */
     box-shadow: 0px 0px 20px rgba(var(--default-color-rgb), 0.1);
 }
 
@@ -1911,7 +1953,7 @@ color: var(--heading-color);
     width: 24px;
     height: 24px;
     margin: 0 10px -6px 0;
-    border: 3px solid var(--accent-color);
+    border: 3px solid var(--primary);
     border-top-color: var(--background-color);
     animation: animate-loading 1s linear infinite;
 }
@@ -1931,7 +1973,7 @@ color: var(--heading-color);
 .contact .php_email_form input[type=text]:focus,
 .contact .php_email_form input[type=email]:focus,
 .contact .php_email_form textarea:focus {
-    border-color: var(--accent-color);
+    border-color: var(--secondary);
 }
 
 .contact .php_email_form input[type=text]::placeholder,
@@ -1942,7 +1984,7 @@ color: var(--heading-color);
 
 .contact .php_email_form button[type=submit] {
     color: var(--contrast-color);
-    background: var(--accent-color);
+    background: var(--primary);
     border: 0;
     padding: 10px 30px;
     transition: 0.4s;
@@ -1950,7 +1992,7 @@ color: var(--heading-color);
 }
 
 .contact .php_email_form button[type=submit]:hover {
-    background: rgba(var(--accent-color-rgb), 0.75);
+    background: rgba(var(--primary-rgb), 0.75);
 }
 
 @keyframes animate-loading {
