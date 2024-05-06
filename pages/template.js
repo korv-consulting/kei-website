@@ -13,7 +13,7 @@ import Footer from "components/partials/footer";
 import Faq from "components/partials/faq";
 import Contact from "components/partials/contact";
 
-export default function Home({offers}) {
+export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function Home({offers}) {
           <LandingPage />
           <About />
           <Description />
-          <PricingOffer offers={offers} />
+          <PricingOffer />
           <Contact />
           <Footer />
         </div>
@@ -84,26 +84,26 @@ export default function Home({offers}) {
   );
 }
 
-export async function getServerSideProps(ctx){
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    }
-  };
+// export async function getServerSideProps(ctx){
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//       "Access-Control-Allow-Origin": "*",
+//     }
+//   };
 
-  const offers  = await fetch(
-    `http://kei-app-back.local/pricing-offers`,
-    options
-  );
-  const response = await offers.json();
-  console.log("offers ****" , response)
+//   const offers  = await fetch(
+//     `http://kei-app-back.local/pricing-offers`,
+//     options
+//   );
+//   const response = await offers.json();
+//   console.log("offers ****" , response)
 
 
-  return {
-    props:{
-      offers:response
-    }
-  }
-}
+//   return {
+//     props:{
+//       offers:response
+//     }
+//   }
+// }

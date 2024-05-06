@@ -27,6 +27,13 @@ html {
   --primary : #11467e;
   --success : #008543;
   --secondary: #1583D8;
+  --primary-rgb : 17, 70, 126;
+
+  --solo : #efb60a;
+  --standard : #2DB6FE;
+  --medium : var(--success);
+  --premium : #5752D1
+
 }
 
 /* Nav Menu Colors */
@@ -71,7 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
