@@ -79,7 +79,7 @@ export default function Home() {
           <Feature />
           <PricingOffer />
           
-          <Faq />
+          {/* <Faq /> */}
           <Contact />
           <Footer />
         </div>
