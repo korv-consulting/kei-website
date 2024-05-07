@@ -18,7 +18,7 @@ html {
   --background-color-rgb: 255, 255, 255;
   --default-color: #444444;
   --default-color-rgb: 68, 68, 68;
-  --heading-color: #37517e;
+  --heading-color: #11467E;
   --heading-color-rgb: 55, 81, 126;
   --accent-color: #47b2e4;
   --accent-color-rgb: 71, 178, 228;
@@ -29,21 +29,27 @@ html {
   --secondary: #1583D8;
   --primary-rgb : 17, 70, 126;
 
+  --semi-grey : #a5acb2;
+
   --solo : #efb60a;
   --standard : #2DB6FE;
   --medium : var(--success);
-  --premium : #5752D1
+  --premium : #5752D1;
 
+  --sky-blue: #95DAFE;
+  --steel-blue: #56A0C5;
+  --azure-blue: #2DB6FE;
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #ffffff;
+  --nav-color: #11467E;
   --nav-hover-color: #47b2e4;
   --nav-dropdown-color: #444444;
   --nav-dropdown-hover-color: #47b2e4;
-  --nav-dropdown-background-color: #ffffff;
+  /* --nav-dropdown-background-color: #ffffff; */
 }
+
 
 /* Smooth scroll */
 :root {
@@ -75,7 +81,7 @@ a:hover {
 h1,
 h2,
 h3,
-h4,
+/* h4, */
 h5,
 h6 {
   color: var(--primary);
