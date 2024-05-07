@@ -92,18 +92,22 @@ export async function getServerSideProps(ctx){
       "Access-Control-Allow-Origin": "*",
     }
   };
-
-  const offers  = await fetch(
-    `http://kei-app-back.local/pricing-offers`,
-    options
-  );
-  const response = await offers.json();
-  console.log("offers ****" , response)
+try {
+    const offers  = await fetch(
+        `http://kei-app-back.local/pricing-offers`,
+        options
+      );
+      const response = await offers.json();
+      console.log("offers ****" , response)
+} catch (error) {
+    console.log(Error)
+}
+  
 
 
   return {
     props:{
-      offers:response
+      offers:[] 
     }
   }
 }

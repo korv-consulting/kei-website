@@ -762,7 +762,7 @@
   --------------------------------------------------------------*/
 
 .hero {
-    --background-color: #37517e;
+    --background-color: var(--primary);
     --default-color: #ffffff;
     --default-color-rgb: 255, 255, 255;
     --heading-color: #ffffff;
@@ -851,7 +851,9 @@
         font-size: 13px;
     }
 }
-
+.carousel img{
+    border-radius: 30px !important;
+}
 @keyframes up-down {
     0% {
         transform: translateY(10px);
@@ -860,6 +862,7 @@
         transform: translateY(-10px);
     }
 }
+
 
 
 /*--------------------------------------------------------------

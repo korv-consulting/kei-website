@@ -2,6 +2,7 @@ import styles from '@/styles/app.module.css'
 import style from '@/styles/Landing.module.css'
 import Link from 'next/link';
 import { AiOutlineArrowRight,AiOutlineArrowLeft } from "react-icons/ai";
+import MyCarousel from './carousel';
 
 export default function LandingPage() {
   const filteredItems = [
@@ -56,7 +57,7 @@ export default function LandingPage() {
     <section id="hero" className={` ${styles.hero} ${styles.section} `}>
 
       <div className="container">
-        <div className="row gy-4">
+        <div className="row gy-4 d-flex justify-content-between">
           <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h1 className="">Better Solutions For Your Business</h1>
             <p className="">We are team of talented designers making websites with Bootstrap</p>
@@ -65,14 +66,14 @@ export default function LandingPage() {
               <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><i className="bi bi-play-circle"></i><span>Watch Video</span></a>
             </div>
           </div>
-          <div className="col-lg-6 order-1 order-lg-2 hero-img">
-            <img src="assets/img/hero-img.png" className="img-fluid animated" alt="" />
+          <div className="col-lg-5 order-1 order-lg-2 hero-img">
+            <MyCarousel />
           </div>
         </div>
       </div>
 
     </section>
-    <div className={style.trending}>
+    {/* <div className={style.trending}>
         <div className={style.container}>
           <div className={style.title_btns}>
             <h3></h3>
@@ -103,7 +104,7 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
         </div>
     );
 }
