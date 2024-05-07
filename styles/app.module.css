@@ -360,7 +360,9 @@
 
 .footer {
     color: var(--default-color);
-    background-color: var(--steel-blue);
+    /* background-color: var(--steel-blue); */
+    background: rgb(72, 86, 100);
+    color: white;
     font-size: 14px;
     padding-bottom: 50px;
     position: relative;
@@ -477,12 +479,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    border: 1px solid rgba(var(--default-color-rgb), 0.5);
+    border: 1px solid white;
     font-size: 16px;
-    color: rgba(var(--default-color-rgb), 0.8);
+    color: white;
     margin-right: 10px;
     transition: 0.3s;
 }
@@ -528,12 +530,25 @@
 
 .footer .footer_links ul a {
     display: inline-block;
-    color: rgba(var(--default-color-rgb), 0.8);
+    /* color: rgba(var(--default-color-rgb), 0.8); */
+    color: var(--semi-grey);
     line-height: 1;
 }
 
 .footer .footer_links ul a:hover {
-    color: var(--accent-color);
+    color: white;
+}
+
+.footer .footer_platfrom p a{
+    color: var(--semi-grey);
+}
+
+.footer .footer_platfrom .icon_store{
+    color: white;
+}
+
+.footer .footer_platfrom p a:hover {
+    color: white;
 }
 
 .footer .footer_about a {
@@ -550,7 +565,8 @@
 .footer .copyright {
     padding-top: 25px;
     padding-bottom: 25px;
-    border-top: 1px solid rgba(var(--default-color-rgb), 0.1);
+    /* color: white; */
+    border-top: 2px solid rgba(var(--contrast-color-rgb), 0.1);
 }
 
 .footer .copyright p {
@@ -766,20 +782,34 @@ color: var(--heading-color);
     color: var(--heading-color);
  
 }
+.titleCard:hover{
+    color: var(--success );
+ 
+}
 
 .featureCard:hover{
-
     bottom: 20px;
-    
+    transition-delay: 1s;
+}
+
+.featureCard{
+transition: 0s bottom;
+box-shadow: 10px 10px 5px 2px grey;
 
 }
-/* 
-.featureCard{
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 5s;
 
-} */
+.sectionFeature{ 
+    /* background-color: var(--sky-blue ); */
+    background-image: url('/tools/3d-illustration-pen-putting-blue-ticks-paper.jpg');
+    /* background-size: contain;   */
+    background-size: cover;  
+    background-color: #def4ff;
+    background-position: justify;
+    background-repeat: no-repeat;    
+
+
+
+}
 
 /*--------------------------------------------------------------
   # Hero Section
@@ -1589,12 +1619,6 @@ color: var(--heading-color);
     align-items: center;
 }
 
-.pricing ul i {
-    color: #059652;
-    font-size: 24px;
-    padding-right: 3px;
-}
-
 .pricing ul .na {
     color: rgba(var(--default-color-rgb), 0.4);
 }
@@ -1636,6 +1660,7 @@ color: var(--heading-color);
     /* font-size: 16px; */
     transition: 0.3s;
     border: 1px solid var(--primary) !important;
+    width: 100%;
 }
 
 .pricing .buy_btn:hover {
