@@ -1,9 +1,11 @@
 import styles from "@/styles/app.module.css";
 import NewsLetter from "./newsLetter";
 import Image from "next/image";
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { BsBrowserChrome, BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import { BiChevronRight, BiLogoPlayStore } from "react-icons/bi";
+import { FaAppStore } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,8 +17,8 @@ const Footer = () => {
           <div className="row gy-4">
             <div className={`col-lg-4 col-md-6 ${styles.footer_about}`}>
               <a href="index.html" className="d-flex align-items-center">
-                <span className={styles.sitename}> 
-                  <Image src="/logo-kei.png" width={80} height={80} alt="KEI Logo"/> 
+                <span className={styles.sitename}>
+                  <Image src="/logo-kei-white.png" width={80} height={80} alt="KEI Logo" />
                 </span>{" "}
               </a>{" "}
               <div className={`pt-3 ${styles.footer_contact}`}>
@@ -38,21 +40,22 @@ const Footer = () => {
               <ul>
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i> <a href="#">Accueil</a>{" "}
+                  <BiChevronRight/>
+                   <a href="#">Accueil</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                 <BiChevronRight/>
                   <a href="#">A Propos</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                 <BiChevronRight/>
                   <a href="#">Fonctionnalités</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                 <BiChevronRight/>
                   <a href="#">Offres Tarifaires</a>{" "}
                 </li>{" "}
               </ul>{" "}
@@ -63,22 +66,22 @@ const Footer = () => {
               <ul>
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                  <BiChevronRight/>
                   <a href="#">Etat des leux</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                  <BiChevronRight/>
                   <a href="#">Déclaration d'incidents</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                  <BiChevronRight/>
                   <a href="#">Rapports d'inspection</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i>{" "}
+                  <BiChevronRight/>
                   <a href="#">Suivi des tâches</a>{" "}
                 </li>{" "}
               </ul>{" "}
@@ -89,51 +92,97 @@ const Footer = () => {
             <NewsLetter />
             </div> */}
 
-            <div className="col-lg-4 col-md-12">
-              <h4> Suivez-nous </h4>{" "}
-              <p>
-                {" "}
-                Visitez nos differents réseaux sociaux{" "}
-              </p>{" "}
-              <div className={`${styles.social_links} d-flex`}>
+            <div className={`col-lg-4 col-md-12 ${styles.footer_platfrom}`}>
+              <h4> Télécharger KEI </h4>{" "}
+             
+              <p className="mt-2">
+                  {" "}
+                  <a href="#">
+                  <strong className="me-2"> <BiLogoPlayStore className={`${styles.icon_store} fs-5`} /> </strong> 
+                  <span>Télécharger sur Playstore</span>{" "}
+                  </a>
+                </p>{" "}
+                <p className="mt-2">
+                  {" "}
+                  <a href="#">
+                  <strong className="me-2"> <FaAppStore className={`${styles.icon_store} fs-5`} /> </strong> 
+                  <span>Télécharger sur App Sotre</span>{" "}
+                  </a>
+                
+                </p>{" "}
+                <p className="mt-2">
+                  {" "}
+                  <a href="#">
+                  <strong className="me-2"> <BsBrowserChrome className={`${styles.icon_store} fs-5 mb-2`} /> </strong> 
+                     <span>Visiter la Plateforme Web</span>{" "}
+                  </a>
+                  
+                </p>{" "}
+              {/* <div className={`${styles.social_links} d-flex`}>
                 <a href="">
                   {" "}
-                  <BsTwitterX/>
+                  <BsTwitterX />
                 </a>
                 <a href="https://www.facebook.com/korvconsulting/">
                   {" "}
-                  <BsFacebook/>
+                  <BsFacebook />
                 </a>
                 <a href="https://www.instagram.com/invites/contact/?i=1htitrb3x2j8j&utm_content=rxzmvja">
                   {" "}
-                  <BsInstagram/>
+                  <BsInstagram />
                 </a>
                 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7086738201788248068">
                   {" "}
-                  <BsLinkedin/>
+                  <BsLinkedin />
                 </a>
-              </div>{" "}
+              </div>{" "} */}
             </div>
           </div>{" "}
         </div>
 
         <div
-          className={`container copyright ${styles.copyright} text-center mt-4`}
+          className={`container copyright ${styles.copyright} mt-4`}
         >
-          <p>
-            {" "}
-            © <span> Copyright </span>{" "}
-            <strong className="px-1 sitename">KORV Estatement Inventory</strong>{" "}
-            <span> Tous droits réservés </span>
-          </p>
-          <div className="credits">
-            {" "}
-            {/* <!-- All the links in the footer should remain intact. -->
+          <div className="row">
+            <div className="col-lg-8 col-md-6">
+              <p>
+                {" "}
+                © <span> Copyright </span>{" "}
+                <strong className="px-1 sitename">KORV Estatement Inventory</strong>{" "}
+                <span> Tous droits réservés </span>
+              </p>
+              <div className="credits">
+                {" "}
+                {/* <!-- All the links in the footer should remain intact. -->
                                                                                                                                                                 <!-- You can delete the links only if you've purchased the pro version. -->
                                                                                                                                                                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                                                                                                                                                                 <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] --> */}
-            {/* Designed by <a href="https://bootstrapmade.com/"> BootstrapMade </a>{" "} */}
-          </div>{" "}
+                {/* Designed by <a href="https://bootstrapmade.com/"> BootstrapMade </a>{" "} */}
+              </div>{" "}
+            </div>
+
+            <div className="col-lg-4 col-md-4 ">
+              <div className={`${styles.social_links} d-flex`}>
+                <a href="">
+                  {" "}
+                  <BsTwitterX />
+                </a>
+                <a href="https://www.facebook.com/korvconsulting/">
+                  {" "}
+                  <BsFacebook />
+                </a>
+                <a href="https://www.instagram.com/invites/contact/?i=1htitrb3x2j8j&utm_content=rxzmvja">
+                  {" "}
+                  <BsInstagram />
+                </a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7086738201788248068">
+                  {" "}
+                  <BsLinkedin />
+                </a>
+              </div>{" "}
+            </div>
+          </div>
+
         </div>
       </footer>{" "}
     </div>

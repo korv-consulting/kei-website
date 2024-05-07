@@ -29,6 +29,8 @@ html {
   --secondary: #1583D8;
   --primary-rgb : 17, 70, 126;
 
+  --semi-grey : #a5acb2;
+
   --solo : #efb60a;
   --standard : #2DB6FE;
   --medium : var(--success);
@@ -79,7 +81,7 @@ a:hover {
 h1,
 h2,
 h3,
-h4,
+/* h4, */
 h5,
 h6 {
   color: var(--primary);
