@@ -17,6 +17,7 @@ const MyCarousel = () => {
               className="d-block w-100"
               height={600}
               width={950}
+              layout="responsive"
               alt="Picture of the author"
             />
           </div>
@@ -26,6 +27,7 @@ const MyCarousel = () => {
               className="d-block w-100"
               height={600}
               width={950}
+              layout="responsive"
               alt="Picture of the author"
             />
           </div>
@@ -35,6 +37,7 @@ const MyCarousel = () => {
               className="d-block w-100"
               height={600}
               width={950}
+              layout="responsive"
               alt="Picture of the author"
             />
           </div>

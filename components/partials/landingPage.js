@@ -54,19 +54,20 @@ export default function LandingPage() {
   };
     return (
         <div>
-    <section id="hero" className={` ${styles.hero} ${styles.section} `}>
+    <section id="home" className={`${styles.hero} ${styles.section} `}>
 
       <div className="container">
-        <div className="row gy-4 d-flex justify-content-between">
-          <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1 className="">Better Solutions For Your Business</h1>
-            <p className="">We are team of talented designers making websites with Bootstrap</p>
+        <div className="row gy-4 d-flex justify-content-between d-flex" style={{height: '60vh'}}>
+          <div className={`col-lg-6 order-2 order-lg-1 d-flex flex-column p-4 ${styles.textPart}`}>
+            <h1 className="">Bienvenue chez <br></br> Korv Estatement Inventory</h1>
+            <p className="">Une plateform d'inspection et d'inventaire de propriété simplifié conçue et construite pour le marché immobilier, créez des rapports d'inspections illimités pour capturer l'état de la propriété, des photos et des problèmes directement depuis votre mobile ou votre tablette à l'aide de notre application d'inspection. </p>
+            <p className="">Produisez des inventaires professionnels, des enregistrements, des départs, des inspections intermédiaires, des inspections de bâtiments, des évaluations de risques et bien plus encore à l'aide de notre logiciel d'inspection primé. </p>
             <div className="d-flex">
-              <a href="#about" className="btn-get-started">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><i className="bi bi-play-circle"></i><span>Watch Video</span></a>
+              <a href="#about" className={styles.btn_get_started}>Essai Gratuit</a>
+              <a href="" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><span> </span></a>
             </div>
           </div>
-          <div className="col-lg-5 order-1 order-lg-2 hero-img">
+          <div className="col-lg-5 order-1 d-flex flex-column justify-content-center order-lg-2 ">
             <MyCarousel />
           </div>
         </div>
@@ -109,12 +110,10 @@ export default function LandingPage() {
     );
 }
 
-export async function getServerSideProps(ctx){
-
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+// export async function getServerSideProps(ctx){
+//     return {
+//         props:{
+//             data:null
+//         }
+//     }
+// }

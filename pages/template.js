@@ -12,8 +12,9 @@ import NewsLetter from "components/partials/newsLetter";
 import Footer from "components/partials/footer";
 import Faq from "components/partials/faq";
 import Contact from "components/partials/contact";
+import Feature from "components/partials/feature";
 
-export default function Home({offers}) {
+export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Home({offers}) {
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <title> KEI Website </title> <meta content="" name="description" />
         <meta content="" name="keywords" />
-        <link href="./../public/img/favicon.png" rel="icon" />
+        <link rel="icon" href="/logo-kei.png" />
         <link
           href="./../public/img/apple-touch-icon.png"
           rel="apple-touch-icon"
@@ -75,7 +76,10 @@ export default function Home({offers}) {
           <LandingPage />
           <About />
           <Description />
-          <PricingOffer offers={offers} />
+          <Feature />
+          <PricingOffer />
+          
+          {/* <Faq /> */}
           <Contact />
           <Footer />
         </div>
@@ -85,29 +89,26 @@ export default function Home({offers}) {
 }
 
 export async function getServerSideProps(ctx){
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    }
-  };
-try {
-    const offers  = await fetch(
-        `http://kei-app-back.local/pricing-offers`,
-        options
-      );
-      const response = await offers.json();
-      console.log("offers ****" , response)
-} catch (error) {
-    console.log(Error)
-}
-  
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//       "Access-Control-Allow-Origin": "*",
+//     }
+//   };
+
+//   const offers  = await fetch(
+//     `http://kei-app-back.local/pricing-offers`,
+//     options
+//   );
+//   const response = await offers.json();
+  const response = [];
+//   console.log("offers ****" , response)
 
 
   return {
     props:{
-      offers:[] 
+      offers:response
     }
   }
 }
