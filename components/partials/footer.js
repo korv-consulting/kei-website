@@ -2,6 +2,8 @@ import styles from "@/styles/app.module.css";
 import NewsLetter from "./newsLetter";
 import Image from "next/image";
 import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { FaLocationDot, FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -19,14 +21,14 @@ const Footer = () => {
               </a>{" "}
               <div className={`pt-3 ${styles.footer_contact}`}>
                 {/* <p> A108 Adam Street </p>  */}
-                <p> 12151 Douala, Cameroun </p>{" "}
+                <p> <FaLocationDot className={`${styles.i}`} /> 12151 Douala, Cameroun </p>{" "}
                 <p className="mt-3">
                   {" "}
-                  <strong> Phone: </strong> <span>+237 6 77 06 28 56</span>{" "}
+                  <strong className="me-2"> <FaPhone className={`${styles.i}`} /> </strong> <span>+237 6 77 06 28 56</span>{" "}
                 </p>{" "}
                 <p>
                   {" "}
-                  <strong> Email: </strong> <span>contact@korv-consulting.fr</span>{" "}
+                  <strong className="me-2"> <IoMdMail className={`${styles.i}`} /> </strong> <span>contact@korv-consulting.fr</span>{" "}
                 </p>{" "}
               </div>{" "}
             </div>

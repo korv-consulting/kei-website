@@ -550,6 +550,7 @@
 .footer .copyright {
     padding-top: 25px;
     padding-bottom: 25px;
+    color: white;
     border-top: 1px solid rgba(var(--default-color-rgb), 0.1);
 }
 
