@@ -794,13 +794,16 @@ color: var(--heading-color);
 
 .featureCard{
 transition: 0s bottom;
-box-shadow: 10px 10px 5px 2px grey;
+box-shadow: 5px 5px 3px 2px grey;
+height: 45vh;
 
 }
 
 .sectionFeature{ 
     /* background-color: var(--sky-blue ); */
-    background-image: url('/tools/3d-illustration-pen-putting-blue-ticks-paper.jpg');
+    /* background-image: url('/tools/3d-illustration-pen-putting-blue-ticks-paper.jpg'); */
+    background: linear-gradient(rgba(255,255,255,1),rgba(0,0,0,0.2)),url('/tools/planification.jpg') center center fixed no-repeat;
+
     /* background-size: contain;   */
     background-size: cover;  
     background-color: #def4ff;
