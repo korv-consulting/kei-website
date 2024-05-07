@@ -1,13 +1,15 @@
 import styles from "@/styles/app.module.css";
 import { FcInspection,FcCalendar } from "react-icons/fc";
-import { FaNetworkWired } from "react-icons/fa";
+import { FaNetworkWired,FaRegFolderOpen } from "react-icons/fa";
+import { PiFilePdfDuotone } from "react-icons/pi";
+import { FcAdvertising } from "react-icons/fc";
 
 const Feature = () => {
     return (
         <div>
 
 
-            <section id="features" className="services section">
+            <section id="features" className={`py-5 ${styles.sectionFeature}`}>
 
 
                 <div className={`container ${styles.section_title}`} data-aos="fade-up">
@@ -53,7 +55,7 @@ const Feature = () => {
                         <div className={` card col-xl-4 col-md-6 d-flex me-4 ${styles.featureCard} ` } data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
                                 <div className="d-flex justify-content-center align-item-center my-2" >
-                                    <FaNetworkWired className={styles.featureIcon} />
+                                    <FaRegFolderOpen className={styles.featureIcon} />
                                 </div>
                                 <h4><a href="" className={styles.titleCard}>Espace de travail</a></h4>
                                 <p>
@@ -66,7 +68,7 @@ const Feature = () => {
                         <div className={` card col-xl-4 col-md-6 d-flex me-4 ${styles.featureCard} ` } data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
                                 <div className="d-flex justify-content-center align-item-center my-2" >
-                                    <FcInspection className={styles.featureIcon} />
+                                    <FcAdvertising className={styles.featureIcon} />
                                 </div>
                                 <h4><a href="" className={styles.titleCard}>Déclaration d'incidents</a></h4>
                                 <p>
@@ -77,7 +79,7 @@ const Feature = () => {
                         <div className={` card col-xl-4 col-md-6 d-flex me-4 ${styles.featureCard} ` } data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
                                 <div className="d-flex justify-content-center align-item-center my-2" >
-                                    <FcInspection className={styles.featureIcon} />
+                                    <FaNetworkWired className={styles.featureIcon} />
                                 </div>
                                 <h4><a href="" className={styles.titleCard}>Suivi des tâches</a></h4>
                                 <p>
@@ -88,7 +90,7 @@ const Feature = () => {
                         <div className={` card col-xl-4 col-md-6 d-flex me-4 ${styles.featureCard} ` } data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
                                 <div className="d-flex justify-content-center align-item-center my-2" >
-                                    <FcInspection className={styles.featureIcon} />
+                                    <PiFilePdfDuotone className={styles.featureIcon} />
                                 </div>
                                 <h4><a href="" className={styles.titleCard}>Rapports d'incident et d'inspection</a></h4>
                                 <p>

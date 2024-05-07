@@ -768,20 +768,34 @@ color: var(--heading-color);
     color: var(--heading-color);
  
 }
+.titleCard:hover{
+    color: var(--success );
+ 
+}
 
 .featureCard:hover{
-
     bottom: 20px;
-    
+    transition-delay: 1s;
+}
+
+.featureCard{
+transition: 0s bottom;
+box-shadow: 10px 10px 5px 2px grey;
 
 }
-/* 
-.featureCard{
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 5s;
 
-} */
+.sectionFeature{ 
+    /* background-color: var(--sky-blue ); */
+    background-image: url('/tools/3d-illustration-pen-putting-blue-ticks-paper.jpg');
+    /* background-size: contain;   */
+    background-size: cover;  
+    background-color: #def4ff;
+    background-position: justify;
+    background-repeat: no-repeat;    
+
+
+
+}
 
 /*--------------------------------------------------------------
   # Hero Section

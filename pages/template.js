@@ -74,11 +74,9 @@ export default function Home() {
         <div className={styles.container}>
           <Header />
           <LandingPage />
-          <About />
-          <Description />
           <Feature />
+          <About />
           <PricingOffer />
-          
           {/* <Faq /> */}
           <Contact />
           <Footer />
