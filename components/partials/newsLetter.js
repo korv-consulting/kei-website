@@ -6,10 +6,10 @@ const NewsLetter = () => {
       <div className={styles.footer_newsletter}>
         <div className="container">
           <div className="row justify-content-center text-center">
-            <div className="col-lg-12">
-              {/* <h4> Abonnement à notre Newsletter </h4>{" "} */}
+            <div className="col-lg-6">
+              <h4> Abonnement à notre Newsletter </h4>{" "}
               <p>
-                {/* Subscribe to our newsletter and receive the latest news about our products and services! */}
+                Subscribe to our newsletter and receive the latest news about our products and services!
                 Abonnez-vous à notre newsletter  et recevez les récentes informations sur notre application!
               </p>{" "}
               <div

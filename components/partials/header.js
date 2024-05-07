@@ -19,7 +19,7 @@ export default function Header() {
             <ul>
               <li><a href="#home" className="">Accueil</a></li>
               <li><a href="#about">A Propos</a></li>
-              <li><a href="#">Fonctionnalités</a></li>
+              <li><a href="#features">Fonctionnalités</a></li>
               {/* <li><a href="#portfolio">Portfolio</a></li> */}
               {/* <li><a href="#team">Team</a></li> */}
               <li><a href="#pricing">Pricing</a></li>

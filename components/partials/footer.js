@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <footer id="footer" className={styles.footer}>
-        {/* <NewsLetter /> */}
+        <NewsLetter />
 
         <div className={`container ${styles.footer_top}`}>
           <div className="row gy-4">
@@ -57,37 +57,37 @@ const Footer = () => {
             </div>
 
             <div className={`col-lg-2 col-md-3 ${styles.footer_links}`}>
-              <h4> Our Services </h4>{" "}
+              <h4>Nos Fonctionalités </h4>{" "}
               <ul>
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">Web Design</a>{" "}
+                  <a href="#">Etat des leux</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">Web Development</a>{" "}
+                  <a href="#">Déclaration d'incidents</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">Product Management</a>{" "}
+                  <a href="#">Rapports d'inspection</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">Marketing</a>{" "}
+                  <a href="#">Suivi des tâches</a>{" "}
                 </li>{" "}
               </ul>{" "}
             </div>
 
-            <div className="col-lg-4 col-md-12">
+            {/* <div className="col-lg-4 col-md-12">
             <h4> Abonnement à notre Newsletter </h4>{" "}
             <NewsLetter />
-            </div>
+            </div> */}
 
-            {/* <div className="col-lg-4 col-md-12">
+            <div className="col-lg-4 col-md-12">
               <h4> Suivez-nous </h4>{" "}
               <p>
                 {" "}
@@ -112,7 +112,7 @@ const Footer = () => {
                   <BsLinkedin/>
                 </a>
               </div>{" "}
-            </div> */}
+            </div>
           </div>{" "}
         </div>
 
