@@ -13,6 +13,7 @@ import Footer from "components/partials/footer";
 import Faq from "components/partials/faq";
 import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
+import ScrollToTopButton from "components/partials/scrollTop";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -80,6 +81,7 @@ export default function Home() {
           {/* <Faq /> */}
           <Contact />
           <Footer />
+          <ScrollToTopButton />
         </div>
       )}{" "}
     </>
