@@ -360,7 +360,9 @@
 
 .footer {
     color: var(--default-color);
-    background-color: var(--steel-blue);
+    /* background-color: var(--steel-blue); */
+    background: rgb(72, 86, 100);
+    color: white;
     font-size: 14px;
     padding-bottom: 50px;
     position: relative;
@@ -477,12 +479,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    border: 1px solid rgba(var(--default-color-rgb), 0.5);
+    border: 1px solid white;
     font-size: 16px;
-    color: rgba(var(--default-color-rgb), 0.8);
+    color: white;
     margin-right: 10px;
     transition: 0.3s;
 }
@@ -529,12 +531,24 @@
 .footer .footer_links ul a {
     display: inline-block;
     /* color: rgba(var(--default-color-rgb), 0.8); */
-    color: var(--default-color);
+    color: var(--semi-grey);
     line-height: 1;
 }
 
 .footer .footer_links ul a:hover {
-    color: var(--primary);
+    color: white;
+}
+
+.footer .footer_platfrom p a{
+    color: var(--semi-grey);
+}
+
+.footer .footer_platfrom .icon_store{
+    color: white;
+}
+
+.footer .footer_platfrom p a:hover {
+    color: white;
 }
 
 .footer .footer_about a {
@@ -551,8 +565,8 @@
 .footer .copyright {
     padding-top: 25px;
     padding-bottom: 25px;
-    color: white;
-    border-top: 1px solid rgba(var(--default-color-rgb), 0.1);
+    /* color: white; */
+    border-top: 2px solid rgba(var(--contrast-color-rgb), 0.1);
 }
 
 .footer .copyright p {
