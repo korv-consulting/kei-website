@@ -21,7 +21,7 @@ export default function Header() {
 
           <nav id="navmenu" className={`navmenu ${styles.navmenu}`}>
             <ul>
-              <li><a href="#home" onClick={() => setIsActive(1)} className={isActive ? styles.active_menu_item : ""}>Accueil</a></li>
+              <li><a href="#home" onClick={() => {setIsActive(1); console.log("Active Menu Item", isActive)}} className={styles.active}>Accueil</a></li>
               <li><a href="#about" onClick={() => setIsActive(2)}>A Propos</a></li>
               <li><a href="#features" onClick={() => setIsActive(3)}>Fonctionnalités</a></li>
               {/* <li><a href="#portfolio">Portfolio</a></li> */}

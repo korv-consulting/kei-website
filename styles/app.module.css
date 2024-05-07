@@ -132,13 +132,6 @@
         transition: 0.3s;  
     }
 
-    .navmenu li .active_meneu_item{
-        line-height: 1.5;
-        margin-bottom: 1px;
-        box-shadow: 0 5px 0 var(--success); /*Line for active menu item */
-        opacity: 1;
-    }
-
     .navmenu a i,
     .navmenu a:focus i {
         font-size: 12px;
@@ -153,12 +146,20 @@
     .navmenu .active,
     .navmenu .active:focus {
         color: var(--success);
-        line-height: 1.5;
+        
+
+    }
+
+    /* .navmenu li:hover>a, */
+    .navmenu .active,
+    .navmenu .active:focus {
+        color: var(--success);
+        line-height: 0.5;
         /* margin-bottom: 1px; */
         box-shadow: 0  2px 0 var(--success); /*Line for active menu item */
         opacity: 1;
         margin: 0 auto;
-        
+
     }
     .navmenu .dropdown ul {
         margin: 0;
