@@ -528,12 +528,13 @@
 
 .footer .footer_links ul a {
     display: inline-block;
-    color: rgba(var(--default-color-rgb), 0.8);
+    /* color: rgba(var(--default-color-rgb), 0.8); */
+    color: var(--default-color);
     line-height: 1;
 }
 
 .footer .footer_links ul a:hover {
-    color: var(--accent-color);
+    color: var(--primary);
 }
 
 .footer .footer_about a {
