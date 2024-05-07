@@ -477,8 +477,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid rgba(var(--default-color-rgb), 0.5);
     font-size: 16px;
@@ -551,7 +551,7 @@
 .footer .copyright {
     padding-top: 25px;
     padding-bottom: 25px;
-    color: white;
+    /* color: white; */
     border-top: 1px solid rgba(var(--default-color-rgb), 0.1);
 }
 
