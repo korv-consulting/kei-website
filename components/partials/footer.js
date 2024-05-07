@@ -36,22 +36,22 @@ const Footer = () => {
               <ul>
                 <li>
                   {" "}
-                  <i className="bi bi-chevron-right"> </i> <a href="#">Home</a>{" "}
+                  <i className="bi bi-chevron-right"> </i> <a href="#">Accueil</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">About us</a>{" "}
+                  <a href="#">A Propos</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">Services</a>{" "}
+                  <a href="#">Fonctionnalités</a>{" "}
                 </li>{" "}
                 <li>
                   {" "}
                   <i className="bi bi-chevron-right"> </i>{" "}
-                  <a href="#">Terms of service</a>{" "}
+                  <a href="#">Offres Tarifaires</a>{" "}
                 </li>{" "}
               </ul>{" "}
             </div>
@@ -91,8 +91,7 @@ const Footer = () => {
               <h4> Suivez-nous </h4>{" "}
               <p>
                 {" "}
-                Cras fermentum odio eu feugiat lide par naso tierra videa magna
-                derita valies{" "}
+                Visitez nos differents réseaux sociaux{" "}
               </p>{" "}
               <div className={`${styles.social_links} d-flex`}>
                 <a href="">

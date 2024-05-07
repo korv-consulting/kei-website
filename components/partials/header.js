@@ -22,7 +22,7 @@ export default function Header() {
               <li><a href="#features">Fonctionnalités</a></li>
               {/* <li><a href="#portfolio">Portfolio</a></li> */}
               {/* <li><a href="#team">Team</a></li> */}
-              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#pricing">Offres Tarifaires</a></li>
               {/* <li className={`dropdown ${styles.dropdown}`}><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -45,7 +45,7 @@ export default function Header() {
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
 
-          <a className={`btn-getstarted ${styles.btn_getstarted}`} href="#about">Commencez</a>
+          <a className={`btn-getstarted ${styles.btn_getstarted}`} href="#pricing">Commencez</a>
 
         </div>
       </header>

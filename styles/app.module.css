@@ -60,7 +60,7 @@
 .header .btn_getstarted:hover,
 .header .btn_getstarted:focus:hover {
     color: var(--contrast-color);
-    background: rgba(var(--accent-color-rgb), 0.85);
+    background: rgba(var(--primary-rgb), 0.85);
 }
 
 @media (max-width: 1200px) {
@@ -144,7 +144,7 @@
     .navmenu li:hover>a,
     .navmenu .active,
     .navmenu .active:focus {
-        color: var(--nav-hover-color);
+        color: var(--success);
     }
     .navmenu .dropdown ul {
         margin: 0;
@@ -367,7 +367,7 @@
 }
 
 .footer .footer_newsletter {
-    /* background-color: rgba(var(--heading-color-rgb), 0.05); */
+    background-color: rgba(var(--heading-color-rgb), 0.05);
     padding: 50px 0;
 }
 
