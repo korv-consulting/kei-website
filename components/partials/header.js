@@ -1,26 +1,29 @@
 import styles from '@/styles/app.module.css'
+import Image from 'next/image'
 
 export default function Header() {
-    return(
-        <>
-            <header id="header" className={`${styles.header} d-flex align-items-center fixed-top`}>
-    <div className="container-fluid container-xl position-relative d-flex align-items-center">
+  return (
+    <>
+      <header id="header" className={`${styles.header} d-flex align-items-center fixed-top`}>
+        <div className="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" className={`d-flex align-items-center me-auto ${styles.logo}`}>
-        {/* <!-- Uncomment the line below if you also wish to use an image logo --> */}
-        {/* <img src="assets/img/logo.png" alt=""> */}
-        <h1 className={styles.sitename}>Arsha</h1>
-      </a>
+          <a href="" className={`d-flex align-items-center me-auto ${styles.logo}`}>
+            {/* <!-- Uncomment the line below if you also wish to use an image logo --> */}
+            {/* <img src="assets/img/logo.png" alt=""> */}
+            <h1 className={styles.sitename}>
+              <Image src="/logo-kei.png" width={100} height={100} alt="KEI Logo" />
+            </h1>
+          </a>
 
-      <nav id="navmenu" className={`navmenu ${styles.navmenu}`}>
-        <ul>
-          <li><a href="index.html#hero" className="">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li className={`dropdown ${styles.dropdown}`}><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+          <nav id="navmenu" className={`navmenu ${styles.navmenu}`}>
+            <ul>
+              <li><a href="#home" className="">Accueil</a></li>
+              <li><a href="#about">A Propos</a></li>
+              <li><a href="#">Fonctionnalités</a></li>
+              {/* <li><a href="#portfolio">Portfolio</a></li> */}
+              {/* <li><a href="#team">Team</a></li> */}
+              <li><a href="#pricing">Pricing</a></li>
+              {/* <li className={`dropdown ${styles.dropdown}`}><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li className={`dropdown ${styles.dropdown}`}><a href="#"><span>Deep Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -36,17 +39,17 @@ export default function Header() {
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+          </li> */}
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
 
-      <a className={`btn-getstarted ${styles.btn_getstarted}`} href="index.html#about">Get Started</a>
+          <a className={`btn-getstarted ${styles.btn_getstarted}`} href="#about">Commencez</a>
 
-    </div>
-  </header>
-            
-        </>
-    )
+        </div>
+      </header>
+
+    </>
+  )
 }

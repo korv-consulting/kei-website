@@ -2,7 +2,7 @@ import styles from '@/styles/app.module.css'
 export default function LandingPage() {
     return (
         <div>
-    <section id="hero" className={` ${styles.hero} ${styles.section} `}>
+    <section id="home" className={` ${styles.hero} ${styles.section} `}>
 
       <div className="container">
         <div className="row gy-4">
