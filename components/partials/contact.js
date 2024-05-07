@@ -14,22 +14,20 @@ const Contact = () => {
   const [loadSpiner, setLoadSpiner] = useState(false);
 
   //const [email, setEmail] = React.useState("");
-  const [submitted, setSubmitted] = React.useState("false");
+  const [submitted, setSubmitted] = useState(false);
+  const [form , setForm] = useState({
+    name:"",
+    email:"",
+    subject:"",
+    message:""
+  })
 
-  useEffect(() => {
-    console.log("recap state:" + recaptcha);
-  }, [recaptcha]);
 
   const handleChangeRecaptcha = () => {
     SetRecaptcha(true);
 
 };
 
-const handleSubmition = (event) => {
-    event.preventDefault();
-    alert(`Hey, onSubmiting...`);
-
-};
 
 const onReCAPTCHAChange = (captchaCode) => {
     // If the reCAPTCHA code is null or undefined indicating that
@@ -45,6 +43,25 @@ const onReCAPTCHAChange = (captchaCode) => {
     // submits another email.
     // recaptchaRef.current.reset();
 } 
+const [emailValid , setEmailValid] = useState(false)
+const [messageValid , setMessageValid] = useState(false)
+const regex = /^[a-z]+[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+console.log("***test****" , regex.test("motouomaureline@gmail.fr"))
+const handleChange = e => {
+  e.preventDefault();
+  const { name, value } = e.target;
+  setForm({ ...form, [name]: value });
+}
+const {name , email ,subject , message} = form
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setSubmitted(true)
+  if(email && message && recaptcha){
+      alert("message send")
+  }
+
+};
+console.log('form***' , form)
 
   return (
     <div>
@@ -141,36 +158,41 @@ const onReCAPTCHAChange = (captchaCode) => {
             </div>
             <div className="col-lg-7">
               <form
-                action="forms/contact.php"
                 method="post"
                 className={styles.php_email_form}
                 data-aos="fade-up"
                 data-aos-delay="200"
+                onSubmit={handleSubmit}
+                noValidate
               >
                 <div className="row gy-4">
                   <div className="col-md-6">
                     <label for="name-field" className="pb-2">
                       Nom
+                      
                     </label>{" "}
                     <input
                       type="text"
                       name="name"
                       id="name-field"
                       className="form-control"
-                      required=""
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-md-6">
                     <label for="email-field" className="pb-2">
                       Email{" "}
+                      <span className="text-danger">*</span>
                     </label>{" "}
                     <input
                       type="email"
-                      className="form-control"
+                      className={`form-control ${submitted && (regex.test(email) ? 'is-valid' : 'is-invalid')}`}
                       name="email"
                       id="email-field"
-                      required=""
+                      required
+                      onChange={handleChange}
                     />
+                    <div className="invalid-feedback">Adresse mail invalide</div>
                   </div>
                   <div className="col-md-12">
                     <label for="subject-field" className="pb-2">
@@ -181,44 +203,45 @@ const onReCAPTCHAChange = (captchaCode) => {
                       className="form-control"
                       name="subject"
                       id="subject-field"
-                      required=""
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-md-12">
                     <label for="message-field" className="pb-2">
                       Message
+                      <span className="text-danger">*</span>
                     </label>
                     <textarea
-                      className="form-control"
+                      className={`form-control ${submitted && (message.trim() ? 'is-valid' : 'is-invalid')}`}
                       name="message"
                       rows="10"
                       id="message-field"
-                      required=""
+                      required
+                      onChange={handleChange}
                     ></textarea>
+                    <div className="invalid-feedback">Veuillez entrer votre message</div>
                   </div>
                  
                   <div className="col-md-12 text-center">
                     <div className={styles.loading}> Loading </div>
-                    <div className={styles.error_message}> </div>
-                    <div className={styles.sent_message}>
-                      Your message has been sent.Thank you!
-                    </div>
+                    
                     <div className="row">
                     <div className="col-md-6">
                     <Recaptcha onReCAPTCHAChange={onReCAPTCHAChange} />
-                    <span
+                    { (!recaptcha && submitted ) && <span
                       className={
-                        recaptcha == false && submitted == true
-                          ? `${styles.error_message}`
-                          : `${styles.disable}`
+                         `text-danger`
                       }
                     >
-                      {/* Veuillez d'abord résoudre l'enygme du recaptcha */}
-                    </span>
+                       Veuillez vérifier le recaptcha
+                    </span>}
                     </div>
-                      <div className="col-md-6 mt-3"><button type="submit"> Envoyer </button></div>
+                      <div className="col-md-6 mt-3"><button type="submit" disabled={submitted ? true : false}> Envoyer </button></div>
                     </div>
-                    {" "}
+
+                    <div className={styles.sent_message}>
+                      Your message has been sent.Thank you!
+                    </div>
                   </div>
                 </div>
               </form>
