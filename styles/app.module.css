@@ -796,11 +796,22 @@ color: var(--heading-color);
     min-height: 80vh;
     position: relative;
     padding: 120px 0 60px 0;
+    background-position: center;
+    background: linear-gradient(rgba(17, 70, 126, 0.922), rgba(17, 70, 126, 0.922)), url('/back3.jpg');
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
 }
-
+.hero::before{
+    /* background-image: ; */
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(rgba(17, 70, 126, 0.8), rgba(17, 70, 126, 0.8)); */
+}
 .hero h1 {
     /* margin: 0; */
     font-size: 40px;
