@@ -7,7 +7,7 @@ const Feature = () => {
         <div>
 
 
-            <section id="services" className="services section">
+            <section id="features" className="services section">
 
 
                 <div className={`container ${styles.section_title}`} data-aos="fade-up">
