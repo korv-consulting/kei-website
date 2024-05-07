@@ -53,11 +53,32 @@ const handleChange = e => {
   setForm({ ...form, [name]: value });
 }
 const {name , email ,subject , message} = form
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
   setSubmitted(true)
   if(email && message && recaptcha){
-      alert("message send")
+      
+      const response = await fetch(`/api/contact` , {
+        method: "POST",
+        body: JSON.stringify(form),
+      }
+      )
+    console.log("response*******" , response)
+
+    const result = await response.json()
+    if(response.ok){
+      setSubmitted(false)
+      setForm({
+        name:"",
+        email:"",
+        subject:"",
+        message:""
+      })
+
+    }else{
+      setSubmitted(false)
+
+    }
   }
 
 };
@@ -177,6 +198,7 @@ console.log('form***' , form)
                       id="name-field"
                       className="form-control"
                       onChange={handleChange}
+                      value={name}
                     />
                   </div>
                   <div className="col-md-6">
@@ -191,6 +213,7 @@ console.log('form***' , form)
                       id="email-field"
                       required
                       onChange={handleChange}
+                      value={email}
                     />
                     <div className="invalid-feedback">Adresse mail invalide</div>
                   </div>
@@ -204,6 +227,7 @@ console.log('form***' , form)
                       name="subject"
                       id="subject-field"
                       onChange={handleChange}
+                      value={subject}
                     />
                   </div>
                   <div className="col-md-12">
@@ -218,6 +242,7 @@ console.log('form***' , form)
                       id="message-field"
                       required
                       onChange={handleChange}
+                      value={message}
                     ></textarea>
                     <div className="invalid-feedback">Veuillez entrer votre message</div>
                   </div>
