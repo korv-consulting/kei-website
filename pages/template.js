@@ -5,7 +5,6 @@ import stylesplash from "../styles/Splash.module.css";
 import Header from "components/partials/header";
 import LandingPage from "components/partials/landingPage";
 import Head from "next/head";
-import About from "components/partials/about";
 import Description from "components/partials/description";
 import PricingOffer from "components/partials/pricingOffer";
 import NewsLetter from "components/partials/newsLetter";
@@ -13,6 +12,7 @@ import Footer from "components/partials/footer";
 import Faq from "components/partials/faq";
 import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
+import Demo from "components/partials/demo";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -75,7 +75,7 @@ export default function Home() {
           <Header />
           <LandingPage />
           <Feature />
-          <About />
+          <Demo/>
           <PricingOffer />
           {/* <Faq /> */}
           <Contact />

@@ -817,6 +817,17 @@ height: 40vh;
     background-repeat: no-repeat;    
 }
 
+.btn_demo{
+    background-color: var(--nav-color);
+    color: #fff;
+}
+
+.btn_demo:hover {
+    background-color: var(--premium);
+    color: #fff;
+}
+
+
 /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/

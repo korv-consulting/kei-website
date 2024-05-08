@@ -32,7 +32,7 @@ const Feature = () => {
                                     <FcInspection className={styles.featureIcon} />
                                 </div>
 
-                                <h4><a href="" className={styles.titleCard} >Réalisation des états des lieux</a></h4>
+                                <h4><a href="" className={` ${styles.titleCard} `}  >Réalisation des états des lieux</a></h4>
                                 <p className={styles.describe} >
                                     Établir des constats d’états des lieux d’entrées et de sorties avec prise de photo
                                 </p>
