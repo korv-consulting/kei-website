@@ -61,7 +61,7 @@ export default function LandingPage() {
           <div className="row gy-4 d-flex justify-content-between d-flex" >
             <div className={`col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-between mb-3 ${styles.textPart}`}>
               <h1 className="mb-1">Bienvenue chez <br></br> Korv Estatement Inventory</h1>
-              <p className="">Une plateform d'inspection et d'inventaire de propriété simplifié conçue et construite pour le marché immobilier, créez des rapports d'inspections illimités pour capturer l'état de la propriété, des photos et des problèmes directement depuis votre mobile ou votre tablette à l'aide de notre application d'inspection. </p>
+              <p className="">Une plateforme d'inspection et d'inventaire de propriété simplifié conçue et construite pour le marché immobilier, créez des rapports d'inspections illimités pour capturer l'état de la propriété, des photos et des problèmes directement depuis votre mobile ou votre tablette à l'aide de notre application d'inspection. </p>
               <p className="">Produisez des inventaires professionnels, des enregistrements, des départs, des inspections intermédiaires, des inspections de bâtiments, des évaluations de risques et bien plus encore à l'aide de notre logiciel d'inspection primé. </p>
               <div className="d-flex">
                 <a href="#about" className={styles.btn_get_started}>Essai Gratuit</a>
