@@ -15,8 +15,8 @@ const MyCarousel = () => {
             <Image
               src="/imgslide1.jpg"
               className="d-block w-100"
-              height={600}
-              width={950}
+              height={900}
+              width={1150}
               layout="responsive"
               alt="Picture of the author"
             />
@@ -25,8 +25,8 @@ const MyCarousel = () => {
             <Image
               src="/imgslide3.jpg"
               className="d-block w-100"
-              height={600}
-              width={950}
+              height={900}
+              width={1150}
               layout="responsive"
               alt="Picture of the author"
             />
@@ -35,8 +35,8 @@ const MyCarousel = () => {
             <Image
               src="/imgslide2.png"
               className="d-block w-100"
-              height={600}
-              width={950}
+              height={900}
+              width={1150}
               layout="responsive"
               alt="Picture of the author"
             />
