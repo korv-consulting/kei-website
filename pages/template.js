@@ -86,7 +86,7 @@ export default function Home() {
   );
 }
 
-// export async function getServerSideProps(ctx){
+export async function getServerSideProps(ctx){
 //   const options = {
 //     method: "GET",
 //     headers: {
@@ -100,12 +100,13 @@ export default function Home() {
 //     options
 //   );
 //   const response = await offers.json();
+  const response = [];
 //   console.log("offers ****" , response)
 
 
-//   return {
-//     props:{
-//       offers:response
-//     }
-//   }
-// }
+  return {
+    props:{
+      offers:response
+    }
+  }
+}
