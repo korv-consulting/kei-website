@@ -780,6 +780,7 @@ color: var(--heading-color);
 
 .titleCard{
     color: var(--heading-color);
+    height: 30% ;
  
 }
 .titleCard:hover{
@@ -807,6 +808,10 @@ transition: 0s bottom;
 box-shadow: 5px 5px 3px 2px grey;
 height: 40vh;
 
+}
+
+.iconCard{
+/* background-color: #059652; */
 }
 
 .sectionFeature{ 

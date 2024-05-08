@@ -28,11 +28,11 @@ const Feature = () => {
 
                         <div className={` card col-xl-3 col-md-6 d-flex me-4 ${styles.featureCard} `} data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
-                                <div className="d-flex justify-content-center align-item-center my-2" >
+                                <div className={`d-flex justify-content-center align-item-center my-2 ${styles.iconCard}` }  >
                                     <FcInspection className={styles.featureIcon} />
                                 </div>
 
-                                <h4><a href="" className={` ${styles.titleCard} `}  >Réalisation des états des lieux</a></h4>
+                                <h4 className={` ${styles.titleCard} `}><a href=""   >Réalisation des états des lieux</a></h4>
                                 <p className={styles.describe} >
                                     Établir des constats d’états des lieux d’entrées et de sorties avec prise de photo
                                 </p>
@@ -45,11 +45,11 @@ const Feature = () => {
 
                         <div className={` card col-xl-3 col-md-6 d-flex me-4 ${styles.featureCard} `} data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
-                                <div className="d-flex justify-content-center align-item-center my-2" >
+                            <div className={`d-flex justify-content-center align-item-center my-2 ${styles.iconCard}` }  >
                                     <FcCalendar className={styles.featureIcon} />
                                 </div>
 
-                                <h4><a href="" className={styles.titleCard}>Planification des états des lieux</a></h4>
+                                <h4  className={styles.titleCard}><a href="">Planification des états des lieux</a></h4>
 
                                 <p className={styles.describe} >
                                     Planifier et réaliser des constats d’états des lieux à distance via un appel vidéo
@@ -64,10 +64,10 @@ const Feature = () => {
 
                         <div className={` card col-xl-3 col-md-6 d-flex me-4 ${styles.featureCard} `} data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
-                                <div className="d-flex justify-content-center align-item-center my-2" >
+                                <div className={`d-flex justify-content-center align-item-center my-2 ${styles.iconCard}` }  >
                                     <FaRegFolderOpen className={styles.featureIcon} />
                                 </div>
-                                <h4><a href="" className={styles.titleCard}>Espace de travail</a></h4>
+                                <h4 className={styles.titleCard}><a href="" >Espace de travail</a></h4>
                                 <p className={styles.describe} >
                                     Créer des espaces de travail pour faciliter la gestion des tâches (états des lieux,
                                     déclaration d’incidents, inspection et intervention
@@ -82,10 +82,10 @@ const Feature = () => {
 
                         <div className={` card col-xl-3 col-md-6 d-flex me-4 ${styles.featureCard} `} data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
-                                <div className="d-flex justify-content-center align-item-center my-2" >
+                                <div className={`d-flex justify-content-center align-item-center my-2 ${styles.iconCard}` }  >
                                     <FcAdvertising className={styles.featureIcon} />
                                 </div>
-                                <h4><a href="" className={styles.titleCard}>Déclaration d'incidents</a></h4>
+                                <h4 className={styles.titleCard}><a href="" >Déclaration d'incidents</a></h4>
                                 <p className={styles.describe}>
                                     Enregistrer un nombre illimité d’incidents et défauts directement dans l’application
                                 </p>
@@ -98,10 +98,10 @@ const Feature = () => {
                         </div>
                         <div className={` card col-xl-3 col-md-6 d-flex me-4 ${styles.featureCard} `} data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
-                                <div className="d-flex justify-content-center align-item-center my-2" >
+                                <div className={`d-flex justify-content-center align-item-center my-2 ${styles.iconCard}` }  >
                                     <FaNetworkWired className={styles.featureIcon} />
                                 </div>
-                                <h4><a href="" className={styles.titleCard}>Suivi des tâches</a></h4>
+                                <h4 className={styles.titleCard}><a href="" >Suivi des tâches</a></h4>
                                 <p className={styles.describe} >
                                     Suivre l’évolution des tâches jusqu’à la clôture
                                 </p>
@@ -113,10 +113,10 @@ const Feature = () => {
                         </div>
                         <div className={` card col-xl-3 col-md-6 d-flex me-4 ${styles.featureCard} `} data-aos="fade-up" data-aos-delay="100" >
                             <div className="service-item position-relative">
-                                <div className="d-flex justify-content-center align-item-center my-2" >
+                                <div className={`d-flex justify-content-center align-item-center my-2 ${styles.iconCard}` }  >
                                     <PiFilePdfDuotone className={styles.featureIcon} />
                                 </div>
-                                <h4><a href="" className={styles.titleCard}>Rapports d'incident et d'inspection</a></h4>
+                                <h4 className={styles.titleCard}><a href="" >Rapports d'incident et d'inspection</a></h4>
                                 <p className={styles.describe} >
                                     Créer, gérer et exporter des rapports d'incident et d'inspection directement depuis
                                     l'application
