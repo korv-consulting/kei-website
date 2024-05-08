@@ -142,14 +142,14 @@
     .navmenu li:last-child a {
         /* padding-right: 0; */
     }
+    /* Active and Hover Menu Item */
     .navmenu li:hover>a,
     .navmenu .active,
     .navmenu .active:focus {
         color: var(--success);
-        
-
     }
 
+    /* Active Menu Item */
     /* .navmenu li:hover>a, */
     .navmenu .active,
     .navmenu .active:focus {
