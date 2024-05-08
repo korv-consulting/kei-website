@@ -113,7 +113,7 @@ const Footer = () => {
                 <p className="mt-2">
                   {" "}
                   <a href="#">
-                  <strong className="me-2"> <BsBrowserChrome className={`${styles.icon_store} fs-5 mb-2`} /> </strong> 
+                  <strong className="me-2"> <BsBrowserChrome className={`${styles.icon_store} fs-5`} /> </strong> 
                      <span>Visiter la Plateforme Web</span>{" "}
                   </a>
                   

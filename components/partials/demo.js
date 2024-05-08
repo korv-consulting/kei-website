@@ -19,7 +19,7 @@ const Demo = () => {
 
   return (
     <div>
-      <section id="about" className={`${styles.about} ${styles.section} `}>
+      <section id="demo" className={`${styles.about} ${styles.section} `}>
 
 
         <div className={`container ${styles.section_title}`} data-aos="fade-up">

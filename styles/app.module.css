@@ -129,8 +129,9 @@
         align-items: center;
         justify-content: space-between;
         white-space: nowrap;
-        transition: 0.3s;
+        transition: 0.3s;  
     }
+
     .navmenu a i,
     .navmenu a:focus i {
         font-size: 12px;
@@ -139,12 +140,26 @@
         transition: 0.3s;
     }
     .navmenu li:last-child a {
-        padding-right: 0;
+        /* padding-right: 0; */
     }
+    /* Active and Hover Menu Item */
     .navmenu li:hover>a,
     .navmenu .active,
     .navmenu .active:focus {
         color: var(--success);
+    }
+
+    /* Active Menu Item */
+    /* .navmenu li:hover>a, */
+    .navmenu .active,
+    .navmenu .active:focus {
+        color: var(--success);
+        line-height: 0.5;
+        /* margin-bottom: 1px; */
+        box-shadow: 0  2px 0 var(--success); /*Line for active menu item */
+        opacity: 1;
+        margin: 0 auto;
+
     }
     .navmenu .dropdown ul {
         margin: 0;
