@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Recaptcha({onReCAPTCHAChange}) {
   
-  const recaptchaRef = React.createRef();
+  const recaptchaRef = useRef();
   return (    
               <ReCAPTCHA
                 ref={recaptchaRef}
