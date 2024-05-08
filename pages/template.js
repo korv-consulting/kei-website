@@ -12,6 +12,7 @@ import Footer from "components/partials/footer";
 import Faq from "components/partials/faq";
 import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
+import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";
 
 export default function Home() {
