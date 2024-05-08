@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
 
             <div className={`col-lg-2 col-md-3 ${styles.footer_links}`}>
-              <h4> Liens Utiles </h4>{" "}
+              <h4> Liens Utiles </h4> 
               <ul>
                 <li>
                   {" "}
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
 
             <div className={`col-lg-2 col-md-3 ${styles.footer_links}`}>
-              <h4>Nos Fonctionalités </h4>{" "}
+              <h4>Nos Fonctionalités </h4> 
               <ul>
                 <li>
                   {" "}
@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
 
             {/* <div className="col-lg-4 col-md-12">
-            <h4> Abonnement à notre Newsletter </h4>{" "}
+            <h4> Abonnement à notre Newsletter </h4> 
             <NewsLetter />
             </div> */}
 
@@ -137,7 +137,7 @@ const Footer = () => {
                 </a>
               </div>{" "} */}
             </div>
-          </div>{" "}
+          </div> 
         </div>
 
         <div
@@ -184,7 +184,7 @@ const Footer = () => {
           </div>
 
         </div>
-      </footer>{" "}
+      </footer> 
     </div>
   );
 };

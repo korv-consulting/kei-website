@@ -5,7 +5,6 @@ import stylesplash from "../styles/Splash.module.css";
 import Header from "components/partials/header";
 import LandingPage from "components/partials/landingPage";
 import Head from "next/head";
-import About from "components/partials/about";
 import Description from "components/partials/description";
 import PricingOffer from "components/partials/pricingOffer";
 import NewsLetter from "components/partials/newsLetter";
@@ -13,6 +12,7 @@ import Footer from "components/partials/footer";
 import Faq from "components/partials/faq";
 import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
+import Demo from "components/partials/demo";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -74,11 +74,9 @@ export default function Home() {
         <div className={styles.container}>
           <Header />
           <LandingPage />
-          <About />
-          <Description />
           <Feature />
+          <Demo/>
           <PricingOffer />
-          
           {/* <Faq /> */}
           <Contact />
           <Footer />
@@ -88,7 +86,7 @@ export default function Home() {
   );
 }
 
-// export async function getServerSideProps(ctx){
+export async function getServerSideProps(ctx){
 //   const options = {
 //     method: "GET",
 //     headers: {
@@ -102,12 +100,13 @@ export default function Home() {
 //     options
 //   );
 //   const response = await offers.json();
+  const response = [];
 //   console.log("offers ****" , response)
 
 
-//   return {
-//     props:{
-//       offers:response
-//     }
-//   }
-// }
+  return {
+    props:{
+      offers:response
+    }
+  }
+}
