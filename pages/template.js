@@ -81,6 +81,7 @@ export default function Home() {
           {/* <Faq /> */}
           <Contact />
           <Footer />
+          <ScrollToTopButton/>
         </div>
       )}{" "}
     </>
