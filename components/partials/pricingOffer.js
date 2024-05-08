@@ -3,6 +3,9 @@ import { GiCheckMark } from "react-icons/gi";
 import Router from "next/router";
 
 const PricingOffer = () => {
+  const handleSubscribe = (plan) => {
+    window.location.href = `http://kei-app-frontweb.local/signup?plan=${plan}`
+  }
   return (
     <div>
       <section id="pricing" className={` ${styles.pricing} ${styles.section} `}>
@@ -56,14 +59,7 @@ const PricingOffer = () => {
                   </li>
                 </ul>
                 <hr />
-                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={() => {
-                  Router.push({
-                    pathname: `/signup`,
-                    query: {
-                      plan: "solo"
-                    }
-                  })
-                }}>
+                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("solo")}>
                   Souscrire
                 </button>
                 
@@ -111,14 +107,7 @@ const PricingOffer = () => {
                   </li>
                 </ul>
                 <hr />
-                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={() => {
-                  Router.push({
-                    pathname: `/signup`,
-                    query: {
-                      plan: "standard"
-                    }
-                  })
-                }}>
+                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("standar")}>
                   Souscrire
                 </button>
                 
@@ -175,14 +164,7 @@ const PricingOffer = () => {
                   </li> */}
                 </ul>
                 <hr />
-                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={() => {
-                  Router.push({
-                    pathname: `/signup`,
-                    query: {
-                      plan: "medium"
-                    }
-                  })
-                }}>
+                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("medium")}>
                   Souscrire
                 </button>
                 {/* <a href="#" className={`mt-1 ${styles.buy_btn}`}>
@@ -233,14 +215,7 @@ const PricingOffer = () => {
                   
                 </ul>
                 <hr />
-                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={() => {
-                  Router.push({
-                    pathname: `/signup`,
-                    query: {
-                      plan: "premium"
-                    }
-                  })
-                }}>
+                <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("premium")}>
                   Souscrire
                 </button>
                 {/* <a href="#" className={`mt-1 ${styles.buy_btn}`}>

@@ -1,5 +1,11 @@
-// import {NextResponse} from "next/server"
-import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
+import formidable from "formidable";
+
+export const config = {
+  api: {
+    bodyParser: false
+  }
+};
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -7,45 +13,67 @@ export default async function handler(req, res) {
     return;
   }
 
-  // Variables
-  const { name, email, subject, message } = req.body;
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  // Transformer les retours à la ligne pour le HTML
-//   const content = message.replace(/\n/g, "<br>").replace(/\r/g, "<br>").replace(/\t/g, "<br>").replace(/<(?!br\s*\/?)[^>]+>/g, ""); 
+  
 
-  try {
-    // Création du message
-    const sendGridMail = {
-      to: "motouomaureline@gmail.com",
-      from: "motouomaureline@gmail.com",
-      templateId: "d-c226b57ead43459ea4a28b671e96aeae",
-      dynamic_template_data: {
-        fullname: name,
-        email: email,
-        message: message
+  const username = process.env.MAIL_USERNAME;
+  const password = process.env.MAIL_PASSWORD;
+  const myEmail = process.env.MAIL_FROM_ADDRESS;
+  const transporter = nodemailer.createTransport({
+    host: process.env.MAIL_HOST,
+    port: process.env.MAIL_PORT,
+    secure: true,
+    auth: {
+      user: username,
+      pass: password
+    }
+  });
+
+  const form = formidable({});
+
+  form.parse(req, async function (err, fields, files) {
+    const name = fields.name[0];
+    const email = fields.email[0];
+    const message = fields.message[0];
+    const content = message
+      .replace(/\n/g, "<br>")
+      .replace(/\r/g, "<br>")
+      .replace(/\t/g, "<br>")
+      .replace(/<(?!br\s*\/?)[^>]+>/g, "");
+    // <p>Name: ${name} </p>
+    // <p>Email: ${email} </p>
+
+    if ( !email || !message) {
+        res.status(400).json({ message: "Veuillez renseigner les champs" });
+        return;
       }
-    };
-    await sgMail.send(sendGridMail);
-    res.status(200).json({
-      message: "Message envoyé"
-    });
-  } catch (e) {
-    res.status(400).json(e);
-  }
+    
+      // Syntaxe adresse email
+      const pattern =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (!pattern.test(email)) {
+        res.status(400).send({
+          message: "EMAIL Invalide"
+        });
+    }
 
-  //   try{
+    try {
+      const mail = await transporter.sendMail({
+        from: email,
+        to: "christophedanson90@gmail.com ",
+        replyTo: myEmail,
+        subject: `KEI`,
+        html: `
+            <p>${content} </p>
+            `
+      });
+      res.status(200).json({
+        message: "Message envoyé"
+      });
+    } catch (e) {
+      console.log("==========================error****", e.message);
+      res.status(400).json({message : e.message});
+    }
+  });
 
-  //     const { data } = await resend.emails.send({
-  //         from: 'Acme <motouomaureline@gmail.com>',
-  //         to: email,
-  //         subject: "KEI",
-  //         html: '<strong>{message}</strong>',
-  //       });
-  //       res.status(200).json(data);
-
-  //     // return NextResponse.json({message : "Votre message a été envoyé"})
-
-  //   }catch(e){
-  //      res.status(400).json(e);
-  //   }
+ 
 }
