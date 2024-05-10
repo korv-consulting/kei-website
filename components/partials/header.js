@@ -27,8 +27,8 @@ export default function Header() {
           <nav id="navmenu" className={`navmenu ${styles.navmenu}`}>
             <ul>
               <li><a href="#home" onClick={() => {setIsActive(1); console.log("Active Menu Item", isActive)}} className={isActive == 1 ? styles.active : ""}>Accueil</a></li>
-              <li><a href="#about" onClick={() => setIsActive(2)} className={isActive == 2 ? styles.active : ""}>A Propos</a></li>
-              <li><a href="#features" onClick={() => setIsActive(3)} className={isActive == 3 ? styles.active : ""}>Fonctionnalités</a></li>
+              <li><a href="#features" onClick={() => setIsActive(2)} className={isActive == 2 ? styles.active : ""}>Fonctionnalités</a></li>
+              <li><a href="#demo" onClick={() => setIsActive(3)} className={isActive == 3 ? styles.active : ""}>Démo</a></li>
               {/* <li><a href="#portfolio">Portfolio</a></li> */}
               {/* <li><a href="#team">Team</a></li> */}
               <li><a href="#pricing" onClick={() => setIsActive(4)} className={isActive == 4 ? styles.active : ""}>Offres Tarifaires</a></li>
