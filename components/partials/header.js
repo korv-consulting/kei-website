@@ -33,6 +33,7 @@ export default function Header() {
               {/* <li><a href="#team">Team</a></li> */}
               <li><a href="#pricing" onClick={() => setIsActive(4)} className={isActive == 4 ? styles.active : ""}>Offres Tarifaires</a></li>
               <li><a href="#contact" onClick={() => setIsActive(5)} className={isActive == 5 ? styles.active : ""}>Contact</a></li>
+              <li><a href="#faq-2" onClick={() => setIsActive(6)} className={isActive == 6 ? styles.active : ""}>FAQ</a></li>
             </ul>
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
             <BsList className='mobile-nav-toggle d-xl-none'/>
