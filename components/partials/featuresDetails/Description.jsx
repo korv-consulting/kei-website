@@ -2,13 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '@/styles/features/Description.module.css';
 
-const Description = () => {
+const Description = ({descriptionTitle,feature1Title,feature2Title,feature3Title,feature4Title,feature1Content,feature2Content,feature3Content,feature4Content}) => {
   return (
     <div className={styles.featuresContainer}>
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
-            <h2 className={`${styles.featuresTitle} `}>SOYEZ PLUS EFFICACES EN CREANT UN ESPACE DE TRAVAIL</h2>
+            <h2 className={`${styles.featuresTitle} `}>{descriptionTitle}</h2>
           </div>
         </div>
         <div className="row mb-5">
@@ -19,11 +19,9 @@ const Description = () => {
           </div>
           <div className="col-12 col-md-6">
             <div className={styles.featureDescription}>
-              <h3 className={styles.featureTitle}>Ajout, édition, archivage, désarchivage et suppression d'un espace</h3>
+              <h3 className={styles.featureTitle}>{feature1Title}</h3>
               <p className={styles.featureText}>
-                Gérez facilement vos espaces de travail en les ajoutant, modifiant, archivant, désarchivant ou supprimant selon vos
-                besoins. Gardez une vue d'ensemble de votre environnement de travail et adaptez-le en fonction de l'évolution de
-                vos projets.
+               {feature1Content}
               </p>
             </div>
           </div>
@@ -37,10 +35,9 @@ const Description = () => {
           </div>
           <div className="col-12 col-md-6 order-md-1">
             <div className={styles.featureDescription}>
-              <h3 className={styles.featureTitle}>Ajout d'une tâche à partir d'un espace</h3>
-              <p className={styles.featureText}>
-                Depuis votre espace de travail, créez facilement de nouvelles tâches en les reliant directement à cet espace.
-                Gagnez en efficacité en centralisant la gestion de vos projets dans un seul endroit.
+              <h3 className={styles.featureTitle}> {feature2Title}  </h3>
+              <p className={styles.featureText}>               {feature2Content}
+
               </p>
             </div>
           </div>
@@ -54,11 +51,11 @@ const Description = () => {
           </div>
           <div className="col-12 col-md-6">
             <div className={styles.featureDescription}>
-              <h3 className={styles.featureTitle}>Affichage des informations détaillées d'un espace</h3>
+              <h3 className={styles.featureTitle}>               {feature3Title}
+              </h3>
               <p className={styles.featureText}>
-                Accédez rapidement à tous les détails d'un espace de travail, notamment la liste de ses tâches et des
-                utilisateurs qui y sont associés. Gardez une vision globale de vos projets et de votre équipe pour une
-                meilleure coordination.
+              {feature3Content}
+
               </p>
             </div>
           </div>
@@ -72,10 +69,11 @@ const Description = () => {
           </div>
           <div className="col-12 col-md-6 order-md-1">
             <div className={styles.featureDescription}>
-              <h3 className={styles.featureTitle}>Liste des espaces de travail</h3>
+              <h3 className={styles.featureTitle}>               {feature4Title}
+              </h3>
               <p className={styles.featureText}>
-                Visualisez rapidement tous vos espaces de travail dans une liste centralisée. Naviguez facilement entre vos
-                différents projets et accédez aux informations essentielles de chacun d'entre eux en un clin d'œil.
+              {feature4Content}
+
               </p>
             </div>
           </div>

@@ -2257,7 +2257,8 @@ height: 40vh;
   }
   
   .modal a:hover {
-    color: #007bff;
+    /* color: #178519!important */
+    color: var(--success) !important
   }
   
 
@@ -2272,3 +2273,49 @@ height: 40vh;
 .starter-section {
     /* Add your styles here */
 }
+
+
+
+
+
+
+/* MODAL */
+
+
+.modal {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 280px;
+  }
+  
+  .verticalModal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .verticalList {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .verticalList li {
+    margin-bottom: 8px !important;
+    padding-left: 0 !important;
+  }
+  
+  .verticalList a {
+    display: block !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    text-align: left !important;
+  }
+  
+  

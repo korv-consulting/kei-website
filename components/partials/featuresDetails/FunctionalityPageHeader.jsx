@@ -19,8 +19,8 @@ const FunctionalityPageHeader = ({title,source}) => {
           src={source} 
           alt={title} 
           layout="responsive" 
-          width={700} 
-          height={475} 
+          width={1024} 
+          height={683} 
           objectFit="contain"
           className={styles.image} 
         />

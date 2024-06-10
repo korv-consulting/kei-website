@@ -1,0 +1,81 @@
+/* styles/IncidentReports.module.css */
+.reportsContainer {
+  background-color: #f2f2f2; /* Fond blanc légèrement sombre */
+  color: #110f0f;
+  padding: 90px;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 830px; /* Hauteur minimale au lieu de hauteur fixe */
+  margin-bottom: 150px;
+  width: 1600px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1em;
+  margin-bottom: 70px;
+
+}
+
+.imageContainer {
+  margin-top: 0rem;
+  margin-bottom: 18px;
+  margin-left:-7rem;
+  width: 600px; /* Ajuster la largeur selon vos besoins */
+  height: 400px; /* Ajuster la hauteur selon vos besoins */
+  
+
+
+}
+
+.linksContainer {
+  text-align: center;
+}
+
+.linksList {
+  text-align: justify;
+  background-color: #f2f2f2; /* Couleur de fond légèrement sombre */
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 8px;
+  width: 600px; /* Vous pouvez ajuster la largeur selon vos besoins */
+  list-style-type: none;
+}
+
+.linkItem {
+  margin-bottom: 10px;
+  
+}
+
+.linkItem a {
+  color: rgb(11, 10, 10);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color:#003366;
+}
+
+.linkItem a:hover {
+  color: var(--success); /* Changer la couleur au survol */
+}
+
+.paragraph {
+  width: 600px; /* Vous pouvez ajuster la largeur selon vos besoins */
+  text-align: justify;
+  background-color: #f2f2f2; /* Couleur de fond légèrement sombre */
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) and (max-width: 1151px) {
+  .paragraph {
+    margin-left: 0rem;
+    font-size: small;
+    width: 400px;
+
+  }
+}
