@@ -840,7 +840,7 @@ height: 40vh;
 .btn_demo:hover {
     background-color: var(--premium);
     color: #fff;
-}
+} 
 
 .youtube{
     width: auto;
@@ -2263,6 +2263,54 @@ height: 40vh;
 }
 
 
+
+
+
+/*navbar -features css for modale */
+
+.modal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 200px;
+  }
+  
+  .verticalModal {
+    width: auto;
+  }
+  
+  .verticalList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .verticalList li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .modal a:hover {
+    /* color: #178519!important */
+    color: var(--success) !important
+  }
+  
+
+
+
+
+
 /*--------------------------------------------------------------
   # Starter Section Section
   --------------------------------------------------------------*/
@@ -2270,3 +2318,49 @@ height: 40vh;
 .starter-section {
     /* Add your styles here */
 }
+
+
+
+
+
+
+/* MODAL */
+
+
+.modal {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 280px;
+  }
+  
+  .verticalModal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .verticalList {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .verticalList li {
+    margin-bottom: 8px !important;
+    padding-left: 0 !important;
+  }
+  
+  .verticalList a {
+    display: block !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    text-align: left !important;
+  }
+  
+  

@@ -1,0 +1,41 @@
+.sloganContainer {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.sloganTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.sloganParagraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  width: 700px;
+  text-align: justify;
+}
+
+.callToAction {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.demoButton {
+  background-color: #00367c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.demoButton:hover {
+  background-color: #002c63;
+}
