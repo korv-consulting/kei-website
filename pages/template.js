@@ -45,6 +45,7 @@ export default function Home() {
           href="./../public/img/apple-touch-icon.png"
           rel="apple-touch-icon"
         />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
         {/* <link
@@ -78,12 +79,13 @@ export default function Home() {
           <Feature />
           <Demo/>
           <PricingOffer />
-          {/* <Faq /> */}
-          <Contact />
+          {/* <Contact /> */}
+          <Faq />
           <Footer />
           <ScrollToTopButton/>
         </div>
       )}{" "}
+
     </>
   );
 }
