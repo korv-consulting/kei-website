@@ -28,11 +28,12 @@ const Demo = () => {
 
         <div className="container">
 
-          <div className="row gy-4">
-            <div class="col-sm col-lg-6">
-              <YouTube videoId="xaJzA47EjQc" opts={opts} onReady={_onReady}  />
+          <div className="row gy-4 d-flex justify-content-center">
+            <div class="col-md-6">
+              <iframe width="100%" height="auto" src="https://www.youtube.com/embed/1bVzEHDOtXs?si=9SevnzoUcyJiPPno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              {/* <YouTube videoId="xaJzA47EjQc" opts={opts} onReady={_onReady} className={`${styles.youtube} w-100`}  /> */}
             </div>
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-md-6" data-aos="fade-up" data-aos-delay="200">
               <p className='d-flex  text-justify' >
                 Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l'industrie.
                 Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
