@@ -79,7 +79,7 @@ export default function Home() {
           <Feature />
           <Demo/>
           <PricingOffer />
-          <Contact />
+          {/* <Contact /> */}
           <Faq />
           <Footer />
           <ScrollToTopButton/>

@@ -54,67 +54,84 @@ export default function LandingPage() {
   };
     return (
         <div>
-    <section id="home" className={`${styles.hero} `}>
-
-      <div className="container">
-        <div className={styles.box}>
-          <div className="row gt-4 d-flex justify-content-between d-flex" >
-            <div className={`col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-between mb-3 ${styles.textPart}`}>
-              <h1 className="mb-1">Bienvenue chez <br></br> Korv Estatement Inventory</h1>
-              <p className="">Une plateforme d'inspection et d'inventaire de propriété simplifié conçue et construite pour le marché immobilier, créez des rapports d'inspections illimités pour capturer l'état de la propriété, des photos et des problèmes directement depuis votre mobile ou votre tablette à l'aide de notre application d'inspection. </p>
-              <p className="">Produisez des inventaires professionnels, des enregistrements, des départs, des inspections intermédiaires, des inspections de bâtiments, des évaluations de risques et bien plus encore à l'aide de notre logiciel d'inspection primé. </p>
-              <div className="d-flex">
-                <a href="#about" className={styles.btn_get_started}>Essai Gratuit</a>
-                <a href="" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><span> </span></a>
-              </div>
-            </div>
-            <div className= {`col-lg-6 order-1 d-flex flex-column justify-content-center order-lg-2`} >
-              <MyCarousel />
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-
-    </section>
-    {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#11467eeb" fill-opacity="1" d="M0,320L48,293.3C96,267,192,213,288,208C384,203,480,245,576,266.7C672,288,768,288,864,272C960,256,1056,224,1152,192C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
-
-    {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#11467eeb" fill-opacity="1" d="M0,64L720,96L1440,128L1440,0L720,0L0,0Z"></path></svg> */}
-    
-    {/* <div className={style.trending}>
-        <div className={style.container}>
-          <div className={style.title_btns}>
-            <h3></h3>
-            <div className={style.btns}>
-              <button title="scroll left" onClick={slideLeft}>
-                <AiOutlineArrowLeft />
-              </button>
-              <button title="scroll right" onClick={slideRight}>
-                <AiOutlineArrowRight />
-              </button>
-            </div>
-          </div>
-          <div className={style.rowcontainer} id="slider">
-            {filteredItems.map((item) => (
-              <div key={item.id} className={style.row_item}>
-                <Link href={`L`} className={style.link}>
-                  <div>
-                    <div className={style.item_header}>
-                      <img src={item.img} alt="product" />
+          <section id="home" className={`${styles.hero}`}>
+            <div className="container-fluid">
+              <div className="row d-flex justify-content-center">
+                <div className="col-12 p-0">
+                  <div className="card text-bg-dark">
+                    <div className="video-container position-relative">
+                      <video autoPlay muted loop className="w-100 h-100 card-img">
+                        <source src="/cover.mov" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                      <div className="video-overlay"></div>
                     </div>
-                    <div className={style.itemDescription}>
-                      <p>{item.description}</p>
-                      <p className={style.itemPrice}>{item.price}$</p>
+                    <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center mt-5 pt-5">
+                      <h1 className="card-title text-white fw-bold display-1">
+                        Bienvenue chez <br /> Korv Estatement Inventory
+                      </h1>
+                      <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+                        <div className="carousel-inner">
+                          <div className="carousel-item active">
+                            <h3 className="card-text text-white fs-4 mt-5 mb-3 w-75 mx-auto">
+                              Une plateforme d'inspection et d'inventaire de propriété simplifiée conçue et construite pour le marché immobilier
+                            </h3>
+                          </div>
+                          <div className="carousel-item">
+                            <h3 className="card-text text-white fs-4 mt-5 mb-3 w-75 mx-auto">
+                              Créez des rapports d'inspections illimités pour capturer l'état de la propriété, des photos et des problèmes directement depuis votre mobile ou votre tablette à l'aide de notre application d'inspection.
+                            </h3>
+                          </div>
+                          <div className="carousel-item">
+                            <h3 className="card-text text-white fs-4 mt-5 mb-3 w-75 mx-auto">
+                              Produisez des inventaires professionnels, des enregistrements, des départs, des inspections intermédiaires, des inspections de bâtiments, des évaluations de risques et bien plus encore à l'aide de notre logiciel d'inspection primé.
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="d-flex justify-content-center mt-4">
+                        <a href="#about" className={styles.btn_get_started}>Essai Gratuit</a>
+                        <a href="" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><span> </span></a>
+                      </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
+            </div>
+          </section>
+          
+    {/*     <div className={style.trending}>
+            <div className={style.container}>
+              <div className={style.title_btns}>
+                <h3></h3>
+                <div className={style.btns}>
+                  <button title="scroll left" onClick={slideLeft}>
+                    <AiOutlineArrowLeft />
+                  </button>
+                  <button title="scroll right" onClick={slideRight}>
+                    <AiOutlineArrowRight />
+                  </button>
+                </div>
+              </div>
+              <div className={style.rowcontainer} id="slider">
+                {filteredItems.map((item) => (
+                  <div key={item.id} className={style.row_item}>
+                    <Link href={`L`} className={style.link}>
+                      <div>
+                        <div className={style.item_header}>
+                          <img src={item.img} alt="product" />
+                        </div>
+                        <div className={style.itemDescription}>
+                          <p>{item.description}</p>
+                          <p className={style.itemPrice}>{item.price}$</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div> */} 
         </div>
     );
 }
