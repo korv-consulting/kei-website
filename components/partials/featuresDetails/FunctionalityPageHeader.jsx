@@ -1,10 +1,8 @@
-// FunctionalityPageHeader.jsx
+
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/features/FunctionalityPage.module.css';
 
 
-
-// components/FunctionalityPageHeader.js
 import Image from 'next/image';
 
 const FunctionalityPageHeader = ({title,source}) => {

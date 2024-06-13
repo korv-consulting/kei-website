@@ -334,7 +334,7 @@ const FeatureSection = () => {
         <section className={styles.featuresSection}>
             <div className="container">
                 <div className="row">
-                    <div className={`col-12 features-title container ${style.section_title}`}>
+                    <div className={`col-12 features-title container ${style.section_title} `}>
                         <h2>Nos Fonctionnalités Principales</h2>
                         <p className='text-dark'>
                             KEI est une application innovante multi plateforme conçue pour l'industrie du bâtiment,

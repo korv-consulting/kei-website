@@ -23,9 +23,9 @@
   font-size: 3rem;
   color: #fff;
   margin-top: 15rem;
-  padding: 0.5rem 1rem; /* Ajout de padding pour un fond transparent */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre subtile pour le texte */
-  border-radius: 5px; /* Bordure arrondie pour un effet plus doux */
+  padding: 0.5rem 1rem; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  border-radius: 5px; 
 }
 
 

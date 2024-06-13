@@ -1,4 +1,4 @@
-// components/IncidentReports.js
+
 import React from 'react';
 import Image from 'next/image';
 import { FaDownload } from 'react-icons/fa';

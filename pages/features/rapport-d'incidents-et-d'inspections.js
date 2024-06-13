@@ -12,7 +12,7 @@ import IncidentReports from "components/partials/featuresDetails/IncidentReports
 const RapportsIncidentsInspections = () => {
 
   const title1 = 'VOTRE OUTIL DE RAPPORTS QUOTIDIENS,EXPORTEZ VOS RAPPORTS EN UN CLIC '
-  const source1 ='/features/report.jpg'
+  const source1 ='/tools/rapport.jpg'
   
   
   const descTitle = 'RAPPORTS  D\'INCIDENTS ET D\'INSPECTIONS'
