@@ -6,7 +6,7 @@ const Description = ({descriptionTitle,feature1Title,feature2Title,feature3Title
   return (
     <div className={styles.featuresContainer}>
       <div className="container">
-        <div className="row">
+        <div className="row d-flex justify-content-center">
           <div className="col-12 text-center">
             <h2 className={`${styles.featuresTitle} `}>{descriptionTitle}</h2>
           </div>

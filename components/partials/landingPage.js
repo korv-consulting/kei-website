@@ -55,41 +55,41 @@ export default function LandingPage() {
     return (
         <div>
           <section id="home" className={`${styles.hero}`}>
-            <div className="container-fluid">
-              <div className="row d-flex justify-content-center">
+            <div className="container-fluid p-0">
+              <div className="row d-flex justify-content-center m-0">
                 <div className="col-12 p-0">
-                  <div className="card text-bg-dark">
+                  <div className="card text-bg-dark border-0">
                     <div className="video-container position-relative">
-                      <video autoPlay muted loop className="w-100 h-100 card-img">
+                      <video autoPlay muted loop className={`w-100 h-100 ${styles.video}`}>
                         <source src="/cover.mov" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                       <div className="video-overlay"></div>
                     </div>
                     <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center mt-5 pt-5">
-                      <h1 className="card-title text-white fw-bold display-1">
+                      <h1 className="card-title text-white fw-bold display-lg-1">
                         Bienvenue chez <br /> Korv Estatement Inventory
                       </h1>
                       <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                           <div className="carousel-item active">
-                            <h3 className="card-text text-white fs-4 mt-5 mb-3 w-75 mx-auto">
-                              Une plateforme d'inspection et d'inventaire de propriété simplifiée conçue et construite pour le marché immobilier
+                            <h3 className="card-text text-white d-none d-md-block fs-4 mt-5 mb-md-3 w-75 mx-auto">
+                              Une plateforme simplifiée d'inspection et d'inventaire pour le marché immobilier.
                             </h3>
                           </div>
                           <div className="carousel-item">
-                            <h3 className="card-text text-white fs-4 mt-5 mb-3 w-75 mx-auto">
-                              Créez des rapports d'inspections illimités pour capturer l'état de la propriété, des photos et des problèmes directement depuis votre mobile ou votre tablette à l'aide de notre application d'inspection.
+                            <h3 className="card-text text-white d-none d-md-block fs-4 mt-5 mb-3 w-75 mx-auto">
+                              Créez des rapports d'inspection illimités avec photos et problèmes via notre application mobile ou tablette.
                             </h3>
                           </div>
                           <div className="carousel-item">
-                            <h3 className="card-text text-white fs-4 mt-5 mb-3 w-75 mx-auto">
-                              Produisez des inventaires professionnels, des enregistrements, des départs, des inspections intermédiaires, des inspections de bâtiments, des évaluations de risques et bien plus encore à l'aide de notre logiciel d'inspection primé.
+                            <h3 className="card-text text-white d-none d-md-block fs-4 mt-5 mb-3 w-75 mx-auto">
+                              Produisez des inventaires professionnels, des inspections et des évaluations de risques avec notre logiciel d'inspection primé.
                             </h3>
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex justify-content-center mt-4">
+                      <div className="d-flex justify-content-center mt-md-4">
                         <a href="#about" className={styles.btn_get_started}>Essai Gratuit</a>
                         <a href="" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><span> </span></a>
                       </div>
@@ -99,6 +99,7 @@ export default function LandingPage() {
               </div>
             </div>
           </section>
+
           
     {/*     <div className={style.trending}>
             <div className={style.container}>

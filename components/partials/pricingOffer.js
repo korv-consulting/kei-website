@@ -11,7 +11,9 @@ const PricingOffer = () => {
       <section id="pricing" className={` ${styles.pricing} ${styles.section} `}>
         {/* <!-- Section Title --> */}
         <div className={`container ${styles.section_title}`} data-aos="fade-up">
-          <h2>NOS OFFRES</h2>
+          <center>
+            <h2>NOS OFFRES</h2>
+          </center>
           <p>Choississez le plan qui vous convient</p>
         </div>
         {/* <!-- End Section Title --> */}

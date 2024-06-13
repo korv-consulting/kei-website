@@ -13,7 +13,9 @@ const Faq = () => {
       <section id="faq-2" className={` ${styles.section} ${styles.faq_2} `}>
         {/* <!-- Section Title --> */}
         <div className={`container ${styles.section_title}`} data-aos="fade-up">
-          <h2>Besoin d'aide ?</h2>
+          <center>
+            <h2>Besoin d'aide ?</h2>
+          </center>
           <p>Voici quelques questions qui sont fréquemment posées</p>
         </div>
         {/* <!-- End Section Title --> */}
