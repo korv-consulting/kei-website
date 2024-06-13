@@ -1,11 +1,11 @@
-/* styles/IncidentReports.module.css */
+
 .reportsContainer {
-  background-color: #f2f2f2; /* Fond blanc légèrement sombre */
+  background-color: #f2f2f2; 
   color: #110f0f;
   padding: 90px;
   border-radius: 8px;
   text-align: center;
-  min-height: 830px; /* Hauteur minimale au lieu de hauteur fixe */
+  min-height: 830px; 
   margin-bottom: 150px;
   width: 1600px;
 }
@@ -25,8 +25,8 @@
   margin-top: 0rem;
   margin-bottom: 18px;
   margin-left:-7rem;
-  width: 600px; /* Ajuster la largeur selon vos besoins */
-  height: 400px; /* Ajuster la hauteur selon vos besoins */
+  width: 600px; 
+  height: 400px; 
   
 
 
@@ -38,11 +38,11 @@
 
 .linksList {
   text-align: justify;
-  background-color: #f2f2f2; /* Couleur de fond légèrement sombre */
+  background-color: #f2f2f2; 
   padding: 20px;
   margin: 0 auto;
   border-radius: 8px;
-  width: 600px; /* Vous pouvez ajuster la largeur selon vos besoins */
+  width: 600px; 
   list-style-type: none;
 }
 
@@ -59,23 +59,23 @@
 }
 
 .linkItem a:hover {
-  color: var(--success); /* Changer la couleur au survol */
+  color: var(--success); 
 }
 
 .paragraph {
-  width: 600px; /* Vous pouvez ajuster la largeur selon vos besoins */
+  width: 600px; 
   text-align: justify;
-  background-color: #f2f2f2; /* Couleur de fond légèrement sombre */
+  background-color: #f2f2f2; 
   padding: 20px;
   margin: 0 auto;
   border-radius: 8px;
 }
 
-@media (min-width: 768px) and (max-width: 1151px) {
+@media (min-width: 992px) and (max-width: 99px) {
   .paragraph {
     margin-left: 0rem;
     font-size: small;
-    width: 400px;
+    width: 300px;
 
   }
 }

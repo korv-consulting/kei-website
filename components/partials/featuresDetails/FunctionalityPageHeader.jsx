@@ -1,10 +1,8 @@
-// FunctionalityPageHeader.jsx
+
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/features/FunctionalityPage.module.css';
 
 
-
-// components/FunctionalityPageHeader.js
 import Image from 'next/image';
 
 const FunctionalityPageHeader = ({title,source}) => {
@@ -20,8 +18,8 @@ const FunctionalityPageHeader = ({title,source}) => {
           alt={title} 
           layout="responsive" 
           width={1024} 
-          height={683} 
-          objectFit="contain"
+          height={520} 
+          objectFit="cover"
           className={styles.image} 
         />
       </div>

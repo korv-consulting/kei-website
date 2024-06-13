@@ -11,7 +11,7 @@ import Description from "components/partials/featuresDetails/Description";
 const SuiviDesTaches = () => {
 
   const title1 = 'GEREZ VOS TACHES DE FACON OPTIMALE'
-  const source1 ='/features/stain-tracking.webp'
+  const source1 ='/tools/planification.jpg'
   
   
   const descTitle = 'GESTION DES TACHES'

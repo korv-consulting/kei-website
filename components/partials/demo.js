@@ -56,7 +56,7 @@
 // export default Demo;
 
 
-// components/Demo/Demo.js
+
 import React from 'react';
 import YouTubePlayer from 'react-youtube';
 import styles from '@/styles/Demo.module.css';

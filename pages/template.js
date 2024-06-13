@@ -15,15 +15,25 @@ import Feature from "components/partials/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
+ 
   useEffect(() => {
-    // setLoading(true)
+    AOS.init({
+      duration: 1000, // durée de l'animation
+      once: false, // si vrai, l'animation ne se produit qu'une seule fois
+    });
+
+    // Simuler le chargement initial
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-  });
+  }, []);
+
 
   const handleScale = async () => {
     console.log("handleScale...");

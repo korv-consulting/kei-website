@@ -11,7 +11,7 @@ import Description from "components/partials/featuresDetails/Description";
 const PlanificationEtatsDesLieux = () => {
 
   const title1 = 'ORGANISEZ VOS INSPECTIONS A DISTANCCE '
-  const source1 ='/features/planify-property-inventories.webp'
+  const source1 ='/tools/plan.jpg'
   
   
   const descTitle = 'PLANIFICATION DES ETATS DES LIEUX'

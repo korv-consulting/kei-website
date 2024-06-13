@@ -9,10 +9,9 @@
   max-width: 950px;
 
   /* color: #1d418f; */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour un effet de profondeur */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
-
-
+  
 
 
 
@@ -41,8 +40,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: auto; /* Ajout de cette ligne */
-  margin-right: auto; /* Ajout de cette ligne */
+  margin-left: auto; 
+  margin-right: auto; 
 }
 
 
@@ -98,4 +97,41 @@
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
+}
+
+
+
+/* page animation */
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animateFadeInUp {
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.animateFadeInDown {
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
 }
