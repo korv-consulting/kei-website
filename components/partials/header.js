@@ -60,7 +60,6 @@ export default function Header() {
     <>
       <header id="header" className={`${styles.header} d-flex align-items-center fixed-top`}>
         <div className="container-fluid container-xl position-relative d-flex align-items-center">
-
           <a href="" className={`d-flex align-items-center me-auto ${styles.logo}`}>
             <h1 className={styles.sitename}>
               <Image src="/logo-kei.png" width={100} height={100} alt="KEI Logo" />
@@ -69,14 +68,30 @@ export default function Header() {
 
           <nav id="navmenu" className={`navmenu ${styles.navmenu}`}>
             <ul>
-              <li><a href="#home" onClick={() => {setIsActive(1); console.log("Active Menu Item", isActive)}} className={isActive == 1 ? styles.active : ""}>Accueil</a></li>
-              <li><a href="#features" onClick={() => setIsActive(2)} className={isActive == 2 ? styles.active : ""}>Fonctionnalités</a></li>
-              <li><a href="#demo" onClick={() => setIsActive(3)} className={isActive == 3 ? styles.active : ""}>Démo</a></li>
-              {/* <li><a href="#portfolio">Portfolio</a></li> */}
-              {/* <li><a href="#team">Team</a></li> */}
-              <li><a href="#pricing" onClick={() => setIsActive(4)} className={isActive == 4 ? styles.active : ""}>Offres Tarifaires</a></li>
-              <li><a href="/template/contact" onClick={() => setIsActive(5)} className={isActive == 5 ? styles.active : ""}>Contact</a></li>
-              <li><a href="#faq-2" onClick={() => setIsActive(6)} className={isActive == 6 ? styles.active : ""}>FAQ</a></li>
+              <li><a href="/template" onClick={() => setIsActive(1)} className={isActive == 1 ? styles.active : ""}>Accueil</a></li>
+              <li
+                onMouseEnter={toggleModal}
+                onMouseLeave={toggleModal}
+                onClick={() => setIsActive(2)}
+                className={isActive == 2 ? styles.active : ""}
+              >
+                <a href="/template#features">Fonctionnalités</a>
+                {isModalVisible && (
+                  <div className={`${styles.modal} ${styles.verticalModal}`}>
+                    <ul className={`${styles.verticalList}`}>
+                      <li><a href="/features/espace-de-travail">Espace de travail</a></li>
+                      <li><a href="/features/suivi-des-taches">Suivi des tâches</a></li>
+                      <li><a href="/features/declaration-d'incidents">Déclaration d'incidents</a></li>
+                      <li><a href="/features/realisation-des-etats-des-lieux">Réalisation des états des lieux</a></li>
+                      <li><a href="/features/planification-des-etats-des-lieux">Planification de l'état des lieux</a></li>
+                      <li><a href="/features/rapport-d'incidents-et-d'inspections">Rapport d'incidents et d'inspections</a></li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+              <li><a href="/template#demo" onClick={() => setIsActive(3)} className={isActive == 3 ? styles.active : ""}  scroll={true}>Démo</a></li>
+              <li><a href="/template#pricing" onClick={() => setIsActive(4)} className={isActive == 4 ? styles.active : ""}>Offres Tarifaires</a></li>
+              <li><a href="/template#contact" onClick={() => setIsActive(5)} className={isActive == 5 ? styles.active : ""} >Contact</a></li>
             </ul>
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
             <BsList className='mobile-nav-toggle d-xl-none' />

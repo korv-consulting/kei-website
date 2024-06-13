@@ -40,14 +40,14 @@
   margin-bottom: 50px;
   text-align: left;
   position: relative;
-  margin-left: 3rem;
+  margin-left: 2.5rem;
 }
 
 .title::after {
   content: '';
   position: absolute;
   bottom: -12px;
-  left: 12%;
+  left: 8%;
   transform: translateX(-50%);
   width: 85px;
   height: 3px;

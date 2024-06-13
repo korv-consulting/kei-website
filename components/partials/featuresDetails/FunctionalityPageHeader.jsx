@@ -20,8 +20,8 @@ const FunctionalityPageHeader = ({title,source}) => {
           alt={title} 
           layout="responsive" 
           width={1024} 
-          height={683} 
-          objectFit="contain"
+          height={520} 
+          objectFit="cover"
           className={styles.image} 
         />
       </div>

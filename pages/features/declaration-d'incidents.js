@@ -11,7 +11,7 @@ import Description from "components/partials/featuresDetails/Description";
 const DeclarationIncidents = () => {
 
   const title1 = 'INCIDENTS A LA LOUPE'
-  const source1 ='/features/incident-reporting.jpeg'
+  const source1 ='/tools/declaration.jpg'
   
   
   const descTitle = 'DECLARATION D\'INCIDENTS'

@@ -7,7 +7,7 @@ import Description from "components/partials/featuresDetails/Description";
 
 const EspaceDeTravail = () => {
 
-  const source1 = '/workspace.png';
+  const source1 = '/tools/workspace.jpg';
   const title1 = 'CREEZ VOS ESPACES DE TRAVAIL  ET AYEZ LE CONTROLE SUR TOUT !';
   const feat1 = "Gérez facilement vos espaces de travail en les ajoutant, modifiant, archivant, désarchivant ou supprimant selon vos besoins. Gardez une vue d'ensemble de votre environnement de travail et adaptez-le en fonction de l'évolution de vos projets.";
   const feat2 = "Depuis votre espace de travail, créez facilement de nouvelles tâches en les reliant directement à cet espace. Gagnez en efficacité en centralisant la gestion de vos projets dans un seul endroit."
