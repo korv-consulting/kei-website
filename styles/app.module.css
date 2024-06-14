@@ -376,7 +376,7 @@
 .footer {
     color: var(--default-color);
     /* background-color: var(--steel-blue); */
-    background: rgb(72, 86, 100);
+    background:rgb(55, 81, 126);
     color: white;
     font-size: 14px;
     padding-bottom: 50px;
@@ -422,17 +422,22 @@
 
 .footer .footer_newsletter .newsletter_form input[type=submit] {
     border: 0;
-    font-size: 16px;
+    font-size: 17px;
     padding: 0 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--heading-color);
-    color: var(--contrast-color);
+    margin: -8px -8px -7px 0;
+    /* background: var(--heading-color); */
+    background-color: #f9f9f9;
+    /* color: var(--contrast-color); */
+    color:#28a745;
     transition: 0.3s;
     border-radius: 50px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  
 }
 
-.footer .footer_newsletter .newsletter-form input[type=submit]:hover {
-    background: rgba(var(--accent-color-rgb), 0.8);
+.footer .footer_newsletter .newsletter_form input[type=submit]:hover {
+    background-color:#b3d3bb!important
 }
 
 .footer .footer_newsletter .error_message {

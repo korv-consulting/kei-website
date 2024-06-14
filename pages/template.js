@@ -24,7 +24,7 @@ export default function Home() {
  
   useEffect(() => {
     AOS.init({
-      duration: 1000, // durée de l'animation
+      duration: 1000,
       once: false, // si vrai, l'animation ne se produit qu'une seule fois
     });
 
@@ -64,24 +64,42 @@ export default function Home() {
         /> */}
       </Head>{" "}
       {loading ? (
+        // <div className={stylesplash.container_splash}>
+        //   <Container>
+        //     <Row className={`mx-auto ${stylesplash.main_splash}`}>
+        //       <Col> </Col>{" "}
+        //       <Col>
+        //         <div className={`mx-auto mx-1 `}>
+        //           <video
+        //             src="./splash/splash-screen2.mp4"
+        //             autoPlay
+        //             muted
+        //             className="h-[100%] w-[100%]"
+        //           ></video>{" "}
+        //         </div>{" "}
+        //       </Col>{" "}
+        //       <Col> </Col>{" "}
+        //     </Row>{" "}
+        //   </Container>{" "}
+        // </div>
+
+
         <div className={stylesplash.container_splash}>
-          <Container>
-            <Row className={`mx-auto ${stylesplash.main_splash}`}>
-              <Col> </Col>{" "}
-              <Col>
-                <div className={`mx-auto mx-1 `}>
-                  <video
-                    src="./splash/splash-screen2.mp4"
-                    autoPlay
-                    muted
-                    className="h-[100%] w-[100%]"
-                  ></video>{" "}
-                </div>{" "}
-              </Col>{" "}
-              <Col> </Col>{" "}
-            </Row>{" "}
-          </Container>{" "}
-        </div>
+        <Container>
+          <Row className={`mx-auto ${stylesplash.main_splash}`}>
+            <Col xs={12} md={4} className="d-flex justify-content-center">
+              <div className={`video_container ${stylesplash.video_container}`}>
+                <video
+                  src="./splash/splash-screen2.mp4"
+                  autoPlay
+                  muted
+                  className="w-100 h-auto"
+                ></video>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       ) : (
         <div className={styles.container}>
           <Header />
