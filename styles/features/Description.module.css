@@ -17,7 +17,16 @@
 
 @media (max-width: 767px) {
   .featuresTitle {
-    margin-left: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    margin-top:  1rem;
+    margin-bottom:  1.5rem;
+  }
+
+  .featuresContainer {
+   width: 100%;
   }
 }
 

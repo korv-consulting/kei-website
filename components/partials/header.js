@@ -94,7 +94,7 @@ export default function Header() {
                       <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>FAQ</a>
                     </li>
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/template/contact" onClick={() => setIsActive(5)}>Contact</a>
+                      <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/contact" onClick={() => setIsActive(5)}>Contact</a>
                     </li>
                   </ul>
                 </div>

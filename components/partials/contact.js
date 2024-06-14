@@ -147,14 +147,16 @@ const Contact = () => {
     <div>
       <section id="contact" className={`${styles.contact} ${styles.section} `}>
         {/* <!-- Section Title --> */}
-        <div className={`container ${styles.section_title}`} data-aos="fade-up">
-          <h2> Contactez-nous </h2>
+        <div className={`container mt-5 pt-5 ${styles.section_title}`} data-aos="fade-up">
+          <center>
+            <h2> Contactez-nous </h2>
+          </center>
         </div>{" "}
         {/* <!-- End Section Title --> {styles.}*/}
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4 justify-content-center">
 
-          <p className="text-center "><a href="#">Cliquez ici</a> pour obtenir une démo.<br/> Si vous avez une autre raison, remplissez le formulaire ci-dessous.</p>
+          <p className="text-center ">Contactez-nous pour obtenir une démo et également<br/> Si vous avez une autre raison, remplissez le formulaire ci-dessous.</p>
 
            {/* <div className="col-lg-5">
               <div className={styles.info_wrap}>
@@ -239,7 +241,7 @@ const Contact = () => {
                 {/* <!-- End Info Item --> }{" "}
               </div>{" "}
             </div>*/}
-            <div className="col-md">
+            <div className="col-md-10">
               <form
                 method="post"
                 className={styles.php_email_form}
@@ -485,7 +487,8 @@ const Contact = () => {
                           </span>
                         )}
                       </div>
-                      <div className="col-md-6 mt-3">
+                      <center>
+                        <div className="col-md-6 mt-3">
                         <button
                           type="submit"
                           disabled={submitted ? true : false}
@@ -504,6 +507,7 @@ const Contact = () => {
                           </span>
                         )} */}
                       </div>
+                      </center>
                     </div>
                   </div>
                 </div>

@@ -9,16 +9,16 @@ const FunctionalityPageHeader = ({title,source}) => {
 
   return (
     <div className={styles.headerContainer}>
-            <h1 className={styles.title}>{title}</h1>
+            <h1 className={` ${styles.title}`}>{title}</h1>
 
       <div className={styles.imageContainer}>
 
       <Image 
           src={source} 
           alt={title} 
-          layout="responsive" 
+          layout="fill" 
           width={1024} 
-          height={520} 
+          height={420} 
           objectFit="cover"
           className={styles.image} 
         />
