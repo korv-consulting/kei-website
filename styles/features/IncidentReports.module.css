@@ -27,9 +27,6 @@
   margin-left:-7rem;
   width: 600px; 
   height: 400px; 
-  
-
-
 }
 
 .linksContainer {
@@ -56,6 +53,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
   color:#003366;
+  text-decoration: underline;
 }
 
 .linkItem a:hover {
@@ -69,6 +67,27 @@
   padding: 20px;
   margin: 0 auto;
   border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+    .reportsContainer {
+      width: 100%;
+      padding: 10px;
+    }
+    .imageContainer {
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      margin-left:0;
+    }
+    .paragraph {
+      width: 100%; 
+      padding: 0;
+      margin: 0;
+    }
+    .linksList {
+      width: 100%; 
+    }
 }
 
 @media (min-width: 992px) and (max-width: 99px) {
