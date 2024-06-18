@@ -137,10 +137,10 @@
 
 .animateFadeInUp {
   opacity: 0;
-  animation: fadeInUp 1.5s forwards;
+  animation: fadeInUp 3s forwards;
 }
 
 .animateFadeInDown {
   opacity: 0;
-  animation: fadeInDown 1s forwards;
+  animation: fadeInDown 3s forwards;
 }
