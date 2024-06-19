@@ -86,23 +86,21 @@ export default function Home() {
 
 
         <div className={stylesplash.container_splash}>
-          <Container>
-            <Row className={`mx-auto d-flex justify-content-center ${stylesplash.main_splash}`}>
-              <Col> </Col>{" "}
-              <Col>
-                <div className={`mx-auto mx-1 `}>
-                  <video
-                    src="./splash/splash-screen2.mp4"
-                    autoPlay
-                    muted
-                    className="h-[100%] w-[100%]"
-                  ></video>{" "}
-                </div>{" "}
-              </Col>{" "}
-              <Col> </Col>{" "}
-            </Row>{" "}
-          </Container>{" "}
-        </div>
+        <Container>
+          <Row className={`mx-auto ${stylesplash.main_splash}`}>
+            <Col xs={12} md={4} className="d-flex justify-content-center">
+              <div className={`video_container ${stylesplash.video_container}`}>
+                <video
+                  src="./splash/splash-screen2.mp4"
+                  autoPlay
+                  muted
+                  className="w-100 h-auto"
+                ></video>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       ) : (
         <div className={styles.container}>
           <Header />

@@ -80,36 +80,30 @@ const Demo = () => {
   };
 
   return (
-    <div>
-      <section id="demo" className={`${styles.about} ${styles.section} `}>
-
-        <div className={`container ${styles.section_title}`} data-aos="fade-up">
-          <h2 className="">Démo</h2>
-        </div>
-
-        <div className="container">
-
-          <div className="row my-5 d-flex justify-content-center">
-            <div class="col-md-4">
-              <iframe width="100%" height="auto" src="https://www.youtube.com/embed/1bVzEHDOtXs?si=9SevnzoUcyJiPPno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              {/* <YouTube videoId="xaJzA47EjQc" opts={opts} onReady={_onReady} className={`${styles.youtube} w-100`}  /> */}
-            </div>
-            <div className="col-md-8" data-aos="fade-up" data-aos-delay="200">
-              <p className='d-flex  text-justify' >
-                Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l'industrie.
-                Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
-              </p>
-              <a className={`btn rounded-pill ${styles.btn_demo}`} href="/contact">
+    <section id="demo" className={styles.demo}>
+      <div className="container">
+        <div className={styles.demoContent}>
+          <div className={styles.videoWrapper}>
+            <YouTubePlayer videoId="xaJzA47EjQc" opts={opts} onReady={_onReady} />
+          </div>
+          <div className={styles.textContent}>
+            <center>
+              <h2 className={styles.title}>DEMO</h2>
+            </center>
+            <p className={styles.description}>
+              Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l'industrie.
+              Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
+            </p>
+            <center>
+              <a className={`${styles.button} btn rounded-pill`} href="/template/contact">
                 Obtenir une démo
               </a>
-
-              {/* <a href="#" className={styles.btn_getstarted}><span>Obtenir une démo</span><i className="bi bi-arrow-right"></i></a> */}
-            </div>
-
+            </center>
+            
           </div>
         </div>
+      </div>
     </section>
-  </div>
   );
 };
 

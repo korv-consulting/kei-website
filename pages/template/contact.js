@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Col, Container, Image, Row } from "react-bootstrap"
-import stylesplash from '../styles/Splash.module.css'
 import Header from 'components/partials/header'
 import Footer from 'components/partials/footer'
 import styles from "@/styles/app.module.css";
@@ -12,7 +11,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import countries from "pages/api/country";
 import activities from "pages/api/activity";
 import calls from "pages/api/call";
-
+import FunctionalityPageHeader from 'components/partials/featuresDetails/FunctionalityPageHeader'
 
 export default function Contact() {
   const [loading, setLoading] = useState(true) 
@@ -157,32 +156,14 @@ export default function Contact() {
     }
   }, [successMessage , error]);
 
+  const source1 = '/contact.jpg';
+  const title1 = 'CONTACTEZ-NOUS !';
+
 
 
 
   return (
     <>
-      {
-        loading ?
-          (  <div className={stylesplash.container_splash}>
-            <Container>
-              <Row className={`mx-auto ${stylesplash.main_splash}`}  >
-                <Col></Col>
-                <Col >
-                  <div className={`mx-auto mx-1 `}>
-                    <video src="./splash/splash-screen2.mp4" autoPlay muted className="h-[100%] w-[100%] " ></video>
-                  </div>
-                </Col>
-                <Col></Col>
-              </Row>
-            </Container>
-
-          </div>
-
-          )
-          : (
-            
-
             <div className={styles.container}>
               <Head>
                 <title>KEI - Home</title> 
@@ -194,14 +175,23 @@ export default function Contact() {
               <main className={styles.main}>
                 <section id="contact" className={`${styles.contact} ${styles.section} my-5 pt-5`}>
                     {/* <!-- Section Title --> */}
-                    <div className={`container ${styles.section_title}`} data-aos="fade-up">
-                    <h2> Contactez-nous </h2>
-                    </div>{" "}
+                    {/* <div className={`container ${styles.section_title}`} data-aos="fade-up">
+                      <center>
+                        <h2> Contactez-nous </h2>
+                      </center>
+                    </div>{" "} */}
+
+                    <div className={styles.pageContainer}>
+                      <FunctionalityPageHeader 
+                      title={title1} 
+                      source={source1} 
+                      />
+                    </div>
                     {/* <!-- End Section Title --> {styles.}*/}
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="row gy-4 justify-content-center">
 
-                    <p className="text-center "><a href="#">Cliquez ici</a> pour obtenir une démo.<br/> Si vous avez une autre raison, remplissez le formulaire ci-dessous.</p>
+                    <p className="text-center mt-5 pt-5 ">Contactez-nous pour obtenir une démo ou<br/> si vous avez une autre raison, remplissez le formulaire ci-dessous.</p>
 
                     {/* <div className="col-lg-5">
                         <div className={styles.info_wrap}>
@@ -286,7 +276,7 @@ export default function Contact() {
                             {/* <!-- End Info Item --> }{" "}
                         </div>{" "}
                         </div>*/}
-                        <div className="col-md-10">
+                        <div className="col-md-12">
                         <form
                             method="post"
                             className={styles.php_email_form}
@@ -563,8 +553,6 @@ export default function Contact() {
 
               <Footer /> 
             </div>
-          )
-      }
 
 
     </>
