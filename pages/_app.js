@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import '@/styles/globals.css'
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useEffect } from 'react';
 import Head from 'next/head'
 

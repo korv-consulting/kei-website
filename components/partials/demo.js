@@ -30,14 +30,19 @@ const Demo = () => {
             <YouTubePlayer videoId="xaJzA47EjQc" opts={opts} onReady={_onReady} />
           </div>
           <div className={styles.textContent}>
-            <h2 className={styles.title}>DEMO</h2>
+            <center>
+              <h2 className={styles.title}>DEMO</h2>
+            </center>
             <p className={styles.description}>
               Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l'industrie.
               Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
             </p>
-            <a className={`${styles.button} btn rounded-pill`} href="/template/contact">
-              Obtenir une démo
-            </a>
+            <center>
+              <a className={`${styles.button} btn rounded-pill`} href="/template/contact">
+                Obtenir une démo
+              </a>
+            </center>
+            
           </div>
         </div>
       </div>
