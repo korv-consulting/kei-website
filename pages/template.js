@@ -14,7 +14,7 @@ import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";
-
+import FloatingButton from "components/partials/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -59,31 +59,10 @@ export default function Home() {
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        /> */}
+      
       </Head>{" "}
       {loading ? (
-        // <div className={stylesplash.container_splash}>
-        //   <Container>
-        //     <Row className={`mx-auto ${stylesplash.main_splash}`}>
-        //       <Col> </Col>{" "}
-        //       <Col>
-        //         <div className={`mx-auto mx-1 `}>
-        //           <video
-        //             src="./splash/splash-screen2.mp4"
-        //             autoPlay
-        //             muted
-        //             className="h-[100%] w-[100%]"
-        //           ></video>{" "}
-        //         </div>{" "}
-        //       </Col>{" "}
-        //       <Col> </Col>{" "}
-        //     </Row>{" "}
-        //   </Container>{" "}
-        // </div>
-
+      
 
         <div className={stylesplash.container_splash}>
         <Container>
@@ -104,6 +83,7 @@ export default function Home() {
       ) : (
         <div className={styles.container}>
           <Header />
+          <FloatingButton />
           <LandingPage />
           <Feature />
           <Demo/>
@@ -111,6 +91,7 @@ export default function Home() {
           {/* <Contact /> */}
           <Faq />
           <Footer />
+          <FloatingButton />
           <ScrollToTopButton/>
         </div>
       )}{" "}
@@ -143,3 +124,10 @@ export async function getServerSideProps(ctx){
     }
   }
 }
+
+
+
+
+
+// bonsoir connais-tu une facon d'amener un utilisateur avec une facon originale d'afficher le bouton demander une demo,j'ai vu un site appele novamap un bouton "demander une demo" fixe au coin droit superieur de
+//  l'ecran peu importe ou on navigue dans la page,bref je veux un truc original de ce type 

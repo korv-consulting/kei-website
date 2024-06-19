@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from '@/styles/app.module.css';
 
+
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -10,6 +11,7 @@ const Faq = () => {
 
   return (
     <div>
+
       <section id="faq-2" className={` ${styles.section} ${styles.faq_2} `}>
         {/* <!-- Section Title --> */}
         <div className={`container ${styles.section_title}`} data-aos="fade-up">
