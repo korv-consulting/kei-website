@@ -35,7 +35,7 @@ const Demo = () => {
               Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l'industrie.
               Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
             </p>
-            <a className={`${styles.button} btn rounded-pill`} href="/demo">
+            <a className={`${styles.button} btn rounded-pill`} href="/template/contact">
               Obtenir une démo
             </a>
           </div>

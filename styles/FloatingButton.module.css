@@ -1,0 +1,37 @@
+/* components/FloatingButton.module.css */
+.floatingButton {
+    position: fixed;
+    bottom: 300px;
+    right: 20px;
+    z-index: 1000;
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #37517e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
