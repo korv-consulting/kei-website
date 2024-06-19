@@ -128,6 +128,3 @@ export async function getServerSideProps(ctx){
 
 
 
-
-// bonsoir connais-tu une facon d'amener un utilisateur avec une facon originale d'afficher le bouton demander une demo,j'ai vu un site appele novamap un bouton "demander une demo" fixe au coin droit superieur de
-//  l'ecran peu importe ou on navigue dans la page,bref je veux un truc original de ce type 
