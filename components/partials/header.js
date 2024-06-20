@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { BsList } from 'react-icons/bs';
 import styles from '@/styles/app.module.css';
+// import style from '@/styles/Modal.module.css';
+
 import Link from 'next/link';
 
 export default function Header() {
@@ -50,7 +52,7 @@ export default function Header() {
             <Image src="/logo-kei.png" className={styles.sitename} width={100} height={100} alt="KEI Logo" />
           </a>
 
-          <nav id="navmenu" className={`navmenu navbar navbar-expand-lg bg-body-tertiary ${styles.navmenu}`}>
+          <nav id="navmenu" className={`navmenu navbar navbar-expand-lg  ${styles.navmenu}`}>
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -75,12 +77,12 @@ export default function Header() {
                       </a>
                       {isModalVisible && (
                         <ul className={`dropdown-menu ${styles.verticalList} ${styles.modal} ${styles.verticalModal}`}>
-                          <li><a className="dropdown-item" href="/features/espace-de-travail">Espace de travail</a></li>
-                          <li><a className="dropdown-item" href="/features/suivi-des-taches">Suivi des tâches</a></li>
-                          <li><a className="dropdown-item" href="/features/declaration-d'incidents">Déclaration d'incidents</a></li>
-                          <li><a className="dropdown-item" href="/features/realisation-des-etats-des-lieux">Réalisation des états des lieux</a></li>
-                          <li><a className="dropdown-item" href="/features/planification-des-etats-des-lieux">Planification de l'état des lieux</a></li>
-                          <li><a className="dropdown-item" href="/features/rapport-d'incidents-et-d'inspections">Rapport d'incidents et d'inspections</a></li>
+                          <li><a className="dropdown-item bg-transparent " href="/features/espace-de-travail">Espace de travail</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/suivi-des-taches">Suivi des tâches</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/declaration-d'incidents">Déclaration d'incidents</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/realisation-des-etats-des-lieux">Réalisation des états des lieux</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/planification-des-etats-des-lieux">Planification de l'état des lieux</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/rapport-d'incidents-et-d'inspections">Rapport d'incidents et d'inspections</a></li>
                         </ul>
                       )}
                     </li>

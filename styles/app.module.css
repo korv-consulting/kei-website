@@ -474,7 +474,7 @@
     /* background: var(--heading-color); */
     background-color: #f9f9f9;
     /* color: var(--contrast-color); */
-    color: #28a745;
+    color: #37517e;
     transition: 0.3s;
     border-radius: 50px;
     overflow: hidden;
@@ -2353,6 +2353,8 @@
 
 /*navbar -features css for modale */
 
+
+
 .modal {
     position: absolute;
     top: 100%;
@@ -2361,34 +2363,35 @@
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    width: 200px;
+    width: 150px;
+    border-radius: 10px;
+
 }
 
 .verticalModal {
     width: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
 }
 
 .verticalList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
 }
 
 .verticalList li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0px
 }
 
-.modal a {
+.modal a,.modal a:hover {
     color: #333;
     text-decoration: none;
-}
-
-.modal a:hover {
-    /* color: #178519!important */
-    color: var(--success) !important
 }
 
 
@@ -2409,41 +2412,3 @@
 
 
 
-/* MODAL */
-
-
-.modal {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    border-radius: 10px;
-    width: 280px;
-}
-
-.verticalModal {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-}
-
-.verticalList {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-}
-
-.verticalList li {
-    margin-bottom: 8px !important;
-    padding-left: 0 !important;
-}
-
-.verticalList a {
-    display: block !important;
-    text-decoration: none !important;
-    color: #000 !important;
-    text-align: left !important;
-}

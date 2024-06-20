@@ -14,7 +14,8 @@ const PricingOffer = () => {
           <center>
             <h2>NOS OFFRES</h2>
           </center>
-          <p>Choississez le plan qui vous convient</p>
+          <p>Optimisez votre gestion locative avec nos outils digitaux. Sélectionnez le plan tarifaire qui vous convient et découvrez comment KEI peut 
+            transformer votre expérience de location immobilière. Que vous soyez un professionnel ou un particulier, nous avons la solution pour vous.</p>
         </div>
         {/* <!-- End Section Title --> */}
 
