@@ -61,7 +61,7 @@ export default function LandingPage() {
                   <div className="card text-bg-dark border-0">
                     <div className="video-container position-relative">
                       <video autoPlay muted loop className={`w-100 h-100 ${styles.video}`}>
-                        <source src="/cover.mov" type="video/mp4" />
+                        <source src="/cover.webm" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                       <div className="video-overlay"></div>
