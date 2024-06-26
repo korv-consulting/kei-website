@@ -358,7 +358,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/espace-de-travail")}>
                                 <div>
-                                    <p>Des outils puissants pour organiser et prioriser vos tâches efficacement.</p>
+                                    <p className ={styles.content}>Des outils puissants pour organiser et prioriser vos tâches efficacement.</p>
                                 </div>
                             </div>
                         </div>
@@ -375,7 +375,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/espace-de-travail")}>
                                 <div>
-                                    <p>Créez vos espaces de travail et ayez le contrôle sur tout.</p>
+                                    <p className ={styles.content}>Créez vos espaces de travail et ayez le contrôle sur tout.</p>
                                 </div>
                             </div>
                         </div>
@@ -392,7 +392,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/declaration-d'incidents")}>
                                 <div>
-                                    <p>Signalez rapidement les incidents pour une résolution efficace.</p>
+                                    <p className ={styles.content}>Signalez rapidement les incidents pour une résolution efficace.</p>
                                 </div>
                             </div>
                         </div>
@@ -411,7 +411,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/realisation-des-etats-des-lieux")}>
                                 <div>
-                                    <p>Capturez chaque détail, photographiez et constatez.</p>
+                                    <p className ={styles.content}>Capturez chaque détail, photographiez et constatez.</p>
                                 </div>
                             </div>
                         </div>
@@ -428,7 +428,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/planification-des-etats-des-lieux")}>
                                 <div>
-                                    <p>Planifiez et gérez vos inspections en toute simplicité.</p>
+                                    <p className ={styles.content}>Planifiez et gérez vos inspections en toute simplicité.</p>
                                 </div>
                             </div>
                         </div>
@@ -445,7 +445,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/rapport-d'incidents-et-d'inspections")}>
                                 <div>
-                                    <p>Exportez vos rapports dans différents formats pour une analyse facile.</p>
+                                    <p className ={styles.content}>Exportez vos rapports dans différents formats pour une analyse facile.</p>
                                 </div>
                             </div>
                         </div>

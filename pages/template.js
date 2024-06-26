@@ -14,6 +14,7 @@ import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";
+import Targets from "components/partials/targets"
 import FloatingButton from "components/partials/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -86,9 +87,10 @@ export default function Home() {
           <FloatingButton />
           <LandingPage />
           <Feature />
-          <Demo/>
+          <Targets />
           <PricingOffer />
-          {/* <Contact /> */}
+
+          <Demo/>
           <Faq />
           <Footer />
           <FloatingButton />

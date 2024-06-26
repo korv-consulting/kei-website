@@ -157,7 +157,7 @@ export default function Contact() {
   }, [successMessage , error]);
 
   const source1 = '/contact.jpg';
-  const title1 = 'CONTACTEZ-NOUS !';
+  const title1 = ' RESERVEZ UN DEMO...';
 
 
 
@@ -174,13 +174,7 @@ export default function Contact() {
               <Header />
               <main className={styles.main}>
                 <section id="contact" className={`${styles.contact} ${styles.section} my-5 pt-5`}>
-                    {/* <!-- Section Title --> */}
-                    {/* <div className={`container ${styles.section_title}`} data-aos="fade-up">
-                      <center>
-                        <h2> Contactez-nous </h2>
-                      </center>
-                    </div>{" "} */}
-
+               
                     <div className={styles.pageContainer}>
                       <FunctionalityPageHeader 
                       title={title1} 
@@ -191,91 +185,9 @@ export default function Contact() {
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="row gy-4 justify-content-center">
 
-                    <p className="text-center mt-5 pt-5 ">Envoyez-nous un e-mail avec ce petit formulaire pratique .<br/>Nous vous attendons impatiemment ! </p>
+                    <p className="text-center mt-5 pt-5 ">Contactez-nous pour obtenir une démo ou<br/> si vous avez une autre raison, remplissez le formulaire ci-dessous.</p>
 
-                    {/* <div className="col-lg-5">
-                        <div className={styles.info_wrap}>
-                            <h6 className="mb-3">En France : </h6>
-                            <div
-                            className={`d-flex ${styles.info_item}`}
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            >
-                            {/* <i className="bi bi-geo-alt flex-shrink-0"> </i>{" "} 
-                            <FaLocationDot className={`${styles.i}`} />
-
-                            <div>
-                                <span> Adresse </span>
-                                <p>
-                                {" "}
-                                91 Rue du Faubourg Saint Honore, 75008 Paris, France{" "}
-                                </p>
-                            </div>
-                            </div>{" "}
-                            {/* <!-- End Info Item --> 
-                            <div
-                            className={`d-flex ${styles.info_item}`}
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            >
-                            <FaPhone className={`${styles.i}`} />
-                            <div>
-                                <span> Télephone </span>
-                                <p> +33 6 20 87 15 28</p>
-                            </div>
-                            </div>{" "}
-                            {/* <!-- End Info Item --> 
-                            <div
-                            className={`d-flex ${styles.info_item}`}
-                            data-aos="fade-up"
-                            data-aos-delay="400"
-                            >
-                            <IoMdMail className={`${styles.i}`} />
-                            <div>
-                                <span> Email </span> <p> contact@korv-consulting.fr </p>{" "}
-                            </div>{" "}
-                            </div>{" "}
-                            {/* <!-- End Info Item -->  <hr />
-                            <h6 className="my-3">Au Cameroun : </h6>
-                            <div
-                            className={`d-flex ${styles.info_item}`}
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            >
-                            {/* <i className="bi bi-geo-alt flex-shrink-0"> </i>{" "} 
-                            <FaLocationDot className={`${styles.i}`} />
-
-                            <div>
-                                <span> Adresse </span>
-                                <p> 12151 Douala, Cameroun </p>
-                            </div>
-                            </div>{" "}
-                            {/* <!-- End Info Item --> 
-                            <div
-                            className={`d-flex ${styles.info_item}`}
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            >
-                            <FaPhone className={`${styles.i}`} />
-                            <div>
-                                <span> Télephone </span>
-                                <p> +237 677 062 856</p>
-                            </div>
-                            </div>{" "}
-                            {/* <!-- End Info Item -->
-                            <div
-                            className={`d-flex ${styles.info_item}`}
-                            data-aos="fade-up"
-                            data-aos-delay="400"
-                            >
-                            <IoMdMail className={`${styles.i}`} />
-                            <div>
-                                <span> Email </span> <p> contact@korv-consulting.fr </p>{" "}
-                            </div>{" "}
-                            </div>{" "}
-                            {/* <!-- End Info Item --> }{" "}
-                        </div>{" "}
-                        </div>*/}
+                  
                         <div className="col-md-12">
                         <form
                             method="post"
@@ -300,6 +212,8 @@ export default function Contact() {
                             <div className="col-md-6">
                                 <label for="lastname-field" className="pb-2">
                                 Prénom
+                                <span className="text-danger">*</span>
+
                                 </label>{" "}
                                 <input
                                 type="text"
@@ -313,6 +227,8 @@ export default function Contact() {
                             <div className="col-md-6">
                                 <label for="name-field" className="pb-2">
                                 Nom
+                                <span className="text-danger">*</span>
+
                                 </label>{" "}
                                 <input
                                 type="text"
@@ -342,29 +258,7 @@ export default function Contact() {
                                 Nom de l'entreprise non renseigné
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <label for="country-field" className="pb-2">
-                                Pays <span className="text-danger">*</span>
-                                </label>{" "}
-                                <select 
-                                className={`form-select ${
-                                submitted && (emailValid ? "is-valid" : "is-invalid")
-                                }`} 
-                                aria-label="Default select example" 
-                                id="country"
-                                name="country"
-                                required
-                                onChange={handleChange}>
-                                {countries.map((country, index) => (
-                                    <option key={index} value={country}>
-                                    {country}
-                                    </option>
-                                ))}
-                                </select>
-                                <div className="invalid-feedback">
-                                Pays non renseigné
-                                </div>
-                            </div>
+                           
                             <div className="col-md-6">
                                 <label for="email-field" className="pb-2">
                                 Email Professionnelle <span className="text-danger">*</span>
@@ -387,6 +281,8 @@ export default function Contact() {
                             <div className="col-md-6">
                                 <label for="phone-field" className="pb-2">
                                 Portable
+                               <span className="text-danger">*</span>
+
                                 </label>{" "}
                                 <input
                                 type="text"
@@ -397,66 +293,11 @@ export default function Contact() {
                                 value={phone}
                                 />
                             </div>
-                            <div className="col-12">
-                                <label for="activity-field" className="pb-2">
-                                Secteur d'activité <span className="text-danger">*</span>
-                                </label>{" "}
-                                <select 
-                                className={`form-select ${
-                                submitted && (emailValid ? "is-valid" : "is-invalid")
-                                }`} 
-                                aria-label="Default select example" 
-                                id="activity-field"
-                                name="activity"
-                                required
-                                onChange={handleChange}>
-                                {activities.map((activity, index) => (
-                                    <option key={index} value={activity}>
-                                    {activity}
-                                    </option>
-                                ))}
-                                </select>
-                                <div className="invalid-feedback">
-                                Secteur d'activité non renseigné
-                                </div>
-                            </div>
-                            <div className="col-12">
-                                <label for="subject-field" className="pb-2">
-                                Je souhaite:{" "}
-                                </label>{" "}
-                                <div className="d-flex justify-content-around">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Demande d'informations" id="imfos" name="infos"/>
-                                    <label class="form-check-label" for="infos">
-                                    Plus d'informations
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Demande de partenariat" id="partner" name="partner"/>
-                                    <label class="form-check-label" for="partner">
-                                    Un partenariat
-                                    </label>
-                                </div>
-                                </div>
-                            </div>
-                            
-                            {/*<div className="col-md-12">
-                                <label for="subject-field" className="pb-2">
-                                Sujet{" "}
-                                </label>{" "}
-                                <input
-                                type="text"
-                                className="form-control"
-                                name="subject"
-                                id="subject-field"
-                                onChange={handleChange}
-                                value={subject}
-                                />
-                                </div>*/}
+                      
+                         
                             <div className="col-md-12">
                                 <label for="message-field" className="pb-2">
-                                Message
-                                <span className="text-danger">*</span>
+                                Avez-vous une preocupation ?. si c'est le cas n'hésitez pas à nous envoyer un message
                                 </label>
                                 <textarea
                                 className={`form-control ${
@@ -473,37 +314,8 @@ export default function Contact() {
                                 Veuillez entrer votre message
                                 </div>
                             </div>
-                            <div className="col-12">
-                                <label for="country-field" className="pb-2">
-                                Comment avez-vous entendu parler de nous ?
-                                </label>{" "}
-                                <select 
-                                className="form-select"
-                                aria-label="Default select example" 
-                                id="call"
-                                name="call"
-                                onChange={handleChange}>
-                                {calls.map((call, index) => (
-                                    <option key={index} value={call}>
-                                    {call}
-                                    </option>
-                                ))}
-                                </select>
-                            </div>
-                            <div className="col-12 pb-2">
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="yes" id="privacy" name="privacy"/>
-                                <label class="form-check-label" for="privacy">
-                                    Je suis informé(e) des dispositions de confidentialité de ce site et j'approuve leur contenu.
-                                </label>
-                                </div>
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="yes" id="mailing" name="mailing"/>
-                                <label class="form-check-label" for="mailing">
-                                Je donne ma permission à KEI pour envoyer des informations pertinentes, que ce soit sous forme de bulletins d'information ou d'e-mails.
-                                </label>
-                                </div>
-                            </div>
+                          
+                         
 
                             <div className="col-md-12 text-center">
                                 <div className={styles.loading}> Loading </div>

@@ -1,146 +1,54 @@
-import styles from '@/styles/app.module.css'
-import style from '@/styles/Landing.module.css'
-import Link from 'next/link';
-import { AiOutlineArrowRight,AiOutlineArrowLeft } from "react-icons/ai";
-import MyCarousel from './carousel';
+import { useState, useEffect } from 'react';
+import styles from '@/styles/LandingPage.module.css';
 
 export default function LandingPage() {
-  const filteredItems = [
-    {
-      id: 1,
-      img: "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "camera",
-      price: 200,
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "Phone",
-      price: 100,
-    },
-    {
-      id: 3,
-      img: "https://images.pexels.com/photos/12753820/pexels-photo-12753820.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "Laptop",
-      price: 500,
-    },
-    {
-      id: 4,
-      img: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "Headephone",
-      price: 40,
-    },
-    {
-      id: 5,
-      img: "https://images.pexels.com/photos/163117/keyboard-white-computer-keyboard-desktop-163117.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "Keyboard",
-      price: 140,
-    },
-    {
-      id: 6,
-      img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "Gaming Mouse",
-      price: 140,
-    },
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const textElements = [
+    "Une plateforme simplifiée d'inspection et d'inventaire pour le marché immobilier",
+    "Créez des rapports d'inspection illimités avec photos et problèmes via notre application mobile ou tablette",
+    "Produisez des inventaires professionnels, des inspections et des évaluations de risques avec notre logiciel d'inspection primé."
   ];
-  const slideLeft = () => {
-    let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 235;
-  };
 
-  const slideRight = () => {
-    let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 235;
-  };
-    return (
-        <div>
-          <section id="home" className={`${styles.hero}`}>
-            <div className="container-fluid p-0">
-              <div className="row d-flex justify-content-center m-0">
-                <div className="col-12 p-0">
-                  <div className="card text-bg-dark border-0">
-                    <div className="video-container position-relative">
-                      <video autoPlay muted loop className={`w-100 h-100 ${styles.video}`}>
-                        <source src="/cover.webm" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      <div className="video-overlay"></div>
-                    </div>
-                    <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center mt-5 pt-5">
-                      <h1 className="card-title text-white fw-bold display-lg-1">
-                        Bienvenue chez <br /> Korv Estatement Inventory
-                      </h1>
-                      <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                          <div className="carousel-item active">
-                            <h3 className="card-text text-white d-none d-md-block fs-4 mt-5 mb-md-3 w-75 mx-auto">
-                              Une plateforme simplifiée d'inspection et d'inventaire pour le marché immobilier.
-                            </h3>
-                          </div>
-                          <div className="carousel-item">
-                            <h3 className="card-text text-white d-none d-md-block fs-4 mt-5 mb-3 w-75 mx-auto">
-                              Créez des rapports d'inspection illimités avec photos et problèmes via notre application mobile ou tablette.
-                            </h3>
-                          </div>
-                          <div className="carousel-item">
-                            <h3 className="card-text text-white d-none d-md-block fs-4 mt-5 mb-3 w-75 mx-auto">
-                              Produisez des inventaires professionnels, des inspections et des évaluations de risques avec notre logiciel d'inspection primé.
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="d-flex justify-content-center mt-md-4">
-                        <a href="#about" className={styles.btn_get_started}>Essai Gratuit</a>
-                        <a href="" className={`glightbox btn-watch-video d-flex align-items-center ${styles.btn_watch_video}`}><span> </span></a>
-                      </div>
-                    </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % textElements.length);
+        setIsVisible(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [textElements]);
+
+  return (
+    <div>
+      <section id="home" className="hero">
+        <div className="container-fluid p-0">
+          <div className="row d-flex justify-content-center m-0">
+            <div className="col-12 p-0">
+              <div className="card text-bg-dark border-0">
+                <div className={styles.videoContainer}>
+                  <video autoPlay muted loop className={styles.video}>
+                    <source src="/cover.webm" type="video/mp4" />
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                  </video>
+                  <div className={styles.videoOverlay}>
+                    <h1 className={`display-lg- w-100  mb-0 ${styles.title}`}>
+                      KORV Estatement Inventory
+                    </h1>
+                    <h3 className={`fs-4 mb-5 w-75 mx-auto ${styles.subtitle} ${isVisible ? 'animate__animated animate__fadeInUp' : 'animate__animated animate__fadeOutDown'}`}>
+                      {textElements[currentIndex]}
+                    </h3>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-
-          
-    {/*     <div className={style.trending}>
-            <div className={style.container}>
-              <div className={style.title_btns}>
-                <h3></h3>
-                <div className={style.btns}>
-                  <button title="scroll left" onClick={slideLeft}>
-                    <AiOutlineArrowLeft />
-                  </button>
-                  <button title="scroll right" onClick={slideRight}>
-                    <AiOutlineArrowRight />
-                  </button>
-                </div>
-              </div>
-              <div className={style.rowcontainer} id="slider">
-                {filteredItems.map((item) => (
-                  <div key={item.id} className={style.row_item}>
-                    <Link href={`L`} className={style.link}>
-                      <div>
-                        <div className={style.item_header}>
-                          <img src={item.img} alt="product" />
-                        </div>
-                        <div className={style.itemDescription}>
-                          <p>{item.description}</p>
-                          <p className={style.itemPrice}>{item.price}$</p>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div> */} 
+          </div>
         </div>
-    );
+      </section>
+    </div>
+  );
 }
-
-// export async function getServerSideProps(ctx){
-//     return {
-//         props:{
-//             data:null
-//         }
-//     }
-// }
