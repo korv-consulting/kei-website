@@ -200,6 +200,7 @@ const Targets = () => {
             </div>
           </div>
           <div className="col-md-6">
+            <div className='styles.ImageContainer'>
             <div className={`${styles.featureImageContainer}`}>
               <Image
                 src="/target.webp"
@@ -207,6 +208,7 @@ const Targets = () => {
                 width={1400}
                 height={800}
               />
+              </div>
             </div>
           </div>
         </div>
