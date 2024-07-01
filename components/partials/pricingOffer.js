@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import styles from "@/styles/PricingOffer.module.css";
 import { GiCheckMark } from "react-icons/gi";
+import Tip  from './tooltip';
+
+import PlanComparison  from  './PlanComparison'
 
 const PricingOffer = () => {
   const initialPropertyPrice = 10; // Valeur par défaut des propriétés
@@ -174,9 +177,19 @@ const PricingOffer = () => {
           <div className="row gy-4">
             <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div className={`container ${styles.pricing_item} ${styles.pricing_item_solo}`}>
-                <h3>Solo</h3>
-                <h4 className={`${styles.solo_title}`}>
-                  <sup>$</sup>{totalPrice}<span> / mois</span>
+
+              <Tip
+              offer='Solo'
+              content={[
+                "Rapports illimités",
+                "Photos illimitées",
+                "5 Propriétés",
+                "1 Utilisateur",
+                "5 Tâches"
+              ]}
+            />
+                 <h4 className={`${styles.solo_title}`}>
+                <sup>$</sup>{totalPrice}<span> / mois</span>
                 </h4>
                 <hr />
                 <ul>
@@ -274,7 +287,17 @@ const PricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_standard}`}>
-    <h3>Standard</h3>
+          <Tip
+              offer='Standard'
+              content={[
+                "Rapports illimités",
+                "Photos illimitées",
+                "5 Propriétés",
+                "2 Utilisateurs",
+                "5 Tâches"
+              ]}
+              />
+              
     <h4 className={`${styles.standard_title}`}>
       <sup>$</sup>{totalPrice1}<span> / mois</span>
     </h4>
@@ -381,8 +404,16 @@ const PricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_medium}`}>
-    <h3>Medium</h3>
-    <h4 className={`${styles.medium_title}`}>
+  <Tip
+              offer='Medium'
+              content={[
+                "Rapports illimités",
+                "Photos illimitées",
+                "5 Propriétés",
+                "5 Utilisateurs",
+                "5 Tâches"
+              ]}
+              />    <h4 className={`${styles.medium_title}`}>
       <sup>$</sup>{totalPrice2}<span> / mois</span>
     </h4>
     <hr />
@@ -480,8 +511,16 @@ const PricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_premium}`}>
-    <h3>Premium</h3>
-    <h4 className={`${styles.premium_title}`}>
+  <Tip
+              offer='Premium'
+              content={[
+                "Rapports illimités",
+                "Photos illimitées",
+                "5 Propriétés",
+                "Utilisateurs illimites",
+                "5 Tâches"
+              ]}
+              />    <h4 className={`${styles.premium_title}`}>
       <sup>$</sup>{totalPrice3}<span> / mois</span>
     </h4>
     <hr />
@@ -578,7 +617,10 @@ const PricingOffer = () => {
 
           </div>
         </div>
+        <PlanComparison/>
+
       </section>
+
     </div>
   );
 };

@@ -18,6 +18,7 @@ import Targets from "components/partials/targets"
 import FloatingButton from "components/partials/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PlanComparison from 'components/partials/PlanComparison'
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -89,7 +90,6 @@ export default function Home() {
           <Feature />
           <Targets />
           <PricingOffer />
-
           <Demo/>
           <Faq />
           <Footer />

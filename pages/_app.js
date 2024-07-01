@@ -3,6 +3,9 @@ import '@/styles/globals.css'
 import { useEffect } from 'react';
 import Head from 'next/head'
 
+import 'antd/dist/reset.css';  // Assurez-vous que les styles globaux sont importés
+
+
 function MyApp({ Component, pageProps }) {
 
 

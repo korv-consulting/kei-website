@@ -2,6 +2,7 @@ import React from 'react';
 import YouTubePlayer from 'react-youtube';
 import styles from '@/styles/Demo.module.css';
 import style from '@/styles/app.module.css';
+import PlanComparison from 'components/partials/PlanComparison';
 
 
 const Demo = () => {
@@ -21,6 +22,7 @@ const Demo = () => {
   };
 
   return (
+    <>
     <section id="demo" className={styles.demo}>
       <div className="container">
         <div className={styles.demoContent}>
@@ -40,6 +42,7 @@ const Demo = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
