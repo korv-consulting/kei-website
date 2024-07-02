@@ -191,7 +191,7 @@ export default function Contact() {
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="row gy-4 justify-content-center">
 
-                    <p className="text-center mt-5 pt-5 ">Contactez-nous pour obtenir une démo ou<br/> si vous avez une autre raison, remplissez le formulaire ci-dessous.</p>
+                    <p className="text-center mt-5 pt-5 ">Envoyez-nous un e-mail avec ce petit formulaire pratique .<br/>Nous vous attendons impatiemment ! </p>
 
                     {/* <div className="col-lg-5">
                         <div className={styles.info_wrap}>

@@ -120,28 +120,11 @@
 
 /*****************************************************************/
 
-@media (max-width: 572px) {
+@media (max-width: 991px) {
   .demoContent {
     flex-direction: column;
   }
 
-  .title{
-  margin-left:9rem;
-  }
-
-
-
-  .title::after {
-    position: absolute;
-    left: 18%;
-  
-  }
-
-  .button {
-  
-    left: 25%;
-
-  }
   .videoWrapper,
   .textContent {
     flex-basis: auto;
