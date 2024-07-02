@@ -23,7 +23,7 @@ export default function Contact() {
     }, 3000)
   })
 
-    const [recaptcha, SetRecaptcha] = useState(false);
+  const [recaptcha, SetRecaptcha] = useState(false);
   const [submitted, setSubmitted] = useState(false); //verify form submit
   const [form, setForm] = useState({
     lastname:"",

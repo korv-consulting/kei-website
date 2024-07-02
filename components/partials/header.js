@@ -51,21 +51,21 @@ export default function Header() {
           </a>
 
           <nav id="navmenu" className={`navmenu navbar navbar-expand-lg bg-body-tertiary ${styles.navmenu}`}>
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <div className="container-fluid">
+              <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
               </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                     <a className={`navbar-brand d-flex align-items-center ${styles.logo}`} href="/template">
                       <Image src="/logo-kei.png" className={styles.sitename} width={100} height={100} alt="KEI Logo" />
                     </a>
                   </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body d-bock">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <div className="offcanvas-body d-bock">
+                  <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li className="nav-item px-3">
                       <a className={`nav-link ${isActive === 1 ? styles.active : ''}`} href="/template" onClick={() => setIsActive(1)}>Accueil</a>
                     </li>
@@ -104,8 +104,8 @@ export default function Header() {
 
           {/* <nav id="navmenu" className={`navmenu navbar navbar-expand-lg bg-body-tertiary ${styles.navmenu}`}>
             <div className="container-fluid d-flex justify-content-center">
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
