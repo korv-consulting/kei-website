@@ -1,40 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
   /*Adds smooth scrolling instead of snapping to element*/
 }
 
-html,
+/* Fonts */
+:root {
+  /* --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Jost", sans-serif;
+  --nav-font: "Poppins", sans-serif; */
+  --font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Global Colors */
+:root {
+  --background-color: #ffffff;
+  --background-color-rgb: 255, 255, 255;
+  --default-color: #444444;
+  --default-color-rgb: 68, 68, 68;
+  --heading-color: #11467E;
+  --heading-color-rgb: 55, 81, 126;
+  --accent-color: #47b2e4;
+  --accent-color-rgb: 71, 178, 228;
+  --contrast-color: #ffffff;
+  --contrast-color-rgb: 255, 255, 255;
+  --primary : #11467e;
+  --success : #008543;
+  --secondary: #1583D8;
+  --primary-rgb : 17, 70, 126;
+
+  --semi-grey : #a5acb2;
+
+  --solo : #efb60a;
+  --standard : #2DB6FE;
+  --medium : var(--success);
+  --premium : #5752D1;
+
+  --sky-blue: #95DAFE;
+  --steel-blue: #56A0C5;
+  --azure-blue: #2DB6FE;
+}
+
+/* Nav Menu Colors */
+:root {
+  --nav-color: #11467E;
+  --nav-hover-color: #47b2e4;
+  --nav-dropdown-color: #444444;
+  --nav-dropdown-hover-color: #47b2e4;
+  /* --nav-dropdown-background-color: #ffffff; */
+}
+
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-#home, #about, #offers{
-
-    scroll-margin-block-start: 155px;
-  /*Adds margin to the top of the viewport*/
-  
-  scroll-margin-block-end: 110px;
-  /*Adds margin to the bottom of the viewport*/
-}
-
-#contact {
-
-  scroll-margin-block-start: 130px;
-  /*Adds margin to the top of the viewport*/
-  
-  scroll-margin-block-end: 110px;
-  /*Adds margin to the bottom of the viewport*/
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--font-family) !important;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
-  color: inherit;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgba(var(--accent-color-rgb), 0.75);
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+h1,
+h2,
+h3,
+/* h4, */
+h5,
+h6 {
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,3 +101,7 @@ a {
     background: white;
   }
 }
+
+
+
+

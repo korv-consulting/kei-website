@@ -1,0 +1,110 @@
+.videoContainer {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width:100%;
+    height: 100%;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    object-fit: cover;
+  }
+  
+  .videoOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:100%
+
+  }
+  
+  .title {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 5rem;
+    width:100%
+  }
+  
+  .subtitle {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 1.5rem;
+    width:100%
+
+  }
+  
+  @media (min-width: 415px) and (max-width: 768px) {
+    .title {
+      font-size: 1.5rem; /* Réduire la taille du titre */
+      margin-top:4rem
+    }
+  
+    .subtitle {
+
+        display:none;
+
+    }
+  
+    
+    .videoContainer {
+      height: 100%; /* Augmenter la taille du conteneur de la vidéo */
+    }
+  
+    .video {
+      height: 100%; /* La vidéo occupe tout le conteneur */
+      object-fit: cover;
+    }
+  }
+  
+  
+  
+  @media (min-width: 810px) {
+    .title {
+      font-size: 3.5rem; /* Réduire la taille du titre */
+    }
+  
+    .subtitle {
+    }
+  
+    .videoContainer {
+      height: 100h; /* Augmenter la taille du conteneur de la vidéo */
+    }
+  
+    .video {
+      height: 100%; /* La vidéo occupe tout le conteneur */
+      object-fit: cover;
+    }
+  }
+  
+  
+  @media (max-width: 414px) {
+    .title {
+      font-size: 1rem; /* Réduire la taille du titre */
+      margin-top:4rem
+    }
+  
+    .subtitle {
+        display :none;
+
+    }
+  
+    
+    .videoContainer {
+      height: 100%; /* Augmenter la taille du conteneur de la vidéo */
+    }
+  
+    .video {
+      height: 100%; /* La vidéo occupe tout le conteneur */
+      object-fit: cover;
+    }
+  }
+  
