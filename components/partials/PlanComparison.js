@@ -7,10 +7,10 @@ const PlanComparison = () => {
   const dataSource = [
     {
       feature: 'Rapports illimités',
-      solo: false,
+      solo: true,
       standard: true,
       medium: true,
-      premium: false,
+      premium: true,
     },
     {
       feature: 'Photos illimitées',
@@ -20,51 +20,51 @@ const PlanComparison = () => {
       premium: true,
     },
     {
-      feature: 'Propriétés',
-      solo: '5',
-      standard: '100',
-      medium: '150',
-      premium: '500',
+      feature: 'Nombre de propriétés',
+      solo: true,
+      standard: true,
+      medium: true,
+      premium: true,
     },
     {
-      feature: 'Utilisateurs',
-      solo: '1',
-      standard: '2',
-      medium: '5',
-      premium: 'Illimité',
+      feature: 'Nombre de d\'tilisateurs',
+      solo: true,
+      standard: true,
+      medium: true,
+      premium: true,
     },
     {
-      feature: 'Tâches',
-      solo: '5',
-      standard: '10',
-      medium: '15',
-      premium: 'Illimité',
+      feature: 'Nombre de tâches',
+      solo: true,
+      standard: true,
+      medium: true,
+      premium: true,
     },
 
     {
         feature: 'Acces au centre d\'aide',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        solo: true,
+        standard: true,
+        medium: true,
+        premium: true,
       },
   
 
       {
         feature: 'Support email',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        solo: false,
+        standard: true,
+        medium: true,
+        premium: true,
       },
   
 
       {
         feature: 'Assistance Telephonique',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        solo: false,
+        standard: false,
+        medium: false,
+        premium: true,
       },
 
 
@@ -75,39 +75,51 @@ const PlanComparison = () => {
 
       {
         feature: 'Themes personalises',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        solo: false,
+        standard: true,
+        medium: true,
+        premium: true,
       },
 
 
 
       {
         feature: 'Templates personalises',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        solo: false,
+        standard: false,
+        medium: true,
+        premium: true,
       },
 
 
       {
         feature: 'Enregistrement video',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        solo: true,
+        standard: true,
+        medium: true,
+        premium: true,
+      },
+
+    
+
+
+
+      {
+        feature: 'Contrôles d\'accès des utilisateurs',
+        solo: false,
+        standard: false,
+        medium: false,
+        premium: true,
       },
 
       {
-        feature: 'Paiment des enregistrements',
-        solo: '5',
-        standard: '10',
-        medium: '15',
-        premium: 'Illimité',
+        feature: 'Gestion des rôles d\'utilisateurs',
+        solo: false,
+        standard: true,
+        medium: true,
+        premium: true,
       },
-    // Add more fields here
+    
   ];
 
   const columns = [
