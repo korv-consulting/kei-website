@@ -61,6 +61,10 @@ const PlanComparison = () => {
     <div className={styles.container}>
       <div className={`container ${styles.section_title}`} data-aos="fade-up">
         <center><h2>Comparaison des Plans d'abonnement</h2></center>
+
+        <center className="mb-3">Trouvez la formule adaptée à vos besoins personnels ou à votre entreprise</center>
+       
+
       </div>
 
 
