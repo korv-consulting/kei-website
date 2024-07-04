@@ -177,7 +177,6 @@ const PricingOffer = () => {
           <div className="row gy-4">
             <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div className={`container ${styles.pricing_item} ${styles.pricing_item_solo}`}>
-
               <Tip
               offer='Solo'
               content={[
