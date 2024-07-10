@@ -12,7 +12,7 @@ const PricingOffer = () => {
       <section id="pricing" className={` ${styles.pricing} ${styles.section} `}>
         <div className={`container ${styles.section_title}`} data-aos="fade-up">
           <center>
-            <h2>NOS OFFRES</h2>
+            <h2>TARIFICATION</h2>
           </center>
           <p className="mb-4">
             Optimisez votre gestion locative avec nos outils digitaux. Sélectionnez le plan tarifaire qui vous convient et découvrez comment KEI peut 

@@ -1,0 +1,48 @@
+.container {
+
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    
+  }
+  
+  .sliderContainer {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  
+  .priceInfo {
+    margin-bottom: 60px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .purchaseButton {
+    /* background: linear-gradient(90deg, #4caf50, #81c784); */
+        background: #37517e;
+        margin-top:2rem;
+
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.5s ease;
+  }
+  
+  .purchaseButton:hover {
+    background: linear-gradient(90deg, #388e3c, #66bb6a);
+  }
+  
+
+  .bold {
+    font-weight: bold;
+  }
+  
