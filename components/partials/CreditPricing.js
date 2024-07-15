@@ -5,9 +5,14 @@ import styles from '@/styles/CreditPricing.module.css';
 
 const creditSteps = [10, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 600];
 
+
+/* the function that handling the value of the credit when sliding  */
 const getPricePerCredit = (credits) => {
-  if (credits >= 500) return 10;
-  if (credits >= 400) return 10.5;
+  if (credits >= 500) return 8;
+  if (credits >= 400) return 8.5;
+  if (credits >= 300) return 9;
+  if (credits >= 250) return 9.5;
+  if (credits >= 150) return 10;
   return 15;
 };
 
@@ -33,8 +38,8 @@ const CreditPricing = () => {
           }, {})}
           value={credits}
           onChange={handleSliderChange}
-          railStyle={{ backgroundColor: '#ddd', height: 10 }}
-          trackStyle={{ backgroundColor: '#4caf50', height: 10 }}
+          railStyle={{ backgroundColor: '#ddd', height: 15 }}
+          trackStyle={{ backgroundColor: '#4caf50', height: 15 }}
           handleStyle={{
             borderColor: '#4caf50',
             height: 25,
@@ -46,8 +51,8 @@ const CreditPricing = () => {
         />
       </div>
       <div className={`mb-2 ${styles.priceInfo}`}>
-        <span><span className={styles.bold}>{pricePerCredit.toFixed(2)}</span>€ par crédit</span><br/>
-        <span className={styles.bold}>Total: {totalPrice.toFixed(2)}€</span>      </div>
+        <span><span className={styles.bold}>{pricePerCredit.toFixed(2)}{" "}€</span> par crédit</span><br/>
+        <span className={styles.bold}>Total: {totalPrice.toFixed(2)}{" "}€{" "}/an </span>      </div>
       <button className={styles.purchaseButton}>
         Acheter {credits} crédits
       </button>

@@ -1,79 +1,54 @@
-// import dynamic from 'next/dynamic';
-// import Head from 'next/head';
-// import Header from 'components/partials/header';
-// import Footer from 'components/partials/footer';
-// import SVGComponent from 'components/partials/SvgComponent';
-// import styles from '@/styles/features/FunctionalityPage.module.css';
-
-// const PricingOffer = dynamic(() => import('components/partials/pricingOffer'), {
-//   ssr: false,
-//   loading: () => <SVGComponent />,
-// });
-
-// const Pricing = () => {
-//   return (
-//     <>
-//       <Head>
-//         <meta charSet="utf-8" />
-//         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-//         <title>KEI Website</title>
-//         <meta content="" name="description" />
-//         <meta content="" name="keywords" />
-//         <link rel="icon" href="/logo-kei.png" />
-//         <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-//         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@20..48&display=swap" />
-//         <link rel="preconnect" href="https://fonts.googleapis.com" />
-//         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-//       </Head>
-//       <Header />
-//       <div className={`${styles.pageContainer} mt-5`}>
-//         <PricingOffer />
-//         <Footer />
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Pricing;
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import Header from 'components/partials/header';
 import Footer from 'components/partials/footer';
-// import Spinner from 'components/common/Spinner';
-
 import SVGComponent from 'components/partials/SvgComponent';
-
+import ToggleButton from 'components/partials/ToggleButton';
+import CreditsPricing from 'components/partials/CreditPricing';
+import PricingOffer from 'components/partials/pricingOffer';
 import styles from '@/styles/PricingPage.module.css';
-
-const PricingOffer = dynamic(() => import('components/partials/pricingOffer'), {
-  ssr: false,
-});
 
 const Pricing = () => {
   const [loading, setLoading] = useState(true);
+  const [isCredits, setIsCredits] = useState(true);
 
+  // ANIMATION
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000); 
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleChange = (isCredits) => {
+    setIsCredits(isCredits);
+  };
 
   return (
     <>
       <Header />
       <div className={`${styles.pageContainer} mt-5`}>
+        <section id="pricing" className={` ${styles.pricing} ${styles.section} `}>
+          <div className={`container ${styles.section_title}`} data-aos="fade-up">
+            <center>
+              <h2>TARIFICATION</h2>
+            </center>
+          
+            <p className='mt-4 mb-6'>
+            Optimisez votre gestion locative avec nos outils digitaux. Tout a été pensé pour apporter le plus de flexibilité possible, vous pouvez soit acheter des crédits selon les besoins qui vous satisfassent, ou encore choisir de vous abonner en choisissant un plan tarifaire qui vous convient. Découvrez comment KEI peut transformer votre expérience de location immobilière. Que vous soyez un professionnel ou un particulier, nous avons la solution pour vous.
+           </p>
+
+          </div>
+          <center>
+            <ToggleButton onChange={handleChange} isCredits={isCredits} />
+          </center>
+        </section>
+
         {loading ? (
           <div className={styles.spinnerContainer}>
             <SVGComponent />
           </div>
         ) : (
-          
-          <PricingOffer />
-          
+          <div>
+            {isCredits ? <CreditsPricing key="credits" /> : <PricingOffer key="offer" />}
+          </div>
         )}
       </div>
       <Footer />
