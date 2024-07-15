@@ -31,7 +31,8 @@
 // export default SVGComponent;
 
 
-// components/common/Spinner.js
+
+
 import React from 'react';
 import styles from '@/styles/SVGComponent.module.css';
 
