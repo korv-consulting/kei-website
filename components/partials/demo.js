@@ -38,7 +38,7 @@ const Demo = () => {
               Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
             </p>
             <center>
-              <a className={`${styles.button} btn rounded-pill`} href="/template/contact">
+              <a className={`${styles.button} btn rounded-pill`} href="/template/demo">
                 Obtenir une démo
               </a>
             </center>

@@ -14,9 +14,11 @@ import Contact from "components/partials/contact";
 import Feature from "components/partials/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";
+import Targets from "components/partials/targets"
 import FloatingButton from "components/partials/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PlanComparison from 'components/partials/PlanComparison'
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -86,9 +88,9 @@ export default function Home() {
           <FloatingButton />
           <LandingPage />
           <Feature />
-          <Demo/>
+          <Targets />
           <PricingOffer />
-          {/* <Contact /> */}
+          <Demo/>
           <Faq />
           <Footer />
           <FloatingButton />
@@ -128,6 +130,3 @@ export async function getServerSideProps(ctx){
 
 
 
-
-// bonsoir connais-tu une facon d'amener un utilisateur avec une facon originale d'afficher le bouton demander une demo,j'ai vu un site appele novamap un bouton "demander une demo" fixe au coin droit superieur de
-//  l'ecran peu importe ou on navigue dans la page,bref je veux un truc original de ce type 

@@ -1,231 +1,100 @@
-/* The style of the element(Nav) */
-.main {
-    margin-top: 2% !important;
-    /* margin-right: 5% !important; */
-    margin-left: 82%;
-    padding: 5% !important;
-    margin-top: 1%;
-    /* direction: rtl; */
-    position: fixed;
-    top: 0;
-    width: 18%;
-    /* z-index: 9999; */
-}
+/* LandingPage.module.css */
 
-/* .container {
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .video {
     width: 100%;
-} */
-
-/* Style for Row containing active lang */
-.row_selected_lang {
-    width: 45% !important;
-    margin-left: 35%;
-    margin-bottom: 6%;
-    /* transition-delay: 200ms; */
-}
-
-/* The selected language image */
-.selected_lang{
-    border-radius: 100% !important;
-    height: 45px;
-    margin-right: 20% !important;
-    cursor: pointer !important; 
-}
-
-/* The list of of languages containing their names and images */
-.list_lang{
-    background-color: transparent !important;
-    /* width: 5%; */
-    /* align-items: center; */
-    margin-left: 4em !important;
-    margin-top: -35%;
-    height: 20px !important;
-    /* float: right; */
-    transition-delay: 200ms;
-    transform-origin: top;
-    transition-property: height, top, bottom;
-}
-
-/* Button containing image and name*/
-.btn_lang {
-    height: 75%;
-    width: 80%;
-    padding-bottom: 25%;
-    border-radius: 5em !important;
-    /* font-size: 30px !important; */
-    color: transparent;
-    /* font-weight: bold; */
-    background-color: transparent;
-    border-color: transparent !important;
-}
-
-.btn_lang:hover{
-    border-color: transparent !important;
-}
-
-/* Style for list item */
-.lang {
-   background-color: transparent !important;
-   height: 55px;
-   /* align-items: flex-start !important; */
-   /* align-content: center !important; */
-   border-color: transparent;
-   
-}
-
-/* Style for label(language name) */
-.lang_name{
-    font-size: 30px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    text-align: center; /* Centrer les éléments textuels */
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
+  }
+  
+  .card-title {
+    color: white;
     font-weight: bold;
-    margin-bottom: 1% !important;
-    padding-left: 5%;
-    width: 50%;
-    height: 60%;
-    margin-top: -10%;
-}
-
-/* The language image */
-.flag {
-    width: 42px;
-    height: 42px;
-    /* margin-right: 5%; */
-    margin-top: -18%;
-    /* margin-bottom: 14%; */
-    margin-left: -32%;
-}
-
-/* Style to hide active language */
-.hidden_active_lang{
-    visibility: hidden;
-    margin-top: 5% !important;
-}
-
-/* Style to hide the list of languages */
-.hidden_list_lang{
-    visibility: hidden;
-    /* margin-bottom: 4% !important; */
-}
-
-/* Styles to make the background of the images and color of text name
-    of the languages when hovering or showing active language*/
-.dark_blue, .dark_blue:hover {
-    background-color: #11467e !important;
+    font-size: 3rem; /* Ajustez selon vos besoins */
+  }
+  
+  .card-text {
     color: white;
-}
-
-.dark_red, .dark_red:hover {
-    background-color: rgb(168, 3, 3) !important;
-    color: white;
-}
-
-.dark_yellow, .dark_yellow:hover {
-    background-color: rgb(246, 196, 70) !important;
-    color: white;
-}
-
-.green, .green:hover {
-    background-color: green !important;
-    color: white;
-}
-
-.dark_blue_hover:hover {
-    background-color: #11467e !important;
-}
-
-.dark_red_hover:hover {
-    background-color: rgb(168, 3, 3) !important;
-}
-
-.dark_yellow_hover:hover {
-    background-color: rgb(246, 196, 70) !important;
-}
-
-.green_hover:hover {
-    background-color: green !important;
-}
-
-@media (max-width: 725px) {
-
-    /* The style of the element(Nav) */
-    .main {
-        margin-left: 68%;
-        padding: 5% !important;
-        margin-top: 10% !important;
-        position: fixed;
-        top: 0;
-        width: 15%;
-        /* display: none; */
+    font-size: 2rem; /* Ajustez selon vos besoins */
+    margin-bottom: 20px;
+  }
+  
+  .btnGetStarted {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .btnGetStarted:hover {
+    background-color: #0056b3;
+  }
+  
+  .btnWatchVideo {
+    /* Styles pour le bouton regarder la vidéo */
+    /* Ajoutez vos styles spécifiques ici si nécessaire */
+  }
+  
+  .animate-enter {
+    animation: fadeInUp 0.5s forwards;
+  }
+  
+  .animate-exit {
+    animation: fadeOutDown 0.5s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-
-    /* Style for Row containing active lang */
-    .row_selected_lang {
-        width: 40% !important;
-        margin-left: 35%;
-        margin-bottom: 6%;
-        /* transition-delay: 200ms; */
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    /* The selected language image */
-    .selected_lang{
-        border-radius: 100% !important;
-        height: 40%;
-        margin-right: 20% !important;
-        cursor: pointer !important; 
+  }
+  
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    /* The list of of languages containing their names and images */
-    .list_lang{
-        background-color: transparent !important;
-        margin-left: 4em !important;
-        margin-top: -35%;
-        height: 20px !important;
-        transition-delay: 200ms;
-        transform-origin: top;
-        transition-property: height, top, bottom;
+    to {
+      opacity: 0;
+      transform: translateY(20px);
     }
-
-    /* Button containing image and name*/
-    .btn_lang {
-        height: 90% !important;
-        width: 55%;
-        padding-bottom: 25%;
-        border-radius: 5em!important;
-        /* font-size: 30px !important; */
-        color: transparent;
-        background-color: transparent;
-        border-color: transparent !important;
-    }
-
-    .btn_lang:hover{
-        border-color: transparent !important;
-    }
-
-    /* Style for list item */
-    .lang {
-        background-color: transparent !important;
-        height: 45px;
-        border-color: transparent;
-    
-    }
-
-    /* Style for label(language name) */
-    .lang_name{
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 1% !important;
-        padding-left: 5%;
-        width: 50%;
-        height: 60%;
-        margin-top: -10%;
-    }
-
-    /* The language image */
-    .flag {
-        width: 35px;
-        height: 35px;
-        /* margin-right: 5%; */
-        margin-top: -12.75%;
-        /* margin-bottom: 14%; */
-        margin-left: -35%;
-    }
-}
+  }
+  

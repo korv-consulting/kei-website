@@ -55,7 +55,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 123, 255, 0.85);
+  background: #c47814 ;
   color: white;
   display: flex;
   align-items: center;
@@ -64,6 +64,27 @@
   text-align: center;
   transition: top 0.3s;
   border-radius: 8px;
+  opacity: 0.9;
+  z-index: 10;
+
+  ;
+}
+
+.overlay p{
+
+  color: white; /* Couleur du texte blanche */
+  font-size: 20px;
+  text-align: center; /* Centrer le texte */
+  margin-top: 2;
+
+  
+}
+
+
+
+
+.content {
+  z-index: 20; /* Assurez-vous que le contenu est au-dessus de l'overlay */
 }
 
 .featureCard:hover .overlay {

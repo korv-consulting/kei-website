@@ -2,7 +2,7 @@
 .floatingButton {
     position: fixed;
     bottom: 300px;
-    right: 20px;
+    right: 5px;
     z-index: 1000;
     animation: float 2s ease-in-out infinite;
   }
@@ -16,11 +16,14 @@
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14 px
+    
   }
   
   .button:hover {
-    background-color: #005bb5;
-    transform: scale(1.05);
+    transform: scale(1.02);
+    background-color: transparent;
+    color:white
   }
   
   @keyframes float {
@@ -34,4 +37,19 @@
       transform: translatey(0px);
     }
   }
-  
+  /****************************/
+
+
+  @media ( max-width: 572px) {
+
+  .floatingButton {
+    position: fixed;
+    top: 290px;
+    right:0px;
+    width:100px;
+    font-size:12px;
+    padding-top:3px;
+    margin-right:-17px
+    
+  }
+  }
