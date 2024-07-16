@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .email-content {
+            padding: 20px;
+            display: flex;
+            width: 60%;
+            justify-content: center;
+            justify-items: center;
+            box-shadow: -4px 2px 5px 1px rgba(179,179,179,0.69);
+            -webkit-box-shadow: -4px 2px 5px 1px rgba(179,179,179,0.69);
+            -moz-box-shadow: -4px 2px 5px 1px rgba(179,179,179,0.69);
+            border: 1px solid rgb(214, 214, 214);
+        }
+    </style>
+</head>
+<body>
+    <div class="container email-content">
+        <div>
+            <div class="d-flex justify-content-center">
+                <img src="./logo-kei.png" class="w-50 h-50 mb-3" alt="KEI Logo" />
+            </div>
+            <h1 class="mb-4 pb-0 text-center">Vous avez reçu un mail de votre site</h1>
+            <h3 class="mb-4 pb-2 text-center">Demande d'une demo ou d'informations sur KEI</h3>
+            <p class="text-center">De <strong>{{email}}</strong> à propos de <strong>{{message}}</strong></p>
+        </div>
+    </div>
+</body>
+</html>
