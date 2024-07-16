@@ -1,51 +1,66 @@
-import { Tooltip,Button } from 'antd';
+import { Tooltip } from 'antd';
 
-const Tip = ({offer,content}) => {
-
+const Tip = ({ offer, content }) => {
   return (
     <h3>
 
       {offer}{' '}
       <Tooltip
-     title={
-        <div>
-          <p>{content[0]}</p>
-          <hr />
-          <p>{content[1]}</p>
-          <hr />
-          <p>{content[2]}</p>
-          <hr />
-          <p>{content[3]}</p>
-          <hr />
-          <p>{content[4]}</p>
-        </div>
-      }
-      
+        title={
+          <div className="custom-tooltip-content">
+            <p>{content[0]}</p>
+            <hr />
+            <p>{content[1]}</p>
+            <hr />
+            <p>{content[2]}</p>
+            <hr />
+            <p>{content[3]}</p>
+            <hr />
+            <p>{content[4]}</p>
+          </div>
+        }
         placement="topRight"
         arrowPointAtCenter
+        overlayClassName="custom-tooltip"
       >
-              <sup
-          style={{
-            position: 'absolute',
-            top: '30px', 
-            right: '173px', 
-            backgroundColor: '#37517e',
-            borderRadius: '50%',
-            width: '18px',
-            height: '18px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            fontWeight: 'lighter',
-          }}
-        >
-         <center>
-            i
-          </center>
+        <sup className="tooltip-trigger">
+          <center>i</center>
         </sup>
       </Tooltip>
-     
+
+      <style jsx global>{`
+        .custom-tooltip-content {
+          background-color: #37517e;
+          color: white;
+          padding: 10px;
+          border: none;
+        }
+
+        .custom-tooltip .ant-tooltip-arrow {
+          border-top-color: #37517e !important;
+        }
+
+        .custom-tooltip .ant-tooltip-inner {
+          background-color: #37517e !important;
+          color: white;
+          border: none !important;
+        }
+
+        .tooltip-trigger {
+          position: absolute;
+          top: 30px;
+          right: 173px;
+          background-color: #37517e;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: lighter;
+        }
+      `}</style>
     </h3>
   );
 };

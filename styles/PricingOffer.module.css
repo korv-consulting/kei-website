@@ -10,6 +10,8 @@
       padding: 60px 0;
       scroll-margin-top: 88px;
       overflow: clip;
+      margin-left:0px;
+      margin-right:0px
   }
   
   @media (max-width: 1199px) {
@@ -78,8 +80,8 @@
 
   .pricing {
 
-    background-color: rgba(240, 236, 236, 0.973);
-
+    background-color: rgba(213, 224, 224, 0.973);
+   width: 100%;
     /* --background-color: rgba(var(--heading-color-rgb), .05); */
 }
 
@@ -242,34 +244,3 @@
         margin: 0 auto 30px auto;
     }
 }
-
-
-
-
-
-
-
-
-
-.customSelect {
- 
-    border-radius: 15px;  
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    width: 172px; 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');    background-repeat: no-repeat;
-    background-position: right 1px center;  /* Positionne l'icône à droite */
-    background-size: 12px 12px;  /* Taille de l'icône */
-    margin-left:1px; 
-    background: #ffffff ;
-   padding-left:0.3rem ;
-   font-weight:400;
-color: rgb(114, 109, 109); /* Gris clair, opaque */
-}
-  
-  .customSelect:focus {
-    outline: none;
-    border-color: #D3D3D3;;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  }
-  

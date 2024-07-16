@@ -579,7 +579,7 @@
 }
 
 .footer .footer_links ul i {
-    margin-right: 3px;
+    margin-right: 5px;
     font-size: 12px;
     line-height: 0;
     color: var(--accent-color);
@@ -610,6 +610,12 @@
     color: var(--semi-grey);
 }
 
+/* .footer .footer_platfrom p  {  
+    
+    
+   flex:align-items-center ;
+} */
+
 .footer .footer_platfrom .icon_store {
     color: white;
 }
@@ -628,6 +634,11 @@
 .footer .footer_contact p {
     margin-bottom: 5px;
 }
+
+.footer .footer_contact p  {
+    margin-bottom: 5px;
+}
+
 
 .footer .copyright {
     padding-top: 25px;

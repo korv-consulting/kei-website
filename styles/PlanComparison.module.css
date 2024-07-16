@@ -1,98 +1,144 @@
-
-
 .section_title {
-    text-align: justify;
-    padding-bottom: 60px;
-    position: relative;
+  text-align: justify;
+  padding-bottom: 60px;
+  position: relative;
 }
 
 .section_title h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
 }
-
 
 .section_title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100px;
-    height: 3px;
-    background: var(--success);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--success);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
-
-
-
-
-
 .container {
-    padding: 20px;
-    max-width: 1340px;
-    margin: 0 auto; /* Centre le composant horizontalement */
-  }
+  padding: 20px;
+  max-width: 1340px;
+  margin: 0 auto;
   
+}
+
+.columnHeader {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black; /* Couleur du titre de la colonne des fonctionnalités */
+}
+
+.featureColumn {
+  width: 200px; /* Largeur de la colonne des caractéristiques */
+  text-align: left;
+}
+
+.planColumn {
+  text-align: center;
+  font-weight: bold;
+}
+
+.soloTitle {
+  color: var(--solo); /* Couleur de l'offre Solo */
+}
+
+.standardTitle {
+  color: var(--standard); /* Couleur de l'offre Standard */
+}
+
+.mediumTitle {
+  color: var(--medium); /* Couleur de l'offre Medium */
+}
+
+.premiumTitle {
+  color: var(--premium); /* Couleur de l'offre Premium */
+}
+
+.solo {
+  color: var(--solo); /* Couleur de l'offre Solo */
+  font-size: 18px; /* Taille de police pour Solo */
+}
+
+.standard {
+  color: var(--standard); /* Couleur de l'offre Standard */
+  font-size: 18px; /* Taille de police pour Standard */
+}
+
+.medium {
+  color: var(--medium); /* Couleur de l'offre Medium */
+  font-size: 18px; /* Taille de police pour Medium */
+}
+
+.premium {
+  color: var(--premium); /* Couleur de l'offre Premium */
+  font-size: 18px; /* Taille de police pour Premium */
+}
+
+@media (max-width: 567px) {
   .columnHeader {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left:0px;
-    font-weight: bold;
-    color: black; /* Couleur du titre de la colonne des fonctionnalités */
+      font-size: 0.9rem;
+      font-weight: bold;
   }
-  
-  .featureColumn {
-    width: 200px; /* Largeur de la colonne des caractéristiques */
-    text-align: left;
-    margin-left:0px
+
+  .container {
+      padding: 1px;
+      max-width: 2000px;
+      width: 100%;
   }
-  
+
   .planColumn {
-    text-align: center;
-    font-weight: bold;
+      text-align: center;
+      font-weight: normal;
+      text-transform: lowercase;
   }
-  
-  .soloTitle {
-    color: var(--solo); /* Couleur de l'offre Solo */
+
+  .featureColumn {
+      width: 80px;
+      font-size: 0.8rem;
   }
-  
-  .standardTitle {
-    color: var(--standard); /* Couleur de l'offre Standard */
+
+  .solo, .standard, .medium, .premium {
+      font-size: 15px; /* Taille de police pour les offres */
   }
-  
-  .mediumTitle {
-    color: var(--medium); /* Couleur de l'offre Medium */
+
+  /* Styles pour les cartes */
+  .card {
+      border: 1px solid #e8e8e8;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
   }
-  
-  .premiumTitle {
-    color: var(--premium); /* Couleur de l'offre Premium */
+
+  .cardTitle {
+      font-weight: bold;
+      margin-bottom: 5px;
   }
-  
-  .solo {
-    color: var(--solo); /* Couleur de l'offre Solo */
-    font-size: 18px; /* Taille de police pour Solo */
+
+  .cardContent {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
   }
-  
-  .standard {
-    color: var(--standard); /* Couleur de l'offre Standard */
-    font-size: 18px; /* Taille de police pour Standard */
+
+  .cardContent span {
+      font-size: 0.9rem;
   }
-  
-  .medium {
-    color: var(--medium); /* Couleur de l'offre Medium */
-    font-size: 18px; /* Taille de police pour Medium */
+
+  .cardContent span {
+      display: block;
+      margin-bottom: 5px;
   }
-  
-  .premium {
-    color: var(--premium); /* Couleur de l'offre Premium */
-    font-size: 18px; /* Taille de police pour Premium */
-  }
-  
+}

@@ -72,6 +72,8 @@
   margin-left: 0rem;
   margin-right: auto;
   max-width: 950px;
+  text-align:justify
+
 }
 
 .title {
@@ -129,6 +131,18 @@
   width: 80%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .featureSection:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -146,14 +160,95 @@
 .featureDescription {
   flex: 1;
   text-align: left;
-  margin-left: -3.5rem;
+  margin-left: -2rem;
 }
 
 .featureText {
   font-size: 1rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
+  list-style-type: disc;
+  margin-left:1rem;
+  
 }
+
+
+
+
+
+
+
+
+@media (max-width: 567px) {
+
+  .featureImageContainer {
+    flex: 1;
+    margin-left: 0rem;
+    margin-top: 2rem;
+
+
+
+  }.Intro {
+    font-size: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left:1rem; 
+    margin-right: auto;
+  
+    width: 100%;
+    text-align: justify;
+  }
+  
+
+
+  .descPart2 {
+  
+    margin-top: 0rem;
+
+
+  }
+  .featureText {
+    margin-left: 2rem;
+  }
+  
+
+}
+
+
+
+
+
+/*TABLETTES*/
+
+
+
+@media (min-width: 768px) and (max-width:1024px){
+
+  .featureImageContainer {
+    flex: 1;
+    margin-left: 3rem;
+    margin-top: 2rem;
+
+
+
+  }
+
+
+
+  .featureText {
+    margin-left: 1rem;
+    font-size: 1rem;
+
+  }
+  
+
+}
+
+
+
+
+
+
 
 
 

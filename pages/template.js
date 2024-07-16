@@ -19,6 +19,8 @@ import FloatingButton from "components/partials/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PlanComparison from 'components/partials/PlanComparison'
+import DownloadApp from "components/partials/DownloadApp";
+import CreditPricing from "components/partials/CreditPricing";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -90,7 +92,9 @@ export default function Home() {
           <Feature />
           <Targets />
           <PricingOffer />
+          {/* <CreditPricing /> */}
           <Demo/>
+          <DownloadApp/>
           <Faq />
           <Footer />
           <FloatingButton />

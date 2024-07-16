@@ -19,26 +19,26 @@ const PlanComparison = () => {
   }, []);
 
   const dataSource = [
-    { feature: 'Rapports illimités', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Photos illimitées', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Nombre de propriétés', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Nombre de d\'utilisateurs', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Nombre de tâches', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Accès au centre d\'aide', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Support email', solo: false, standard: true, medium: true, premium: true },
-    { feature: 'Assistance téléphonique', solo: false, standard: false, medium: false, premium: true },
-    { feature: 'Thèmes personnalisés', solo: false, standard: true, medium: true, premium: true },
-    { feature: 'Templates personnalisés', solo: false, standard: false, medium: true, premium: true },
-    { feature: 'Enregistrement vidéo', solo: true, standard: true, medium: true, premium: true },
-    { feature: 'Contrôles d\'accès des utilisateurs', solo: false, standard: false, medium: false, premium: true },
-    { feature: 'Gestion des rôles d\'utilisateurs', solo: false, standard: true, medium: true, premium: true },
+    { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Nombre de propriétés', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Nombre de d\'utilisateurs', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Nombre de tâches', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Accès au centre d\'aide', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Support email', solo: false, duo: true, pro: true, premium: true },
+    { feature: 'Assistance téléphonique', solo: false, duo: false, pro: false, premium: true },
+    { feature: 'Thèmes personnalisés', solo: false, duo: true, pro: true, premium: true },
+    { feature: 'Templates personnalisés', solo: false, duo: false, pro: true, premium: true },
+    { feature: 'Enregistrement vidéo', solo: true, duo: true, pro: true, premium: true },
+    { feature: 'Contrôles d\'accès des utilisateurs', solo: false, duo: false, pro: false, premium: true },
+    { feature: 'Gestion des rôles d\'utilisateurs', solo: false, duo: true, pro: true, premium: true },
   ];
 
   const columns = [
     { title: <h1 className={styles.columnHeader}>Fonctionnalités</h1>, dataIndex: 'feature', key: 'feature', className: styles.featureColumn },
     { title: <h1 className={`${styles.columnHeader} ${styles.soloTitle}`}>SOLO</h1>, dataIndex: 'solo', key: 'solo', render: (text) => renderCell(text, 'solo'), className: `${styles.planColumn} ${styles.solo}` },
-    { title: <h1 className={`${styles.columnHeader} ${styles.standardTitle}`}>STANDARD</h1>, dataIndex: 'standard', key: 'standard', render: (text) => renderCell(text, 'standard'), className: `${styles.planColumn} ${styles.standard}` },
-    { title: <h1 className={`${styles.columnHeader} ${styles.mediumTitle}`}>MEDIUM</h1>, dataIndex: 'medium', key: 'medium', render: (text) => renderCell(text, 'medium'), className: `${styles.planColumn} ${styles.medium}` },
+    { title: <h1 className={`${styles.columnHeader} ${styles.standardTitle}`}>DUO</h1>, dataIndex: 'duo', key: 'duo', render: (text) => renderCell(text, 'duo'), className: `${styles.planColumn} ${styles.standard}` },
+    { title: <h1 className={`${styles.columnHeader} ${styles.mediumTitle}`}>PRO</h1>, dataIndex: 'pro', key: 'pro', render: (text) => renderCell(text, 'pro'), className: `${styles.planColumn} ${styles.medium}` },
     { title: <h1 className={`${styles.columnHeader} ${styles.premiumTitle}`}>PREMIUM</h1>, dataIndex: 'premium', key: 'premium', render: (text) => renderCell(text, 'premium'), className: `${styles.planColumn} ${styles.premium}` },
   ];
 
@@ -50,8 +50,8 @@ const PlanComparison = () => {
   const getTextColor = (plan) => {
     switch (plan) {
       case 'solo': return 'var(--solo)';
-      case 'standard': return 'var(--standard)';
-      case 'medium': return 'var(--medium)';
+      case 'duo': return 'var(--standard)';
+      case 'pro': return 'var(--medium)';
       case 'premium': return 'var(--premium)';
       default: return 'black';
     }
@@ -61,6 +61,8 @@ const PlanComparison = () => {
     <div className={styles.container}>
       <div className={`container ${styles.section_title}`} data-aos="fade-up">
         <center><h2>Comparaison des Plans d'abonnement</h2></center>
+
+        <center className="mb-3">Trouvez la formule adaptée à vos besoins personnels ou à votre entreprise</center>
       </div>
 
 
@@ -74,8 +76,6 @@ const PlanComparison = () => {
             <div className={styles.cardTitle}>{data.feature}</div>
             <div className={styles.cardContent}>
               <span className={styles.solo}>Solo: {renderCell(data.solo, 'solo')}</span>
-              <span className={styles.standard}>Standard: {renderCell(data.standard, 'standard')}</span>
-              <span className={styles.medium}>Medium: {renderCell(data.medium, 'medium')}</span>
               <span className={styles.premium}>Premium: {renderCell(data.premium, 'premium')}</span>
             </div>
           </div>
