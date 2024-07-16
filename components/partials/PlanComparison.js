@@ -1,14 +1,24 @@
-import { Table } from 'antd';
-import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
+
+
+import { useState, useEffect } from 'react';
+import { Collapse } from 'antd';
+import { CheckOutlined, MinusOutlined } from '@ant-design/icons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styles from '@/styles/PlanComparison.module.css';
-import { useEffect, useState } from 'react';
+
+const { Panel } = Collapse;
 
 const PlanComparison = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-
-//LET'S CHECK THE SCREEN SIZE TO CHECKTO DECIDDE IF I MAY DISPLAY A TABLE OR A CARD'S SYSTEM
   useEffect(() => {
+    AOS.init({
+      duration: 1200, // durée de l'animation
+      easing: 'ease-in-out', // type d'animation
+      once: false, // activer l'animation uniquement une fois
+    });
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 567);
     };
@@ -18,86 +28,97 @@ const PlanComparison = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const dataSource = [
-    { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Nombre de propriétés', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Nombre de d\'utilisateurs', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Nombre de tâches', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Accès au centre d\'aide', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Support email', solo: false, duo: true, pro: true, premium: true },
-    { feature: 'Assistance téléphonique', solo: false, duo: false, pro: false, premium: true },
-    { feature: 'Thèmes personnalisés', solo: false, duo: true, pro: true, premium: true },
-    { feature: 'Templates personnalisés', solo: false, duo: false, pro: true, premium: true },
-    { feature: 'Enregistrement vidéo', solo: true, duo: true, pro: true, premium: true },
-    { feature: 'Contrôles d\'accès des utilisateurs', solo: false, duo: false, pro: false, premium: true },
-    { feature: 'Gestion des rôles d\'utilisateurs', solo: false, duo: true, pro: true, premium: true },
-  ];
-
-  const columns = [
-    { title: <h1 className={styles.columnHeader}>Fonctionnalités</h1>, dataIndex: 'feature', key: 'feature', className: styles.featureColumn },
-    { title: <h1 className={`${styles.columnHeader} ${styles.soloTitle}`}>SOLO</h1>, dataIndex: 'solo', key: 'solo', render: (text) => renderCell(text, 'solo'), className: `${styles.planColumn} ${styles.solo}` },
-    { title: <h1 className={`${styles.columnHeader} ${styles.standardTitle}`}>DUO</h1>, dataIndex: 'duo', key: 'duo', render: (text) => renderCell(text, 'duo'), className: `${styles.planColumn} ${styles.standard}` },
-    { title: <h1 className={`${styles.columnHeader} ${styles.mediumTitle}`}>PRO</h1>, dataIndex: 'pro', key: 'pro', render: (text) => renderCell(text, 'pro'), className: `${styles.planColumn} ${styles.medium}` },
-    { title: <h1 className={`${styles.columnHeader} ${styles.premiumTitle}`}>PREMIUM</h1>, dataIndex: 'premium', key: 'premium', render: (text) => renderCell(text, 'premium'), className: `${styles.planColumn} ${styles.premium}` },
-  ];
-
-  const renderCell = (text, plan) => {
-    const color = getTextColor(plan);
-    return text === true ? <CheckOutlined style={{ color }} /> : text === false ? <CloseOutlined style={{ color }} /> : text;
-  };
-
-  const getTextColor = (plan) => {
-    switch (plan) {
-      case 'solo': return 'var(--solo)';
-      case 'duo': return 'var(--standard)';
-      case 'pro': return 'var(--medium)';
-      case 'premium': return 'var(--premium)';
-      default: return 'black';
-    }
+  const data = {
+    'Rapports': [
+      { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
+      { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true }
+    ],
+    'Utilisateurs': [
+      { feature: 'Nombre de propriétés', solo: true, duo: true, pro: true, premium: true },
+      { feature: 'Nombre de d\'utilisateurs', solo: true, duo: true, pro: true, premium: true },
+      { feature: 'Nombre de tâches', solo: true, duo: true, pro: true, premium: true }
+    ],
+    'Support': [
+      { feature: 'Support email', solo: false, duo: true, pro: true, premium: true },
+      { feature: 'Assistance téléphonique', solo: false, duo: false, pro: false, premium: true }
+    ],
+    'Personnalisation': [
+      { feature: 'Thèmes personnalisés', solo: false, duo: true, pro: true, premium: true },
+      { feature: 'Templates personnalisés', solo: false, duo: false, pro: true, premium: true }
+    ],
+    'Vidéo': [
+      { feature: 'Enregistrement vidéo', solo: true, duo: true, pro: true, premium: true }
+    ],
+    'Sécurité': [
+      { feature: 'Contrôles d\'accès des utilisateurs', solo: false, duo: false, pro: false, premium: true },
+      { feature: 'Chiffrement des données', solo: true, duo: true, pro: true, premium: true }
+    ]
   };
 
   return (
-    <div className={styles.container}>
-      <div className={`container ${styles.section_title}`} data-aos="fade-up">
-        <center><h2>Comparaison des Plans d'abonnement</h2></center>
-
-        <center className="mb-3">Trouvez la formule adaptée à vos besoins personnels ou à votre entreprise</center>
-       
-
+    <div className={styles.planComparisonContainer}>
+      <div className={styles.planComparisonHeader}>
+        <div className={styles.headerContent} data-aos="zoom-in">
+          <h2>Trouvez l'offre qui vous convient</h2>
+          <p>Découvrez nos différentes formules et leurs avantages</p>
+        </div>
       </div>
 
-
-
-
-      {isMobile ? 
-      
-      (
-        dataSource.map((data, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles.cardTitle}>{data.feature}</div>
-            <div className={styles.cardContent}>
-              <span className={styles.solo}>Solo: {renderCell(data.solo, 'solo')}</span>
-              <span className={styles.standard}>Duo: {renderCell(data.duo, 'duo')}</span>
-              <span className={styles.medium}>Pro: {renderCell(data.pro, 'pro')}</span>
-              <span className={styles.premium}>Premium: {renderCell(data.premium, 'premium')}</span>
+      <div className={styles.tableContainer} data-aos="zoom-in">
+        <div className={styles.tableHeader}>
+          <div className={styles.featureColumn}></div>
+          <div className={`${styles.planColumn} ${styles.solo}`}>
+            <div className={styles.headerCard}>
+              <h3>SOLO</h3>
+              <p>Pour les particuliers</p>
             </div>
           </div>
-        ))
+          <div className={`${styles.planColumn} ${styles.duo}`}>
+            <div className={styles.headerCard}>
+              <h3>DUO</h3>
+              <p>Pour les petites équipes</p>
+            </div>
+          </div>
+          <div className={`${styles.planColumn} ${styles.pro}`}>
+            <div className={styles.headerCard}>
+              <h3>PRO</h3>
+              <p>Pour les professionnels</p>
+            </div>
+          </div>
+          <div className={`${styles.planColumn} ${styles.premium}`}>
+            <div className={styles.headerCard}>
+              <h3>PREMIUM</h3>
+              <p>Pour les entreprises</p>
+            </div>
+          </div>
+        </div>
 
-
-      ) : 
-      
-      
-      
-      
-      
-      (
-
-
-
-        <Table dataSource={dataSource} columns={columns} pagination={false} />
-      )}
+        <div className={styles.tableContent}>
+          <Collapse accordion data-aos="zoom-in">
+            {Object.keys(data).map((category, index) => (
+              <Panel header={category} key={index} className={styles.panelHeader}>
+                {data[category].map((item, idx) => (
+                  <div className={styles.tableRow} key={`${index}-${idx}`}>
+                    <div className={styles.featureColumn}>{item.feature}</div>
+                    <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
+                      {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                    </div>
+                    <div className={`${styles.planColumn} ${styles.duo} ${item.duo ? styles.check : styles.close}`}>
+                      {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                    </div>
+                    <div className={`${styles.planColumn} ${styles.pro} ${item.pro ? styles.check : styles.close}`}>
+                      {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                    </div>
+                    <div className={`${styles.planColumn} ${styles.premium} ${item.premium ? styles.check : styles.close}`}>
+                      {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                    </div>
+                  </div>
+                ))}
+              </Panel>
+            ))}
+          </Collapse>
+        </div>
+      </div>
     </div>
   );
 };

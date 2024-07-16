@@ -47,7 +47,7 @@ const Pricing = () => {
           </div>
         ) : (
           <div>
-            {isCredits ? <CreditsPricing key="credits" /> : <PricingOffer key="offer" />}
+            {isCredits ? <PricingOffer key="offer" /> : <CreditsPricing key="credits" /> }
           </div>
         )}
       </div>

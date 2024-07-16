@@ -82,7 +82,10 @@
 
     background-color: rgba(213, 224, 224, 0.973);
    width: 100%;
-    /* --background-color: rgba(var(--heading-color-rgb), .05); */
+   border-top-left-radius: 30%;
+   border-top-right-radius: 30%;
+
+   /* --background-color: rgba(var(--heading-color-rgb), .05); */
 }
 
 .pricing .pricing_item {

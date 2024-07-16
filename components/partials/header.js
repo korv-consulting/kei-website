@@ -92,7 +92,7 @@ export default function Header() {
                       <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>Démo</a>
                     </li>
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template#pricing" onClick={() => setIsActive(4)}>Tarifs</a>
+                      <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template/pricing" onClick={() => setIsActive(4)}>Tarifs</a>
                     </li>
                     <li className="nav-item px-3">
                       <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>FAQ</a>
