@@ -4,6 +4,7 @@ const Tip = ({offer,content}) => {
 
   return (
     <h3>
+
       {offer}{' '}
       <Tooltip
      title={
@@ -26,8 +27,8 @@ const Tip = ({offer,content}) => {
               <sup
           style={{
             position: 'absolute',
-            top: '40px', // Ajustez cette valeur pour positionner verticalement
-            right: '173px', // Ajustez cette valeur pour positionner horizontalement
+            top: '30px', 
+            right: '173px', 
             backgroundColor: '#37517e',
             borderRadius: '50%',
             width: '18px',
@@ -39,9 +40,12 @@ const Tip = ({offer,content}) => {
             fontWeight: 'lighter',
           }}
         >
-          i
+         <center>
+            i
+          </center>
         </sup>
       </Tooltip>
+     
     </h3>
   );
 };

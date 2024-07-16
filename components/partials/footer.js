@@ -23,14 +23,14 @@ const Footer = () => {
               </a>{" "}
               <div className={`pt-3 ${styles.footer_contact}`}>
                 {/* <p> A108 Adam Street </p>  */}
-                <p> <FaLocationDot className={`${styles.i}`} /> 12151 Douala, Cameroun </p>{" "}
-                <p className="mt-3">
+                <p> <FaLocationDot className={`${styles.i}`} /> <span className="position-relative ms-4 "style={{ top: '-15px' }}>12151 Douala, Cameroun </span></p>{" "}
+                <p className="mt-2">
                   {" "}
-                  <strong className="me-2"> <FaPhone className={`${styles.i}`} /> </strong> <span>+237 6 77 06 28 56</span>{" "}
+                  <strong className="me-2 "> <FaPhone className={`${styles.i}`} /> </strong> <span className=" ms-3 position-relative "style={{ top: '-15px' }}>+237 6 77 06 28 56</span>{" "}
                 </p>{" "}
                 <p>
                   {" "}
-                  <strong className="me-2"> <IoMdMail className={`${styles.i}`} /> </strong> <span>contact@korv-consulting.fr</span>{" "}
+                  <strong className="me-2"> <IoMdMail className={`${styles.i}`} /> </strong> <span className=" ms-3 position-relative "style={{ top: '-15px' }}>contact@korv-consulting.fr</span>{" "}
                 </p>{" "}
               </div>{" "}
             </div>
@@ -87,56 +87,35 @@ const Footer = () => {
               </ul>{" "}
             </div>
 
-            {/* <div className="col-lg-4 col-md-12">
-            <h4> Abonnement à notre Newsletter </h4> 
-            <NewsLetter />
-            </div> */}
+        
 
-            <div className={`col-lg-4 col-md-12 ${styles.footer_platfrom}`}>
+            <div className={`col-lg-4 col-md-12  ${styles.footer_platfrom}`}>
               <h4> Télécharger KEI </h4>{" "}
              
-              <p className="mt-2">
+                <p className=" mt-2">
                   {" "}
                   <a href="#">
-                  <strong className="me-2"> <BiLogoPlayStore className={`${styles.icon_store} fs-5`} /> </strong> 
-                  <span>Télécharger sur Playstore</span>{" "}
+                  <strong className="me-4"> <BiLogoPlayStore className={`${styles.icon_store} fs-5`} /> </strong> 
+                  <span className="position-relative "style={{ top: '-18px' }}>Télécharger sur Playstore</span>{" "}
                   </a>
                 </p>{" "}
-                <p className="mt-2">
+                <p className="mt-2 ">
                   {" "}
                   <a href="#">
-                  <strong className="me-2"> <FaAppStore className={`${styles.icon_store} fs-5`} /> </strong> 
-                  <span>Télécharger sur App Sotre</span>{" "}
+                  <strong className="me-4"> <FaAppStore className={`${styles.icon_store} fs-5`} /> </strong> 
+                  <span className="position-relative "style={{ top: '-18px' }}>Télécharger sur App Sotre</span>{" "}
                   </a>
                 
                 </p>{" "}
                 <p className="mt-2">
                   {" "}
                   <a href="#">
-                  <strong className="me-2"> <BsBrowserChrome className={`${styles.icon_store} fs-5`} /> </strong> 
-                     <span>Visiter la Plateforme Web</span>{" "}
+                  <strong className="me-4"> <BsBrowserChrome className={`${styles.icon_store} fs-5`} /> </strong> 
+                     <span className="position-relative "style={{ top: '-18px' }}>Visiter la Plateforme Web</span>{" "}
                   </a>
-                  
                 </p>{" "}
-              {/* <div className={`${styles.social_links} d-flex`}>
-                <a href="">
-                  {" "}
-                  <BsTwitterX />
-                </a>
-                <a href="https://www.facebook.com/korvconsulting/">
-                  {" "}
-                  <BsFacebook />
-                </a>
-                <a href="https://www.instagram.com/invites/contact/?i=1htitrb3x2j8j&utm_content=rxzmvja">
-                  {" "}
-                  <BsInstagram />
-                </a>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7086738201788248068">
-                  {" "}
-                  <BsLinkedin />
-                </a>
-              </div>{" "} */}
             </div>
+
           </div> 
         </div>
 
