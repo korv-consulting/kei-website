@@ -91,7 +91,7 @@ export default function Home() {
           <LandingPage />
           <Feature />
           <Targets />
-          <PricingOffer />
+          {/* <PricingOffer /> */}
           {/* <CreditPricing /> */}
           <Demo/>
           <DownloadApp/>
@@ -130,7 +130,6 @@ export async function getServerSideProps(ctx){
     }
   }
 }
-
 
 
 

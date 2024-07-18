@@ -37,10 +37,9 @@ export default function Contact() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 3000)
-  })
-
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   const recaptchaRef = useRef();
 
@@ -222,7 +221,6 @@ export default function Contact() {
                         <label htmlFor="business-field" className="pb-2">
                           Entreprise
                         </label>{' '}
-                        const [recaptcha, SetRecaptcha] = useState(false);
                         <input
                           type="text"
                           name="business"

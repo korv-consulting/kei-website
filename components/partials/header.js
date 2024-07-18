@@ -92,7 +92,7 @@ export default function Header() {
                       <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>Démo</a>
                     </li>
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template#pricing" onClick={() => setIsActive(4)}>Tarifs</a>
+                      <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template/pricing" onClick={() => setIsActive(4)}>Tarifs</a>
                     </li>
                     <li className="nav-item px-3">
                       <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>FAQ</a>
@@ -106,47 +106,7 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* <nav id="navmenu" className={`navmenu navbar navbar-expand-lg bg-body-tertiary ${styles.navmenu}`}>
-            <div className="container-fluid d-flex justify-content-center">
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                  <li className="nav-item px-3">
-                    <a className={`nav-link ${isActive === 1 ? styles.active : ''}`} href="/template" onClick={() => setIsActive(1)}>Accueil</a>
-                  </li>
-                  <li className={`nav-item dropdown px-3 ${isActive === 2 ? styles.active : ''}`} onMouseEnter={toggleModal} onMouseLeave={toggleModal} onClick={() => setIsActive(2)}>
-                    <a className="nav-link dropdown-toggle" href="/template#features" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Fonctionnalités
-                    </a>
-                    {isModalVisible && (
-                      <ul className={`dropdown-menu ${styles.verticalList} ${styles.modal} ${styles.verticalModal}`}>
-                        <li><a className="dropdown-item" href="/features/espace-de-travail">Espace de travail</a></li>
-                        <li><a className="dropdown-item" href="/features/suivi-des-taches">Suivi des tâches</a></li>
-                        <li><a className="dropdown-item" href="/features/declaration-d'incidents">Déclaration d'incidents</a></li>
-                        <li><a className="dropdown-item" href="/features/realisation-des-etats-des-lieux">Réalisation des états des lieux</a></li>
-                        <li><a className="dropdown-item" href="/features/planification-des-etats-des-lieux">Planification de l'état des lieux</a></li>
-                        <li><a className="dropdown-item" href="/features/rapport-d'incidents-et-d'inspections">Rapport d'incidents et d'inspections</a></li>
-                      </ul>
-                    )}
-                  </li>
-                  <li className="nav-item px-3">
-                    <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>Démo</a>
-                  </li>
-                  <li className="nav-item px-3">
-                    <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template#pricing" onClick={() => setIsActive(4)}>Offres Tarifaires</a>
-                  </li>
-                  <li className="nav-item px-3">
-                    <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>FAQ</a>
-                  </li>
-                  <li className="nav-item px-3">
-                    <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/template/contact" onClick={() => setIsActive(5)}>Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav> */}
+        
 
           <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">Commencez</a>
         </div>
@@ -154,7 +114,6 @@ export default function Header() {
     </>
   );
 }
-
 
 
 
