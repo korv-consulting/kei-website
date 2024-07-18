@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import styles from "@/styles/PricingOffer.module.css";
 import MonthlyPricingOffer from './MonthlyPricingOffer';
 import YearlyPricingOffer from './YearlyPricingOffer';

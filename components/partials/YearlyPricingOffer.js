@@ -5,6 +5,8 @@ import { GiCheckMark } from "react-icons/gi";
 
 
 const YearlyPricingOffer = () => {
+
+
   const basePrice = 100;
   const totalPrice = basePrice;
 
@@ -36,6 +38,7 @@ const YearlyPricingOffer = () => {
 
 
 
+
   const handleSubscribe = (plan) => {
     window.location.href = `http://kei-app-frontweb.local/signup?plan=${plan}`;
   };
@@ -48,7 +51,7 @@ const YearlyPricingOffer = () => {
           <div className="row gy-4">
             <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div className={`container ${styles.pricing_item} ${styles.pricing_item_solo}`}>
-              <h3>Solo</h3>
+              <h3 className={styles.title0}>Solo</h3>
                  <h4 className={`${styles.solo_title}`}>
                 <sup>$</sup>{totalPrice}<span> / an</span>
                 </h4>
@@ -102,8 +105,8 @@ const YearlyPricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_standard}`}>
-       
-  <h3>Duo</h3>
+  <h3 className={styles.title1}>Duo</h3>
+              
     <h4 className={`${styles.standard_title}`}>
       <sup>$</sup>{totalPrice1}<span> / an</span>
     </h4>
@@ -128,10 +131,10 @@ const YearlyPricingOffer = () => {
 
       <li>
         <GiCheckMark className={`me-2 ${styles.standard_check}`} />
-                    
         <span>
                       <span className="fw-bold">100</span> propriétés 
                     </span>
+                 
       </li>
 
 
@@ -150,7 +153,7 @@ const YearlyPricingOffer = () => {
       </li>
     </ul>
     <hr />
-    <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("standar")}>
+    <button className={`btn mt-1 ${styles.buy_btn1}`} onClick={()=>handleSubscribe("standar")}>
       Souscrire
     </button>
   </div>
@@ -164,9 +167,9 @@ const YearlyPricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_medium}`}>
-  <h3>Pro</h3>
+   <h3 className={styles.title2} >Pro</h3>
 
-    <h4 className={`${styles.medium_title}`}>
+   <h4 className={`${styles.medium_title}`}>
       <sup>$</sup>{totalPrice2}<span> / an</span>
     </h4>
     <hr />
@@ -185,11 +188,10 @@ const YearlyPricingOffer = () => {
       </li>
       <li>
         <GiCheckMark className={`me-2 ${styles.medium_check}`} />
-               
         <span>
                       <span className="fw-bold">150</span> propriétés 
                     </span>
-
+                
       </li>
       <li>
         <GiCheckMark className={`me-2 ${styles.medium_check}`} />
@@ -200,13 +202,13 @@ const YearlyPricingOffer = () => {
       <li>
         <GiCheckMark className={`me-2 ${styles.medium_check}`} />
         <span>
-                      {" "}
-                      <span className="fw-bold">15</span> tâches
-                    </span>
+          {" "}
+        <span className="fw-bold">15</span> tâches
+       </span>
       </li>
     </ul>
     <hr />
-    <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("medium")}>
+    <button className={`btn mt-1 ${styles.buy_btn2}`} onClick={()=>handleSubscribe("medium")}>
       Souscrire
     </button>
   </div>
@@ -219,7 +221,8 @@ const YearlyPricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_premium}`}>
-  <h3>Premium</h3>  <h4 className={`${styles.premium_title}`}>
+  <h3 className={styles.title3}>Premium</h3>
+     <h4 className={`${styles.premium_title}`}>
       <sup>$</sup>{totalPrice3}<span> / an</span>
     </h4>
     <hr />
@@ -238,7 +241,7 @@ const YearlyPricingOffer = () => {
       </li>
       <li>
         <GiCheckMark className={`me-2 ${styles.premium_check}`} />
-        <span>
+        <span> {" "}
                       <span className="fw-bold">500</span> propriétés 
                     </span>
       </li>
@@ -250,14 +253,14 @@ const YearlyPricingOffer = () => {
       </li>
       <li>
         <GiCheckMark className={`me-2 ${styles.premium_check}`} />
-        <span>
+                   <span>
                       {" "}
                       Tâches <span className="fw-bold">illimités</span> 
                     </span>
       </li>
     </ul>
     <hr />
-    <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("premium")}>
+    <button className={`btn mt-1 ${styles.buy_btn3}`} onClick={()=>handleSubscribe("premium")}>
       Souscrire
     </button>
   </div>
