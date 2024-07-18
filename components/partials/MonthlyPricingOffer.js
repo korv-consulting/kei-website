@@ -51,7 +51,7 @@ const MonthlyPricingOffer = () => {
           <div className="row gy-4">
             <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div className={`container ${styles.pricing_item} ${styles.pricing_item_solo}`}>
-              <h3>Solo</h3>
+              <h3 className={styles.title0}>Solo</h3>
                  <h4 className={`${styles.solo_title}`}>
                 <sup>$</sup>{totalPrice}<span> / mois</span>
                 </h4>
@@ -105,7 +105,7 @@ const MonthlyPricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_standard}`}>
-  <h3>Duo</h3>
+  <h3 className={styles.title1}>Duo</h3>
               
     <h4 className={`${styles.standard_title}`}>
       <sup>$</sup>{totalPrice1}<span> / mois</span>
@@ -153,7 +153,7 @@ const MonthlyPricingOffer = () => {
       </li>
     </ul>
     <hr />
-    <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("standar")}>
+    <button className={`btn mt-1 ${styles.buy_btn1}`} onClick={()=>handleSubscribe("standar")}>
       Souscrire
     </button>
   </div>
@@ -167,9 +167,9 @@ const MonthlyPricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_medium}`}>
-  <h3>Pro</h3>
+   <h3 className={styles.title2} >Pro</h3>
 
-  <h4 className={`${styles.medium_title}`}>
+   <h4 className={`${styles.medium_title}`}>
       <sup>$</sup>{totalPrice2}<span> / mois</span>
     </h4>
     <hr />
@@ -208,7 +208,7 @@ const MonthlyPricingOffer = () => {
       </li>
     </ul>
     <hr />
-    <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("medium")}>
+    <button className={`btn mt-1 ${styles.buy_btn2}`} onClick={()=>handleSubscribe("medium")}>
       Souscrire
     </button>
   </div>
@@ -221,7 +221,7 @@ const MonthlyPricingOffer = () => {
 
 <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
   <div className={`container ${styles.pricing_item} ${styles.pricing_item_premium}`}>
-  <h3>Premium</h3>
+  <h3 className={styles.title3}>Premium</h3>
      <h4 className={`${styles.premium_title}`}>
       <sup>$</sup>{totalPrice3}<span> / mois</span>
     </h4>
@@ -260,7 +260,7 @@ const MonthlyPricingOffer = () => {
       </li>
     </ul>
     <hr />
-    <button className={`btn mt-1 ${styles.buy_btn}`} onClick={()=>handleSubscribe("premium")}>
+    <button className={`btn mt-1 ${styles.buy_btn3}`} onClick={()=>handleSubscribe("premium")}>
       Souscrire
     </button>
   </div>

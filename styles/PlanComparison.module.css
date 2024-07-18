@@ -12,6 +12,12 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+.headerContent {
+ 
+  margin-bottom: 10px;
+}
+
 .headerContent h2 {
   font-size: 36px;
   font-weight: 700;
@@ -21,6 +27,7 @@
 .headerContent p {
   font-size: 18px;
   color: #666;
+  
 }
 
 .headerCards {
@@ -227,6 +234,6 @@
 
 
 .icon {
-  font-size: 24px; /* Augmentez cette valeur selon vos préférences */
+  font-size: 24px; 
   font-weight: 800;
 }
