@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import { Collapse } from 'antd';
 import { CheckOutlined, MinusOutlined } from '@ant-design/icons';
@@ -14,13 +12,13 @@ const PlanComparison = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1200, // durée de l'animation
-      easing: 'ease-in-out', // type d'animation
-      once: false, // activer l'animation uniquement une fois
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: false,
     });
 
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 567);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     handleResize();
@@ -30,6 +28,7 @@ const PlanComparison = () => {
 
   const data = {
     'Rapports': [
+      { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
       { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
       { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true }
     ],
@@ -59,16 +58,16 @@ const PlanComparison = () => {
     <div className={styles.planComparisonContainer}>
       <div className={styles.planComparisonHeader}>
         <div className={styles.headerContent} data-aos="zoom-in">
-          <h2>Trouvez l'offre qui vous convient</h2>
-          <p>Découvrez nos différentes formules et leurs avantages</p>
+          <h2>COMPARAISON</h2>
+          <p>Découvrez nos différentes formules et leurs avantages,et enfin Trouvez l'offre qui vous convient</p>
         </div>
       </div>
 
       <div className={styles.tableContainer} data-aos="zoom-in">
-        <div className={styles.tableHeader}>
-          <div className={styles.featureColumn}></div>
+        <div className={`${styles.tableHeader}`}>
+          {/* <div className={styles.featureColumn}></div> */}
           <div className={`${styles.planColumn} ${styles.solo}`}>
-            <div className={styles.headerCard}>
+            <div className={` ${styles.headerCard}`}>
               <h3>SOLO</h3>
               <p>Pour les particuliers</p>
             </div>
@@ -94,23 +93,32 @@ const PlanComparison = () => {
         </div>
 
         <div className={styles.tableContent}>
-          <Collapse accordion data-aos="zoom-in">
+          
+          <Collapse accordion data-aos="zoom-in" className={isMobile ? styles.mobileCollapse : ''}>
             {Object.keys(data).map((category, index) => (
               <Panel header={category} key={index} className={styles.panelHeader}>
                 {data[category].map((item, idx) => (
-                  <div className={styles.tableRow} key={`${index}-${idx}`}>
-                    <div className={styles.featureColumn}>{item.feature}</div>
-                    <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
-                      {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                  <div key={`${index}-${idx}`} className={styles.mobileFeature}>
+                    <div className={styles.featureName}>{item.feature}</div>
+                    <div className={styles.mobileHeader}>
+                      <div className={`${styles.mobilePlanColumn} ${styles.solo}`}>SOLO</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.duo}`}>DUO</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.pro}`}>PRO</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.premium}`}>PREMIUM</div>
                     </div>
-                    <div className={`${styles.planColumn} ${styles.duo} ${item.duo ? styles.check : styles.close}`}>
-                      {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
-                    </div>
-                    <div className={`${styles.planColumn} ${styles.pro} ${item.pro ? styles.check : styles.close}`}>
-                      {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
-                    </div>
-                    <div className={`${styles.planColumn} ${styles.premium} ${item.premium ? styles.check : styles.close}`}>
-                      {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                    <div className={`${styles.mobileRow}`}>
+                      <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
+                        {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                      </div>
+                      <div className={`${styles.planColumn} ${styles.duo} ${item.duo ? styles.check : styles.close}`}>
+                        {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                      </div>
+                      <div className={`${styles.planColumn} ${styles.pro} ${item.pro ? styles.check : styles.close}`}>
+                        {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                      </div>
+                      <div className={`${styles.planColumn} ${styles.premium} ${item.premium ? styles.check : styles.close}`}>
+                        {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                      </div>
                     </div>
                   </div>
                 ))}

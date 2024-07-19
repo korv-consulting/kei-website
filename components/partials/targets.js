@@ -137,7 +137,7 @@ const Targets = () => {
               <Image
                 src={images[currentImageIndex]}
                 alt={`Image ${currentImageIndex + 1}`}
-                width={400}
+                width={300}
                 height={400}
                 className={styles.carouselImage}
               />

@@ -1,7 +1,6 @@
-/* CreditPricing.module.css */
 
 .container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
   padding: 60px;
@@ -11,9 +10,29 @@
   font-family: 'Roboto', sans-serif;
 }
 
+
+
+
+
+
+
+
+
+.intro{
+
+
+  margin-left:18rem
+}
+
+
+
 .sliderContainer {
+
+  margin-top:70px;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
+  /* background-color: rgb(169, 169, 169);  */
+
 }
 
 .priceInfo {
@@ -24,7 +43,9 @@
 
 .purchaseButton {
   background: #37517e;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-left:auto;
+  margin-right:auto;
   color: #fff;
   border: none;
   padding: 15px 30px;
@@ -36,6 +57,7 @@
 
 .purchaseButton:hover {
   background: linear-gradient(90deg, #388e3c, #66bb6a);
+
 }
 
 .bold {
@@ -88,7 +110,7 @@
 }
 
 .rc-slider-dot {
-  display: none; /* Hide dots under marks */
+  display: none; 
 }
 
 .rc-slider-mark {
@@ -117,57 +139,27 @@
 
 
 
-
 @media (max-width: 767px) {
   .sliderContainer {
-    width: 100%; /* Assurez-vous que le slider prend toute la largeur disponible */
-    height: auto; /* Ajustez la hauteur automatiquement en fonction du contenu */
-    display: flex;
-    flex-direction: column; /* Affiche les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
+    height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
-
-  .sliderContainer .rc-slider {
-    width: 80%; /* Largeur ajustée pour le slider */
-    margin: 0 auto; /* Centrer horizontalement */
+  
+  .rc-slider {
+    width: auto;
+    height: 300px;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-
-  .sliderContainer .priceInfo {
-    margin-bottom: 40px; /* Réduire la marge inférieure */
-    font-size: 16px; /* Réduire la taille de la police */
+  
+  .rc-slider-rail,
+  .rc-slider-track,
+  .rc-slider-step,
+  .rc-slider-dot,
+  .rc-slider-handle {
+    width: 11px;
+    height: auto;
   }
-
-  .purchaseButton {
-    width: 80%; /* Largeur ajustée pour le bouton */
-    padding: 12px 24px; /* Réduire la taille des boutons */
-    font-size: 16px; /* Réduire la taille de la police */
   }
-}
-
-
-
-
-
-
-@media (min-width: 768px) {
-  .container {
-    padding: 20px; /* Augmenter l'espacement intérieur */
-    width: 80%;
-  }
-
-  .sliderContainer {
-    margin-bottom: 70px; /* Augmenter la marge inférieure */
-  }
-
-  .priceInfo {
-    margin-bottom: 60px; /* Augmenter la marge inférieure */
-    font-size: 18px; /* Taille de la police standard */
-  }
-
-  .purchaseButton {
-    padding: 15px 30px; /* Taille de bouton standard */
-    font-size: 18px; /* Taille de la police standard */
-  }
-
-}
-
