@@ -4,7 +4,8 @@ import { CheckOutlined, MinusOutlined } from '@ant-design/icons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '@/styles/PlanComparison.module.css';
-import { useEffect, useState } from 'react';
+
+const { Panel } = Collapse;
 
 const PlanComparison = () => {
   const [isMobile, setIsMobile] = useState(false);
