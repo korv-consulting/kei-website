@@ -68,25 +68,25 @@ const PlanComparison = () => {
           {/* <div className={styles.featureColumn}></div> */}
           <div className={`${styles.planColumn} ${styles.solo}`}>
             <div className={` ${styles.headerCard}`}>
-              <h3>SOLO</h3>
+              <h3 className={styles.headerCardTitle} >SOLO</h3>
               <p>Pour les particuliers</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.duo}`}>
             <div className={styles.headerCard}>
-              <h3>DUO</h3>
+              <h3 className={styles.headerCardTitle}>DUO</h3>
               <p>Pour les petites équipes</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.pro}`}>
             <div className={styles.headerCard}>
-              <h3>PRO</h3>
+              <h3 className={styles.headerCardTitle}>PRO</h3>
               <p>Pour les professionnels</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.premium}`}>
             <div className={styles.headerCard}>
-              <h3>PREMIUM</h3>
+              <h3  className={styles.headerCardTitle}>PREMIUM</h3>
               <p>Pour les entreprises</p>
             </div>
           </div>

@@ -61,6 +61,12 @@
 
 
 
+.headerCardTitle{
+
+  color:var(--solo)!important;
+
+}
+
 
 
 .featureColumn {
@@ -73,17 +79,16 @@
   text-align: center;
   border-left: 1px solid #e8e8e8;
 }
-
+/* 
 .headerCard {
   border-radius: 4px;
   padding: 8px;
-}
+} */
 
 .tableContent {
   max-height: 500px;
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(21, 21, 21, 0.8);
-  /* background-color: #d0d3d7; */
 
 
 }
