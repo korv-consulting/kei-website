@@ -1,143 +1,194 @@
-.section_title {
-  text-align: justify;
-  padding-bottom: 60px;
-  position: relative;
+.planComparisonContainer {
+  padding: 40px 20px;
+  /* width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+ */
 }
 
-.section_title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  text-transform: uppercase;
-  position: relative;
+
+
+.planComparisonHeader {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.section_title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: var(--success);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.container {
-  padding: 20px;
-  max-width: 1340px;
+.headerContent {
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.columnHeader {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 10px;
+
+.headerContent h2{
+  font-size: 30px;
+  margin-top: 20px;
   font-weight: bold;
-  color: black; /* Couleur du titre de la colonne des fonctionnalités */
 }
 
+
+.tableContainer {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+
+.tableHeader {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  border-top: 1px solid #e8e8e8;
+  background-color: #ffffff
+
+}
+
+
+.planColumn {
+  padding-left: 30px;
+  text-align: right;
+  border-left: 1px solid #e8e8e8;
+  justify-content:right
+}
+
+.headerCard {
+  border-radius: 4px;
+  padding: 8px;
+  width:100%
+}
+
+
+
+
+
+
 .featureColumn {
-  width: 200px; /* Largeur de la colonne des caractéristiques */
-  text-align: left;
+  padding: 16px;
+  font-weight: bold;
 }
 
 .planColumn {
+  padding: 16px;
   text-align: center;
+  border-left: 1px solid #e8e8e8;
+}
+
+.headerCard {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.tableContent {
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(21, 21, 21, 0.8);
+  /* background-color: #d0d3d7; */
+
+
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr);
+  border-top: 1px solid #e8e8e8;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.icon {
+  font-size: 16px;
+  justify-content:right;
+  margin-right:0px;
+  padding-right:0px
+}
+
+.check {
+  color: #52c41a;
+}
+
+.close {
+  color: #ff4d4f;
+}
+
+.mobileCollapse {
+  border: none;
+}
+
+.mobileFeature {
+  margin-bottom: 16px;
+}
+
+.featureName {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.mobileHeader {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  background-color: #f5f5f5;
   font-weight: bold;
 }
 
-.soloTitle {
-  color: var(--solo); /* Couleur de l'offre Solo */
+.mobilePlanColumn {
+  flex: 1;
+  text-align: center;
 }
 
-.standardTitle {
-  color: var(--standard); /* Couleur de l'offre Standard */
+.mobileRow {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+  border-top: 1px solid #e8e8e8;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
+
+
+}
+.planColumn {
+  flex: 1;
+  text-align: center;
 }
 
-.mediumTitle {
-  color: var(--medium); /* Couleur de l'offre Medium */
+.check {
+  color: #52c41a;
 }
 
-.premiumTitle {
-  color: var(--premium); /* Couleur de l'offre Premium */
+.close {
+  color: #ff4d4f;
 }
 
-.solo {
-  color: var(--solo); /* Couleur de l'offre Solo */
-  font-size: 18px; /* Taille de police pour Solo */
-}
-
-.standard {
-  color: var(--standard); /* Couleur de l'offre Standard */
-  font-size: 18px; /* Taille de police pour Standard */
-}
-
-.medium {
-  color: var(--medium); /* Couleur de l'offre Medium */
-  font-size: 18px; /* Taille de police pour Medium */
-}
-
-.premium {
-  color: var(--premium); /* Couleur de l'offre Premium */
-  font-size: 18px; /* Taille de police pour Premium */
-}
-
-@media (max-width: 567px) {
-  .columnHeader {
-      font-size: 0.9rem;
-      font-weight: bold;
+@media (max-width: 767px) {
+  .tableHeader {
+    display: none;
   }
 
-  .container {
-      padding: 1px;
-      max-width: 2000px;
-      width: 100%;
-  }
-
-  .planColumn {
-      text-align: center;
-      font-weight: normal;
-      text-transform: lowercase;
+  .tableRow {
+    grid-template-columns: 1fr;
   }
 
   .featureColumn {
-      width: 80px;
-      font-size: 0.8rem;
+    padding: 8px 0;
   }
 
-  .solo, .standard, .medium, .premium {
-      font-size: 15px; /* Taille de police pour les offres */
+  .planColumn {
+    padding: 8px 0;
+    border-left: none;
   }
 
-  /* Styles pour les cartes */
-  .card {
-      border: 1px solid #e8e8e8;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-  }
 
-  .cardTitle {
-      font-weight: bold;
-      margin-bottom: 5px;
-  }
+}
 
-  .cardContent {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-  }
 
-  .cardContent span {
-      font-size: 0.9rem;
-  }
 
-  .cardContent span {
-      display: block;
-      margin-bottom: 5px;
+@media (min-width:768px){
+
+
+  .mobileHeader {
+    display: none;
+    
   }
 }
