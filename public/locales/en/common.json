@@ -1,0 +1,16 @@
+{
+  "contact_us": "Contact us!",
+  "send_message": "Send us an email using this handy form. We're eagerly waiting for you!",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "company": "Company",
+  "country": "Country",
+  "professional_email": "Professional Email",
+  "phone": "Phone",
+  "activity_sector": "Activity Sector",
+  "message": "Message",
+  "send": "Send",
+  "sending": "Sending...",
+  "success_message": "Your message has been sent. Thank you!",
+  "error_message": "Oops, an error occurred. Please try again."
+}

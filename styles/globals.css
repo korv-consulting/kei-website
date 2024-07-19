@@ -37,11 +37,9 @@ html {
   --semi-grey : #a5acb2;
 
   --solo : #efb60a;
-  --duo : #2DB6FE;
-  --pro : var(--success);
+  --standard : #2DB6FE;
+  --medium : var(--success);
   --premium : #5752D1;
-
-  --solo-rgb: 224, 173, 167; 
 
   --sky-blue: #95DAFE;
   --steel-blue: #56A0C5;

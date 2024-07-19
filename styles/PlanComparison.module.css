@@ -1,239 +1,143 @@
-.planComparisonContainer {
+.section_title {
+  text-align: justify;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section_title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section_title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--success);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.container {
   padding: 20px;
   max-width: 1340px;
   margin: 0 auto;
 }
 
-.planComparisonHeader {
-  background-color: #f8f8f8;
-  padding: 40px 20px;
+.columnHeader {
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-.headerContent {
- 
-  margin-bottom: 10px;
-}
-
-.headerContent h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.headerContent p {
-  font-size: 18px;
-  color: #666;
-  
-}
-
-.headerCards {
-  display: flex;
-  justify-content: right;
-  margin-top: 30px;
-  border-radius:20px;
-  background-color:dark;
-  } 
-
-.planComparisonContainer {
-  padding: 20px;
-  max-width: 1340px;
-  margin: 0 auto;
-}
-
-.planComparisonHeader {
-  background-color: #f8f8f8;
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.headerContent h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.headerContent p {
-  font-size: 18px;
-  color: #666;
-}
-
-.headerCards {
-  display: flex;
-  justify-content: right;
-  margin-top: 30px;
-  border-radius:20px;
-  background-color:dark;
-  margin-bottom: 0px;
-  }  
-
-
-.headerCards .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
-  width: 150px;
-
-}
-
-.headerCards .card h3 {
   font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.headerCards .card p {
-  font-size: 14px;
-  color: #666;
-}
-
-.headerCards .card.solo { color: #FFA500; }
-.headerCards .card.duo { color: #4169E1; }
-.headerCards .card.pro { color: #008000; }
-.headerCards .card.premium { color: #800080; }
-
-.tableContainer {
-  margin-top: 40px;
-}
-
-.tableHeader {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  background-color: #f8f8f8;
+  margin-bottom: 10px;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.tableRow {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  color: black; /* Couleur du titre de la colonne des fonctionnalités */
 }
 
 .featureColumn {
-  width: 30%;
+  width: 200px; /* Largeur de la colonne des caractéristiques */
   text-align: left;
-  padding-left: 10px;
 }
 
 .planColumn {
-  width: 17.5%;
   text-align: center;
-}
-
-.check {
-  color: green;
-  font-size: 16px;
-}
-
-.close {
-  color: red;
-  font-size: 16px;
-}
-
-.panelHeader {
   font-weight: bold;
-  background-color: #f8f8f8;
 }
 
-.solo { color: #FFA500; }
-.duo { color: #4169E1; }
-.pro { color: #008000; }
-.premium { color: #800080; }
-
-
-
-.headerCards .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
-  width: 150px;
+.soloTitle {
+  color: var(--solo); /* Couleur de l'offre Solo */
 }
 
-.headerCards .card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 5px;
+.standardTitle {
+  color: var(--standard); /* Couleur de l'offre Standard */
 }
 
-.headerCards .card p {
-  font-size: 14px;
-  color: #666;
+.mediumTitle {
+  color: var(--medium); /* Couleur de l'offre Medium */
 }
 
-.headerCards .card.solo { color: #FFA500; }
-.headerCards .card.duo { color: #4169E1; }
-.headerCards .card.pro { color: #008000; }
-.headerCards .card.premium { color: #800080; }
-
-.tableContainer {
-  margin-top: 40px;
+.premiumTitle {
+  color: var(--premium); /* Couleur de l'offre Premium */
 }
 
-.tableHeader {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  background-color: #f8f8f8;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+.solo {
+  color: var(--solo); /* Couleur de l'offre Solo */
+  font-size: 18px; /* Taille de police pour Solo */
 }
 
-.tableRow {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+.standard {
+  color: var(--standard); /* Couleur de l'offre Standard */
+  font-size: 18px; /* Taille de police pour Standard */
 }
 
-.featureColumn {
-  width: 30%;
-  text-align: left;
-  padding-left: 10px;
+.medium {
+  color: var(--medium); /* Couleur de l'offre Medium */
+  font-size: 18px; /* Taille de police pour Medium */
 }
 
-.planColumn {
-  width: 17.5%;
-  text-align: center;
+.premium {
+  color: var(--premium); /* Couleur de l'offre Premium */
+  font-size: 18px; /* Taille de police pour Premium */
 }
 
-.check {
-  color: green;
-  font-size: 16px;
-}
+@media (max-width: 567px) {
+  .columnHeader {
+      font-size: 0.9rem;
+      font-weight: bold;
+  }
 
-.close {
-  color: red;
-  font-size: 16px;
-}
+  .container {
+      padding: 1px;
+      max-width: 2000px;
+      width: 100%;
+  }
 
-.panelHeader {
-  font-weight: bold;
-  background-color: #f8f8f8;
-}
+  .planColumn {
+      text-align: center;
+      font-weight: normal;
+      text-transform: lowercase;
+  }
 
-.solo { color: #FFA500; }
-.duo { color: #4169E1; }
-.pro { color: #008000; }
-.premium { color: #800080; }
+  .featureColumn {
+      width: 80px;
+      font-size: 0.8rem;
+  }
 
+  .solo, .standard, .medium, .premium {
+      font-size: 15px; /* Taille de police pour les offres */
+  }
 
-.icon {
-  font-size: 24px; 
-  font-weight: 800;
+  /* Styles pour les cartes */
+  .card {
+      border: 1px solid #e8e8e8;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+  }
+
+  .cardTitle {
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  .cardContent {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+  }
+
+  .cardContent span {
+      font-size: 0.9rem;
+  }
+
+  .cardContent span {
+      display: block;
+      margin-bottom: 5px;
+  }
 }

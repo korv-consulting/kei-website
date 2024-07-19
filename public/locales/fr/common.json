@@ -1,0 +1,16 @@
+{
+  "contact_us": "Contactez-nous !",
+  "send_message": "Envoyez-nous un e-mail avec ce petit formulaire pratique. Nous vous attendons impatiemment !",
+  "first_name": "Prénom",
+  "last_name": "Nom",
+  "company": "Entreprise",
+  "country": "Pays",
+  "professional_email": "Email Professionnelle",
+  "phone": "Portable",
+  "activity_sector": "Secteur d'activité",
+  "message": "Message",
+  "send": "Envoyer",
+  "sending": "En cours d'envoi...",
+  "success_message": "Votre message a été envoyé. Merci!",
+  "error_message": "Oups, une erreur est survenue. Veuillez réessayer."
+}

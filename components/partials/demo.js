@@ -4,8 +4,6 @@ import React from 'react';
 import YouTubePlayer from 'react-youtube';
 import styles from '@/styles/Demo.module.css';
 import style from '@/styles/app.module.css';
-import DownloadApp from "components/partials/DownloadApp";
-
 
 
 const Demo = () => {
@@ -26,7 +24,7 @@ const Demo = () => {
 
   return (
     <section id="demo" className={styles.demo}>
-      <div className="container ">
+      <div className="container">
         <div className={styles.demoContent}>
           <div className={styles.videoWrapper}>
             <YouTubePlayer videoId="xaJzA47EjQc" opts={opts} onReady={_onReady} />
@@ -48,7 +46,6 @@ const Demo = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };

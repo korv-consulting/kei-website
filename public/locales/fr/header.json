@@ -1,0 +1,15 @@
+{
+  "home": "Accueil",
+  "features": "Fonctionnalités",
+  "workspace": "Espace de travail",
+  "task_tracking": "Suivi des tâches",
+  "incident_reporting": "Déclaration d'incidents",
+  "condition_reports": "Réalisation des états des lieux",
+  "planning": "Planification de l'état des lieux",
+  "reports": "Rapport d'incidents et d'inspections",
+  "demo": "Démo",
+  "pricing": "Offres Tarifaires",
+  "faq": "FAQ",
+  "contact": "Contact",
+  "get_started": "Commencez"
+}

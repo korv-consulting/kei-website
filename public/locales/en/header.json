@@ -1,0 +1,15 @@
+{
+  "home": "Home",
+  "features": "Features",
+  "workspace": "Workspace",
+  "task_tracking": "Task Tracking",
+  "incident_reporting": "Incident Reporting",
+  "condition_reports": "Condition Reports",
+  "planning": "Planning",
+  "reports": "Reports",
+  "demo": "Demo",
+  "pricing": "Pricing",
+  "faq": "FAQ",
+  "contact": "Contact",
+  "get_started": "Get Started"
+}
