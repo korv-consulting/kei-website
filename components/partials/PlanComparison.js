@@ -10,8 +10,6 @@ const { Panel } = Collapse;
 const PlanComparison = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-
-//LET'S CHECK THE SCREEN SIZE TO CHECKTO DECIDDE IF I MAY DISPLAY A TABLE OR A CARD'S SYSTEM
   useEffect(() => {
     AOS.init({
       duration: 1200,

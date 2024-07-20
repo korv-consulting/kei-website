@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from "../component/header";
-import FunctionalityPageHeader from "../component/featuresDetails/FunctionalityPageHeader";
+import FunctionalityPageHeader from "../../components/partials/featuresDetails/FunctionalityPageHeader";
 import styles from '@/styles/features/FunctionalityPage.module.css';
-import Slogan from "../component/featuresDetails/slogan";
+import Slogan from "../../components/partials/featuresDetails/slogan";
 import Footer from "../component/footer";
-import Description from "../component/featuresDetails/Description";
+import Description from "../../components/partials/featuresDetails/Description";
 import Head from "next/head";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 

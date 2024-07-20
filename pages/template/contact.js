@@ -11,7 +11,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import countries from "../api/country";
 import activities from "../api/activity";
 import calls from "../api/call";
-import FunctionalityPageHeader from '../component/featuresDetails/FunctionalityPageHeader';
+import FunctionalityPageHeader from '../../components/partials/featuresDetails/FunctionalityPageHeader';
 import { useTranslation } from 'next-i18next';
 
 export default function Contact() {
