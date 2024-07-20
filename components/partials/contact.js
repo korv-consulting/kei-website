@@ -1,7 +1,7 @@
 import styles from "@/styles/app.module.css";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import Recaptcha from "../../components/Recaptcha";
+import Recaptcha from "../Recaptcha";
 import React, { useState, useEffect , useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import countries from "pages/api/country";

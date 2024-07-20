@@ -324,14 +324,11 @@
 import React from 'react';
 import styles from '@/styles/features/FeatureSection.module.css';
 import style from "@/styles/app.module.css";
-import { useTranslation } from 'react-i18next';
 
 const FeatureSection = () => {
     const handleOverlayClick = (link) => {
         window.location.href = link;
     };
-
-    const {t} = useTranslation('feature')
 
     return (
         <section className={styles.featuresSection}>
@@ -339,10 +336,12 @@ const FeatureSection = () => {
                 <div className="row">
                     <div className={`col-12 features-title container ${style.section_title} `}>
                         <center>
-                            <h2>{t('title')}</h2>
+                            <h2>Nos Fonctionnalités Principales</h2>
                         </center>
                         <p className='text-dark'>
-                            {t('description')}
+                            KEI est une application innovante multi plateforme conçue pour l'industrie du bâtiment,
+                            résidentielle, hôtelière et locative, pour des rapports d'inspection détaillés et professionnels.
+                            Découvrez les puissantes fonctionnalités que nous offrons pour simplifier votre flux de travail.
                         </p>
                     </div>
                 </div>
@@ -352,14 +351,14 @@ const FeatureSection = () => {
                         <div className={styles.featureCard}>
                             <img src="/tools/planification.jpg" alt="Gestion des Tâches" className={styles.featureImage} />
                             <div className={styles.featureTitle}>
-                                 {t('title1')}
+                                 Suivis des taches
                             </div>
                             <div className={styles.featureDescription}>
-                                {t('desc1')}
+                                Gérez efficacement vos tâches, suivez leur avancement jusqu'à la clôture et restez organisé grâce à notre système intuitif de gestion des tâches.
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/espace-de-travail")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content1')}</p>
+                                    <p className ={styles.content}>Des outils puissants pour organiser et prioriser vos tâches efficacement.</p>
                                 </div>
                             </div>
                         </div>
@@ -369,14 +368,14 @@ const FeatureSection = () => {
                         <div className={styles.featureCard}>
                             <img src="/tools/workspace.jpg" alt="Suivi des Progrès" className={styles.featureImage} />
                             <div className={styles.featureTitle}>
-                               {t('title2')}
+                                Espace de travail
                             </div>
                             <div className={styles.featureDescription}>
-                               {t('desc2')}
+                                Créez des espaces de travail pour faciliter la gestion des tâches (états des lieux, déclaration d’incidents, inspection et intervention).
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/espace-de-travail")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content2')}</p>
+                                    <p className ={styles.content}>Créez vos espaces de travail et ayez le contrôle sur tout.</p>
                                 </div>
                             </div>
                         </div>
@@ -386,14 +385,14 @@ const FeatureSection = () => {
                         <div className={styles.featureCard}>
                             <img src="/tools/declaration.jpg" alt="Déclaration d'Incidents" className={styles.featureImage} />
                             <div className={styles.featureTitle}>
-                                {t('title3')}
+                                Déclaration d'incidents
                             </div>
                             <div className={styles.featureDescription}>
-                                {t('desc3')}
+                                Signalez et enregistrez un nombre illimité d’incidents et défauts directement dans l’application assurant ainsi un environnement de travail plus sûr.
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/declaration-d'incidents")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content3')}</p>
+                                    <p className ={styles.content}>Signalez rapidement les incidents pour une résolution efficace.</p>
                                 </div>
                             </div>
                         </div>
@@ -405,14 +404,14 @@ const FeatureSection = () => {
                         <div className={styles.featureCard}>
                             <img src="/features/carrying-out-inventory.png" alt="Inspections Détaillées" className={styles.featureImage} />
                             <div className={styles.featureTitle}>
-                                {t('title4')}
+                                Réalisation des états des lieux
                             </div>
                             <div className={styles.featureDescription}>
-                                {t('desc4')}
+                                Réalisez des inspections approfondies et établissez des constats d’états des lieux d’entrées et de sorties avec prise de photo.
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/realisation-des-etats-des-lieux")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content4')}</p>
+                                    <p className ={styles.content}>Capturez chaque détail, photographiez et constatez.</p>
                                 </div>
                             </div>
                         </div>
@@ -422,14 +421,14 @@ const FeatureSection = () => {
                         <div className={styles.featureCard}>
                             <img src="/tools/plan.jpg" alt="Planification" className={styles.featureImage} />
                             <div className={styles.featureTitle}>
-                                {t('title5')}
+                                Planification de l'état des lieux
                             </div>
                             <div className={styles.featureDescription}>
-                                {t('desc5')}
+                                Planifiez et réalisez vos inspections à distance via un appel vidéo facilement grâce à nos fonctionnalités robustes de planification.
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/planification-des-etats-des-lieux")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content5')}</p>
+                                    <p className ={styles.content}>Planifiez et gérez vos inspections en toute simplicité.</p>
                                 </div>
                             </div>
                         </div>
@@ -439,14 +438,14 @@ const FeatureSection = () => {
                         <div className={styles.featureCard}>
                             <img src="/tools/rapport.jpg" alt="Exportation de Rapports" className={styles.featureImage} />
                             <div className={styles.featureTitle}>
-                                {t('title6')}
+                                Rapport d'incidents et d'inspections
                             </div>
                             <div className={styles.featureDescription}>
-                                {t('desc6')}
+                                Exportez facilement vos rapports d'incident et d'inspection dans divers formats pour une analyse et un partage ultérieurs, directement depuis l'application.
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/rapport-d'incidents-et-d'inspections")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content6')}</p>
+                                    <p className ={styles.content}>Exportez vos rapports dans différents formats pour une analyse facile.</p>
                                 </div>
                             </div>
                         </div>

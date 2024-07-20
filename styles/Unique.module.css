@@ -1,0 +1,161 @@
+
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+
+
+
+.unique_pricing .unique_pricing_card {
+    background-color: blanchedalmond;
+    box-shadow: 0 3px 5px -2px rgba(var(--default-color-rgb), 0.1) !important;
+    border-top: 4px solid var(--background-color) !important;
+    padding: 40px 40px !important;
+    height: 100% !important;
+    border-radius: 20px !important;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s !important;
+}
+
+.unique_pricing .unique_pricing_card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.unique_pricing .unique_pricing_card_solo {
+    border-top: 5px solid var(--solo) !important;
+    background-color: #f0f8ff !important; /* Light Cyan */
+}
+
+.unique_pricing .unique_pricing_card_standard {
+    border-top: 5px solid var(--standard) !important;
+    background-color: #e6ffe6 !important; /* Light Green */
+}
+
+.unique_pricing .unique_pricing_card_medium {
+    border-top: 5px solid var(--medium) !important;
+    background-color: #ffffcc !important; /* Light Yellow */
+}
+
+.unique_pricing .unique_pricing_card_premium {
+    border-top: 5px solid var(--premium) !important;
+    background-color: #ffe6e6 !important; /* Light Red */
+}
+
+.unique_pricing h3 {
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+    font-size: 20px !important;
+    color: var(--primary) !important;
+}
+
+.unique_pricing h4 {
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    margin-bottom: 0 !important;
+}
+
+.unique_pricing .unique_solo_title {
+    color: var(--solo) !important;
+}
+
+.unique_pricing .unique_standard_title {
+    color: var(--standard) !important;
+}
+
+.unique_pricing .unique_medium_title {
+    color: var(--medium) !important;
+}
+
+.unique_pricing .unique_premium_title {
+    color: var(--premium) !important;
+}
+
+.unique_pricing h4 sup {
+    font-size: 28px !important;
+}
+
+.unique_pricing h4 span {
+    color: rgba(var(--default-color-rgb), 0.5) !important;
+    font-size: 18px !important;
+}
+
+.unique_pricing ul {
+    padding: 20px 0 !important;
+    list-style: none !important;
+    color: rgba(var(--default-color-rgb), 0.7) !important;
+    text-align: left !important;
+    line-height: 20px !important;
+}
+
+.unique_pricing ul li {
+    padding: 10px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.unique_pricing ul .na {
+    color: rgba(var(--default-color-rgb), 0.4) !important;
+}
+
+.unique_pricing ul .na i {
+    color: rgba(var(--default-color-rgb), 0.4) !important;
+}
+
+.unique_pricing ul .na span {
+    text-decoration: line-through !important;
+}
+
+.unique_pricing .unique_solo_check {
+    color: var(--solo) !important;
+}
+
+.unique_pricing .unique_standard_check {
+    color: var(--standard) !important;
+}
+
+.unique_pricing .unique_medium_check {
+    color: var(--medium) !important;
+}
+
+.unique_pricing .unique_premium_check {
+    color: var(--premium) !important;
+}
+
+.unique_buy_btn {
+    color: var(--primary) !important;
+    background-color: white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 50px !important;
+    transition: background-color 0.3s, color 0.3s !important;
+    padding: 8px 20px !important;
+    border: 1px solid var(--primary) !important;
+    width: 100% !important;
+}
+
+.unique_pricing .unique_buy_btn:hover {
+    background: var(--primary) !important;
+    color: var(--contrast-color) !important;
+}
+
+@media (max-width: 992px) {
+    .unique_pricing .box {
+        max-width: 60% !important;
+        margin: 0 auto 30px auto !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .unique_pricing .box {
+        max-width: 80% !important;
+        margin: 0 auto 30px auto !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .unique_pricing .box {
+        max-width: 100% !important;
+        margin: 0 auto 30px auto !important;
+    }
+}
