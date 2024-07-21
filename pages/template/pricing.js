@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Header from '../component/header';
 import Footer from '../component/footer';
 import SVGComponent from 'components/partials/SvgComponent';
-import ToggleButton from 'components/partials/ToggleButton';
-import CreditsPricing from 'components/partials/CreditPricing';
-import PricingOffer from 'components/partials/pricingOffer';
+import ToggleButton from 'pages/component/ToggleButton';
+import CreditsPricing from 'pages/component/CreditPricing';
+import PricingOffer from 'pages/component/pricingOffer';
 import styles from '@/styles/PricingPage.module.css';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -61,6 +61,6 @@ export default Pricing;
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pricing','header','footer']),
+    ...await serverSideTranslations(locale, ['pricing','header','footer', 'planComparaison', 'montly_pricing', 'yearly_pricing', 'credit', 'tooglebtn','newsletter']),
   },
 });

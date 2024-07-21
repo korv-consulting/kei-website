@@ -1,17 +1,18 @@
+import React from 'react';
+import { useTranslation } from 'next-i18next';
 import styles from "@/styles/app.module.css";
 
 const NewsLetter = () => {
+  const { t } = useTranslation('newsletter');
+
   return (
     <div>
       <div className={styles.footer_newsletter}>
         <div className="container">
           <div className="row justify-content-center text-center">
             <div className="col-lg-6">
-              <h4> Abonnement à notre Newsletter </h4>{" "}
-              <p>
-                {/* Subscribe to our newsletter and receive the latest news about our products and services! */}
-                Abonnez-vous à notre newsletter  et recevez les récentes informations sur notre application!
-              </p>{" "}
+              <h4>{t('newsletter_title')}</h4>
+              <p>{t('newsletter_description')}</p>
               <div
                 // action=""
                 // method="post"
@@ -20,12 +21,12 @@ const NewsLetter = () => {
               >
                 <div className={styles.newsletter_form}>
                   <input type="email" name="email" />
-                  <input type="submit" value="Subscribe" onClick={(e) => alert("Vous vous êtes abonné!")} />
-                </div>{" "}
-                <div className={styles.loading}> Loading </div>{" "}
-                <div className={styles.error_message}> </div>{" "}
+                  <input type="submit" value={t('subscribe_button')} onClick={(e) => alert(t('subscription_success'))} />
+                </div>
+                <div className={styles.loading}>{t('loading')}</div>
+                <div className={styles.error_message}>{t('error_message')}</div>
                 <div className={styles.sent_message}>
-                  Vous êtes abonné à notre newsletter!
+                  {t('subscription_success')}
                 </div>
               </div>
             </div>

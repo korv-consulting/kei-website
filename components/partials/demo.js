@@ -4,7 +4,7 @@ import React from 'react';
 import YouTubePlayer from 'react-youtube';
 import styles from '@/styles/Demo.module.css';
 import style from '@/styles/app.module.css';
-import DownloadApp from "components/partials/DownloadApp";
+import DownloadApp from "pages/component/DownloadApp";
 
 
 

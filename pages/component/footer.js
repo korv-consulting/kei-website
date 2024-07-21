@@ -1,5 +1,5 @@
 import styles from "@/styles/app.module.css";
-import NewsLetter from "../../components/partials/newsLetter";
+import NewsLetter from "./newsLetter";
 import Image from "next/image";
 import { BsBrowserChrome, BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";

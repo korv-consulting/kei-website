@@ -1,8 +1,8 @@
-
-
 import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
-const SwitchButton = ({setShowMonthly }) => {
+const SwitchButton = ({ setShowMonthly }) => {
+  const { t } = useTranslation('switchBtn');
   const [selectedOption, setSelectedOption] = useState('monthly');
 
   const handleOptionChange = (option) => {
@@ -45,12 +45,12 @@ const SwitchButton = ({setShowMonthly }) => {
             color: 'white',
             cursor: 'pointer',
             position: 'relative',
-            fontWeight:'bold',
-            zIndex: 3, // S'assurer que le texte reste au-dessus du pseudo-élément
+            fontWeight: 'bold',
+            zIndex: 3, // Ensure text is above the pseudo-element
           }}
           onClick={() => handleOptionChange('monthly')}
         >
-          Mensuellement
+          {t('monthly')}
         </div>
         <div
           style={{
@@ -61,13 +61,12 @@ const SwitchButton = ({setShowMonthly }) => {
             color: 'white',
             cursor: 'pointer',
             position: 'relative',
-            zIndex: 3, // S'assurer que le texte reste au-dessus du pseudo-élément
-            fontWeight:'bold',
-
+            zIndex: 3, // Ensure text is above the pseudo-element
+            fontWeight: 'bold',
           }}
           onClick={() => handleOptionChange('annually')}
         >
-          Annuellement
+          {t('annually')}
         </div>
       </div>
     </center>

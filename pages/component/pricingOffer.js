@@ -4,6 +4,7 @@ import MonthlyPricingOffer from './MonthlyPricingOffer';
 import YearlyPricingOffer from './YearlyPricingOffer';
 import SwitchButton from './SwitchButton';
 import PlanComparison from './PlanComparison'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const PricingOffer = () => {
   const [showMonthly, setShowMonthly] = useState(true);
@@ -29,5 +30,11 @@ const PricingOffer = () => {
     </div>
   );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['planComparison', 'montly_pricing', 'yearly_pricing', 'switchBtn'])),
+  },
+});
 
 export default PricingOffer;

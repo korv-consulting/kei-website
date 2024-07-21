@@ -1,4 +1,4 @@
-import PricingOffer from "components/partials/pricingOffer"
+import PricingOffer from "pages/component/pricingOffer"
 
 export default function Prices() {
   return (

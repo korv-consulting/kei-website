@@ -2,7 +2,7 @@ import React from 'react';
 import YouTubePlayer from 'react-youtube';
 import styles from '@/styles/Demo.module.css';
 import style from '@/styles/app.module.css';
-import PlanComparison from 'components/partials/PlanComparison';
+import PlanComparison from 'pages/component/PlanComparison';
 import { useTranslation } from 'react-i18next';
 
 const Demo = () => {

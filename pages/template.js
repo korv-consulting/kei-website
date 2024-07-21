@@ -6,8 +6,8 @@ import Header from "./component/header";
 import LandingPage from "./component/landingPage";
 import Head from "next/head";
 import Description from "components/partials/description";
-import PricingOffer from "components/partials/pricingOffer";
-import NewsLetter from "components/partials/newsLetter";
+import PricingOffer from "pages/component/pricingOffer";
+import NewsLetter from "pages/component/newsLetter";
 import Footer from "./component/footer";
 import Faq from "./component/faq";
 import Contact from "components/partials/contact";
@@ -18,9 +18,9 @@ import Targets from "./component/targets"
 import FloatingButton from "./component/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import PlanComparison from 'components/partials/PlanComparison'
-import DownloadApp from "../components/partials/DownloadApp";
-import CreditPricing from "components/partials/CreditPricing";
+import PlanComparison from 'pages/component/PlanComparison'
+import DownloadApp from "./component/DownloadApp";
+import CreditPricing from "pages/component/CreditPricing";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
@@ -110,7 +110,7 @@ export default function Home() {
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['demo','faq', 'feature', 'footer','header', 'landing','target', 'declarationIncident', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches'])),
+      ...(await serverSideTranslations(locale, ['demo','faq', 'feature', 'footer','header', 'landing','target', 'declarationIncident', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches', 'downloadApp', 'newsletter'])),
     },
   };
 }

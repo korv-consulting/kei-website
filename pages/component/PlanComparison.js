@@ -4,10 +4,12 @@ import { CheckOutlined, MinusOutlined } from '@ant-design/icons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '@/styles/PlanComparison.module.css';
+import { useTranslation } from 'next-i18next';
 
 const { Panel } = Collapse;
 
 const PlanComparison = () => {
+  const { t } = useTranslation('planComparison');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -27,30 +29,30 @@ const PlanComparison = () => {
   }, []);
 
   const data = {
-    'Rapports': [
-      { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true }
+    'reports': [
+      { feature: t('unlimitedReports'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('unlimitedReports'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('unlimitedPhotos'), solo: true, duo: true, pro: true, premium: true }
     ],
-    'Utilisateurs': [
-      { feature: 'Nombre de propriétés', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Nombre de d\'utilisateurs', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Nombre de tâches', solo: true, duo: true, pro: true, premium: true }
+    'users': [
+      { feature: t('numberOfProperties'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('numberOfUsers'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('numberOfTasks'), solo: true, duo: true, pro: true, premium: true }
     ],
-    'Support': [
-      { feature: 'Support email', solo: false, duo: true, pro: true, premium: true },
-      { feature: 'Assistance téléphonique', solo: false, duo: false, pro: false, premium: true }
+    'support': [
+      { feature: t('emailSupport'), solo: false, duo: true, pro: true, premium: true },
+      { feature: t('phoneSupport'), solo: false, duo: false, pro: false, premium: true }
     ],
-    'Personnalisation': [
-      { feature: 'Thèmes personnalisés', solo: false, duo: true, pro: true, premium: true },
-      { feature: 'Templates personnalisés', solo: false, duo: false, pro: true, premium: true }
+    'customization': [
+      { feature: t('customThemes'), solo: false, duo: true, pro: true, premium: true },
+      { feature: t('customTemplates'), solo: false, duo: false, pro: true, premium: true }
     ],
-    'Vidéo': [
-      { feature: 'Enregistrement vidéo', solo: true, duo: true, pro: true, premium: true }
+    'video': [
+      { feature: t('videoRecording'), solo: true, duo: true, pro: true, premium: true }
     ],
-    'Sécurité': [
-      { feature: 'Contrôles d\'accès des utilisateurs', solo: false, duo: false, pro: false, premium: true },
-      { feature: 'Chiffrement des données', solo: true, duo: true, pro: true, premium: true }
+    'security': [
+      { feature: t('userAccessControls'), solo: false, duo: false, pro: false, premium: true },
+      { feature: t('dataEncryption'), solo: true, duo: true, pro: true, premium: true }
     ]
   };
 
@@ -58,53 +60,51 @@ const PlanComparison = () => {
     <div className={styles.planComparisonContainer}>
       <div className={styles.planComparisonHeader}>
         <div className={styles.headerContent} data-aos="zoom-in">
-          <h2>COMPARAISON</h2>
-          <p>Découvrez nos différentes formules et leurs avantages,et enfin Trouvez l'offre qui vous convient</p>
+          <h2>{t('comparison')}</h2>
+          <p>{t('description')}</p>
         </div>
       </div>
 
       <div className={styles.tableContainer} data-aos="zoom-in">
         <div className={`${styles.tableHeader}`}>
-          {/* <div className={styles.featureColumn}></div> */}
           <div className={`${styles.planColumn} ${styles.solo}`}>
             <div className={` ${styles.headerCard}`}>
-              <h3 className={styles.headerCardTitle} >SOLO</h3>
-              <p>Pour les particuliers</p>
+              <h3 className={styles.headerCardTitle}>{t('solo')}</h3>
+              <p>{t('forIndividuals')}</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.duo}`}>
             <div className={styles.headerCard}>
-              <h3 className={styles.headerCardTitle}>DUO</h3>
-              <p>Pour les petites équipes</p>
+              <h3 className={styles.headerCardTitle}>{t('duo')}</h3>
+              <p>{t('forSmallTeams')}</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.pro}`}>
             <div className={styles.headerCard}>
-              <h3 className={styles.headerCardTitle}>PRO</h3>
-              <p>Pour les professionnels</p>
+              <h3 className={styles.headerCardTitle}>{t('pro')}</h3>
+              <p>{t('forProfessionals')}</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.premium}`}>
             <div className={styles.headerCard}>
-              <h3  className={styles.headerCardTitle}>PREMIUM</h3>
-              <p>Pour les entreprises</p>
+              <h3 className={styles.headerCardTitle}>{t('premium')}</h3>
+              <p>{t('forEnterprises')}</p>
             </div>
           </div>
         </div>
 
         <div className={styles.tableContent}>
-          
           <Collapse accordion data-aos="zoom-in" className={isMobile ? styles.mobileCollapse : ''}>
             {Object.keys(data).map((category, index) => (
-              <Panel header={category} key={index} className={styles.panelHeader}>
+              <Panel header={t(category)} key={index} className={styles.panelHeader}>
                 {data[category].map((item, idx) => (
                   <div key={`${index}-${idx}`} className={styles.mobileFeature}>
                     <div className={styles.featureName}>{item.feature}</div>
                     <div className={styles.mobileHeader}>
-                      <div className={`${styles.mobilePlanColumn} ${styles.solo}`}>SOLO</div>
-                      <div className={`${styles.mobilePlanColumn} ${styles.duo}`}>DUO</div>
-                      <div className={`${styles.mobilePlanColumn} ${styles.pro}`}>PRO</div>
-                      <div className={`${styles.mobilePlanColumn} ${styles.premium}`}>PREMIUM</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.solo}`}>{t('solo')}</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.duo}`}>{t('duo')}</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.pro}`}>{t('pro')}</div>
+                      <div className={`${styles.mobilePlanColumn} ${styles.premium}`}>{t('premium')}</div>
                     </div>
                     <div className={`${styles.mobileRow}`}>
                       <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
