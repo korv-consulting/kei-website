@@ -1,23 +1,22 @@
 {
-  "contactUs": "Contactez-nous",
-  "contactInfo": "Contactez-nous pour obtenir une démo et également si vous avez une autre raison, remplissez le formulaire ci-dessous.",
-  "firstName": "Prénom",
-  "lastName": "Nom",
-  "company": "Entreprise",
-  "country": "Pays",
-  "professionalEmail": "Email Professionnelle",
-  "phone": "Portable",
-  "activitySector": "Secteur d'activité",
-  "want": "Je souhaite:",
-  "moreInfo": "Plus d'informations",
-  "partnership": "Un partenariat",
-  "message": "Message",
-  "howDidYouHear": "Comment avez-vous entendu parler de nous?",
-  "privacy": "Je suis informé(e) des dispositions de confidentialité de ce site et j'approuve leur contenu.",
-  "mailingPermission": "Je donne ma permission à KEI pour envoyer des informations pertinentes, que ce soit sous forme de bulletins d'information ou d'e-mails.",
-  "send": "Envoyer",
-  "sending": "En cours d'envoi...",
-  "errorMessage": "Oups une erreur est survenue.Veuillez réesayer",
-  "successMessage": "Votre message a été envoyé. Merci!",
-  "loading": "Loading"
+  "contact": {
+    "title": "CONTACTEZ-NOUS !",
+    "description": "Envoyez-nous un e-mail avec ce petit formulaire pratique. Nous vous attendons impatiemment !",
+    "form": {
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "company": "Entreprise",
+      "country": "Pays",
+      "sector": "Secteur d'activité",
+      "email": "Email Professionnelle",
+      "phone": "Portable",
+      "message": "Message",
+      "choose_date": "Choisissez une date et heure",
+      "privacy_policy": "Je suis informé(e) des dispositions de confidentialité de ce site et j'approuve leur contenu.",
+      "newsletter": "Je donne ma permission à KEI pour envoyer des informations pertinentes, que ce soit sous forme de bulletins d'information ou d'e-mails.",
+      "send": "Envoyer"
+    },
+    "success_message": "Votre message a été envoyé. Merci!",
+    "error_message": "Oups une erreur est survenue. Veuillez réessayer"
+  }
 }

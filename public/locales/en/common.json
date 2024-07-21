@@ -1,23 +1,22 @@
 {
-  "contactUs": "Contact Us",
-  "contactInfo": "Contact us for a demo or if you have another reason, please fill out the form below.",
-  "firstName": "First Name",
-  "lastName": "Last Name",
-  "company": "Company",
-  "country": "Country",
-  "professionalEmail": "Professional Email",
-  "phone": "Phone",
-  "activitySector": "Activity Sector",
-  "want": "I want:",
-  "moreInfo": "More information",
-  "partnership": "A partnership",
-  "message": "Message",
-  "howDidYouHear": "How did you hear about us?",
-  "privacy": "I am informed of the privacy provisions of this site and approve their content.",
-  "mailingPermission": "I give permission to KEI to send relevant information, whether in the form of newsletters or emails.",
-  "send": "Send",
-  "sending": "Sending...",
-  "errorMessage": "Oops, an error occurred. Please try again.",
-  "successMessage": "Your message has been sent. Thank you!",
-  "loading": "Loading"
+  "contact": {
+    "title": "CONTACT US!",
+    "description": "Send us an email using this handy form. We look forward to hearing from you!",
+    "form": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "company": "Company",
+      "country": "Country",
+      "sector": "Sector",
+      "email": "Business Email",
+      "phone": "Phone",
+      "message": "Message",
+      "choose_date": "Choose a date and time",
+      "privacy_policy": "I am informed about the privacy provisions of this site and approve their content.",
+      "newsletter": "I give my permission to KEI to send relevant information, whether in the form of newsletters or emails.",
+      "send": "Send"
+    },
+    "success_message": "Your message has been sent. Thank you!",
+    "error_message": "Oops, an error occurred. Please try again."
+  }
 }
