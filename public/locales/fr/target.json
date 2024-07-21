@@ -1,16 +1,18 @@
 {
-    "title": "CONÇU ET DÉVELOPPÉ POUR LES PROFESSIONNELS DE L'IMMOBILIER",
-    "intro": "Notre application innovante regorge de fonctionnalités conçues spécifiquement pour répondre aux besoins variés des professionnels de l'immobilier. Parmi nos utilisateurs, nous comptons :",
-    "li11": "Inspecteurs en bâtiment",
-    "li12": "Fournisseurs d'inventaire",
-    "li13": "Gestionnaires de logements",
-    "li14": "Gestionnaires de propriétés",
-    "li15": "Agents immobiliers et de location",
-    "li16": "Autorité et régulation du bâtiment",
-    "li17": "Gestionnaires de blocs résidentiels",
-    "li21": "Sociétés de location",
-    "li22": "Sociétés de construction",
-    "li23": "Investisseurs immobiliers",
-    "li24": "Institutions universitaires",
-    "li25": "Sociétés de gestion de logements"
+  "title": "CONÇU ET DÉVELOPPÉ POUR LES PROFESSIONNELS DE L'IMMOBILIER",
+  "intro": "Notre application innovante regorge de fonctionnalités conçues spécifiquement pour répondre aux besoins variés des professionnels de l'immobilier. Parmi nos utilisateurs, nous comptons :",
+  "targets": [
+    "Inspecteurs en bâtiment",
+    "Fournisseurs d'inventaire",
+    "Gestionnaires de logements",
+    "Gestionnaires de propriétés",
+    "Agents immobiliers et de location",
+    "Autorité et régulation du bâtiment",
+    "Gestionnaires de blocs résidentiels",
+    "Sociétés de location",
+    "Sociétés de construction",
+    "Investisseurs immobiliers",
+    "Institutions universitaires",
+    "Sociétés de gestion de logements"
+  ]
 }

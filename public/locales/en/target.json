@@ -1,16 +1,18 @@
 {
-    "title": "DESIGNED AND DEVELOPED FOR REAL ESTATE PROFESSIONALS",
-    "intro": "Our innovative app is packed with features specifically designed to meet the varied needs of real estate professionals. Among our users, we count:",
-    "li11": "Building Inspectors",
-    "li12": "Inventory Providers",
-    "li13": "Housing Managers",
-    "li14": "Property Managers",
-    "li15": "Real Estate and Rental Agents",
-    "li16": "Building Authority and Regulation",
-    "li17": "Residential Block Managers",
-    "li21": "Rental Companies",
-    "li22": "Construction Companies",
-    "li23": "Real Estate Investors",
-    "li24": "Academic Institutions",
-    "li25": "Housing Management Companies"
+  "title": "DESIGNED AND DEVELOPED FOR REAL ESTATE PROFESSIONALS",
+  "intro": "Our innovative application is packed with features specifically designed to meet the diverse needs of real estate professionals. Among our users, we count:",
+  "targets": [
+    "Building Inspectors",
+    "Inventory Suppliers",
+    "Housing Managers",
+    "Property Managers",
+    "Real Estate and Rental Agents",
+    "Building Authority and Regulation",
+    "Residential Block Managers",
+    "Rental Companies",
+    "Construction Companies",
+    "Real Estate Investors",
+    "University Institutions",
+    "Housing Management Companies"
+  ]
 }

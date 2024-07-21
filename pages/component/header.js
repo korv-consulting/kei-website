@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from '@/styles/app.module.css';
-
-
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import LocaleSwitcher from 'components/LocalSwitcher';
 
 export default function Header() {
+  const { t } = useTranslation('header');
   const [isActive, setIsActive] = useState(1);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const router = useRouter();
@@ -67,68 +69,50 @@ export default function Header() {
                 <div className="offcanvas-body d-bock">
                   <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 1 ? styles.active : ''}`} href="/template" onClick={() => setIsActive(1)}>Accueil</a>
+                      <a className={`nav-link ${isActive === 1 ? styles.active : ''}`} href="/template" onClick={() => setIsActive(1)}>{t('home')}</a>
                     </li>
-
-
-                     <li className={`nav-item dropdown px-3 ${isActive === 2 ? styles.active : ''}`} onMouseEnter={toggleModal} onMouseLeave={toggleModal} onClick={() => setIsActive(2)}>
+                    <li className={`nav-item dropdown px-3 ${isActive === 2 ? styles.active : ''}`} onMouseEnter={toggleModal} onMouseLeave={toggleModal} onClick={() => setIsActive(2)}>
                       <a className="nav-link dropdown-toggle" href="/template#features" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Fonctionnalités
+                        {t('features')}
                       </a>
                       {isModalVisible && (
                         <ul className={`dropdown-menu ${styles.verticalList} ${styles.modal} ${styles.verticalModal}`}>
-                          <li><a className="dropdown-item bg-transparent " href="/features/espace-de-travail">Espace de travail</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/suivi-des-taches">Suivi des tâches</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/declaration-d'incidents">Déclaration d'incidents</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/realisation-des-etats-des-lieux">Réalisation des états des lieux</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/planification-des-etats-des-lieux">Planification de l'état des lieux</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/rapport-d'incidents-et-d'inspections">Rapport d'incidents et d'inspections</a></li>
+                          <li><a className="dropdown-item bg-transparent " href="/features/espace-de-travail">{t('workspace')}</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/suivi-des-taches">{t('taskTracking')}</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/declaration-d'incidents">{t('incidentDeclaration')}</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/realisation-des-etats-des-lieux">{t('stateRealization')}</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/planification-des-etats-des-lieux">{t('statePlanning')}</a></li>
+                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/rapport-d'incidents-et-d'inspections">{t('incidentReport')}</a></li>
                         </ul>
                       )}
-                    </li>  
-
-
-                    <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>Démo</a>
                     </li>
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template/pricing" onClick={() => setIsActive(4)}>Tarifs</a>
+                      <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>{t('demo')}</a>
                     </li>
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>FAQ</a>
+                      <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template/pricing" onClick={() => setIsActive(4)}>{t('pricing')}</a>
                     </li>
                     <li className="nav-item px-3">
-                      <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/template/contact" onClick={() => setIsActive(5)}>Contact</a>
+                      <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>{t('faq')}</a>
+                    </li>
+                    <li className="nav-item px-3">
+                      <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/template/contact" onClick={() => setIsActive(5)}>{t('contact')}</a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </nav>
-
-        
-
-          <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">Commencez</a>
+          <LocaleSwitcher/>
+          <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
         </div>
       </header>
     </>
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+});

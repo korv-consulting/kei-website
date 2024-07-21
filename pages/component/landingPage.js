@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import styles from '@/styles/LandingPage.module.css';
+import { useTranslation } from 'react-i18next';
 
 export default function LandingPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  
+  const { t } = useTranslation('landing');
 
   const textElements = [
-    "Une plateforme simplifiée d'inspection et d'inventaire pour le marché immobilier",
-    "Créez des rapports d'inspection illimités avec photos et problèmes via notre application mobile ou tablette",
-    "Produisez des inventaires professionnels, des inspections et des évaluations de risques avec notre logiciel d'inspection primé."
+    t('text1'),
+    t('text2'),
+    t('text3')
   ];
 
   useEffect(() => {

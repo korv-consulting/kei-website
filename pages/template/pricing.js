@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Header from 'components/partials/header';
-import Footer from 'components/partials/footer';
+import Header from '../component/header';
+import Footer from '../component/footer';
 import SVGComponent from 'components/partials/SvgComponent';
 import ToggleButton from 'components/partials/ToggleButton';
 import CreditsPricing from 'components/partials/CreditPricing';
 import PricingOffer from 'components/partials/pricingOffer';
 import styles from '@/styles/PricingPage.module.css';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Pricing = () => {
+  const { t } = useTranslation('pricing');
   const [loading, setLoading] = useState(true);
   const [isCredits, setIsCredits] = useState(true);
 
@@ -28,13 +31,11 @@ const Pricing = () => {
         <section id="pricing" className={` ${styles.pricing} ${styles.section} `}>
           <div className={`container ${styles.section_title}`} data-aos="fade-up">
             <center>
-              <h2>TARIFICATION</h2>
+              <h2>{t('pricingTitle')}</h2>
             </center>
-          
             <p className='mt-4 mb-6'>
-            Optimisez votre gestion locative avec nos outils digitaux. Tout a été pensé pour apporter le plus de flexibilité possible, vous pouvez soit acheter des crédits selon les besoins qui vous satisfassent, ou encore choisir de vous abonner en choisissant un plan tarifaire qui vous convient. Découvrez comment KEI peut transformer votre expérience de location immobilière. Que vous soyez un professionnel ou un particulier, nous avons la solution pour vous.
-           </p>
-
+              {t('pricingDescription')}
+            </p>
           </div>
           <center>
             <ToggleButton onChange={handleChange} isCredits={isCredits} />
@@ -57,3 +58,9 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['pricing','header','footer']),
+  },
+});

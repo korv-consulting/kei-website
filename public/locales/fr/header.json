@@ -2,14 +2,14 @@
   "home": "Accueil",
   "features": "Fonctionnalités",
   "workspace": "Espace de travail",
-  "task_tracking": "Suivi des tâches",
-  "incident_reporting": "Déclaration d'incidents",
-  "condition_reports": "Réalisation des états des lieux",
-  "planning": "Planification de l'état des lieux",
-  "reports": "Rapport d'incidents et d'inspections",
+  "taskTracking": "Suivi des tâches",
+  "incidentDeclaration": "Déclaration d'incidents",
+  "stateRealization": "Réalisation des états des lieux",
+  "statePlanning": "Planification de l'état des lieux",
+  "incidentReport": "Rapport d'incidents et d'inspections",
   "demo": "Démo",
-  "pricing": "Offres Tarifaires",
+  "pricing": "Tarifs",
   "faq": "FAQ",
   "contact": "Contact",
-  "get_started": "Commencez"
+  "getStarted": "Commencez"
 }

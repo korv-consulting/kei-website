@@ -2,25 +2,26 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "@/styles/app.module.css";
 import { useEffect, useState } from "react";
 import stylesplash from "../styles/Splash.module.css";
-import Header from "components/partials/header";
-import LandingPage from "components/partials/landingPage";
+import Header from "./component/header";
+import LandingPage from "./component/landingPage";
 import Head from "next/head";
 import Description from "components/partials/description";
 import PricingOffer from "components/partials/pricingOffer";
 import NewsLetter from "components/partials/newsLetter";
-import Footer from "components/partials/footer";
-import Faq from "components/partials/faq";
+import Footer from "./component/footer";
+import Faq from "./component/faq";
 import Contact from "components/partials/contact";
-import Feature from "components/partials/feature";
+import Feature from "./component/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";
-import Targets from "components/partials/targets"
-import FloatingButton from "components/partials/floatingButton";
+import Targets from "./component/targets"
+import FloatingButton from "./component/floatingButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PlanComparison from 'components/partials/PlanComparison'
 import DownloadApp from "../components/partials/DownloadApp";
 import CreditPricing from "components/partials/CreditPricing";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -106,29 +107,12 @@ export default function Home() {
   );
 }
 
-export async function getServerSideProps(ctx){
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Access-Control-Allow-Origin": "*",
-//     }
-//   };
-
-//   const offers  = await fetch(
-//     `http://kei-app-back.local/pricing-offers`,
-//     options
-//   );
-//   const response = await offers.json();
-  const response = [];
-//   console.log("offers ****" , response)
-
-
+export async function getServerSideProps({ locale }) {
   return {
-    props:{
-      offers:response
-    }
-  }
+    props: {
+      ...(await serverSideTranslations(locale, ['demo','faq', 'feature', 'footer','header', 'landing','target', 'declarationIncident', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches'])),
+    },
+  };
 }
 
 
