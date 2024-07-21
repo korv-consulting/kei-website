@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Head from 'next/head';
-import { useTranslation } from 'next-i18next';
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -13,11 +12,12 @@ import styles from "@/styles/app.module.css";
 import countries from "pages/api/country";
 import activities from "pages/api/activity";
 import calls from "pages/api/call";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from "react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Contact() {
-  const { t } = useTranslation('common');
   const [loading, setLoading] = useState(true);
+  const {t} = useTranslation('common')
   const [showInfo, setShowInfo] = useState(true);
   const [recaptcha, setRecaptcha] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -108,7 +108,7 @@ export default function Contact() {
   };
 
   const source1 = '/contact.jpg';
-  const title1 = t('contact.title');
+  const title1 = 'CONTACTEZ-NOUS !';
 
   return (
     <div className={styles.container}>
@@ -126,7 +126,7 @@ export default function Contact() {
           <div className="container" data-aos="fade-up" data-aos-delay="100">
             <div className="row gy-4 justify-content-center">
               <p className="text-center mt-5 pt-5">
-                {t('contact.description')}
+                {t('description')}
               </p>
               <div className="col-md-12">
                 <form
@@ -140,17 +140,17 @@ export default function Contact() {
                 >
                   {successMessage && (
                     <div className={styles.sent_message}>
-                      {t('contact.success_message')}
+                      {t('success_message')}
                     </div>
                   )}
                   {error && (
                     <div className={styles.error_message}>
-                      {t('contact.error_message')}
+                      {t('error_message')}
                     </div>
                   )}
                   <div className="row gy-4">
                     <div className="col-md-6">
-                      <label htmlFor="lastname-field" className="pb-2">{t('contact.form.last_name')}</label>
+                      <label htmlFor="lastname-field" className="pb-2">{t('first_name')}</label>
                       <input
                         type="text"
                         name="lastname"
@@ -161,7 +161,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="col-md-6">
-                      <label htmlFor="name-field" className="pb-2">{t('contact.form.first_name')}</label>
+                      <label htmlFor="name-field" className="pb-2">{t('last_name')}</label>
                       <input
                         type="text"
                         name="name"
@@ -172,69 +172,55 @@ export default function Contact() {
                       />
                     </div>
                     <div className="col-md-6">
-                      <label htmlFor="business-field" className="pb-2">{t('contact.form.company')}</label>
+                      <label htmlFor="business-field" className="pb-2">
+                        {t('company')} <span className="text-danger">*</span>
+                      </label>
                       <input
                         type="text"
                         name="business"
                         id="business-field"
-                        className="form-control"
+                        className={`form-control ${submitted && !form.business ? "is-invalid" : ""}`}
+                        required
                         onChange={handleChange}
                         value={form.business}
                       />
+                      <div className="invalid-feedback">Nom de l'entreprise non renseigné</div>
                     </div>
                     <div className="col-md-6">
-                      <label htmlFor="country-field" className="pb-2">{t('contact.form.country')}</label>
+                      <label htmlFor="country-field" className="pb-2">
+                        {t('country')} <span className="text-danger">*</span>
+                      </label>
                       <select
+                        className={`form-select ${submitted && !form.country ? "is-invalid" : ""}`}
+                        id="country"
                         name="country"
-                        id="country-field"
-                        className="form-select"
+                        required
                         onChange={handleChange}
                         value={form.country}
                       >
-                        <option value="">{t('contact.form.country')}</option>
-                        {countries.map((country) => (
-                          <option key={country.code} value={country.name}>
-                            {country.name}
-                          </option>
+                        {countries.map((country, index) => (
+                          <option key={index} value={country}>{country}</option>
                         ))}
                       </select>
+                      <div className="invalid-feedback">Pays non renseigné</div>
                     </div>
                     <div className="col-md-6">
-                      <label htmlFor="activity-field" className="pb-2">{t('contact.form.sector')}</label>
-                      <select
-                        name="activity"
-                        id="activity-field"
-                        className="form-select"
-                        onChange={handleChange}
-                        value={form.activity}
-                      >
-                        <option value="">{t('contact.form.sector')}</option>
-                        {activities.map((activity) => (
-                          <option key={activity.code} value={activity.name}>
-                            {activity.name}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="col-md-6">
-                      <label htmlFor="email-field" className="pb-2">{t('contact.form.email')}</label>
+                      <label htmlFor="email-field" className="pb-2">
+                        {t('email')} <span className="text-danger">*</span>
+                      </label>
                       <input
                         type="email"
+                        className={`form-control ${submitted && !emailValid ? "is-invalid" : ""}`}
                         name="email"
-                        id="email-field"
-                        className={`form-control ${submitted && !emailValid && 'is-invalid'}`}
+                        id="email"
+                        required
                         onChange={handleChange}
                         value={form.email}
-                        required
                       />
-                      {submitted && !emailValid && (
-                        <div className="invalid-feedback">
-                          {t('contact.form.email')} {t('contact.form.required')}
-                        </div>
-                      )}
+                      <div className="invalid-feedback">Adresse mail invalide</div>
                     </div>
                     <div className="col-md-6">
-                      <label htmlFor="phone-field" className="pb-2">{t('contact.form.phone')}</label>
+                      <label htmlFor="phone-field" className="pb-2">{t('phone')}</label>
                       <input
                         type="text"
                         name="phone"
@@ -244,72 +230,121 @@ export default function Contact() {
                         value={form.phone}
                       />
                     </div>
-                    <div className="col-md-12">
-                      <label htmlFor="message-field" className="pb-2">{t('contact.form.message')}</label>
-                      <textarea
-                        name="message"
-                        id="message-field"
-                        className={`form-control ${submitted && !messageValid && 'is-invalid'}`}
-                        onChange={handleChange}
-                        value={form.message}
+                    <div className="col-12">
+                      <label htmlFor="activity-field" className="pb-2">
+                        {t('sector')} <span className="text-danger">*</span>
+                      </label>
+                      <select
+                        className={`form-select ${submitted && !form.activity ? "is-invalid" : ""}`}
+                        id="activity-field"
+                        name="activity"
                         required
-                      />
-                      {submitted && !messageValid && (
-                        <div className="invalid-feedback">
-                          {t('contact.form.message')} {t('contact.form.required')}
-                        </div>
-                      )}
-                    </div>
-                    <div className="col-md-12">
-                      <label htmlFor="call-field" className="pb-2">{t('contact.form.choose_date')}</label>
-                      <input
-                        type="datetime-local"
-                        name="call"
-                        id="call-field"
-                        className="form-control"
                         onChange={handleChange}
-                        value={form.call}
-                      />
-                    </div>
-                    <div className="col-md-12 mt-4">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          id="privacy-field"
-                          name="privacy"
-                          required
-                        />
-                        <label className="form-check-label" htmlFor="privacy-field">
-                          {t('contact.form.privacy_policy')}
-                        </label>
-                      </div>
-                      <div className="form-check mt-2">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          id="newsletter-field"
-                          name="newsletter"
-                        />
-                        <label className="form-check-label" htmlFor="newsletter-field">
-                          {t('contact.form.newsletter')}
-                        </label>
-                      </div>
-                    </div>
-                    <div className="col-md-12 mt-4">
-                      <ReCAPTCHA
-                        sitekey="your-site-key"
-                        onChange={handleRecaptchaChange}
-                        ref={recaptchaRef}
-                      />
-                    </div>
-                    <div className="col-md-12 text-center mt-4">
-                      <button
-                        type="submit"
-                        className="btn btn-primary"
-                        disabled={submitted}
+                        value={form.activity}
                       >
-                        {t('contact.form.send')}
+                        {activities.map((activity, index) => (
+                          <option key={index} value={activity}>{activity}</option>
+                        ))}
+                      </select>
+                      <div className="invalid-feedback">Secteur d'activité non renseigné</div>
+                    </div>
+                    <div className="col-12">
+                      <label htmlFor="subject-field" className="pb-2">Je souhaite:</label>
+                      <SwitchButtonPartenariat setShowInfo={setShowInfo} />
+                    </div>
+                    {showInfo ? (
+                      <>
+                        <div className="col-md-12">
+                          <label htmlFor="message-field" className="pb-2">
+                            {t('message')} <span className="text-danger">*</span>
+                          </label>
+                          <textarea
+                            className={`form-control ${submitted && !messageValid ? "is-invalid" : ""}`}
+                            name="message"
+                            id="message"
+                            rows="6"
+                            required
+                            onChange={handleChange}
+                            value={form.message}
+                          ></textarea>
+                          <div className="invalid-feedback">Message non renseigné</div>
+                        </div>
+                        <div className="col-12 pb-2">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="yes" id="privacy" name="privacy"/>
+                            <label class="form-check-label" for="privacy">
+                                {t('privacy_policy')}
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="yes" id="mailing" name="mailing"/>
+                            <label class="form-check-label" for="mailing">
+                            {t('newsletter')}
+                            </label>
+                            </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="col-md-12">
+                        <label htmlFor="message-field" className="pb-2">
+                          {t('message')} <span className="text-danger">*</span>
+                        </label>
+                        <textarea
+                          className={`form-control ${submitted && !messageValid ? "is-invalid" : ""}`}
+                          name="message"
+                          id="message"
+                          rows="6"
+                          required
+                          onChange={handleChange}
+                          value={form.message}
+                        ></textarea>
+                        <div className="invalid-feedback">Message non renseigné</div>
+                      </div>
+                      <div className="col-12">
+                          <label for="country-field" className="pb-2">
+                          {t('how')}
+                          </label>{" "}
+                          <select 
+                          className="form-select"
+                          aria-label="Default select example" 
+                          id="call"
+                          name="call"
+                          onChange={handleChange}>
+                          {calls.map((call, index) => (
+                              <option key={index} value={call}>
+                              {call}
+                              </option>
+                          ))}
+                          </select>
+                      </div>
+                      <div className="col-12 pb-2">
+                          <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="yes" id="privacy" name="privacy"/>
+                          <label class="form-check-label" for="privacy">
+                              {t('privacy_policy')}
+                          </label>
+                          </div>
+                          <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="yes" id="mailing" name="mailing"/>
+                          <label class="form-check-label" for="mailing">
+                          {t('newsletter')}
+                          </label>
+                          </div>
+                      </div>
+                      </>
+                    )}
+                    <div className="col-12">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                        onChange={handleRecaptchaChange}
+                        className="mt-3 mb-4"
+                      />
+                    </div>
+                    <div className="col-12 text-center">
+                      <button type="submit" className="btn btn-primary rounded-pill py-3 px-5">
+                        {t('send')}
                       </button>
                     </div>
                   </div>
@@ -326,6 +361,6 @@ export default function Contact() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common', 'header', 'footer', 'newsletter'])),
+    ...(await serverSideTranslations(locale, ['common', 'header', 'footer', 'newsletter', 'switchBtn'])),
   },
 });
