@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next';
 const { Panel } = Collapse;
 
 const PlanComparison = () => {
-  const { t } = useTranslation('planComparison');
+  const { t } = useTranslation('planComparaison');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
