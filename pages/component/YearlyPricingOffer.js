@@ -59,29 +59,29 @@ const YearlyPricingOffer = () => {
           <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div className={`container ${styles.pricing_item} ${styles.pricing_item_duo}`}>
               <h3 className={styles.title1}>{t('duo')}</h3>
-              <h4 className={styles.standard_title}>
+              <h4 className={styles.duo_title}>
                 <sup>$</sup>{basePrice1}<span> {t('perYear')}</span>
               </h4>
               <hr />
               <ul>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.standard_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.duo_check}`} />
                   <span>{t('unlimitedReports')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.standard_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.duo_check}`} />
                   <span>{t('unlimitedPhotos')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.standard_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.duo_check}`} />
                   <span><span className="fw-bold">100</span> {t('properties')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.standard_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.duo_check}`} />
                   <span><span className="fw-bold">2</span> {t('users')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.standard_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.duo_check}`} />
                   <span><span className="fw-bold">10</span> {t('tasks')}</span>
                 </li>
               </ul>
@@ -96,29 +96,29 @@ const YearlyPricingOffer = () => {
           <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div className={`container ${styles.pricing_item} ${styles.pricing_item_pro}`}>
               <h3 className={styles.title2}>{t('pro')}</h3>
-              <h4 className={styles.medium_title}>
+              <h4 className={styles.pro_title}>
                 <sup>$</sup>{basePrice2}<span> {t('perYear')}</span>
               </h4>
               <hr />
               <ul>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.medium_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.pro_check}`} />
                   <span>{t('unlimitedReports')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.medium_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.pro_check}`} />
                   <span>{t('unlimitedPhotos')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.medium_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.pro_check}`} />
                   <span><span className="fw-bold">150</span> {t('properties')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.medium_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.pro_check}`} />
                   <span><span className="fw-bold">5</span> {t('users')}</span>
                 </li>
                 <li>
-                  <GiCheckMark className={`me-2 ${styles.medium_check}`} />
+                  <GiCheckMark className={`me-2 ${styles.pro_check}`} />
                   <span><span className="fw-bold">15</span> {t('tasks')}</span>
                 </li>
               </ul>

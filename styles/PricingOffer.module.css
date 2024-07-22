@@ -149,11 +149,11 @@
     color: var(--solo);
 }
 
-.pricing .standard_title {
+.pricing .duo_title {
     color: var(--duo);
 }
 
-.pricing .medium_title {
+.pricing .pro_title {
     color: var(--pro);
 }
 
@@ -200,11 +200,11 @@
     color: var(--solo);
 }
 
-.pricing .standard_check {
+.pricing .duo_check {
     color: var(--duo);
 }
 
-.pricing .medium_check {
+.pricing .pro_check {
     color: var(--pro);
 }
 
