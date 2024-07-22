@@ -33,7 +33,7 @@ const PricingOffer = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['planComparison', 'montly_pricing', 'yearly_pricing', 'switchBtn'])),
+    ...(await serverSideTranslations(locale, ['planComparaison', 'montly_pricing', 'yearly_pricing', 'switchBtn'])),
   },
 });
 
