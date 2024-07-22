@@ -31,17 +31,23 @@ const PlanComparison = () => {
   const data = {
     'reports': [
       { feature: t('unlimitedReports'), solo: true, duo: true, pro: true, premium: true },
-      { feature: t('unlimitedReports'), solo: true, duo: true, pro: true, premium: true },
-      { feature: t('unlimitedPhotos'), solo: true, duo: true, pro: true, premium: true }
+      /* { feature: t('unlimitedReports'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('unlimitedPhotos'), solo: true, duo: true, pro: true, premium: true } */
     ],
     'users': [
       { feature: t('numberOfProperties'), solo: true, duo: true, pro: true, premium: true },
       { feature: t('numberOfUsers'), solo: true, duo: true, pro: true, premium: true },
       { feature: t('numberOfTasks'), solo: true, duo: true, pro: true, premium: true }
     ],
+    'application': [
+      { feature: t('inspection'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('tasks'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('compter'), solo: true, duo: true, pro: true, premium: true }
+    ],
     'support': [
       { feature: t('emailSupport'), solo: false, duo: true, pro: true, premium: true },
-      { feature: t('phoneSupport'), solo: false, duo: false, pro: false, premium: true }
+      { feature: t('phoneSupport'), solo: false, duo: false, pro: false, premium: true },
+      { feature: t('centerSupport'), solo: false, duo: false, pro: false, premium: true }
     ],
     'customization': [
       { feature: t('customThemes'), solo: false, duo: true, pro: true, premium: true },
@@ -52,7 +58,9 @@ const PlanComparison = () => {
     ],
     'security': [
       { feature: t('userAccessControls'), solo: false, duo: false, pro: false, premium: true },
-      { feature: t('dataEncryption'), solo: true, duo: true, pro: true, premium: true }
+      { feature: t('dataEncryption'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('addLocation'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('mandataire'), solo: true, duo: true, pro: true, premium: true },
     ]
   };
 
