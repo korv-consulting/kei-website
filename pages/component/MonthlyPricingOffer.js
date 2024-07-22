@@ -17,6 +17,7 @@ const MonthlyPricingOffer = () => {
     window.location.href = `http://kei-app-frontweb.local/signup?plan=${plan}`;
   };
 
+  console.log(plans[0].title);
   return (
     <div className="container">
       <div className="row gy-4">

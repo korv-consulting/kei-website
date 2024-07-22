@@ -113,11 +113,11 @@
     border-top: 5px solid var(--solo);
 }
 
-.pricing .pricing_item_standard {
+.pricing .pricing_item_duo {
     border-top: 5px solid var(--duo);
 }
 
-.pricing .pricing_item_medium {
+.pricing .pricing_item_pro {
     /* border-top: 5px solid var(--success); */
     border-top: 5px solid var(--pro);
 }

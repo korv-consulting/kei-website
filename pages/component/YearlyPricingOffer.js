@@ -57,7 +57,7 @@ const YearlyPricingOffer = () => {
 
           {/* STANDARD PRICECARD */}
           <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-            <div className={`container ${styles.pricing_item} ${styles.pricing_item_standard}`}>
+            <div className={`container ${styles.pricing_item} ${styles.pricing_item_duo}`}>
               <h3 className={styles.title1}>{t('duo')}</h3>
               <h4 className={styles.standard_title}>
                 <sup>$</sup>{basePrice1}<span> {t('perYear')}</span>
@@ -94,7 +94,7 @@ const YearlyPricingOffer = () => {
 
           {/* MEDIUM */}
           <div className="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-            <div className={`container ${styles.pricing_item} ${styles.pricing_item_medium}`}>
+            <div className={`container ${styles.pricing_item} ${styles.pricing_item_pro}`}>
               <h3 className={styles.title2}>{t('pro')}</h3>
               <h4 className={styles.medium_title}>
                 <sup>$</sup>{basePrice2}<span> {t('perYear')}</span>
