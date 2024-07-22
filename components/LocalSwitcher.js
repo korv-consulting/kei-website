@@ -17,7 +17,7 @@ const LocaleSwitcher = () => {
 
   return (
     <Link href={asPath} locale={otherLocale}>
-      <button class="btn btn-info mb-3 text-white">{locale === 'en' ? 'FR' : 'EN'}</button>
+      <button className="btn btn-info mb-3 text-white">{locale === 'en' ? 'FR' : 'EN'}</button>
     </Link>
   );
 };

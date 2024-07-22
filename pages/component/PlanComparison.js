@@ -42,7 +42,8 @@ const PlanComparison = () => {
     'application': [
       { feature: t('inspection'), solo: true, duo: true, pro: true, premium: true },
       { feature: t('tasks'), solo: true, duo: true, pro: true, premium: true },
-      { feature: t('compter'), solo: true, duo: true, pro: true, premium: true }
+      { feature: t('compter'), solo: true, duo: true, pro: true, premium: true },
+      { feature: t('videoRecording'), solo: true, duo: true, pro: true, premium: true }
     ],
     'support': [
       { feature: t('emailSupport'), solo: false, duo: true, pro: true, premium: true },
@@ -52,9 +53,6 @@ const PlanComparison = () => {
     'customization': [
       { feature: t('customThemes'), solo: false, duo: true, pro: true, premium: true },
       { feature: t('customTemplates'), solo: false, duo: false, pro: true, premium: true }
-    ],
-    'video': [
-      { feature: t('videoRecording'), solo: true, duo: true, pro: true, premium: true }
     ],
     'security': [
       { feature: t('userAccessControls'), solo: false, duo: false, pro: false, premium: true },
