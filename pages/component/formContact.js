@@ -7,6 +7,8 @@ import SwitchButtonPartenariat from 'pages/component/SwitchButtonPartenariat';
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'; 
 import FunctionalityPageHeader from 'pages/component/featuresDetails/FunctionalityPageHeader';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
@@ -62,6 +64,10 @@ const FormContact = () => {
         if (name === "message") {
         setMessageValid(value.trim() !== "");
         }
+    };
+
+     const handlePhoneChange = (value) => {
+        setForm({ ...form, phone: value });
     };
 
   const handleRecaptchaChange = (captchaCode) => {
@@ -211,14 +217,18 @@ return(
             </div>
             <div className="col-md-6">
                 <label htmlFor="phone-field" className="pb-2">{t('contact.form.phone')}</label>
-                <input
-                type="text"
-                name="phone"
-                id="phone-field"
-                className="form-control"
-                onChange={handleChange}
-                value={form.phone}
+                <PhoneInput
+                    country={'cm'}
+                    value={form.phone}
+                    onChange={handlePhoneChange}
+                    inputClass="form-control"
+                    inputProps={{
+                        name: 'phone',
+                        required: true,
+                        className: `form-control ${submitted && !form.phone ? "is-invalid" : ""}`,
+                    }}
                 />
+                <div className="invalid-feedback">Numéro de téléphone non renseigné</div>
             </div>
             <div className="col-12">
                 <label htmlFor="activity-field" className="pb-2">
