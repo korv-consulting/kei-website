@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Col, Container, Image, Row } from "react-bootstrap"
-import Header from 'components/partials/header'
-import Footer from 'components/partials/footer'
+import Header from 'pages/component/header'
+import Footer from 'pages/component/footer'
 import styles from "@/styles/app.module.css";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -11,7 +11,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import countries from "pages/api/country";
 import activities from "pages/api/activity";
 import calls from "pages/api/call";
-import FunctionalityPageHeader from 'components/partials/featuresDetails/FunctionalityPageHeader'
+import FunctionalityPageHeader from 'pages/component/featuresDetails/FunctionalityPageHeader'
 
 export default function Contact() {
   const [loading, setLoading] = useState(true) 
