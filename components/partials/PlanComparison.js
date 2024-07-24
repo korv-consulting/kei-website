@@ -27,31 +27,31 @@ const PlanComparison = () => {
   }, []);
 
   const data = {
-    'Rapports': [
+    Rapports: [
       { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
       { feature: 'Rapports ', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true }
+      { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true },
     ],
-    'Utilisateurs': [
+    Utilisateurs: [
       { feature: 'Nombre de propriétés', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Nombre de d\'utilisateurs', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Nombre de tâches', solo: true, duo: true, pro: true, premium: true }
+      { feature: "Nombre d'utilisateurs", solo: true, duo: true, pro: true, premium: true },
+      { feature: 'Nombre de tâches', solo: true, duo: true, pro: true, premium: true },
     ],
-    'Support': [
+    Support: [
       { feature: 'Support email', solo: false, duo: true, pro: true, premium: true },
-      { feature: 'Assistance téléphonique', solo: false, duo: false, pro: false, premium: true }
+      { feature: 'Assistance téléphonique', solo: false, duo: false, pro: false, premium: true },
     ],
-    'Personnalisation': [
+    Personnalisation: [
       { feature: 'Thèmes personnalisés', solo: false, duo: true, pro: true, premium: true },
-      { feature: 'Templates personnalisés', solo: false, duo: false, pro: true, premium: true }
+      { feature: 'Templates personnalisés', solo: false, duo: false, pro: true, premium: true },
     ],
-    'Vidéo': [
-      { feature: 'Enregistrement vidéo', solo: true, duo: true, pro: true, premium: true }
+    Vidéo: [
+      { feature: 'Enregistrement vidéo', solo: true, duo: true, pro: true, premium: true },
     ],
-    'Sécurité': [
-      { feature: 'Contrôles d\'accès des utilisateurs', solo: false, duo: false, pro: false, premium: true },
-      { feature: 'Chiffrement des données', solo: true, duo: true, pro: true, premium: true }
-    ]
+    Sécurité: [
+      { feature: "Contrôles d'accès des utilisateurs", solo: false, duo: false, pro: false, premium: true },
+      { feature: 'Chiffrement des données', solo: true, duo: true, pro: true, premium: true },
+    ],
   };
 
   return (
@@ -59,22 +59,17 @@ const PlanComparison = () => {
       <div className={styles.planComparisonHeader}>
         <div className={styles.headerContent} data-aos="zoom-in">
           <h2>COMPARAISON</h2>
-          <p>Découvrez nos différentes formules et leurs avantages,et enfin Trouvez l'offre qui vous convient</p>
+          <p>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
         </div>
       </div>
 
       <div className={styles.tableContainer} data-aos="zoom-in">
-        <div className={`${styles.tableHeader} mx-3`}>
-          {/* <div className={styles.featureColumn}>{"                           "}</div> */}
+        {/* En-tête visible seulement pour desktop */}
+        <div className={`${styles.tableHeader}`}>
+          <div className={styles.featureColumn}></div> {/* Empty cell for features */}
           <div className={`${styles.planColumn} ${styles.solo}`}>
-            <div className={` ${styles.headerCard}`}>
-              <h3 className={styles.headerCardTitle} ></h3>
-              {/* <p>Pour les particuliers</p> */}
-            </div>
-            </div>
-          <div className={`${styles.planColumn} ${styles.solo}`}>
-            <div className={` ${styles.headerCard}`}>
-              <h3 className={styles.headerCardTitle} >SOLO</h3>
+            <div className={`${styles.headerCard}`}>
+              <h3 className={styles.headerCardTitle}>SOLO</h3>
               <p>Pour les particuliers</p>
             </div>
           </div>
@@ -84,58 +79,65 @@ const PlanComparison = () => {
               <p>Pour les petites équipes</p>
             </div>
           </div>
-          <div className={`${styles.planColumn} ${styles.pro} `}>
+          <div className={`${styles.planColumn} ${styles.pro}`}>
             <div className={styles.headerCard}>
               <h3 className={styles.headerCardTitle}>PRO</h3>
               <p>Pour les professionnels</p>
             </div>
           </div>
-          <div className={`${styles.planColumn} ${styles.premium} ms-2`}>
+          <div className={`${styles.planColumn} ${styles.premium}`}>
             <div className={styles.headerCard}>
-              <h3  className={styles.headerCardTitle}>PREMIUM</h3>
+              <h3 className={styles.headerCardTitle}>PREMIUM</h3>
               <p>Pour les entreprises</p>
             </div>
           </div>
         </div>
 
-
         <div className={styles.tableContent}>
-          
           <Collapse accordion data-aos="zoom-in" className={isMobile ? styles.mobileCollapse : ''}>
             {Object.keys(data).map((category, index) => (
               <Panel header={category} key={index} className={styles.panelHeader}>
                 {data[category].map((item, idx) => (
-                  <div key={`${index}-${idx}`} className={styles.mobileFeature}>
-
-                    {isMobile ? <div className={styles.featureName}>{item.feature}</div>:''}
-
-
-                    <div className={styles.mobileHeader}>
-                      <div className={`${styles.mobilePlanColumn} ${styles.solo}`}>SOLO</div>
-                      <div className={`${styles.mobilePlanColumn} ${styles.duo}`}>DUO</div>
-                      <div className={`${styles.mobilePlanColumn} ${styles.pro}`}>PRO</div>
-                      <div className={`${styles.mobilePlanColumn} ${styles.premium}`}>PREMIUM</div>
-                    </div>
-                    <div className={`${styles.mobileRow} mx-0`}>
-                      
-
-                      {   isMobile ? '':  <div className={`${styles.planColumn}`}> {item.feature} </div> }
-
-                      {/* <div className={styles.featureName}>{item.feature}</div> */}
-
-                      <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
-                        {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
-                      </div>
-                      <div className={`${styles.planColumn} ${styles.duo} ${item.duo ? styles.check : styles.close}`}>
-                        {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
-                      </div>
-                      <div className={`${styles.planColumn} ${styles.pro} ${item.pro ? styles.check : styles.close}`}>
-                        {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
-                      </div>
-                      <div className={`${styles.planColumn} ${styles.premium} ${item.premium ? styles.check : styles.close}`}>
-                        {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
-                      </div>
-                    </div>
+                  <div key={`${index}-${idx}`} className={isMobile ? styles.mobileRow : styles.tableRow}>
+                    {/* Ligne de caractéristiques pour mobile */}
+                    {isMobile ? (
+                      <>
+                        <div className={styles.mobileFeatureColumn}>{item.feature}</div>
+                        <div className={styles.mobilePlanColumn}>
+                          <div className={styles.mobilePlanName}>SOLO</div>
+                          {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                        <div className={styles.mobilePlanColumn}>
+                          <div className={styles.mobilePlanName}>DUO</div>
+                          {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                        <div className={styles.mobilePlanColumn}>
+                          <div className={styles.mobilePlanName}>PRO</div>
+                          {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                        <div className={styles.mobilePlanColumn}>
+                          <div className={styles.mobilePlanName}>PREMIUM</div>
+                          {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                      </>
+                    ) : (
+                      // Ligne de tableau standard pour desktop
+                      <>
+                        <div className={styles.featureColumn}>{item.feature}</div>
+                        <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
+                          {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                        <div className={`${styles.planColumn} ${styles.duo} ${item.duo ? styles.check : styles.close}`}>
+                          {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                        <div className={`${styles.planColumn} ${styles.pro} ${item.pro ? styles.check : styles.close}`}>
+                          {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                        <div className={`${styles.planColumn} ${styles.premium} ${item.premium ? styles.check : styles.close}`}>
+                          {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                        </div>
+                      </>
+                    )}
                   </div>
                 ))}
               </Panel>

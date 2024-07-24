@@ -1,4 +1,4 @@
-/* DownloadApp.module.css */
+
 
 .download-container {
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .phone-image {
-  width: 300px; /* Ajustez la taille selon vos besoins */
+  width: 300px; 
   margin-right: 20px;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .qr-code-image {
-  width: 400px; /* Ajustez la taille selon vos besoins */
+  width: 400px; 
   margin-bottom: 10px;
 }
 
