@@ -29,7 +29,7 @@ const PlanComparison = () => {
   const data = {
     'Rapports': [
       { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
-      { feature: 'Rapports illimités', solo: true, duo: true, pro: true, premium: true },
+      { feature: 'Rapports ', solo: true, duo: true, pro: true, premium: true },
       { feature: 'Photos illimitées', solo: true, duo: true, pro: true, premium: true }
     ],
     'Utilisateurs': [
@@ -64,8 +64,14 @@ const PlanComparison = () => {
       </div>
 
       <div className={styles.tableContainer} data-aos="zoom-in">
-        <div className={`${styles.tableHeader}`}>
-          {/* <div className={styles.featureColumn}></div> */}
+        <div className={`${styles.tableHeader} mx-3`}>
+          {/* <div className={styles.featureColumn}>{"                           "}</div> */}
+          <div className={`${styles.planColumn} ${styles.solo}`}>
+            <div className={` ${styles.headerCard}`}>
+              <h3 className={styles.headerCardTitle} ></h3>
+              {/* <p>Pour les particuliers</p> */}
+            </div>
+            </div>
           <div className={`${styles.planColumn} ${styles.solo}`}>
             <div className={` ${styles.headerCard}`}>
               <h3 className={styles.headerCardTitle} >SOLO</h3>
@@ -78,19 +84,20 @@ const PlanComparison = () => {
               <p>Pour les petites équipes</p>
             </div>
           </div>
-          <div className={`${styles.planColumn} ${styles.pro}`}>
+          <div className={`${styles.planColumn} ${styles.pro} `}>
             <div className={styles.headerCard}>
               <h3 className={styles.headerCardTitle}>PRO</h3>
               <p>Pour les professionnels</p>
             </div>
           </div>
-          <div className={`${styles.planColumn} ${styles.premium}`}>
+          <div className={`${styles.planColumn} ${styles.premium} ms-2`}>
             <div className={styles.headerCard}>
               <h3  className={styles.headerCardTitle}>PREMIUM</h3>
               <p>Pour les entreprises</p>
             </div>
           </div>
         </div>
+
 
         <div className={styles.tableContent}>
           
@@ -99,14 +106,23 @@ const PlanComparison = () => {
               <Panel header={category} key={index} className={styles.panelHeader}>
                 {data[category].map((item, idx) => (
                   <div key={`${index}-${idx}`} className={styles.mobileFeature}>
-                    <div className={styles.featureName}>{item.feature}</div>
+
+                    {isMobile ? <div className={styles.featureName}>{item.feature}</div>:''}
+
+
                     <div className={styles.mobileHeader}>
                       <div className={`${styles.mobilePlanColumn} ${styles.solo}`}>SOLO</div>
                       <div className={`${styles.mobilePlanColumn} ${styles.duo}`}>DUO</div>
                       <div className={`${styles.mobilePlanColumn} ${styles.pro}`}>PRO</div>
                       <div className={`${styles.mobilePlanColumn} ${styles.premium}`}>PREMIUM</div>
                     </div>
-                    <div className={`${styles.mobileRow}`}>
+                    <div className={`${styles.mobileRow} mx-0`}>
+                      
+
+                      {   isMobile ? '':  <div className={`${styles.planColumn}`}> {item.feature} </div> }
+
+                      {/* <div className={styles.featureName}>{item.feature}</div> */}
+
                       <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
                         {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
                       </div>

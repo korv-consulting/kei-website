@@ -13,7 +13,7 @@
    */
 
    .section {
-    background-image: url('/bg.svg');
+    /* background-image: url('/bg.svg'); */
     background-size: 20% auto; /* Taille moyenne */
     background-position: right center; /* Alignée à gauche */
     background-repeat: no-repeat; /* Pas de répétition */
@@ -140,7 +140,7 @@
   
   .featureImageContainer {
     flex: 1;
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
   
   .featureSection:nth-child(even) .featureImageContainer {
@@ -199,6 +199,7 @@
   
     .featureText {
       margin-left: 2rem;
+      display:flex
     }
   }
   
@@ -248,12 +249,25 @@
   }
   
   .carouselImage {
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top:0px;
+    top:0px;    /* border-radius: 8px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+    /* margin-left:-7rem; */
     transition: transform 0.3s ease;
+    /* width:100% */
   }
   
   .carouselImage:hover {
     transform: translateY(-5px);
   }
   
+
+  .targetListItem{
+
+   display:flex;
+   justify-content:inline-block;
+   margin-bottom:1rem
+
+
+
+  }

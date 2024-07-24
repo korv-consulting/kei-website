@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 
 const SwitchButton = ({setShowMonthly }) => {
-  const [selectedOption, setSelectedOption] = useState('monthly');
+  const [selectedOption, setSelectedOption] = useState('annually');
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
-    setShowMonthly(option === 'monthly');
+    setShowMonthly(option === 'annually');
   };
 
   return (
@@ -48,7 +48,7 @@ const SwitchButton = ({setShowMonthly }) => {
             fontWeight:'bold',
             zIndex: 3, // S'assurer que le texte reste au-dessus du pseudo-élément
           }}
-          onClick={() => handleOptionChange('monthly')}
+          onClick={() => handleOptionChange('annually')}
         >
           Mensuellement
         </div>
@@ -65,7 +65,7 @@ const SwitchButton = ({setShowMonthly }) => {
             fontWeight:'bold',
 
           }}
-          onClick={() => handleOptionChange('annually')}
+          onClick={() => handleOptionChange('monthly')}
         >
           Annuellement
         </div>

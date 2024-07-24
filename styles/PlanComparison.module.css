@@ -1,9 +1,9 @@
 .planComparisonContainer {
   padding: 40px 20px;
-  /* width: 80%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
- */
+
 }
 
 
@@ -35,14 +35,6 @@
 
 
 
-.tableHeader {
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-  border-top: 1px solid #e8e8e8;
-  background-color: #ffffff
-
-}
 
 
 .planColumn {
@@ -75,15 +67,13 @@
 }
 
 .planColumn {
-  padding: 16px;
+  padding: 10px;
   text-align: center;
   border-left: 1px solid #e8e8e8;
 }
-/* 
-.headerCard {
-  border-radius: 4px;
-  padding: 8px;
-} */
+
+
+
 
 .tableContent {
   max-height: 500px;
@@ -129,6 +119,8 @@
 .featureName {
   font-weight: bold;
   margin-bottom: 8px;
+  margin-left:0px;
+  margin-right:10px
 }
 
 .mobileHeader {
@@ -139,20 +131,52 @@
   font-weight: bold;
 }
 
+
+
+
+
 .mobilePlanColumn {
   flex: 1;
   text-align: center;
 }
 
+
+
 .mobileRow {
   display: flex;
+  align-items: end;
+  justify-content: space-around;
+  padding: 7px;
+  border-top: 1px solid #e8e8e8;
+  margin-left: auto;
+  margin-right:auto;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
+
+}
+
+
+.tableHeader {
+  display: flex;
+  align-items: end;
   justify-content: space-around;
   padding: 6px;
   border-top: 1px solid #e8e8e8;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
-
-
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right:auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 .planColumn {
   flex: 1;
   text-align: center;
@@ -184,6 +208,13 @@
     border-left: none;
   }
 
+
+  .planComparisonContainer {
+    width: 100%;
+  
+  }
+  
+  
 
 }
 

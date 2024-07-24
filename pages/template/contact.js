@@ -277,10 +277,10 @@ export default function Contact() {
                           id="phone-field"
                           name="phone"
                           className="form-control"
-                          country={'cm'}
+                          country={'fr'}
                           value={Phone}
                           onChange={(value) => handleChange(value, 'phone')}
-                          preferredCountries={['us','fr', 'gb']}
+                          preferredCountries={['fr','us', 'gb']}
                         />
                       </div>
 
