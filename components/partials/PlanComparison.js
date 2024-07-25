@@ -59,7 +59,7 @@ const PlanComparison = () => {
       <div className={styles.planComparisonHeader}>
         <div className={styles.headerContent} data-aos="zoom-in">
           <h2>COMPARAISON</h2>
-          <p className='text-start w-100'>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
+          <p className='text-center w-100'>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
         </div>
       </div>
 
