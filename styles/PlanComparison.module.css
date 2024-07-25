@@ -39,6 +39,7 @@
   padding: 16px;
   font-weight: bold;
   text-align: left;
+  color: #37517e;
 }
 
 .planColumn {
@@ -64,9 +65,39 @@
   background-color: #f5f5f5;
 }
 
-.icon {
+
+
+.mobilePlanColumn .icon {
   font-size: 16px;
+  color: var(--solo);
+
 }
+
+
+.mobilePlanColumn .icon1 {
+  font-size: 16px;
+  color: var(--duo);
+}
+
+
+.mobilePlanColumn .icon2 {
+  font-size: 16px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanColumn .icon3 {
+  font-size: 16px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
 
 .check {
   color: #52c41a;
@@ -93,11 +124,40 @@
   width: 100%;
 }
 
-.headerCardTitle {
-  font-weight: bold;
+
+
+.headerCard .headerCardTitle0 {
+  font-weight: bold !important;
+  color: var(--solo) !important;
 }
 
-/* Ajout des styles pour l'affichage mobile */
+.headerCard .headerCardTitle1 {
+  font-weight: bold !important;
+  color: var(--duo) !important;
+}
+
+.headerCard .headerCardTitle2 {
+  font-weight: bold !important;
+  color: var(--pro) !important;
+
+}
+
+.headerCard .headerCardTitle3 {
+  font-weight: bold !important;
+  color: var(--premium) !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 .mobileRow {
   display: flex;
   flex-direction: column;
@@ -109,6 +169,8 @@
 .mobileFeatureColumn {
   font-weight: bold;
   margin-bottom: 8px;
+  color: #37517e;
+
 }
 
 .mobilePlanColumn {
@@ -118,11 +180,40 @@
   width: 100%;
 }
 
+
+
 .mobilePlanName {
   flex: 1;
   font-weight: bold;
   margin-right: 8px;
+  color: var(--solo);
 }
+
+.mobilePlanName1 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--duo);
+
+}
+
+.mobilePlanName2 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanName3{
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--premium);
+
+}
+
 
 
 
@@ -130,6 +221,7 @@
 
 .solo .icon {
   color: var(--solo);
+  /* font-size: 25px; */
 }
 
 .duo .icon {
@@ -138,11 +230,59 @@
 
 .pro .icon {
   color: var(--pro);
+}  .mobilePlanColumn .icon {
+  color: var(--solo);
 }
+
+.mobilePlanColumn .duo .icon {
+  color: var(--duo);
+}
+
+.mobilePlanColumn .pro .icon {
+  color: var(--pro);
+}
+
+.mobilePlanColumn .premium .icon {
+  color: var(--premium);
+}
+
+
 
 .premium .icon {
   color: var(--premium);
 }
+
+
+
+
+
+
+
+.mobilePlanColumn .solo .icon {
+  color: var(--solo);
+}
+
+.mobilePlanColumn .duo .icon {
+  color: var(--duo);
+}
+
+.mobilePlanColumn .pro .icon {
+  color: var(--pro);
+}
+
+.mobilePlanColumn .premium .icon {
+  color: var(--premium);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media Queries Originales */
@@ -164,10 +304,19 @@
     padding: 8px 0;
     border-left: none;
   }
+
+
+
+
+
+
+
+
+  
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .planComparisonContainer {
-    /* width: 100%; */
+    width: 100%;
   }
 }

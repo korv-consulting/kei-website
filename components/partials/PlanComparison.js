@@ -59,7 +59,7 @@ const PlanComparison = () => {
       <div className={styles.planComparisonHeader}>
         <div className={styles.headerContent} data-aos="zoom-in">
           <h2>COMPARAISON</h2>
-          <p>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
+          <p className='text-start w-100'>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
         </div>
       </div>
 
@@ -69,25 +69,25 @@ const PlanComparison = () => {
           <div className={styles.featureColumn}></div> {/* Empty cell for features */}
           <div className={`${styles.planColumn} ${styles.solo}`}>
             <div className={`${styles.headerCard}`}>
-              <h3 className={styles.headerCardTitle}>SOLO</h3>
+              <h3 className={styles.headerCardTitle0}>SOLO</h3>
               <p>Pour les particuliers</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.duo}`}>
             <div className={styles.headerCard}>
-              <h3 className={styles.headerCardTitle}>DUO</h3>
+              <h3 className={styles.headerCardTitle1}>DUO</h3>
               <p>Pour les petites équipes</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.pro}`}>
             <div className={styles.headerCard}>
-              <h3 className={styles.headerCardTitle}>PRO</h3>
+              <h3 className={styles.headerCardTitle2}>PRO</h3>
               <p>Pour les professionnels</p>
             </div>
           </div>
           <div className={`${styles.planColumn} ${styles.premium}`}>
             <div className={styles.headerCard}>
-              <h3 className={styles.headerCardTitle}>PREMIUM</h3>
+              <h3 className={styles.headerCardTitle3}>PREMIUM</h3>
               <p>Pour les entreprises</p>
             </div>
           </div>
@@ -108,16 +108,16 @@ const PlanComparison = () => {
                           {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
                         </div>
                         <div className={styles.mobilePlanColumn}>
-                          <div className={styles.mobilePlanName}>DUO</div>
-                          {item.duo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                          <div className={styles.mobilePlanName1}>DUO</div>
+                          {item.duo ? <CheckOutlined className={styles.icon1} /> : <MinusOutlined className={styles.icon1} />}
                         </div>
                         <div className={styles.mobilePlanColumn}>
-                          <div className={styles.mobilePlanName}>PRO</div>
-                          {item.pro ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                          <div className={styles.mobilePlanName2}>PRO</div>
+                          {item.pro ? <CheckOutlined className={styles.icon2} /> : <MinusOutlined className={styles.icon2} />}
                         </div>
                         <div className={styles.mobilePlanColumn}>
-                          <div className={styles.mobilePlanName}>PREMIUM</div>
-                          {item.premium ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
+                          <div className={styles.mobilePlanName3}>PREMIUM</div>
+                          {item.premium ? <CheckOutlined className={styles.icon3} /> : <MinusOutlined className={styles.icon3} />}
                         </div>
                       </>
                     ) : (
@@ -150,3 +150,24 @@ const PlanComparison = () => {
 };
 
 export default PlanComparison;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
