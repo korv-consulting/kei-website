@@ -248,14 +248,14 @@ const YearlyPricingOffer = () => {
       <li>
         <GiCheckMark className={`me-2 ${styles.premium_check}`} />
         <span>
-          Utilisateurs <span className="fw-bold">illimités</span> 
+          Utilisateurs <span className="fw-bold"></span> 
         </span>
       </li>
       <li>
         <GiCheckMark className={`me-2 ${styles.premium_check}`} />
                    <span>
                       {" "}
-                      Tâches <span className="fw-bold">illimités</span> 
+                      Tâches <span className="fw-bold"></span> 
                     </span>
       </li>
     </ul>

@@ -151,13 +151,6 @@
 
 
 
-
-
-
-
-
-
-
 .mobileRow {
   display: flex;
   flex-direction: column;
@@ -230,27 +223,11 @@
 
 .pro .icon {
   color: var(--pro);
-}  .mobilePlanColumn .icon {
-  color: var(--solo);
-}
-
-.mobilePlanColumn .duo .icon {
-  color: var(--duo);
-}
-
-.mobilePlanColumn .pro .icon {
-  color: var(--pro);
-}
-
-.mobilePlanColumn .premium .icon {
-  color: var(--premium);
-}
-
-
+}  
 
 .premium .icon {
   color: var(--premium);
-}
+}  
 
 
 
@@ -278,13 +255,6 @@
 
 
 
-
-
-
-
-
-
-
 /* Media Queries Originales */
 
 @media (max-width: 767px) {
@@ -305,15 +275,12 @@
     border-left: none;
   }
 
-
-
-
-
-
-
-
   
 }
+
+
+
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .planComparisonContainer {
