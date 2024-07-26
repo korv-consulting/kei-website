@@ -359,7 +359,7 @@ const FeatureSection = () => {
                             </div>
                             <div className={styles.overlay} onClick={() => handleOverlayClick("/features/espace-de-travail")}>
                                 <div>
-                                    <p className ={styles.content}>{t('content1')}</p>
+                                    <p className ={`${styles.content} fs-6`}>{t('content1')}</p>
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 const SwitchButton = ({setShowMonthly }) => {
   const [selectedOption, setSelectedOption] = useState('annually');
+  const {t} = useTranslation('switchBtn')
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
@@ -73,3 +74,4 @@ const SwitchButton = ({setShowMonthly }) => {
 };
 
 export default SwitchButton;
+/* text-shadow: -40px -40px 4px #4CCE23; */

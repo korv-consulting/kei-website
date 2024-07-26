@@ -21,8 +21,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="" />
         <link rel="icon" href="/logo-kei.png" />
         <link
-          href="./../public/img/apple-touch-icon.png"
-          rel="apple-touch-icon"
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet"
         />
         <link
           rel="stylesheet"

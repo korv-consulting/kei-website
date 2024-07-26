@@ -61,6 +61,6 @@ export default Pricing;
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pricing','header','footer', 'planComparaison', 'montly_pricing', 'yearly_pricing', 'credit', 'tooglebtn','newsletter']),
+    ...await serverSideTranslations(locale, ['pricing','header','footer', 'planComparaison', 'montly_pricing', 'yearly_pricing', 'credit', 'tooglebtn','newsletter', 'switchBtn', 'downloadApp']),
   },
 });

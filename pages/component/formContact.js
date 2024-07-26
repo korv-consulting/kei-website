@@ -12,6 +12,7 @@ import 'react-phone-input-2/lib/style.css';
 import FunctionalityPageHeader from 'pages/component/featuresDetails/FunctionalityPageHeader';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const FormContact = () => {
     const {t} = useTranslation('common')
@@ -250,7 +251,7 @@ return(
             </div>
             <div className="col-12">
                 <label htmlFor="subject-field" className="pb-2">Je souhaite:</label>
-                <SwitchButtonPartenariat setShowInfo={setShowInfo} />
+                <SwitchButtonPartenariat setShowMPartenariat={setShowInfo} />
             </div>
             {showInfo ? (
                 <>
@@ -334,3 +335,9 @@ return(
 }
 
 export default FormContact;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [  'switchBtn'])),
+  },
+});

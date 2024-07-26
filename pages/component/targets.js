@@ -87,7 +87,7 @@ const Targets = () => {
         </div>
         <div className="row d-flex justify-content-center mb-8">
           <div className="col-md-6">
-            <div className={`${styles.featureDescription}`}>
+            <div className={`${styles.featureDescription} fs-5`}>
               <p className={` ${styles.Intro}`}>
                 {t('intro')}
               </p>
@@ -95,7 +95,7 @@ const Targets = () => {
                 <div className="col-md-6">
                   <ul className={styles.featureText}>
                     {Array.isArray(targetList) && targetList.slice(8).map((target, index) => (
-                      <li key={index} className={styles.targetListItem}>
+                      <li key={index} className={`${styles.targetListItem} fs-6 fw-bold`}>
                         {targetIcons[index]} {target}
                       </li>
                     ))}
@@ -104,7 +104,7 @@ const Targets = () => {
                 <div className={`col-md-6 ${styles.descPart2}`}>
                   <ul className={styles.featureText}>
                     {Array.isArray(targetList) && targetList.slice(7).map((target, index) => (
-                      <li key={index + 7} className={styles.targetListItem}>
+                      <li key={index + 7} className={`${styles.targetListItem} fs-6 fw-bold`}>
                         {targetIcons[index + 7]} {target}
                       </li>
                     ))}

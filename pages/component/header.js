@@ -72,21 +72,61 @@ export default function Header() {
                     <li className="nav-item px-3">
                       <a className={`nav-link ${isActive === 1 ? styles.active : ''}`} href="/template" onClick={() => setIsActive(1)}>{t('home')}</a>
                     </li>
-                    <li className={`nav-item dropdown px-3 ${isActive === 2 ? styles.active : ''}`} onMouseEnter={toggleModal} onMouseLeave={toggleModal} onClick={() => setIsActive(2)}>
-                      <a className="nav-link dropdown-toggle" href="/template#features" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <li
+                      className={`nav-item dropdown px-3 ${isActive === 2 ? styles.active : ''}`}
+                      onMouseEnter={toggleModal}
+                      onMouseLeave={toggleModal}
+                      onClick={() => setIsActive(2)}
+                    >
+                      <a
+                        className="nav-link dropdown-toggle"
+                        href="/template#features"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         {t('features')}
                       </a>
                       {isModalVisible && (
-                        <ul className={`dropdown-menu ${styles.verticalList} ${styles.modal} ${styles.verticalModal}`}>
-                          <li><a className="dropdown-item bg-transparent " href="/features/espace-de-travail">{t('workspace')}</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/suivi-des-taches">{t('taskTracking')}</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/declaration-d'incidents">{t('incidentDeclaration')}</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/realisation-des-etats-des-lieux">{t('stateRealization')}</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/planification-des-etats-des-lieux">{t('statePlanning')}</a></li>
-                          <li><a className="dropdown-item bg-transparent pt-0" href="/features/rapport-d'incidents-et-d'inspections">{t('incidentReport')}</a></li>
+                        <ul className={`dropdown-menu ${styles.dropdownMenu}`}>
+                          <div className={styles.column}>
+                            <li>
+                              <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/espace-de-travail">
+                                <span>{t('workspace')}</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/suivi-des-taches">
+                                <span>{t('taskTracking')}</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/planification-des-etats-des-lieux">
+                                <span>{t('statePlanning')}</span>
+                              </a>
+                            </li>
+                          </div>
+                          <div className={styles.column}>
+                            <li>
+                              <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/declaration-d'incidents">
+                                <span>{t('incidentDeclaration')}</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/realisation-des-etats-des-lieux">
+                                <span>{t('stateRealization')}</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/rapport-d'incidents-et-d'inspections">
+                                <span>{t('incidentReport')}</span>
+                              </a>
+                              </li>
+                          </div>
                         </ul>
                       )}
-                    </li>
+                    </li> 
                     <li className="nav-item px-3">
                       <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>{t('demo')}</a>
                     </li>
@@ -121,3 +161,5 @@ export const getStaticProps = async ({ locale }) => ({
     ...await serverSideTranslations(locale, ['common']),
   },
 });
+
+/* text-shadow: -40px -40px 4px #4CCE23; */ 

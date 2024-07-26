@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'next-i18next';
+import {react, useState} from 'react';
+import { useTranslation } from 'react-i18next';
 
-const SwitchButtonPartenariat = ({ setShowInfo }) => {
+const SwitchButtonPartenariat = ({ setShowMPartenariat }) => {
+  const [selectedOption, setSelectedOption] = useState('partenariat');
   const { t } = useTranslation('switchBtn');
-  const [selectedOption, setSelectedOption] = useState('info');
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
-    setShowInfo(option === 'info');
+    setShowMPartenariat(option === 'partenariat');
   };
 
   return (
@@ -46,9 +46,9 @@ const SwitchButtonPartenariat = ({ setShowInfo }) => {
             cursor: 'pointer',
             position: 'relative',
             fontWeight: 'bold',
-            zIndex: 3, // Ensure text is above the pseudo-element
+            zIndex: 3,
           }}
-          onClick={() => handleOptionChange('info')}
+          onClick={() => handleOptionChange('partenariat')}
         >
           {t('info')}
         </div>
@@ -61,10 +61,10 @@ const SwitchButtonPartenariat = ({ setShowInfo }) => {
             color: 'white',
             cursor: 'pointer',
             position: 'relative',
-            zIndex: 3, // Ensure text is above the pseudo-element
+            zIndex: 3,
             fontWeight: 'bold',
           }}
-          onClick={() => handleOptionChange('partenariat')}
+          onClick={() => handleOptionChange('info')}
         >
           {t('partenariat')}
         </div>

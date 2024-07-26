@@ -1,0 +1,31 @@
+{
+  "home": {
+    "title": "Accueil",
+    "description": "Bienvenue chez KEI - Votre partenaire de confiance pour l'inventaire d'estatement."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Contactez-nous pour obtenir une démo ou si vous avez une autre raison, remplissez le formulaire ci-dessous.",
+    "successMessage": "Votre message a été envoyé. Merci !",
+    "errorMessage": "Oups, une erreur est survenue. Veuillez réessayer.",
+    "fields": {
+      "lastname": "Prénom",
+      "name": "Nom",
+      "business": "Entreprise",
+      "email": "Email Professionnel",
+      "phone": "Téléphone",
+      "date": "Date",
+      "time": "Heure",
+      "message": "Avez-vous une préoccupation ? Si oui, veuillez nous envoyer un message."
+    },
+    "validation": {
+      "business": "Le nom de l'entreprise est requis",
+      "email": "Adresse email professionnelle invalide",
+      "message": "Veuillez entrer votre message"
+    },
+    "loading": "Chargement",
+    "recaptchaError": "Veuillez vérifier le reCAPTCHA",
+    "sending": "En cours d'envoi...",
+    "send": "Envoyer"
+  }
+}

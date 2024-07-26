@@ -820,6 +820,7 @@
     padding-bottom: 20px;
     text-transform: uppercase;
     position: relative;
+    /* text-shadow: -35px -25px 3px #10876D; */
 }
 
 /* .section_title h2:before {
@@ -2452,6 +2453,29 @@
     border: rgb(223, 223, 223) 1px solid;
 }
 
+
+
+.dropdown-menu {
+  display: flex;
+  gap: 1rem; /* Space between columns */
+  padding: 0;
+  width: 400px; /* Adjust width as needed */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item img {
+  margin-right: 0.5rem;
+}
 
 
 
