@@ -47,7 +47,8 @@ export default function Header() {
   return (
     <>
       <header id="header" className={`${styles.header} d-flex align-items-center fixed-top`}>
-        <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-around">
+          
           <a className={`navbar-brand d-flex align-items-center ${styles.logo}`} href="/template">
             <Image src="/logo-kei.png" className={styles.sitename} width={100} height={100} alt="KEI Logo" />
           </a>
@@ -103,8 +104,12 @@ export default function Header() {
               </div>
             </div>
           </nav>
-          <LocaleSwitcher/>
-          <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
+
+          <div className='d-md-flex'>
+            <div className="d-none d-md-block"><LocaleSwitcher/></div>
+            <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
+          </div>
+          
         </div>
       </header>
     </>

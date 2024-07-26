@@ -218,14 +218,14 @@ return(
             <div className="col-md-6">
                 <label htmlFor="phone-field" className="pb-2">{t('contact.form.phone')}</label>
                 <PhoneInput
-                    country={'cm'}
+                    country={'fr'}
                     value={form.phone}
                     onChange={handlePhoneChange}
                     inputClass="form-control"
                     inputProps={{
                         name: 'phone',
                         required: true,
-                        className: `form-control ${submitted && !form.phone ? "is-invalid" : ""}`,
+                        className: `form-control w-100 py-2 phoneInput ${submitted && !form.phone ? "is-invalid" : ""}`,
                     }}
                 />
                 <div className="invalid-feedback">Numéro de téléphone non renseigné</div>

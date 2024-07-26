@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Image from 'next/image';
+import styles from '@/styles/app.module.css';
 
 const LocaleSwitcher = () => {
   const router = useRouter();
@@ -13,14 +14,30 @@ const LocaleSwitcher = () => {
     return null;
   }
 
-  const otherLocale = locales.find((loc) => loc !== locale);
+  const handleLocaleChange = (event) => {
+    const selectedLocale = event.target.value;
+    if (selectedLocale !== locale) {
+      router.push(asPath, asPath, { locale: selectedLocale });
+    }
+  };
 
   return (
-    <Link href={asPath} locale={otherLocale}>
-      <button className="btn btn-info mb-3 text-white">{locale === 'en' ? 'FR' : 'EN'}</button>
-    </Link>
+    <div className='d-flex align-items-center'>
+      {
+      locale === 'en' ? 
+      <Image src="/flags/uk.png" className={styles.sitename} width={25} height={25} alt="anglais" />
+      :
+      <Image src="/flags/fr.png" className={styles.sitename} width={25} height={25} alt="francais" />
+      }
+      <select className={`${styles.select} ms-3`} id="loc" value={locale} onChange={handleLocaleChange}>
+        {locales.map((local, index) => (
+          <option key={index} value={local}>
+            {local === 'en' ? 'English' : 'Français'}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
 export default LocaleSwitcher;
-

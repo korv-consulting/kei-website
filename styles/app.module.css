@@ -2178,6 +2178,8 @@
 
 .contact .php_email_form input[type=text],
 .contact .php_email_form input[type=email],
+.contact .php_email_form select,
+.phoneInput,
 .contact .php_email_form textarea {
     font-size: 14px;
     padding: 10px 15px;
@@ -2190,12 +2192,16 @@
 
 .contact .php_email_form input[type=text]:focus,
 .contact .php_email_form input[type=email]:focus,
+.contact .php_email_form select:focus,
+.phoneInput:focus,
 .contact .php_email_form textarea:focus {
     border-color: var(--secondary);
 }
 
 .contact .php_email_form input[type=text]::placeholder,
 .contact .php_email_form input[type=email]::placeholder,
+.contact .php_email_form select::placeholder,
+.phoneInput::placeholder,
 .contact .php_email_form textarea::placeholder {
     color: rgba(var(--default-color-rgb), 0.3);
 }
@@ -2440,7 +2446,11 @@
     /* Add your styles here */
 }
 
-
+.select{
+    background-color: #ffffff;
+    color: black;
+    border: rgb(223, 223, 223) 1px solid;
+}
 
 
 
