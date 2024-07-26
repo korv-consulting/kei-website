@@ -12,7 +12,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 const Pricing = () => {
   const { t } = useTranslation('pricing');
   const [loading, setLoading] = useState(true);
-  const [isCredits, setIsCredits] = useState(true);
+  const [isCredits, setIsCredits] = useState(false);
 
   // ANIMATION
   useEffect(() => {
@@ -48,7 +48,7 @@ const Pricing = () => {
           </div>
         ) : (
           <div>
-            {isCredits ? <PricingOffer key="offer" /> : <CreditsPricing key="credits" /> }
+            {isCredits ?  <CreditsPricing key="credits" />:<PricingOffer key="offer" />  }
           </div>
         )}
       </div>

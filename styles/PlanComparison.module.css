@@ -1,77 +1,49 @@
 .planComparisonContainer {
   padding: 40px 20px;
-  /* width: 80%;
+  width: 73%;
   margin-left: auto;
   margin-right: auto;
- */
+  margin-top:40px;
 }
-
-
 
 .planComparisonHeader {
   text-align: center;
   margin-bottom: 40px;
+  width:100%
 }
 
 .headerContent {
-  max-width: 600px;
+  width:100%;
   margin: 0 auto;
 }
 
-
-.headerContent h2{
+.headerContent h2 {
   font-size: 30px;
   margin-top: 20px;
   font-weight: bold;
 }
 
 
+
 .tableContainer {
   border: 1px solid #e8e8e8;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
-
-
 
 .tableHeader {
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-  border-top: 1px solid #e8e8e8;
-  background-color: #ffffff
-
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr); /* Aligner les colonnes */
+  background-color: #ffffff;
+  align-items: center;
+  padding: 10px;
 }
-
-
-.planColumn {
-  padding-left: 30px;
-  text-align: right;
-  border-left: 1px solid #e8e8e8;
-  justify-content:right
-}
-
-.headerCard {
-  border-radius: 4px;
-  padding: 8px;
-  width:100%
-}
-
-
-
-
-.headerCardTitle{
-
-  color:var(--solo)!important;
-
-}
-
-
 
 .featureColumn {
   padding: 16px;
   font-weight: bold;
+  text-align: left;
+  color: #37517e;
 }
 
 .planColumn {
@@ -79,36 +51,57 @@
   text-align: center;
   border-left: 1px solid #e8e8e8;
 }
-/* 
-.headerCard {
-  border-radius: 4px;
-  padding: 8px;
-} */
 
 .tableContent {
-  max-height: 500px;
-  overflow-y: auto;
-  box-shadow: 0 4px 12px rgba(21, 21, 21, 0.8);
-
-
+  overflow-x: auto;
+  overflow-y: hidden; /* Supprimer la barre de défilement verticale */
+  box-shadow: 0 4px 12px rgba(21, 21, 21, 0.1);
 }
 
 .tableRow {
   display: grid;
-  grid-template-columns: 1fr repeat(4, 1fr);
+  grid-template-columns: 1fr repeat(4, 1fr); /* Aligner les colonnes */
   border-top: 1px solid #e8e8e8;
+  padding: 10px 0;
 }
 
 .tableRow:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-.icon {
+
+
+.mobilePlanColumn .icon {
   font-size: 16px;
-  justify-content:right;
-  margin-right:0px;
-  padding-right:0px
+  color: var(--solo);
+
 }
+
+
+.mobilePlanColumn .icon1 {
+  font-size: 16px;
+  color: var(--duo);
+}
+
+
+.mobilePlanColumn .icon2 {
+  font-size: 16px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanColumn .icon3 {
+  font-size: 16px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
 
 .check {
   color: #52c41a;
@@ -122,49 +115,151 @@
   border: none;
 }
 
-.mobileFeature {
-  margin-bottom: 16px;
-}
-
-.featureName {
+.panelHeader {
   font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 18px;
+  padding: 0 !important;
+  border: none;
 }
 
-.mobileHeader {
-  display: flex;
-  justify-content: space-around;
+.headerCard {
+  border-radius: 4px;
   padding: 8px;
-  background-color: #f5f5f5;
-  font-weight: bold;
+  width: 100%;
 }
 
-.mobilePlanColumn {
-  flex: 1;
-  text-align: center;
+
+
+.headerCard .headerCardTitle0 {
+  font-weight: bold !important;
+  color: var(--solo) !important;
 }
+
+.headerCard .headerCardTitle1 {
+  font-weight: bold !important;
+  color: var(--duo) !important;
+}
+
+.headerCard .headerCardTitle2 {
+  font-weight: bold !important;
+  color: var(--pro) !important;
+
+}
+
+.headerCard .headerCardTitle3 {
+  font-weight: bold !important;
+  color: var(--premium) !important;
+
+}
+
+
+
 
 .mobileRow {
   display: flex;
-  justify-content: space-around;
-  padding: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
   border-top: 1px solid #e8e8e8;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
+}
 
+.mobileFeatureColumn {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #37517e;
 
 }
-.planColumn {
+
+.mobilePlanColumn {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  width: 100%;
+}
+
+
+
+.mobilePlanName {
   flex: 1;
-  text-align: center;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--solo);
 }
 
-.check {
-  color: #52c41a;
+.mobilePlanName1 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--duo);
+
 }
 
-.close {
-  color: #ff4d4f;
+.mobilePlanName2 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--pro);
+
 }
+
+
+.mobilePlanName3{
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
+.solo .icon {
+  color: var(--solo);
+  /* font-size: 25px; */
+}
+
+.duo .icon {
+  color: var(--duo);
+}
+
+.pro .icon {
+  color: var(--pro);
+}  
+
+.premium .icon {
+  color: var(--premium);
+}  
+
+
+
+
+
+
+
+.mobilePlanColumn .solo .icon {
+  color: var(--solo);
+}
+
+.mobilePlanColumn .duo .icon {
+  color: var(--duo);
+}
+
+.mobilePlanColumn .pro .icon {
+  color: var(--pro);
+}
+
+.mobilePlanColumn .premium .icon {
+  color: var(--premium);
+}
+
+
+
+
+
+/* Media Queries Originales */
 
 @media (max-width: 767px) {
   .tableHeader {
@@ -185,15 +280,19 @@
   }
 
 
+  .headerContent p{
+    width:100
+ 
+  }
+  
 }
 
 
 
-@media (min-width:768px){
 
 
-  .mobileHeader {
-    display: none;
-    
+@media (min-width: 768px) and (max-width: 1024px) {
+  .planComparisonContainer {
+    width: 100%;
   }
 }

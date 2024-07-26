@@ -55,7 +55,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #c47814 ;
+  /* background: #c47814 ; */
+  background: linear-gradient(to bottom, #ff8c00, #cc6600);
   color: white;
   display: flex;
   align-items: center;

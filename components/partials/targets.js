@@ -8,11 +8,20 @@ const Targets = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    '/1.png',
-    '/2.png',
-    '/3.png',
-    '/4.png',
-    '/5.png',
+    '/agents/Redbuilding.png',
+    // '/agents/a1.png',
+    '/agents/a2.png',
+    '/agents/8.jpg',
+    '/agents/3.jpg',
+    '/agents/7.jpg',
+    // '/agents/9.jpg',
+    '/agents/10.jpg',
+    // '/agents/4.jpg',
+    '/agents/133.jpg',
+    '/agents/1.jpg',
+    '/agents/11.jpg',
+
+
   ];
 
   const targetIcons = [
@@ -115,7 +124,7 @@ const Targets = () => {
                   <ul className={styles.featureText}>
                     {targetList.slice(0, 7).map((target, index) => (
                       <li key={index} className={styles.targetListItem}>
-                        {targetIcons[index]} {target}
+                       <span className="mt-1"> {targetIcons[index]}</span>{target}
                       </li>
                     ))}
                   </ul>
@@ -124,7 +133,7 @@ const Targets = () => {
                   <ul className={styles.featureText}>
                     {targetList.slice(7).map((target, index) => (
                       <li key={index + 7} className={styles.targetListItem}>
-                        {targetIcons[index + 7]} {target}
+                        <span className="mt-1">{targetIcons[index + 7]}</span> {target}
                       </li>
                     ))}
                   </ul>
@@ -137,8 +146,8 @@ const Targets = () => {
               <Image
                 src={images[currentImageIndex]}
                 alt={`Image ${currentImageIndex + 1}`}
-                width={300}
-                height={400}
+                width={790}
+                height={570}
                 className={styles.carouselImage}
               />
             </div>

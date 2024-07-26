@@ -4,7 +4,7 @@ import MonthlyPricingOffer from './MonthlyPricingOffer';
 import YearlyPricingOffer from './YearlyPricingOffer';
 import SwitchButton from './SwitchButton';
 import PlanComparison from './PlanComparison'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import DownloadApp from './DownloadApp';
 
 const PricingOffer = () => {
   const [showMonthly, setShowMonthly] = useState(true);
@@ -26,7 +26,10 @@ const PricingOffer = () => {
         {showMonthly ? <MonthlyPricingOffer /> : <YearlyPricingOffer />}
 
         <PlanComparison />
+
       </section>
+
+      <DownloadApp/>
     </div>
   );
 };
