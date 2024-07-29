@@ -10,7 +10,6 @@ import PricingOffer from "pages/component/pricingOffer";
 import NewsLetter from "pages/component/newsLetter";
 import Footer from "./component/footer";
 import Faq from "./component/faq";
-import Contact from "components/partials/contact";
 import Feature from "./component/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
 import Demo from "components/partials/demo";

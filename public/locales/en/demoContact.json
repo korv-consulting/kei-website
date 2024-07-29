@@ -4,7 +4,7 @@
     "description": "Welcome to KEI - Your trusted partner in Estatement Inventory."
   },
   "contact": {
-    "title": "Contact Us",
+    "title": "Book a Demo",
     "description": "Contact us to schedule a demo or if you have any other inquiries, please fill out the form below.",
     "successMessage": "Your message has been sent. Thank you!",
     "errorMessage": "Oops, an error occurred. Please try again.",

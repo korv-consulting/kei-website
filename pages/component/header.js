@@ -46,7 +46,7 @@ export default function Header() {
 
   return (
     <>
-      <header id="header" className={`${styles.header} d-flex align-items-center fixed-top`}>
+      <header id="header" className={`${styles.header} d-flex align-items-center justify-content-center fixed-top`}>
         <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-around">
           
           <a className={`navbar-brand d-flex align-items-center ${styles.logo}`} href="/template">
@@ -145,8 +145,8 @@ export default function Header() {
             </div>
           </nav>
 
-          <div className='d-md-flex'>
-            <div className="d-none d-md-block"><LocaleSwitcher/></div>
+          <div className={`d-flex justify-content-center  ${styles.locales}`}>
+            <div className="me-3"><LocaleSwitcher/></div>
             <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
           </div>
           

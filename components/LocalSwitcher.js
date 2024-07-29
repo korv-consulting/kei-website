@@ -6,7 +6,6 @@ const LocaleSwitcher = () => {
   const router = useRouter();
   const { locale, locales, asPath } = router;
 
-  console.log(locales);
 
   // Si locale ou locales est undefined, afficher un message d'erreur ou un retour
   if (!locale || !locales) {

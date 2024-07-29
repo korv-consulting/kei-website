@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Header from "../component/header";
-import FunctionalityPageHeader from "../component/featuresDetails/FunctionalityPageHeader";
+import Header from "../../component/header";
+import FunctionalityPageHeader from "../../component/featuresDetails/FunctionalityPageHeader";
 import styles from '@/styles/features/FunctionalityPage.module.css';
-import Slogan from "../component/featuresDetails/slogan";
-import Footer from "../component/footer";
-import Description from "../component/featuresDetails/Description";
+import Slogan from "../../component/featuresDetails/slogan";
+import Footer from "../../component/footer";
+import Description from "../../component/featuresDetails/Description";
 import { useTranslation } from 'react-i18next';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 

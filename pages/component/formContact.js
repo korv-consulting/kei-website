@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "@/styles/app.module.css";
-import countries from "pages/api/country";
-import activities from "pages/api/activity";
-import calls from "pages/api/call";
 import SwitchButtonPartenariat from 'pages/component/SwitchButtonPartenariat';
+import styles from "@/styles/app.module.css";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -15,7 +12,65 @@ import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const FormContact = () => {
-    const {t} = useTranslation('common')
+  const { t } = useTranslation('common');
+  
+  // Sample data, replace with actual data if needed
+  const [selectedActivity, setSelectedActivity] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState('');
+   const [selectedCall, setSelectedCall] = useState('');
+
+  const activities = [
+    'construction', 'hospitality', 'real_estate', 'agriculture',
+    'automotive', 'banking', 'biotech', 'education', 'energy',
+    'manufacturing', 'it', 'media', 'marketing', 'health',
+    'professional_services', 'telecommunications', 'transportation',
+    'retail', 'public_services', 'arts'
+  ];
+
+  const countries = [
+    'afghanistan', 'albania', 'algeria', 'andorra', 'angola', 'antigua_and_barbuda',
+    'argentina', 'armenia', 'australia', 'austria', 'azerbaijan', 'bahamas', 'bahrain',
+    'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia',
+    'bosnia_and_herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina_faso',
+    'burundi', 'cote_divoire', 'cabo_verde', 'cambodia', 'cameroon', 'canada',
+    'central_african_republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo',
+    'costa_rica', 'croatia', 'cuba', 'cyprus', 'czechia', 'democratic_republic_of_the_congo',
+    'denmark', 'djibouti', 'dominica', 'dominican_republic', 'ecuador', 'egypt', 'el_salvador',
+    'equatorial_guinea', 'eritrea', 'estonia', 'eswatini', 'ethiopia', 'fiji', 'finland',
+    'france', 'gabon', 'gambia', 'georgia', 'germany', 'ghana', 'greece', 'grenada',
+    'guatemala', 'guinea', 'guinea_bissau', 'guyana', 'haiti', 'holy_see', 'honduras',
+    'hungary', 'iceland', 'india', 'indonesia', 'iran', 'iraq', 'ireland', 'israel',
+    'italy', 'jamaica', 'japan', 'jordan', 'kazakhstan', 'kenya', 'kiribati', 'kuwait',
+    'kyrgyzstan', 'laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya',
+    'liechtenstein', 'lithuania', 'luxembourg', 'madagascar', 'malawi', 'malaysia',
+    'maldives', 'mali', 'malta', 'marshall_islands', 'mauritania', 'mauritius',
+    'mexico', 'micronesia', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco',
+    'mozambique', 'myanmar', 'namibia', 'nauru', 'nepal', 'netherlands', 'new_zealand',
+    'nicaragua', 'niger', 'nigeria', 'north_korea', 'north_macedonia', 'norway', 'oman',
+    'pakistan', 'palau', 'palestine_state', 'panama', 'papua_new_guinea', 'paraguay',
+    'peru', 'philippines', 'poland', 'portugal', 'qatar', 'romania', 'russia', 'rwanda',
+    'saint_kitts_and_nevis', 'saint_lucia', 'saint_vincent_and_the_grenadines', 'samoa',
+    'san_marino', 'sao_tome_and_principe', 'saudi_arabia', 'senegal', 'serbia', 'seychelles',
+    'sierra_leone', 'singapore', 'slovakia', 'slovenia', 'solomon_islands', 'somalia',
+    'south_africa', 'south_sudan', 'spain', 'sri_lanka', 'sudan', 'suriname', 'sweden',
+    'switzerland', 'syria', 'taiwan', 'tajikistan', 'tanzania', 'thailand', 'timor_leste',
+    'togo', 'tonga', 'trinidad_and_tobago', 'tunisia', 'turkey', 'turkmenistan', 'tuvalu',
+    'uganda', 'ukraine', 'united_arab_emirates', 'united_kingdom', 'united_states',
+    'uruguay', 'uzbekistan', 'vanuatu', 'venezuela', 'vietnam', 'yemen', 'zambia', 'zimbabwe'
+  ];
+
+  const calls = [
+  "make_a_choice",
+  "email",
+  "google",
+  "linkedin",
+  "facebook",
+  "media",
+  "word_of_mouth",
+  "event",
+  "other"
+  ];
+
      const source1 = '/contact.jpg';
   const title1 = t('contact.title');
 
@@ -113,8 +168,7 @@ const FormContact = () => {
     }
   };
 
-return(
-
+  return (
     <main className={styles.main}>
     <section id="contact" className={`${styles.contact} ${styles.section} my-5 pt-5`}>
         <div className={styles.pageContainer}>
@@ -184,20 +238,14 @@ return(
                 <div className="invalid-feedback">Nom de l'entreprise non renseigné</div>
             </div>
             <div className="col-md-6">
-                <label htmlFor="country-field" className="pb-2">
-                {t('contact.form.country')} <span className="text-danger">*</span>
-                </label>
-                <select
-                className={`form-select ${submitted && !form.country ? "is-invalid" : ""}`}
-                id="country"
-                name="country"
-                required
-                onChange={handleChange}
-                value={form.country}
-                >
-                {countries.map((country, index) => (
-                    <option key={index} value={country}>{country}</option>
-                ))}
+                <label>{t('contact.form.country')}:</label>
+                <select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)} className="form-select">
+                  <option value="">{t('countries.default')}</option>
+                  {countries.map((country) => (
+                    <option key={country} value={country}>
+                      {t(`countries.${country}`)}
+                    </option>
+                  ))}
                 </select>
                 <div className="invalid-feedback">Pays non renseigné</div>
             </div>
@@ -232,25 +280,19 @@ return(
                 <div className="invalid-feedback">Numéro de téléphone non renseigné</div>
             </div>
             <div className="col-12">
-                <label htmlFor="activity-field" className="pb-2">
-                {t('contact.form.sector')} <span className="text-danger">*</span>
-                </label>
-                <select
-                className={`form-select ${submitted && !form.activity ? "is-invalid" : ""}`}
-                id="activity-field"
-                name="activity"
-                required
-                onChange={handleChange}
-                value={form.activity}
-                >
-                {activities.map((activity, index) => (
-                    <option key={index} value={activity}>{activity}</option>
-                ))}
+                 <label>{t('contact.form.sector')}:</label>
+                <select value={selectedActivity} onChange={(e) => setSelectedActivity(e.target.value)} className="form-select">
+                  <option value="">{t('activities.default')}</option>
+                  {activities.map((activity) => (
+                    <option key={activity} value={activity}>
+                      {t(`activities.${activity}`)}
+                    </option>
+                  ))}
                 </select>
                 <div className="invalid-feedback">Secteur d'activité non renseigné</div>
             </div>
             <div className="col-12">
-                <label htmlFor="subject-field" className="pb-2">Je souhaite:</label>
+                <label htmlFor="subject-field" className="pb-2">{t('contact.form.witch')}</label>
                 <SwitchButtonPartenariat setShowMPartenariat={setShowInfo} />
             </div>
             {showInfo ? (
@@ -268,10 +310,11 @@ return(
                     aria-label="Default select example" 
                     id="call"
                     name="call"
-                    onChange={handleChange}>
+                    value={selectedCall} onChange={(e) => setSelectedCall(e.target.value)}>
+                      <option value="">{t('calls.make_a_choice')}</option>
                     {calls.map((call, index) => (
                         <option key={index} value={call}>
-                        {call}
+                        {t(`calls.${call}`)}
                         </option>
                     ))}
                     </select>

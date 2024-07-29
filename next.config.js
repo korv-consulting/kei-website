@@ -4,4 +4,5 @@ module.exports = {
   reactStrictMode: true,
   output: 'standalone',
   i18n: nextI18NextConfig.i18n,
+  react: { useSuspense: false },
 };

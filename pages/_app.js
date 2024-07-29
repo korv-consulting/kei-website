@@ -1,3 +1,4 @@
+// pages/_app.js
 import { appWithTranslation } from 'next-i18next';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.css';
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }) {
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossOrigin="anonymous"
         ></script>
+          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
       </Head>
       <Component {...pageProps} />
     </>
