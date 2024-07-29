@@ -60,8 +60,8 @@ const PlanComparison = () => {
     <div className={styles.planComparisonContainer}>
       <div className={styles.planComparisonHeader}>
         <div className={styles.headerContent} data-aos="zoom-in">
-          <h2>COMPARAISON</h2>
-          <p className='text-center w-100'>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
+          <h2>Détails des plans</h2>
+          <p className='text-center w-100 mt-4'>Découvrez nos différentes formules et leurs avantages, et enfin trouvez l'offre qui vous convient</p>
         </div>
       </div>
 
@@ -125,7 +125,7 @@ const PlanComparison = () => {
                     ) : (
                       // Ligne de tableau standard pour desktop
                       <>
-                        <div className={styles.featureColumn}>{item.feature}</div>
+                        <div className={styles.featureColumn1}>{item.feature}</div>
                         <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
                           {item.solo ? <CheckOutlined className={styles.icon} /> : <MinusOutlined className={styles.icon} />}
                         </div>

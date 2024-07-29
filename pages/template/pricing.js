@@ -27,8 +27,9 @@ const Pricing = () => {
   return (
     <>
       <Header />
-      <div className={`${styles.pageContainer} mt-5`}>
+      
         <section id="pricing" className={` ${styles.pricing} ${styles.section} `}>
+        <div className={`${styles.pageContainer} mt-5`}>
           <div className={`container ${styles.section_title}`} data-aos="fade-up">
             <center>
               <h2>{t('pricingTitle')}</h2>
@@ -40,7 +41,7 @@ const Pricing = () => {
           <center>
             <ToggleButton onChange={handleChange} isCredits={isCredits} />
           </center>
-        </section>
+       
 
         {loading ? (
           <div className={styles.spinnerContainer}>
@@ -51,7 +52,16 @@ const Pricing = () => {
             {isCredits ?  <CreditsPricing key="credits" />:<PricingOffer key="offer" />  }
           </div>
         )}
+
+    
+    
       </div>
+      </section>
+
+      <PlanComparison />
+        <DownloadApp/>
+
+  
       <Footer />
     </>
   );

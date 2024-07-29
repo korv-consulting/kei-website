@@ -89,10 +89,11 @@ export default function Home() {
           <Header />
           <FloatingButton />
           <LandingPage />
+
+          <AnimatedCards/>
           <Feature />
           <Targets />
-          {/* <PricingOffer /> */}
-          {/* <CreditPricing /> */}
+        
           <Demo/>
           <DownloadApp/>
           <Faq />
