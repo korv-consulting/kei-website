@@ -20,7 +20,7 @@ export default function Header() {
       setIsActive(1);
     } else if (path === '/#demo') {
       setIsActive(3);
-    } else if (path === '/#pricing') {
+    } else if (path === '/pricing') {
       setIsActive(4);
     } else if (path === '/template/contact') {
       setIsActive(5);
@@ -90,7 +90,7 @@ export default function Header() {
                       </a>
                       {isModalVisible && (
                         <ul className={`dropdown-menu ${styles.dropdownMenu}`}>
-                          <div className={styles.column}>
+                          <div className={`${styles.column} ${styles.verticalLine}`}>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/espace-de-travail">
                                 <span>{t('workspace')}</span>

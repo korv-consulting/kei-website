@@ -21,7 +21,7 @@ const DownloadApp = () => {
         <div className={styles['phone-section']}>
           <Image src='/phone-image.jpeg' alt="Phone" objectFit="cover" width={50} height={80} className={styles['phone-image']} />
           <div className={styles['phone-text']}>
-            <h2>{t('download_app')}</h2>
+            <h2 className='fs-3'>{t('download_app')}</h2>
             <p>{t('transform_life')}</p>
           </div>
         </div>

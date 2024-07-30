@@ -35,9 +35,12 @@ const Demo = () => {
             <p className={styles.description}>
               {t('description')}
             </p>
-            <a className={`${styles.button} btn rounded-pill`} href="/template/contact">
-              {t('btnContact')}
-            </a>
+            <center>
+              <a className={`${styles.button} btn rounded-pill`} href="/template/demo">
+                {t('btnContact')}
+              </a>
+            </center>
+            
           </div>
         </div>
       </div>

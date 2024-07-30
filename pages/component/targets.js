@@ -9,12 +9,20 @@ const Targets = () => {
   const sectionRef = useRef(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  
   const images = [
-    '/1.png',
-    '/2.png',
-    '/3.png',
-    '/4.png',
-    '/5.png',
+    '/agents/Redbuilding.png',
+    // '/agents/a1.png',
+    '/agents/a2.png',
+    '/agents/8.jpg',
+    '/agents/3.jpg',
+    '/agents/7.jpg',
+    // '/agents/9.jpg',
+    '/agents/10.jpg',
+    // '/agents/4.jpg',
+    '/agents/133.jpg',
+    '/agents/1.jpg',
+    '/agents/11.jpg',
   ];
 
   const targetIcons = [
@@ -34,39 +42,43 @@ const Targets = () => {
 
   const targetList = t('targets', { returnObjects: true });
 
-  useEffect(() => {
+    useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add(styles.animateFadeInUp);
-            observer.unobserve(entry.target); // Stop observing the element to prevent the animation from repeating at each intersection.
+            observer.unobserve(entry.target);//Arrête d'observer l'élément pour éviter que l'animation se répète à chaque intersection.
           }
         });
       },
       {
-        threshold: 0.1, // The animation triggers when 10% of the elements are visible.
+        threshold: 0.1,//l'animation se declenche lorsque 10% des elements sont visibles
       }
     );
 
-    // If the reference is not null, the observation of the section is initiated. The reference is null by default when the page is not yet loaded, so the component is not yet mounted.
+
+    //si la reference est non nulle l'observation de la section est initiee,la reference est  nulle par defaut lorsque la page ,n'est pas 
+    // encore chargee,par consequent lorsque le composant n'est pas encore monte
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
-    // Handling the auto-scroll of the real estate agents' images.
+    //Handling the AUTO SCROLL OF THE REAL ESTATE AGENTS'S IMAGES
+
     const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Ensures the rotation of the images.
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);//ensures the rotation of the images
     }, 2500);
 
-    // Cleaning function to avoid memory losses.
+
+    //cleaning function to avoid memory losses
     return () => {
-      // For the animation.
+      //for the animation
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
 
-      // For the images' rotation.
+      //for the images's rotation
       clearInterval(intervalId);
     };
   }, []);
@@ -95,7 +107,7 @@ const Targets = () => {
                 <div className="col-md-6">
                   <ul className={styles.featureText}>
                     {Array.isArray(targetList) && targetList.slice(8).map((target, index) => (
-                      <li key={index} className={`${styles.targetListItem} fs-6 fw-bold`}>
+                      <li key={index} className={`${styles.targetListItem} `}>
                         {targetIcons[index]} {target}
                       </li>
                     ))}
@@ -104,7 +116,7 @@ const Targets = () => {
                 <div className={`col-md-6 ${styles.descPart2}`}>
                   <ul className={styles.featureText}>
                     {Array.isArray(targetList) && targetList.slice(7).map((target, index) => (
-                      <li key={index + 7} className={`${styles.targetListItem} fs-6 fw-bold`}>
+                      <li key={index + 7} className={`${styles.targetListItem} `}>
                         {targetIcons[index + 7]} {target}
                       </li>
                     ))}
@@ -118,9 +130,9 @@ const Targets = () => {
               <Image
                 src={images[currentImageIndex]}
                 alt={`Image ${currentImageIndex + 1}`}
-                width={300}
+                width={500}
                 height={400}
-                className={styles.carouselImage}
+                className={`w-100 ${styles.carouselImage}`}
               />
             </div>
           </div>

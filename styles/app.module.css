@@ -2145,11 +2145,30 @@
     box-shadow: 0px 0px 20px rgba(var(--default-color-rgb), 0.1);
 }
 
+.verticalLine{
+    border-right: 1px solid var(--success); /* Épaisseur et couleur de la ligne */
+    height: 150px; /* Hauteur de la ligne */
+    margin: 0 auto; 
+}
+
 @media (max-width: 575px) {
     .contact .php_email_form {
         padding: 20px;
     }
+
+    .verticalLine{
+        border-right: none;
+        border-bottom: 1px solid var(--success); /* Épaisseur et couleur de la ligne */
+        height: 150px; /* Hauteur de la ligne */
+        margin: 0 auto; 
+    }
 }
+
+
+
+
+
+
 
 .error_message {
     display: block;

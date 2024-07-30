@@ -8,6 +8,8 @@ import PricingOffer from 'pages/component/pricingOffer';
 import styles from '@/styles/PricingPage.module.css';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import PlanComparison from 'pages/component/PlanComparison';
+import DownloadApp from 'pages/component/DownloadApp';
 
 const Pricing = () => {
   const { t } = useTranslation('pricing');
