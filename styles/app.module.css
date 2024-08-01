@@ -55,12 +55,32 @@
     margin: 0 0 0 30px;
     border-radius: 50px;
     transition: 0.3s;
+    text-align: center;
 }
 
 .header .btn_getstarted:hover,
 .header .btn_getstarted:focus:hover {
     color: var(--contrast-color);
     background: rgba(var(--primary-rgb), 0.85);
+}
+
+.header .btn_signin,
+.header .btn_signin:focus {
+    color: var(--success);
+    background: var(--contrast-color);
+    border: #059652 1px solid;
+    font-size: 14px;
+    padding: 8px 25px;
+    margin: 0 0 0 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.header .btn_signin:hover,
+.header .btn_signin:focus:hover {
+    color: var(--contrast-color);
+    background: var(--success);
+    border-color: 1px solid var(--nav-color);
 }
 
 .header .locale{
@@ -75,6 +95,12 @@
     .header .btn_getstarted {
         order: 3;
         margin: 0 15px 0 0;
+        padding: 6px 15px;
+    }
+
+    .header .btn_signin {
+        order: 3;
+        margin: 15px 15px 0 0;
         padding: 6px 15px;
     }
 
@@ -324,7 +350,7 @@
 
     .navmenu a,
     .navmenu a:focus {
-        color: var(--nav-dropdown-color);
+        color: #37517e;
         padding: 10px 20px;
         font-family: var(--nav-font);
         font-size: 17px;
@@ -360,7 +386,7 @@
     .navmenu a:hover,
     .navmenu .active,
     .navmenu .active:focus {
-        color: var(--nav-dropdown-hover-color);
+        color: #059652;
     }
 
     .navmenu .active i,
@@ -419,6 +445,18 @@
 
     .mobile-nav-active .navmenu>ul {
         display: block;
+    }
+
+    .header .btn_getstarted,
+    .header .btn_getstarted:focus {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header .btn_signin,
+    .header .btn_signin:focus {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -1267,8 +1305,8 @@
     color: var(--accent-color);
 }
 
-.why-us .faq_container .faq_active h3 {
-    color: var(--accent-color);
+.why-us .faq_container .faq_active h2 button h3 {
+    color: #059652;
 }
 
 .why-us .faq_container .faq_active .faq_content {
@@ -2003,7 +2041,7 @@
     margin-bottom: 0;
 }
 
-.faq_2 .faq_container .faq_item h3 {
+.faq_2 .faq_container .faq_item button h3 {
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
@@ -2017,8 +2055,8 @@
     padding-right: 5p
 }
 
-.faq_2 .faq_container .faq_item h3:hover {
-    color: var(--accent-color);
+.faq_2 .faq_container .faq_item button h3:hover {
+    color: #059652;
 }
 
 .faq_2 .faq_container .faq_item .faq_content {

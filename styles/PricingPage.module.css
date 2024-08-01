@@ -1,11 +1,17 @@
 .section,
 .section {
     color: var(--default-color);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     padding: 60px 0;
     scroll-margin-top: 88px;
     overflow: clip;
+     background: url('/back4.jpg') center center  no-repeat;
+    background-size: cover;  
+    background-color: #def4ff;
+    background-position: justify;
+    background-repeat: no-repeat;  
 }
+
 
 @media (max-width: 1199px) {
 

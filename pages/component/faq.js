@@ -26,7 +26,7 @@ const Faq = () => {
             <div className={`col-md-6 ${styles.faq_2}`}>
               <div className={`accordion ${styles.faq_container}`} id="accordionExample1">
                 {questions.slice(0, 3).map((question, index) => (
-                  <div key={index} className={`accordion-item py-3 ${styles.faq_item} ${activeIndex === index ? styles.faq_active : ''}`}>
+                  <div key={index} className={`accordion-tem py-3 ${styles.faq_item} ${activeIndex === index ? styles.faq_active : ''}`}>
                     <h2 className="accordion-header">
                       <button
                         className={`accordion-button ${activeIndex === index ? '' : 'collapsed'}`}

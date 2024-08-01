@@ -69,12 +69,12 @@ export default function Header() {
                 </div>
                 <div className="offcanvas-body d-bock">
                   <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li className="nav-item px-3">
+                    <li className="nav-item px-2">
                       <a className={`nav-link ${isActive === 1 ? styles.active : ''}`} href="/template" onClick={() => setIsActive(1)}>{t('home')}</a>
                     </li>
 
                     <li
-                      className={`nav-item dropdown px-3 ${isActive === 2 ? styles.active : ''}`}
+                      className={`nav-item dropdown px-2 ${isActive === 2 ? styles.active : ''}`}
                       onMouseEnter={toggleModal}
                       onMouseLeave={toggleModal}
                       onClick={() => setIsActive(2)}
@@ -127,27 +127,35 @@ export default function Header() {
                         </ul>
                       )}
                     </li> 
-                    <li className="nav-item px-3">
+                    
+                    <li className="nav-item px-2">
                       <a className={`nav-link ${isActive === 3 ? styles.active : ''}`} href="/template#demo" onClick={() => setIsActive(3)}>{t('demo')}</a>
                     </li>
-                    <li className="nav-item px-3">
+                    <li className="nav-item px-2">
                       <a className={`nav-link ${isActive === 4 ? styles.active : ''}`} href="/template/pricing" onClick={() => setIsActive(4)}>{t('pricing')}</a>
                     </li>
-                    <li className="nav-item px-3">
+                    <li className="nav-item px-2">
                       <a className={`nav-link ${isActive === 6 ? styles.active : ''}`} href="/template#faq-2" onClick={() => setIsActive(6)}>{t('faq')}</a>
                     </li>
-                    <li className="nav-item px-3">
+                    <li className="nav-item px-2">
                       <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/template/contact" onClick={() => setIsActive(5)}>{t('contact')}</a>
                     </li>
+                    <div className="ms-4"><LocaleSwitcher/></div>
+                    <div className={`d-md-none d-sm-block my-3  ${styles.locales}`}>
+                    {/* <div className="me-3"><LocaleSwitcher/></div> */}
+                    <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
+                    <a className={`btn-signin ${styles.btn_signin}`} href="/template/pricing">{t('signin')}</a>
+                  </div>
                   </ul>
                 </div>
               </div>
             </div>
           </nav>
 
-          <div className={`d-flex justify-content-center  ${styles.locales}`}>
-            <div className="me-3"><LocaleSwitcher/></div>
+          <div className={`d-flex d-none d-md-block justify-content-center  ${styles.locales}`}>
+            {/* <div className="me-3"><LocaleSwitcher/></div> */}
             <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
+            <a className={`btn-signin ${styles.btn_signin}`} href="/template/pricing">{t('signin')}</a>
           </div>
           
         </div>

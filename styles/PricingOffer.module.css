@@ -5,7 +5,7 @@
 .section,
 .section {
     color: var(--default-color);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     padding: 60px 0;
     scroll-margin-top: 88px;
     overflow: clip;
