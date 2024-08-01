@@ -1,0 +1,31 @@
+{
+  "home": {
+    "title": "Inicio",
+    "description": "Bienvenido a KEI - Tu socio de confianza en Inventario de Estatement."
+  },
+  "contact": {
+    "title": "Solicitar una Demostración",
+    "description": "Contáctanos para programar una demostración o si tienes alguna otra consulta, por favor completa el formulario a continuación.",
+    "successMessage": "Tu mensaje ha sido enviado. ¡Gracias!",
+    "errorMessage": "Oops, ocurrió un error. Por favor, intenta de nuevo.",
+    "fields": {
+      "lastname": "Nombre",
+      "name": "Apellido",
+      "business": "Empresa",
+      "email": "Correo Electrónico Profesional",
+      "phone": "Teléfono",
+      "date": "Fecha",
+      "time": "Hora",
+      "message": "¿Tienes alguna inquietud? Si es así, por favor envíanos un mensaje."
+    },
+    "validation": {
+      "business": "El nombre de la empresa es obligatorio",
+      "email": "Dirección de correo electrónico profesional inválida",
+      "message": "Por favor ingresa tu mensaje"
+    },
+    "loading": "Cargando",
+    "recaptchaError": "Por favor verifica el reCAPTCHA",
+    "sending": "Enviando...",
+    "send": "Enviar"
+  }
+}

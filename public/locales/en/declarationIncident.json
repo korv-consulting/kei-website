@@ -1,0 +1,14 @@
+{
+  "title": "INCIDENTS UNDER THE SPOTLIGHT",
+  "descriptionTitle": "INCIDENT REPORTING",
+  "feat1Title": "1. Quick and Intuitive Reporting",
+  "feat2Title": "2. Detailed and Centralized Documentation",
+  "feat3Title": "3. Real-Time Notifications and Alerts",
+  "feat4Title": "4. Automated Analysis and Reports",
+  "feat1": "Our platform allows users to report incidents in just a few clicks. Whether via a smartphone, tablet, or computer, users can quickly document an issue by adding descriptions, photos, and videos. This feature ensures a prompt and effective response to incidents, improving property management.",
+  "feat2": "Each reported incident is automatically recorded in the system with complete traceability of actions taken. Users can view the incident history for each property, including details such as dates, descriptions, attached media, and corrective measures taken. This centralized documentation facilitates incident management and tracking.",
+  "feat3": "Real-time notifications and alerts ensure that stakeholders are immediately informed when an incident is reported. This allows property managers and maintenance teams to respond quickly, reducing intervention times and potential damage. Notifications can be customized according to each user’s preferences, ensuring effective communication.",
+  "feat4": "Our tool automatically generates detailed reports on incidents, including statistics and analyses on recurring incident types, resolution times, and associated costs. These reports help identify trends and implement preventive measures to avoid future incidents. Reports can be exported as PDFs for easy distribution to stakeholders.",
+  "metaDescription": "Discover our incident reporting tool, offering quick reporting, detailed documentation, real-time notifications, and automated reports.",
+  "metaKeywords": "incident reporting, incident management, incident reports, real-time alerts"
+}

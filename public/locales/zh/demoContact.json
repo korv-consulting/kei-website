@@ -1,0 +1,31 @@
+{
+  "home": {
+    "title": "首页",
+    "description": "欢迎来到KEI - 您值得信赖的资产清单合作伙伴。"
+  },
+  "contact": {
+    "title": "预约演示",
+    "description": "请联系我们安排演示或如果您有其他询问，请填写下面的表格。",
+    "successMessage": "您的消息已发送。谢谢！",
+    "errorMessage": "哎呀，发生了错误。请再试一次。",
+    "fields": {
+      "lastname": "名",
+      "name": "姓",
+      "business": "公司",
+      "email": "专业邮箱",
+      "phone": "电话",
+      "date": "日期",
+      "time": "时间",
+      "message": "有问题吗？如果有，请给我们发送消息。"
+    },
+    "validation": {
+      "business": "公司名称是必填项",
+      "email": "无效的专业邮箱地址",
+      "message": "请输入您的消息"
+    },
+    "loading": "加载中",
+    "recaptchaError": "请验证reCAPTCHA",
+    "sending": "发送中...",
+    "send": "发送"
+  }
+}

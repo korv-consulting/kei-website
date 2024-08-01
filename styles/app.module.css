@@ -55,6 +55,7 @@
     margin: 0 0 0 30px;
     border-radius: 50px;
     transition: 0.3s;
+    text-align: center;
 }
 
 .header .btn_getstarted:hover,
@@ -63,19 +64,56 @@
     background: rgba(var(--primary-rgb), 0.85);
 }
 
+.header .btn_signin,
+.header .btn_signin:focus {
+    color: var(--success);
+    background: var(--contrast-color);
+    border: #059652 1px solid;
+    font-size: 14px;
+    padding: 8px 25px;
+    margin: 0 0 0 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.header .btn_signin:hover,
+.header .btn_signin:focus:hover {
+    color: var(--contrast-color);
+    background: var(--success);
+    border-color: 1px solid var(--nav-color);
+}
+
+.header .locale{
+    margin-right: 15px;
+}
+
 @media (max-width: 1200px) {
     .header .logo {
         order: 1;
     }
 
     .header .btn_getstarted {
-        order: 2;
+        order: 3;
         margin: 0 15px 0 0;
         padding: 6px 15px;
     }
 
-    .header .navmenu {
+    .header .btn_signin {
         order: 3;
+        margin: 15px 15px 0 0;
+        padding: 6px 15px;
+    }
+
+    .header .navmenu {
+        order: 5;
+    }
+
+    .header .locale{
+        order: 2;
+    }
+
+    .header .locales{
+        order: 4;
     }
 }
 
@@ -312,7 +350,7 @@
 
     .navmenu a,
     .navmenu a:focus {
-        color: var(--nav-dropdown-color);
+        color: #37517e;
         padding: 10px 20px;
         font-family: var(--nav-font);
         font-size: 17px;
@@ -348,7 +386,7 @@
     .navmenu a:hover,
     .navmenu .active,
     .navmenu .active:focus {
-        color: var(--nav-dropdown-hover-color);
+        color: #059652;
     }
 
     .navmenu .active i,
@@ -407,6 +445,18 @@
 
     .mobile-nav-active .navmenu>ul {
         display: block;
+    }
+
+    .header .btn_getstarted,
+    .header .btn_getstarted:focus {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header .btn_signin,
+    .header .btn_signin:focus {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -820,6 +870,7 @@
     padding-bottom: 20px;
     text-transform: uppercase;
     position: relative;
+    /* text-shadow: -35px -25px 3px #10876D; */
 }
 
 /* .section_title h2:before {
@@ -1254,8 +1305,8 @@
     color: var(--accent-color);
 }
 
-.why-us .faq_container .faq_active h3 {
-    color: var(--accent-color);
+.why-us .faq_container .faq_active h2 button h3 {
+    color: #059652;
 }
 
 .why-us .faq_container .faq_active .faq_content {
@@ -1990,7 +2041,7 @@
     margin-bottom: 0;
 }
 
-.faq_2 .faq_container .faq_item h3 {
+.faq_2 .faq_container .faq_item button h3 {
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
@@ -2004,8 +2055,8 @@
     padding-right: 5p
 }
 
-.faq_2 .faq_container .faq_item h3:hover {
-    color: var(--accent-color);
+.faq_2 .faq_container .faq_item button h3:hover {
+    color: #059652;
 }
 
 .faq_2 .faq_container .faq_item .faq_content {
@@ -2132,11 +2183,30 @@
     box-shadow: 0px 0px 20px rgba(var(--default-color-rgb), 0.1);
 }
 
+.verticalLine{
+    border-right: 1px solid var(--success); /* Épaisseur et couleur de la ligne */
+    height: 150px; /* Hauteur de la ligne */
+    margin: 0 auto; 
+}
+
 @media (max-width: 575px) {
     .contact .php_email_form {
         padding: 20px;
     }
+
+    .verticalLine{
+        border-right: none;
+        border-bottom: 1px solid var(--success); /* Épaisseur et couleur de la ligne */
+        height: 150px; /* Hauteur de la ligne */
+        margin: 0 auto; 
+    }
 }
+
+
+
+
+
+
 
 .error_message {
     display: block;
@@ -2178,6 +2248,8 @@
 
 .contact .php_email_form input[type=text],
 .contact .php_email_form input[type=email],
+.contact .php_email_form select,
+.phoneInput,
 .contact .php_email_form textarea {
     font-size: 14px;
     padding: 10px 15px;
@@ -2190,12 +2262,16 @@
 
 .contact .php_email_form input[type=text]:focus,
 .contact .php_email_form input[type=email]:focus,
+.contact .php_email_form select:focus,
+.phoneInput:focus,
 .contact .php_email_form textarea:focus {
     border-color: var(--secondary);
 }
 
 .contact .php_email_form input[type=text]::placeholder,
 .contact .php_email_form input[type=email]::placeholder,
+.contact .php_email_form select::placeholder,
+.phoneInput::placeholder,
 .contact .php_email_form textarea::placeholder {
     color: rgba(var(--default-color-rgb), 0.3);
 }
@@ -2440,8 +2516,33 @@
     /* Add your styles here */
 }
 
+.select{
+    background-color: #ffffff;
+    color: black;
+    border: rgb(223, 223, 223) 1px solid;
+}
 
 
 
+.dropdown-menu {
+  display: flex;
+  gap: 1rem; /* Space between columns */
+  padding: 0;
+  width: 400px; /* Adjust width as needed */
+}
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item img {
+  margin-right: 0.5rem;
+}
 

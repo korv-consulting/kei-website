@@ -1,0 +1,16 @@
+{
+  "home": "Inicio",
+  "features": "Características",
+  "workspace": "Espacio de Trabajo",
+  "taskTracking": "Seguimiento de Tareas",
+  "incidentDeclaration": "Declaración de Incidentes",
+  "stateRealization": "Realización del Estado",
+  "statePlanning": "Planificación del Estado",
+  "incidentReport": "Informes de Incidentes e Inspección",
+  "demo": "Demostración",
+  "pricing": "Precios",
+  "faq": "Preguntas Frecuentes",
+  "contact": "Contacto",
+  "getStarted": "Comenzar",
+  "signin": "Iniciar Sesión"
+}

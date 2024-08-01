@@ -5,7 +5,7 @@
 .section,
 .section {
     color: var(--default-color);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     padding: 60px 0;
     scroll-margin-top: 88px;
     overflow: clip;
@@ -116,11 +116,11 @@
     border-top: 5px solid var(--solo);
 }
 
-.pricing .pricing_item_standard {
+.pricing .pricing_item_duo {
     border-top: 5px solid var(--duo);
 }
 
-.pricing .pricing_item_medium {
+.pricing .pricing_item_pro {
     /* border-top: 5px solid var(--success); */
     border-top: 5px solid var(--pro);
 }
@@ -152,11 +152,11 @@
     color: var(--solo);
 }
 
-.pricing .standard_title {
+.pricing .duo_title {
     color: var(--duo);
 }
 
-.pricing .medium_title {
+.pricing .pro_title {
     color: var(--pro);
 }
 
@@ -203,11 +203,11 @@
     color: var(--solo);
 }
 
-.pricing .standard_check {
+.pricing .duo_check {
     color: var(--duo);
 }
 
-.pricing .medium_check {
+.pricing .pro_check {
     color: var(--pro);
 }
 
