@@ -104,20 +104,20 @@ const Targets = () => {
                 {t('intro')}
               </p>
               <div className="row d-flex justify-content-center">
-                <div className="col-md-6">
-                  <ul className={styles.featureText}>
-                    {Array.isArray(targetList) && targetList.slice(8).map((target, index) => (
-                      <li key={index} className={`${styles.targetListItem} `}>
-                        {targetIcons[index]} {target}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 <div className={`col-md-6 ${styles.descPart2}`}>
                   <ul className={styles.featureText}>
                     {Array.isArray(targetList) && targetList.slice(7).map((target, index) => (
                       <li key={index + 7} className={`${styles.targetListItem} `}>
                         {targetIcons[index + 7]} {target}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="col-md-6">
+                  <ul className={styles.featureText}>
+                    {Array.isArray(targetList) && targetList.slice(8).map((target, index) => (
+                      <li key={index} className={`${styles.targetListItem} `}>
+                        {targetIcons[index]} {target}
                       </li>
                     ))}
                   </ul>

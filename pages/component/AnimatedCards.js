@@ -1,6 +1,8 @@
 import styles from '@/styles/AnimatedCards.module.css';
-import { ReactSVG } from 'react-svg';
+// import { ReactSVG } from 'react-svg';
 import { useTranslation } from 'next-i18next';
+import MagnifierEffect from './MagnifierEffect';
+
 
 const AnimatedCards = () => {
     const { t } = useTranslation('animated');
@@ -38,10 +40,12 @@ const AnimatedCards = () => {
                 </div>
                 <div className={styles.card}>
                     <h3>{t('thoroughInspection')}</h3>
-                    <svg width="300px" height="200px" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+
+                    <MagnifierEffect />
+
+                    {/* <svg width="300px" height="200px" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                         <rect x="10" y="20" width="280" height="160" rx="15" ry="15" fill="#EAEDED" stroke="#333" stroke-width="2" />
                         <rect x="10" y="180" width="280" height="10" fill="#333" />
-                        {/* <text x="150" y="15" fill="#333" font-family="Arial" font-size="16" text-anchor="middle">Inspection</text> */}
                         <circle cx="100" cy="100" r="30" fill="none" stroke="#3498DB" stroke-width="4">
                             <animate attributeName="stroke-width" values="4;6;4" dur="2s" repeatCount="indefinite" />
                         </circle>
@@ -49,18 +53,20 @@ const AnimatedCards = () => {
                             <animate attributeName="x2" values="150;170;150" dur="2s" repeatCount="indefinite" />
                             <animate attributeName="y2" values="150;170;150" dur="2s" repeatCount="indefinite" />
                         </line>
-                    </svg>
+                    </svg> */}
                 </div>
                 <div className={styles.card}>
                     <h3>{t('templateGeneration')}</h3>
-                    <svg width="400" height="300" viewBox="0 0 400 300">
-                        {/* <!-- Écran fixe --> */}
+
+
+                        <svg width="400" height="300" viewBox="0 0 400 300">
+                        
                         <rect x="50" y="50" width="300" height="200" fill="#f0f0f0" stroke="#ccc" />
-                        {/* <!-- Champs de texte --> */}
+                        
                         <rect x="70" y="70" width="250" height="30" fill="#fff" />
                         <rect x="70" y="120" width="250" height="30" fill="#fff" />
                         <rect x="70" y="170" width="250" height="30" fill="#fff" />
-                        {/* <!-- Lignes animées --> */}
+                        
                         <line x1="70" y1="85" x2="320" y2="85" stroke="blue" stroke-width="2">
                             <animate attributeName="x2" values="320; 70; 320" dur="2s" repeatCount="indefinite" />
                         </line>
@@ -70,7 +76,7 @@ const AnimatedCards = () => {
                         <line x1="70" y1="185" x2="320" y2="185" stroke="blue" stroke-width="2">
                             <animate attributeName="x2" values="320; 70; 320" dur="2s" repeatCount="indefinite" begin="1s" />
                         </line>
-                    </svg>
+                    </svg> 
                 </div>
                 <div className={styles.card}>
                     <h3>{t('interactiveReports')}</h3>

@@ -1,5 +1,5 @@
 import styles from '@/styles/AnimatedCards.module.css';
-import MagnifierEffect from './MagnifierEffect';
+import MagnifierEffect from '../../pages/component/MagnifierEffect';
 import GearCom from './Gear';
 const AnimatedCards = () => {
     return (
