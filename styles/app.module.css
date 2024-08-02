@@ -2524,22 +2524,24 @@
 
 
 
-.dropdown-menu {
+.dropdownMenu {
   display: flex;
   gap: 1rem; /* Space between columns */
   padding: 0;
   width: 400px; /* Adjust width as needed */
 }
 
-.column {
+.dropdownMenu .column {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.dropdown-item {
+.dropdownMenu .column .dropdownItem {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  justify-content: center;
+  padding: 1rem 1rem;
 }
 
 .dropdown-item img {
