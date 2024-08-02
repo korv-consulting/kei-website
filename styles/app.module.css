@@ -2528,7 +2528,7 @@
   display: flex;
   gap: 1rem; /* Space between columns */
   padding: 0;
-  width: 400px; /* Adjust width as needed */
+  width: 600px; /* Adjust width as needed */
 }
 
 .dropdownMenu .column {
