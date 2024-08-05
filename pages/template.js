@@ -22,6 +22,7 @@ import DownloadApp from "./component/DownloadApp";
 import CreditPricing from "pages/component/CreditPricing";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AnimatedCards from "pages/component/AnimatedCards";
+import Ads from "components/partials/Ads";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -98,6 +99,7 @@ export default function Home() {
           <Demo/>
           <DownloadApp/>
           <Faq />
+          <Ads />
           <Footer />
           <FloatingButton />
           <ScrollToTopButton/>

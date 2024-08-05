@@ -37,12 +37,12 @@ const DownloadApp = () => {
           </button>
         </div>
 
-        <center>
+        {/* <center>
           <div className={styles['qr-code-section']}>
             <QRCode value='192.168.100.173:3000/template' size={200} />
           </div>
           <p>{t('scan_qr')}</p>
-        </center>
+        </center> */}
       </div>
     </section>
   );

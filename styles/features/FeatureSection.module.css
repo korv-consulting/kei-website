@@ -56,7 +56,8 @@
   right: 0;
   bottom: 0;
   /* background: #c47814 ; */
-  background: linear-gradient(to bottom, #ff8c00, #cc6600);
+  /* background: linear-gradient(to bottom, #ff8c00, #cc6600); */
+  background-color: rgb(72, 189, 72); /* Vert foncé (forêt) */
   color: white;
   display: flex;
   align-items: center;

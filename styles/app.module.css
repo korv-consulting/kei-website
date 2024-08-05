@@ -17,7 +17,7 @@
   # Global Header
   --------------------------------------------------------------*/
 
-.header {
+  .header {
     --background-color: #37517e;
     --heading-color: #ffffff;
     --heading-color-rgb: 255, 255, 255;
@@ -2547,4 +2547,3 @@
 .dropdown-item img {
   margin-right: 0.5rem;
 }
-
