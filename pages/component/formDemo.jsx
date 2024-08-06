@@ -29,7 +29,7 @@ export default function FormDemo() {
                   {t('contact.description')}
                 </p>
                 <div className="col-lg-8">
-                  <div className="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/manuela-kengni?embed=true"></div>
+                  <div className="meetings-iframe-container" data-src="https://outlook.office.com/bookwithme/user/3a616dd1f5254eafabe863b59f0fc5da@korv-consulting.fr/meetingtype/Lpp4Jr73ykCyzAxosTt84g2?anonymous&ep=mlink"></div>
                 </div>
                 <div className="col-lg-4 d-none d-lg-block">
                   <Image src="/building.jpg" className={styles.sitename} width={800} height={1250} alt="KEI Logo" />
