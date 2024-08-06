@@ -1,6 +1,3 @@
-/*  */
-
-
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Select from 'react-select';
@@ -23,8 +20,12 @@ const LocaleSwitcher = () => {
     return null;
   }
 
-  const handleChange = (event) => {
-    const selectedLocale = event.value;
+   const filteredLocaleOptions = asPath === '/template/demo'
+    ? localeOptions.filter(option => option.value !== 'es' && option.value !== 'zh')
+    : localeOptions;
+
+  const handleChange = (selectedOption) => {
+    const selectedLocale = selectedOption.value;
     if (selectedLocale !== locale) {
       router.push(asPath, asPath, { locale: selectedLocale });
     }
@@ -33,7 +34,7 @@ const LocaleSwitcher = () => {
   const customSingleValue = ({ data }) => (
     <div className="d-flex align-items-center">
       <Image src={data.image} className={styles.sitename} width={25} height={25} alt={data.label} />
-      <span className="ms-2">{data.label}</span>
+      <span className="ms-2 fs-6">{data.label}</span>
     </div>
   );
 
@@ -42,18 +43,68 @@ const LocaleSwitcher = () => {
     return (
       <div ref={innerRef} {...innerProps} className="d-flex align-items-center p-2">
         <Image src={data.image} className={styles.sitename} width={25} height={25} alt={data.label} />
-        <span className="ms-2">{data.label}</span>
+        <span className="ms-2 fs-6">{data.label}</span>
       </div>
     );
   };
 
   return (
     <Select
-      value={localeOptions.find(option => option.value === locale)}
+      value={filteredLocaleOptions.find(option => option.value === locale)}
       onChange={handleChange}
-      options={localeOptions}
+      options={filteredLocaleOptions}
       components={{ SingleValue: customSingleValue, Option: customOption }}
-      className={styles.select}
+      
+      classNamePrefix="locale-select"
+      styles={{
+        control: (provided) => ({
+          ...provided,
+          boxShadow: 'none',
+          border: 'none',
+          minHeight: '20px',
+          paddingBottom: '18px',
+        }),
+        menu: (provided) => ({
+          ...provided,
+          marginTop: 0,
+          padding: 0, 
+        }),
+        menuList: (provided) => ({
+          ...provided,
+          padding: 0, // Remove padding from the menu list
+        }),
+        option: (provided) => ({
+          ...provided,
+          padding: 0,
+          margin: 0,
+        }),
+        placeholder: (provided) => ({
+          ...provided,
+          position: 'absolute',
+          top: '50%',
+          left: '10px',
+          transform: 'translateY(-50%)',
+          opacity: 0, 
+          margin: 0,
+          padding: 0,
+        }),
+        input: (provided) => ({
+          ...provided,
+          opacity: 0,
+          margin: 0,
+          padding: 0,
+          
+        }),
+        singleValue: (provided) => ({
+          ...provided,
+          margin: 0,
+          padding: 0, // Remove padding from the single value
+        }),
+        dropdownIndicator: (provided) => ({
+          ...provided,
+          paddingTop: '20px',
+        }),
+      }}
     />
   );
 };
