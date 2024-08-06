@@ -2528,7 +2528,7 @@
   display: flex;
   gap: 1rem; /* Space between columns */
   padding: 0;
-  width: 600px; /* Adjust width as needed */
+  width: 620px; /* Adjust width as needed */
 }
 
 .dropdownMenu .column {
@@ -2540,7 +2540,7 @@
 .dropdownMenu .column .dropdownItem {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   padding: 1rem 1rem;
 }
 

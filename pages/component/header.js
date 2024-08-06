@@ -93,19 +93,19 @@ export default function Header() {
                           <div className={`${styles.column} ${styles.verticalLine}`}>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/espace-de-travail">
-                                <span class="material-symbols-outlined">workspaces</span>
+                                <span class="material-symbols-outlined me-3">workspaces</span>
                                 <span>{t('workspace')}</span>
                               </a>
                             </li>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/suivi-des-taches">
-                                <span class="material-symbols-outlined">task</span>  
+                                <span class="material-symbols-outlined me-3">task</span>  
                                 <span>{t('taskTracking')}</span>
                               </a>
                             </li>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/planification-des-etats-des-lieux">
-                              <span class="material-symbols-outlined">where_to_vote</span>  
+                                <span class="material-symbols-outlined me-3">where_to_vote</span>  
                                 <span>{t('statePlanning')}</span>
                               </a>
                             </li>
@@ -113,16 +113,19 @@ export default function Header() {
                           <div className={styles.column}>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/declaration-d'incidents">
+                                <span class="material-symbols-outlined me-3">where_to_vote</span>  
                                 <span>{t('incidentDeclaration')}</span>
                               </a>
                             </li>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/realisation-des-etats-des-lieux">
+                                <span class="material-symbols-outlined me-3">home</span>  
                                 <span>{t('stateRealization')}</span>
                               </a>
                             </li>
                             <li>
                               <a className={`dropdown-item ${styles.dropdownItem}`} href="/features/rapport-d'incidents-et-d'inspections">
+                                <span class="material-symbols-outlined me-3">warning</span>  
                                 <span>{t('incidentReport')}</span>
                               </a>
                               </li>
