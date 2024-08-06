@@ -12,17 +12,15 @@ const Targets = () => {
   
   const images = [
     '/agents/Redbuilding.png',
-    // '/agents/a1.png',
     '/agents/a2.png',
     '/agents/8.jpg',
     '/agents/3.jpg',
     '/agents/7.jpg',
-    // '/agents/9.jpg',
-    '/agents/10.jpg',
-    // '/agents/4.jpg',
-    '/agents/133.jpg',
     '/agents/1.jpg',
-    '/agents/11.jpg',
+    '/agents/12.jpg',
+    '/agents/13.jpg',
+    '/agents/14.jpg',
+    '/agents/15.jpg',
   ];
 
   const targetIcons = [
