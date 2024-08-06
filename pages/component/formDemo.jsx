@@ -32,7 +32,7 @@ export default function FormDemo() {
                   <div className="meetings-iframe-container" data-src="https://outlook.office.com/bookwithme/user/3a616dd1f5254eafabe863b59f0fc5da@korv-consulting.fr/meetingtype/Lpp4Jr73ykCyzAxosTt84g2?anonymous&ep=mlink"></div>
                 </div>
                 <div className="col-lg-4 d-none d-lg-block">
-                  <Image src="/building.jpg" className={styles.sitename} width={800} height={1250} alt="KEI Logo" />
+                  <Image src="/building.jpg" className={styles.sitename} width={800} height={1450} alt="KEI Logo" />
                 </div>
               </div>
             </div>
