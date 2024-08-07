@@ -88,11 +88,11 @@
 }
 
 @media (max-width: 1200px) {
-    .header .logo {
+    /*.header .logo {
         order: 1;
     }
 
-    .header .btn_getstarted {
+     .header .btn_getstarted {
         order: 3;
         margin: 0 15px 0 0;
         padding: 6px 15px;
@@ -114,7 +114,7 @@
 
     .header .locales{
         order: 4;
-    }
+    } */
 }
 
 
@@ -144,7 +144,7 @@
 
 /* Desktop Navigation */
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .navmenu {
         padding: 0;
     }
@@ -318,7 +318,7 @@
 
 /* Mobile Navigation */
 
-@media (max-width: 1199px) {
+@media (max-width: 992px) {
     .mobile-nav-toggle {
         color: var(--nav-color);
         font-size: 28px;

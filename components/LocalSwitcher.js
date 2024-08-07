@@ -67,11 +67,11 @@ const LocaleSwitcher = () => {
         menu: (provided) => ({
           ...provided,
           marginTop: 0,
-          padding: 0, 
+          padding: 0,
         }),
         menuList: (provided) => ({
           ...provided,
-          padding: 0, // Remove padding from the menu list
+          padding: 0, 
         }),
         option: (provided) => ({
           ...provided,
@@ -98,11 +98,12 @@ const LocaleSwitcher = () => {
         singleValue: (provided) => ({
           ...provided,
           margin: 0,
-          padding: 0, // Remove padding from the single value
+          padding: 0, 
         }),
         dropdownIndicator: (provided) => ({
           ...provided,
           paddingTop: '20px',
+          display: 'none',
         }),
       }}
     />
