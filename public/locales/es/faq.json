@@ -1,0 +1,30 @@
+{
+  "title": "¿Necesitas ayuda?",
+  "info": "Aquí tienes algunas preguntas frecuentes",
+  "questions": [
+    {
+      "question": "¿Qué es nuestra plataforma simplificada de inspección y inventario de propiedades?",
+      "answer": "Nuestra plataforma te permite crear informes de inspección detallados, incluyendo el estado de la propiedad, fotos y problemas, directamente desde tu móvil o tablet utilizando nuestra aplicación de inspección."
+    },
+    {
+      "question": "¿Qué tipos de inspecciones puedo realizar con tu aplicación?",
+      "answer": "Puedes realizar inventarios profesionales, entradas, salidas, inspecciones interinas, inspecciones de edificios, evaluaciones de riesgos y mucho más."
+    },
+    {
+      "question": "¿Cómo se facturan tus servicios?",
+      "answer": "Ofrecemos varios planes de precios adaptados a las necesidades de individuos y profesionales, incluyendo opciones de suscripción mensual y anual. Puedes consultar nuestra página de precios para más detalles."
+    },
+    {
+      "question": "¿Son tus informes de inspección conformes a los estándares de la industria?",
+      "answer": "Sí, nuestros informes están diseñados para cumplir con los estándares y regulaciones de la industria, asegurando registros precisos y fiables."
+    },
+    {
+      "question": "¿Cuáles son los beneficios de usar tu plataforma para los profesionales inmobiliarios?",
+      "answer": "Nuestra plataforma simplifica la creación de informes de inspección, mejora la precisión de los registros y te permite gestionar las inspecciones de manera eficiente y profesional, ahorrando tiempo y mejorando la satisfacción del cliente."
+    },
+    {
+      "question": "¿Es segura tu plataforma?",
+      "answer": "Sí, la seguridad de tus datos es nuestra prioridad. Utilizamos protocolos de seguridad avanzados, incluyendo cifrado de datos, para proteger tu información y garantizar su confidencialidad."
+    }
+  ]
+}

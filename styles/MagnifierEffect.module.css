@@ -1,0 +1,25 @@
+/* MagnifierEffect.css */
+.svg {
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.text {
+  font-size: 30px;
+  font-family: 'Arial, sans-serif';
+}
+
+.circle,
+.line {
+  pointer-events: none;
+}
+
+.line {
+  stroke-linecap: round;
+}
+
+.magnified-text {
+  font-size: 64px;
+  fill: #333;
+}

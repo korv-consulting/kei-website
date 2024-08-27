@@ -1,0 +1,13 @@
+{
+  "title1": "MANAGE YOUR TASKS OPTIMALLY",
+  "descTitle": "TASK MANAGEMENT",
+  "feat1Title": "1. Add, edit, archive, unarchive, and delete a task",
+  "feat2Title": "2. Task Execution",
+  "feat3Title": "3. Preview and Close a Task",
+  "feat4Title": "4. Task List",
+  "feat5Title": "5. Task List",
+  "feat1": "Adding tasks on our platform is simple and intuitive. Whether from a mobile or tablet, you can create a new task in a few clicks. Provide all necessary details such as title, description, due date, and assign the task to a team member for optimal organization. Changes are inevitable in project management. Our editing feature allows you to modify all aspects of a task in real-time. Adjust priorities, add comments or attachments, and update statuses seamlessly. To maintain a clean and uncluttered interface, archive completed or non-priority tasks. Archived tasks are not lost; you can unarchive them at any time if they become relevant again. Effective management sometimes involves deleting obsolete or redundant tasks. Our deletion function is designed to be secure and requires confirmation to prevent accidental deletion.",
+  "feat2": "Track and manage the progress of each task smoothly. Each team member can mark the steps of completion, report blockages or partial completions, and receive real-time notifications on updates. This traceability ensures total transparency and seamless collaboration.",
+  "feat3": "Before finalizing a task, use our preview feature to check all details. Generating a PDF of the task allows you to easily share a printable and formal summary of the completed work, complete with all annotations and attachments. Once a task is completed, mark it as 'closed'. This action automatically triggers a notification to stakeholders, and the task is moved to the archives. Closing a task includes the option to add final comments and confirm the satisfaction of all initial requirements.",
+  "feat4": "Keep a clear and organized overview of all ongoing, completed, or archived tasks with our task list. Use powerful filters to sort by priority, due date, status, or assigned team member. This feature ensures you never miss a deadline and that all tasks are tracked optimally. With our application, every aspect of task management is covered, from start to finish, ensuring maximum productivity and impeccable organization."
+}

@@ -25,6 +25,8 @@ RUN yarn build
 # 3. Production image, copy all the files and run next
 FROM node:16-alpine AS runner
 WORKDIR /app
+COPY --from=builder /app/next.config.js ./next.config.js
+COPY --from=builder /app/next-i18next.config.js ./next-i18next.config.js
 
 ENV NODE_ENV=production
 

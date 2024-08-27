@@ -1,0 +1,85 @@
+.section,
+.section {
+    color: var(--default-color);
+    /* background-color: var(--background-color); */
+    padding: 60px 0;
+    scroll-margin-top: 88px;
+    overflow: clip;
+     background: url('/back4.jpg') center center  no-repeat;
+    background-size: cover;  
+    background-color: #def4ff;
+    background-position: justify;
+    background-repeat: no-repeat;  
+}
+
+
+@media (max-width: 1199px) {
+
+    .section,
+    .section {
+        scroll-margin-top: 66px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # Global Section Titles
+  --------------------------------------------------------------*/
+
+.section_title {
+    text-align: justify;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.section_title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+.section_title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--success);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section_title p {
+    margin-bottom: 0;
+}
+
+
+
+.pageContainer {
+  width:100%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 2px;
+
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Ajustez selon votre mise en page */
+}
+
+
+
+/* Styles généraux pour les contenus de la page */
+.mt-5 {
+  margin-top: 30px;
+}
+

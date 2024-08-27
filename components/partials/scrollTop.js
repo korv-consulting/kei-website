@@ -45,7 +45,7 @@ const ScrollToTopButton = () => {
             boxShadow: '1px 1px 8px 1px rgba(0,0,0,0.4)',
             borderRadius: '50%',
         }}>
-          <AiOutlineArrowUp style={{marginTop:'-2px', height:'25px' }} />
+          <AiOutlineArrowUp style={{marginTop:'-2px', height:'35px',paddingLeft:'10px',width:'25px' }} />
         </button>
       )}
     </>

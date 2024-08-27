@@ -1,0 +1,360 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.planComparisonContainer {
+  padding: 40px 20px;
+  width: 71%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+
+}
+
+
+
+/* .planComparisonContainer {
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 7000px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  box-sizing: border-box;
+
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+.planComparisonHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  width:100%
+}
+
+.headerContent {
+  width:100%;
+  margin: 0 auto;
+  
+}
+
+.headerContent h2 {
+  font-size: 30px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+
+
+.tableContainer {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow-x: hidden;
+  box-shadow: 0 3px 5px -2px rgba(var(--default-color-rgb), 0.7);
+
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr); /* Aligner les colonnes */
+  background-color: #ffffff;
+  align-items: center;
+  padding: 10px;
+}
+
+.featureColumn {
+  padding: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: #37517e;
+}
+
+
+.featureColumn1 {
+  padding: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: dark;
+  font-size:15px
+}
+
+
+
+
+.planColumn {
+  padding: 16px;
+  text-align: center;
+  border-left: 1px solid #e8e8e8;
+}
+
+.tableContent {
+  overflow-x: auto;
+  overflow-y: hidden; /* Supprimer la barre de défilement verticale */
+  box-shadow: 0 4px 12px rgba(21, 21, 21, 0.1);
+  /* width:80% */
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr); /* Aligner les colonnes */
+  border-top: 1px solid #e8e8e8;
+  padding: 10px 0;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+
+.mobilePlanColumn .icon {
+  font-size: 16px;
+  color: var(--solo);
+
+}
+
+
+.mobilePlanColumn .icon1 {
+  font-size: 16px;
+  color: var(--duo);
+}
+
+
+.mobilePlanColumn .icon2 {
+  font-size: 16px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanColumn .icon3 {
+  font-size: 16px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
+
+.check {
+  color: #52c41a;
+}
+
+.close {
+  color: #ff4d4f;
+}
+
+.mobileCollapse {
+  border: none;
+}
+
+.panelHeader {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 !important;
+  border: none;
+}
+
+.headerCard {
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
+
+
+
+.headerCard .headerCardTitle0 {
+  font-weight: bold !important;
+  color: var(--solo) !important;
+}
+
+.headerCard .headerCardTitle1 {
+  font-weight: bold !important;
+  color: var(--duo) !important;
+}
+
+.headerCard .headerCardTitle2 {
+  font-weight: bold !important;
+  color: var(--pro) !important;
+
+}
+
+.headerCard .headerCardTitle3 {
+  font-weight: bold !important;
+  color: var(--premium) !important;
+
+}
+
+
+
+
+.mobileRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.mobileFeatureColumn {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #37517e;
+
+}
+
+.mobilePlanColumn {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  width: 100%;
+}
+
+
+
+.mobilePlanName {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--solo);
+}
+
+.mobilePlanName1 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--duo);
+
+}
+
+.mobilePlanName2 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanName3{
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
+.solo .icon {
+  color: var(--solo);
+  /* font-size: 25px; */
+}
+
+.duo .icon {
+  color: var(--duo);
+}
+
+.pro .icon {
+  color: var(--pro);
+}  
+
+.premium .icon {
+  color: var(--premium);
+}  
+
+
+
+
+
+
+
+.mobilePlanColumn .solo .icon {
+  color: var(--solo);
+}
+
+.mobilePlanColumn .duo .icon {
+  color: var(--duo);
+}
+
+.mobilePlanColumn .pro .icon {
+  color: var(--pro);
+}
+
+.mobilePlanColumn .premium .icon {
+  color: var(--premium);
+}
+
+
+
+
+
+/* Media Queries Originales */
+
+@media (max-width: 767px) {
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    grid-template-columns: 1fr;
+  }
+
+  .featureColumn {
+    padding: 8px 0;
+  }
+
+  .planColumn {
+    padding: 8px 0;
+    border-left: none;
+  }
+
+
+  .headerContent p{
+    width:100
+ 
+  }
+  
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .planComparisonContainer {
+    width: 100%;
+  }
+} 

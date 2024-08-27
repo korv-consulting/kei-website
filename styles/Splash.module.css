@@ -1,14 +1,55 @@
-
+/* /* 
 /*---- Begin styles for splash screen ---------  */
 .container_splash{
   width: 100vw;
   height: 100vh;
-  padding-top: 10%;
+  padding-top:10%;
+  position:relative;/**/
+  margin:0;/**/
   
+}
+
+/**/
+.main_splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 
 
+.video_container {
+  width: 100%;
+  height: auto;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .main_splash {
+    flex-direction: column;
+  }
+
+  .video_container {
+    padding: 0.5rem;
+  }
+  .container_splash{
+
+   padding-top:38%;
+   /* justify-content: center; */
+
+  }
+
+
+
+}
+
+
+/**/
 
 /*----End styles for splash screen ---------  */
 
@@ -123,4 +164,4 @@
   }
   
   
-  
+    

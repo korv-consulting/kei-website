@@ -2,28 +2,44 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "@/styles/app.module.css";
 import { useEffect, useState } from "react";
 import stylesplash from "../styles/Splash.module.css";
-import Header from "components/partials/header";
-import LandingPage from "components/partials/landingPage";
+import Header from "./component/header";
+import LandingPage from "./component/landingPage";
 import Head from "next/head";
 import Description from "components/partials/description";
-import PricingOffer from "components/partials/pricingOffer";
-import NewsLetter from "components/partials/newsLetter";
-import Footer from "components/partials/footer";
-import Faq from "components/partials/faq";
-import Contact from "components/partials/contact";
-import Feature from "components/partials/feature";
+import PricingOffer from "pages/component/pricingOffer";
+import NewsLetter from "pages/component/newsLetter";
+import Footer from "./component/footer";
+import Faq from "./component/faq";
+import Feature from "./component/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
-import Demo from "components/partials/demo";
+import Demo from "./demo";
+import Targets from "./component/targets"
+import FloatingButton from "./component/floatingButton";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import PlanComparison from 'pages/component/PlanComparison'
+import DownloadApp from "./component/DownloadApp";
+import CreditPricing from "pages/component/CreditPricing";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import AnimatedCards from "pages/component/AnimatedCards";
+import Ads from "components/partials/Ads";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
+ 
   useEffect(() => {
-    // setLoading(true)
+    AOS.init({
+      duration: 1000,
+      once: false, // si vrai, l'animation ne se produit qu'une seule fois
+    });
+
+    // Simuler le chargement initial
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-  });
+  }, []);
+
 
   const handleScale = async () => {
     console.log("handleScale...");
@@ -45,70 +61,63 @@ export default function Home() {
           href="./../public/img/apple-touch-icon.png"
           rel="apple-touch-icon"
         />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        /> */}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
       </Head>{" "}
       {loading ? (
+      
+
         <div className={stylesplash.container_splash}>
-          <Container>
-            <Row className={`mx-auto ${stylesplash.main_splash}`}>
-              <Col> </Col>{" "}
-              <Col>
-                <div className={`mx-auto mx-1 `}>
-                  <video
-                    src="./splash/splash-screen2.mp4"
-                    autoPlay
-                    muted
-                    className="h-[100%] w-[100%]"
-                  ></video>{" "}
-                </div>{" "}
-              </Col>{" "}
-              <Col> </Col>{" "}
-            </Row>{" "}
-          </Container>{" "}
-        </div>
+        <Container>
+          <Row className={`mx-auto ${stylesplash.main_splash}`}>
+            <Col xs={12} md={4} className="d-flex justify-content-center">
+              <div className={`video_container ${stylesplash.video_container}`}>
+                <video
+                  src="./splash/splash-screen2.mp4"
+                  autoPlay
+                  muted
+                  className="w-100 h-auto"
+                ></video>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       ) : (
         <div className={styles.container}>
           <Header />
+          <FloatingButton />
           <LandingPage />
+
+          <AnimatedCards/>
           <Feature />
+          <Targets />
+        
           <Demo/>
-          <PricingOffer />
-          {/* <Faq /> */}
-          <Contact />
+          <DownloadApp/>
+          <Faq />
+          <Ads />
           <Footer />
+          <FloatingButton />
           <ScrollToTopButton/>
         </div>
       )}{" "}
+
     </>
   );
 }
 
-export async function getServerSideProps(ctx){
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Access-Control-Allow-Origin": "*",
-//     }
-//   };
-
-//   const offers  = await fetch(
-//     `http://kei-app-back.local/pricing-offers`,
-//     options
-//   );
-//   const response = await offers.json();
-  const response = [];
-//   console.log("offers ****" , response)
-
-
+export async function getServerSideProps({ locale }) {
   return {
-    props:{
-      offers:response
-    }
-  }
+    props: {
+      ...(await serverSideTranslations(locale, ['demo','faq', 'feature', 'animated', 'footer','header', 'landing','target', 'declarationIncident', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches', 'downloadApp', 'newsletter'])),
+    },
+  };
 }
+
+
+
+
