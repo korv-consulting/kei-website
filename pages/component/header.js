@@ -146,21 +146,19 @@ export default function Header() {
                     <li className="nav-item px-2">
                       <a className={`nav-link ${isActive === 5 ? styles.active : ''}`} href="/template/contact" onClick={() => setIsActive(5)}>{t('contact')}</a>
                     </li>
-                    <div className="ms-4"><LocaleSwitcher/></div>
-                    <div className={`d-md-none d-sm-block my-3  ${styles.locales}`}>
-                    {/* <div className="me-3"><LocaleSwitcher/></div> */}
-                    <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
-                    <a className={`btn-signin ${styles.btn_signin}`} href="/template/pricing">{t('signin')}</a>
-                  </div>
+                    <div className={`ms-4  ${styles.locale}`}><LocaleSwitcher/></div>
+                    <div className={`d-lg-none d-md-block my-3  ${styles.locales}`}>
+                      <a className={`btn-getstarted mb-2 ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
+                      <a className={`btn-signin ${styles.btn_signin}`} href="/template/pricing">{t('signin')}</a>
+                    </div>
                   </ul>
                 </div>
               </div>
             </div>
           </nav>
 
-          <div className={`d-flex d-none d-md-block justify-content-center  ${styles.locales}`}>
-            {/* <div className="me-3"><LocaleSwitcher/></div> */}
-            <a className={`btn-getstarted ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
+          <div className={`d-flex d-none d-lg-block justify-content-center`}>
+            <a className={`btn-getstarted mb-2 ${styles.btn_getstarted}`} href="/template/pricing">{t('getStarted')}</a>
             <a className={`btn-signin ${styles.btn_signin}`} href="/template/pricing">{t('signin')}</a>
           </div>
           
