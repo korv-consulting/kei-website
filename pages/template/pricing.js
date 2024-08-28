@@ -62,8 +62,7 @@ const Pricing = () => {
 
       <PlanComparison />
         <DownloadApp/>
-
-  
+   
       <Footer />
     </>
   );

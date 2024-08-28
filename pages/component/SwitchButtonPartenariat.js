@@ -28,7 +28,7 @@ const SwitchButtonPartenariat = ({ setShowMPartenariat }) => {
           style={{
             position: 'absolute',
             top: 0,
-            left: selectedOption === 'info' ? 0 : '50%',
+            left: selectedOption === 'partenariat' ? 0 : '50%',
             width: '50%',
             height: '100%',
             backgroundColor: 'rgba(255, 255, 255, 0.4)',

@@ -23,7 +23,7 @@ const YearlyPricingOffer = () => {
             <div className={`container ${styles.pricing_item} ${styles.pricing_item_solo}`}>
               <h3 className={styles.title0}>{t('solo')}</h3>
               <h4 className={styles.solo_title}>
-                <sup>$</sup>{basePrice}<span> {t('perYear')}</span>
+                <sup>£</sup>{basePrice}<span> {t('perYear')}</span>
               </h4>
               <hr />
               <ul>
@@ -60,7 +60,7 @@ const YearlyPricingOffer = () => {
             <div className={`container ${styles.pricing_item} ${styles.pricing_item_duo}`}>
               <h3 className={styles.title1}>{t('duo')}</h3>
               <h4 className={styles.duo_title}>
-                <sup>$</sup>{basePrice1}<span> {t('perYear')}</span>
+                <sup>£</sup>{basePrice1}<span> {t('perYear')}</span>
               </h4>
               <hr />
               <ul>
@@ -97,7 +97,7 @@ const YearlyPricingOffer = () => {
             <div className={`container ${styles.pricing_item} ${styles.pricing_item_pro}`}>
               <h3 className={styles.title2}>{t('pro')}</h3>
               <h4 className={styles.pro_title}>
-                <sup>$</sup>{basePrice2}<span> {t('perYear')}</span>
+                <sup>£</sup>{basePrice2}<span> {t('perYear')}</span>
               </h4>
               <hr />
               <ul>
@@ -134,7 +134,7 @@ const YearlyPricingOffer = () => {
             <div className={`container ${styles.pricing_item} ${styles.pricing_item_premium}`}>
               <h3 className={styles.title3}>{t('premium')}</h3>
               <h4 className={styles.premium_title}>
-                <sup>$</sup>{basePrice3}<span> {t('perYear')}</span>
+                <sup>£</sup>{basePrice3}<span> {t('perYear')}</span>
               </h4>
               <hr />
               <ul>
