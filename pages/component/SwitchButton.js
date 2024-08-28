@@ -28,7 +28,7 @@ const SwitchButton = ({setShowMonthly }) => {
           style={{
             position: 'absolute',
             top: 0,
-            left: selectedOption === 'annually' ? 0 : '50%',
+            left: selectedOption === 'monthly' ? 0 : '50%',
             width: '50%',
             height: '100%',
             backgroundColor: 'rgba(255, 255, 255, 0.4)',
@@ -74,3 +74,4 @@ const SwitchButton = ({setShowMonthly }) => {
 };
 
 export default SwitchButton;
+/* text-shadow: -40px -40px 4px #4CCE23; */

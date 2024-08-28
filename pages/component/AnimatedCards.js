@@ -43,7 +43,17 @@ const AnimatedCards = () => {
 
                     <MagnifierEffect />
 
-           
+                    {/* <svg width="300px" height="200px" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <rect x="10" y="20" width="280" height="160" rx="15" ry="15" fill="#EAEDED" stroke="#333" stroke-width="2" />
+                        <rect x="10" y="180" width="280" height="10" fill="#333" />
+                        <circle cx="100" cy="100" r="30" fill="none" stroke="#3498DB" stroke-width="4">
+                            <animate attributeName="stroke-width" values="4;6;4" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                        <line x1="120" y1="120" x2="150" y2="150" stroke="#3498DB" stroke-width="4">
+                            <animate attributeName="x2" values="150;170;150" dur="2s" repeatCount="indefinite" />
+                            <animate attributeName="y2" values="150;170;150" dur="2s" repeatCount="indefinite" />
+                        </line>
+                    </svg> */}
                 </div>
                 <div className={styles.card}>
                     <h3>{t('templateGeneration')}</h3>

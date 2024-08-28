@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div>
       <footer id="footer" className={styles.footer}>
-        {/* <NewsLetter /> */}
+       {/*  <NewsLetter /> */}
 
         <div className={`container ${styles.footer_top}`}>
           <div className="row gy-4">
@@ -27,8 +27,8 @@ const Footer = () => {
               <div className={`pt-3 ${styles.footer_contact}`}>
                 <p> <FaLocationDot className={`${styles.i}`} /> <span className="position-relative ms-4 " style={{ top: '-15px' }}>Paris, France</span></p>
                 <p className="mt-2">
-                  {/* <strong className="me-2"> <FaPhone className={`${styles.i}`} /> </strong> */}
-                  {/* <span className=" ms-3 position-relative " style={{ top: '-15px' }}>+237 6 77 06 28 56</span> */}
+                  <strong className="me-2"> <FaPhone className={`${styles.i}`} /> </strong>
+                  <span className=" ms-3 position-relative " style={{ top: '-15px' }}>+33 6 20 87 15 28</span>
                 </p>
                 <p>
                   <strong className="me-2"> <IoMdMail className={`${styles.i}`} /> </strong>
