@@ -26,7 +26,7 @@ const MonthlyPricingOffer = () => {
             <div className={`container ${styles.pricing_item} ${styles[`pricing_item_${plan.title}`]}`}>
               <h3 className={styles[`title${index}`]}>{t(plan.title)}</h3>
               <h4 className={styles[`${plan.title}_title`]}>
-                <sup>£</sup>{plan.price}<span>{t('perMonth')}</span>
+                <sup>$</sup>{plan.price}<span>{t('perMonth')}</span>
               </h4>
               <hr />
               <ul>
