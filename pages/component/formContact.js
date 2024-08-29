@@ -60,7 +60,6 @@ const FormContact = () => {
   ];
 
   const calls = [
-  "make_a_choice",
   "email",
   "google",
   "linkedin",
@@ -76,6 +75,7 @@ const FormContact = () => {
 
      const [loading, setLoading] = useState(true);
   const [showInfo, setShowInfo] = useState(true);
+  const [alert, setAlert] = useState({ type: '', message: '' });
   const [recaptcha, setRecaptcha] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
@@ -148,7 +148,7 @@ const FormContact = () => {
       });
 
       if (response.ok) {
-        setSuccess(true);
+        setAlert({ type: 'success', message: t('contact.success_message') });
         setForm({
           lastname: "",
           name: "",
@@ -162,11 +162,12 @@ const FormContact = () => {
         });
         recaptchaRef.current.reset();
       } else {
-        setError(true);
+        setAlert({ type: 'danger', message: t('contact.error_message') });
       }
       setSubmitted(false);
     }
   };
+
 
   return (
     <main className={styles.main}>
@@ -189,16 +190,12 @@ const FormContact = () => {
             noValidate
             encType="multipart/form-data"
         >
-            {successMessage && (
-            <div className={styles.sent_message}>
-                {t('contact.success_message')}
-            </div>
-            )}
-            {error && (
-            <div className={styles.error_message}>
-                {t('contact.error_message')}
-            </div>
-            )}
+            {alert.message && (
+                  <div className={`alert alert-${alert.type} alert-dismissible fade show`} role="alert">
+                    {alert.message}
+                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                )}
             <div className="row gy-4">
             <div className="col-md-6">
                 <label htmlFor="lastname-field" className="pb-2">{t('contact.form.first_name')}</label>
@@ -337,15 +334,15 @@ const FormContact = () => {
                 <div className="invalid-feedback">Message non renseigné</div>
             </div>
             <div className="col-12 pb-2">
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="yes" id="privacy" name="privacy"/>
-                <label class="form-check-label" for="privacy">
+                <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="yes" id="privacy" name="privacy"/>
+                <label className="form-check-label" for="privacy">
                     {t('contact.form.privacy_policy')}
                 </label>
                 </div>
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="yes" id="mailing" name="mailing"/>
-                <label class="form-check-label" for="mailing">
+                <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="yes" id="mailing" name="mailing"/>
+                <label className="form-check-label" for="mailing">
                 {t('contact.form.newsletter')}
                 </label>
                 </div>
