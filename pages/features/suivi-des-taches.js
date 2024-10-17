@@ -60,7 +60,7 @@ const SuiviDesTaches = () => {
   );
 };
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['declarationIncident', 'newsletter', 'footer','header', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches'])),

@@ -38,9 +38,9 @@ function MyApp({ Component, pageProps }) {
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossOrigin="anonymous"
-        ></script>
-          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+          crossOrigin="anonymous" async={true}
+        />
+          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" async={true}></script>
       </Head>
       <Component {...pageProps} />
     </>

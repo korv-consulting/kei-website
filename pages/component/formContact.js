@@ -232,7 +232,7 @@ const FormContact = () => {
                 onChange={handleChange}
                 value={form.business}
                 />
-                <div className="invalid-feedback">Nom de l'entreprise non renseigné</div>
+                <div className="invalid-feedback">Nom de l&apos;entreprise non renseigné</div>
             </div>
             <div className="col-md-6">
                 <label>{t('contact.form.country')}:</label>
@@ -286,7 +286,7 @@ const FormContact = () => {
                     </option>
                   ))}
                 </select>
-                <div className="invalid-feedback">Secteur d'activité non renseigné</div>
+                <div className="invalid-feedback">Secteur d&apos;activité non renseigné</div>
             </div>
             <div className="col-12">
                 <label htmlFor="subject-field" className="pb-2">{t('contact.form.witch')}</label>

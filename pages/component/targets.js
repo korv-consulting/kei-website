@@ -26,18 +26,18 @@ const Targets = () => {
   ];
 
   const targetIcons = [
-    <FaCheck className={styles.targetIcon} />,
-    <FaBuilding className={styles.targetIcon} />,
-    <FaUserTie className={styles.targetIcon} />,
-    <FaHome className={styles.targetIcon} />,
-    <FaClipboardList className={styles.targetIcon} />,
-    <FaUserGraduate className={styles.targetIcon} />,
-    <FaUserCog className={styles.targetIcon} />,
-    <FaMoneyBillAlt className={styles.targetIcon} />,
-    <FaTools className={styles.targetIcon} />,
-    <FaChartLine className={styles.targetIcon} />,
-    <FaUniversity className={styles.targetIcon} />,
-    <FaUsersCog className={styles.targetIcon} />,
+    <FaCheck className={styles.targetIcon} key={1} />,
+    <FaBuilding className={styles.targetIcon} key={2} />,
+    <FaUserTie className={styles.targetIcon} key={3} />,
+    <FaHome className={styles.targetIcon} key={4} />,
+    <FaClipboardList className={styles.targetIcon} key={5} />,
+    <FaUserGraduate className={styles.targetIcon} key={6} />,
+    <FaUserCog className={styles.targetIcon} key={7} />,
+    <FaMoneyBillAlt className={styles.targetIcon} key={8} />,
+    <FaTools className={styles.targetIcon} key={9} />,
+    <FaChartLine className={styles.targetIcon} key={10} />,
+    <FaUniversity className={styles.targetIcon} key={11} />,
+    <FaUsersCog className={styles.targetIcon} key={12} />,
   ];
 
   const targetList = t('targets', { returnObjects: true });

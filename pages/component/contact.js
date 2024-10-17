@@ -4,9 +4,60 @@ import { IoMdMail } from "react-icons/io";
 import Recaptcha from "../../components/Recaptcha";
 import React, { useState, useEffect , useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import countries from "pages/api/country";
-import activities from "pages/api/activity";
-import calls from "pages/api/call";
+// import countries from "pages/api/country";
+// import activities from "pages/api/activity";
+// import calls from "pages/api/call";
+
+const activities = [
+  'construction', 'hospitality', 'real_estate', 'agriculture',
+  'automotive', 'banking', 'biotech', 'education', 'energy',
+  'manufacturing', 'it', 'media', 'marketing', 'health',
+  'professional_services', 'telecommunications', 'transportation',
+  'retail', 'public_services', 'arts'
+];
+
+const countries = [
+  'afghanistan', 'albania', 'algeria', 'andorra', 'angola', 'antigua_and_barbuda',
+  'argentina', 'armenia', 'australia', 'austria', 'azerbaijan', 'bahamas', 'bahrain',
+  'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia',
+  'bosnia_and_herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina_faso',
+  'burundi', 'cote_divoire', 'cabo_verde', 'cambodia', 'cameroon', 'canada',
+  'central_african_republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo',
+  'costa_rica', 'croatia', 'cuba', 'cyprus', 'czechia', 'democratic_republic_of_the_congo',
+  'denmark', 'djibouti', 'dominica', 'dominican_republic', 'ecuador', 'egypt', 'el_salvador',
+  'equatorial_guinea', 'eritrea', 'estonia', 'eswatini', 'ethiopia', 'fiji', 'finland',
+  'france', 'gabon', 'gambia', 'georgia', 'germany', 'ghana', 'greece', 'grenada',
+  'guatemala', 'guinea', 'guinea_bissau', 'guyana', 'haiti', 'holy_see', 'honduras',
+  'hungary', 'iceland', 'india', 'indonesia', 'iran', 'iraq', 'ireland', 'israel',
+  'italy', 'jamaica', 'japan', 'jordan', 'kazakhstan', 'kenya', 'kiribati', 'kuwait',
+  'kyrgyzstan', 'laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya',
+  'liechtenstein', 'lithuania', 'luxembourg', 'madagascar', 'malawi', 'malaysia',
+  'maldives', 'mali', 'malta', 'marshall_islands', 'mauritania', 'mauritius',
+  'mexico', 'micronesia', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco',
+  'mozambique', 'myanmar', 'namibia', 'nauru', 'nepal', 'netherlands', 'new_zealand',
+  'nicaragua', 'niger', 'nigeria', 'north_korea', 'north_macedonia', 'norway', 'oman',
+  'pakistan', 'palau', 'palestine_state', 'panama', 'papua_new_guinea', 'paraguay',
+  'peru', 'philippines', 'poland', 'portugal', 'qatar', 'romania', 'russia', 'rwanda',
+  'saint_kitts_and_nevis', 'saint_lucia', 'saint_vincent_and_the_grenadines', 'samoa',
+  'san_marino', 'sao_tome_and_principe', 'saudi_arabia', 'senegal', 'serbia', 'seychelles',
+  'sierra_leone', 'singapore', 'slovakia', 'slovenia', 'solomon_islands', 'somalia',
+  'south_africa', 'south_sudan', 'spain', 'sri_lanka', 'sudan', 'suriname', 'sweden',
+  'switzerland', 'syria', 'taiwan', 'tajikistan', 'tanzania', 'thailand', 'timor_leste',
+  'togo', 'tonga', 'trinidad_and_tobago', 'tunisia', 'turkey', 'turkmenistan', 'tuvalu',
+  'uganda', 'ukraine', 'united_arab_emirates', 'united_kingdom', 'united_states',
+  'uruguay', 'uzbekistan', 'vanuatu', 'venezuela', 'vietnam', 'yemen', 'zambia', 'zimbabwe'
+];
+
+const calls = [
+"email",
+"google",
+"linkedin",
+"facebook",
+"media",
+"word_of_mouth",
+"event",
+"other"
+];
 
 const Contact = () => {
 
@@ -304,7 +355,7 @@ const Contact = () => {
                       value={business}
                     />
                     <div className="invalid-feedback">
-                      Nom de l'entreprise non renseigné
+                      Nom de l&apos;entreprise non renseigné
                     </div>
                   </div>
                   <div className="col-md-6">
@@ -364,7 +415,7 @@ const Contact = () => {
                   </div>
                   <div className="col-12">
                     <label for="activity-field" className="pb-2">
-                      Secteur d'activité <span className="text-danger">*</span>
+                      Secteur d&apos;activité <span className="text-danger">*</span>
                     </label>{" "}
                     <select 
                     className={`form-select ${
@@ -382,7 +433,7 @@ const Contact = () => {
                       ))}
                     </select>
                     <div className="invalid-feedback">
-                      Secteur d'activité non renseigné
+                      Secteur d&apos;activité non renseigné
                     </div>
                   </div>
                   <div className="col-12">
@@ -393,7 +444,7 @@ const Contact = () => {
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Demande d'informations" id="imfos" name="infos"/>
                         <label class="form-check-label" for="infos">
-                          Plus d'informations
+                          Plus d&apos;informations
                         </label>
                       </div>
                       <div class="form-check">
@@ -459,13 +510,13 @@ const Contact = () => {
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="yes" id="privacy" name="privacy"/>
                       <label class="form-check-label" for="privacy">
-                        Je suis informé(e) des dispositions de confidentialité de ce site et j'approuve leur contenu.
+                        Je suis informé(e) des dispositions de confidentialité de ce site et j&apos;approuve leur contenu.
                       </label>
                     </div>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="yes" id="mailing" name="mailing"/>
                       <label class="form-check-label" for="mailing">
-                       Je donne ma permission à KEI pour envoyer des informations pertinentes, que ce soit sous forme de bulletins d'information ou d'e-mails.
+                       Je donne ma permission à KEI pour envoyer des informations pertinentes, que ce soit sous forme de bulletins d&apos;information ou d&apos;e-mails.
                       </label>
                     </div>
                   </div>

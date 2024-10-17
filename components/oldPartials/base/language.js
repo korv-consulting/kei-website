@@ -11,7 +11,7 @@ function Language() {
 
     const [activeLang, setActiveLang] = useState({"name": "FR", "url": "/flags/fr.png"});
 
-    console.log(window.innerWidth)
+    // console.log(window.innerWidth)
     const handleClickActiveLang = () => {
 
       // Set active language to false

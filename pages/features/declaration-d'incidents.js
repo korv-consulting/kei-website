@@ -30,7 +30,7 @@ const DeclarationIncidents = () => {
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>KEI Website - Declaration d'Incidents</title>
+        <title>KEI Website - Declaration d&apos;Incidents</title>
         <meta name="description" content={t('metaDescription')} />
         <meta name="keywords" content={t('metaKeywords')} />
         <link rel="icon" href="/logo-kei.png" />
@@ -65,7 +65,7 @@ const DeclarationIncidents = () => {
   );
 };
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['declarationIncident', 'footer','header', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches', 'newsletter'])),
