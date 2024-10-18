@@ -7,6 +7,7 @@ import { IoMdMail } from "react-icons/io";
 import { BiChevronRight, BiLogoPlayStore } from "react-icons/bi";
 import { FaAppStore } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const Footer = () => {
   const { t } = useTranslation('footer');
@@ -19,11 +20,11 @@ const Footer = () => {
         <div className={`container ${styles.footer_top}`}>
           <div className="row gy-4">
             <div className={`col-lg-4 col-md-6 ${styles.footer_about}`}>
-              <a href="index.html" className="d-flex align-items-center">
+              <Link href="/" className="d-flex align-items-center">
                 <span className={styles.sitename}>
                   <Image src="/logo-kei-white.png" width={80} height={80} alt="KEI Logo" />
                 </span>
-              </a>
+              </Link>
               <div className={`pt-3 ${styles.footer_contact}`}>
                 <p> <FaLocationDot className={`${styles.i}`} /> <span className="position-relative ms-4 " style={{ top: '-15px' }}>Paris, France</span></p>
                 <p className="mt-2">

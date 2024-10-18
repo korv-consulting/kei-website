@@ -23,6 +23,7 @@ import CreditPricing from "pages/component/CreditPricing";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AnimatedCards from "pages/component/AnimatedCards";
 import Ads from "components/partials/Ads";
+import FormDemo from "./component/formDemo";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -52,7 +53,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <title> KEI Website </title> <meta content="" name="description" />
         <meta content="" name="keywords" />
@@ -63,8 +64,8 @@ export default function Home() {
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" async={true} integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossOrigin="anonymous"></script>
       
       </Head>{" "}
       {loading ? (
@@ -96,7 +97,8 @@ export default function Home() {
           <Feature />
           <Targets />
         
-          <Demo/>
+          {/* <Demo/> */}
+          <FormDemo/>
           <DownloadApp/>
           <Faq />
           <Ads />
@@ -110,14 +112,13 @@ export default function Home() {
   );
 }
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['demo','faq', 'feature', 'animated', 'footer','header', 'landing','target', 'declarationIncident', 'slogan', 'espace_de_travail', 'incidentReport', 'planification_etats_des_lieux', 'rapports_incidents_inspections', 'realisation_etats_des_lieux', 'suivi_des_taches', 'downloadApp', 'newsletter'])),
     },
   };
 }
-
 
 
 

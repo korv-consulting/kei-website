@@ -97,7 +97,7 @@ const DownloadApp = () => {
             className={styles['phone-image']}
           />
           <div className={styles['phone-text']}>
-            <h2>Téléchargez l'application KEI !</h2>
+            <h2>Téléchargez l&apos;application KEI !</h2>
             <p>Transformez votre quotidien avec notre application innovante.</p>
           </div>
         </div>
@@ -128,7 +128,7 @@ const DownloadApp = () => {
           {/* <div className={styles['qr-code-section']}>
             <QRCode value={qrCodeValue} size={200} />
           </div> */}
-          <p>Scannez ce QR code pour télécharger directement l'application.</p>
+          <p>Scannez ce QR code pour télécharger directement l&apos;application.</p>
         </center>
       </div>
     </section>

@@ -37,7 +37,7 @@ function Footer() {
                       <Image src="/devices.png" className="w-50"/>
                     </div>
                     <p className={`text-center mt-2 mb-3 ${styles.text_app}`}>
-                      L'application KEI est disponible sur toutes les plateformes
+                      L&apos;application KEI est disponible sur toutes les plateformes
                     </p>
 
                     <div className="d-flex justify-content-center my-2 px-2">

@@ -3,6 +3,7 @@ import styles from "@/styles/PricingOffer.module.css";
 import MonthlyPricingOffer from './MonthlyPricingOffer';
 import YearlyPricingOffer from './YearlyPricingOffer';
 import SwitchButton from './SwitchButton';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const PricingOffer = () => {
   const [showMonthly, setShowMonthly] = useState(true);

@@ -25,7 +25,7 @@ function About() {
                         </div>
                         <div className={`row`}>
                             <Button className={styles.btn_download} id="btn_download">
-                                Télécharger l'Application KEI
+                                Télécharger l&apos;Application KEI
                                 <Image src='/arrow.png' className={styles.img_arrow} />
                                 <Image src='/u_icon.png' className={styles.img_u_icon} />
                             </Button>
