@@ -3,8 +3,8 @@ const nextI18NextConfig = require('./next-i18next.config');
 module.exports = {
   reactStrictMode: true,
   env: {
-    NEXT_PUBLIC_apiUrl: "http://kei-app-back.local",
-    FRONTEND_Url: "http://kei-app-frontweb.local",
+    NEXT_PUBLIC_apiUrl: "https://api-dev.kei-app.com",
+    FRONTEND_Url: "https://front-dev.kei-app.com",
   },
   experimental: {
     outputStandalone: true,
