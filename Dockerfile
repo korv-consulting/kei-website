@@ -50,4 +50,4 @@ EXPOSE 3000
 
 ENV PORT 3000
 
-CMD ["yarn", "run", "start"]
+CMD ["node", "server.js"]

@@ -15,6 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     const path = router.pathname;
+    console.log(" \n  \n  \n      ", router.pathname, "      \n  \n  \n ")
     if (path.includes('/features')) {
       setIsActive(2);
     } else if (path === '/#home') {
