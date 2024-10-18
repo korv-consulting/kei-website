@@ -1,20 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .planComparisonContainer {
   padding: 40px 20px;
   width: 71%;
@@ -41,16 +26,6 @@
 
 
 } */
-
-
-
-
-
-
-
-
-
-
 
 
 .planComparisonHeader {
@@ -183,6 +158,7 @@
   font-size: 18px;
   padding: 0 !important;
   border: none;
+  flex-wrap: nowrap !important;
 }
 
 .headerCard {
