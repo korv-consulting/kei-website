@@ -14,6 +14,7 @@ export default function Header() {
 
   useEffect(() => {
     const path = router.pathname;
+    console.log(" \n  \n  \n      ", router.pathname, "      \n  \n  \n ")
     if (path.includes('/features')) {
       setIsActive(2);
     } else if (path === '/#home') {
@@ -22,7 +23,7 @@ export default function Header() {
       setIsActive(3);
     } else if (path === '/pricing') {
       setIsActive(4);
-    } else if (path === '/template/contact') {
+    } else if (path === '/contact') {
       setIsActive(5);
     }
   }, [router.pathname]);
