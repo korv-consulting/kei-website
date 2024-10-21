@@ -116,7 +116,7 @@ function StepFourFormSignup({ next, preview }) {
                                 title="Cochez la case"
                             /> 
                             <span className={styles.box_right}>
-                                <span className={styles.txt_blue_check} >J'ai lu et j'accepte la</span>
+                                <span className={styles.txt_blue_check} >J&apos;ai lu et j&apos;accepte la</span>
                                 <span className={styles.txt_green}>
                                     politique de confidentialité
                                 </span>

@@ -1,0 +1,16 @@
+{
+  "home": "主页",
+  "features": "功能",
+  "workspace": "工作空间",
+  "taskTracking": "任务跟踪",
+  "incidentDeclaration": "事件声明",
+  "stateRealization": "状态实现",
+  "statePlanning": "状态规划",
+  "incidentReport": "事件和检查报告",
+  "demo": "演示",
+  "pricing": "定价",
+  "faq": "常见问题",
+  "contact": "联系",
+  "getStarted": "开始使用",
+  "signin": "登录"
+}

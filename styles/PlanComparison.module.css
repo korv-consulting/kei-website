@@ -1,143 +1,336 @@
-.section_title {
-  text-align: justify;
-  padding-bottom: 60px;
-  position: relative;
+
+
+.planComparisonContainer {
+  padding: 40px 20px;
+  width: 71%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+
 }
 
-.section_title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  text-transform: uppercase;
-  position: relative;
-}
 
-.section_title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: var(--success);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
 
-.container {
-  padding: 20px;
-  max-width: 1340px;
-  margin: 0 auto;
-}
+/* .planComparisonContainer {
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 7000px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  box-sizing: border-box;
 
-.columnHeader {
+
+} */
+
+
+.planComparisonHeader {
   text-align: center;
-  font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  width:100%
+}
+
+.headerContent {
+  width:100%;
+  margin: 0 auto;
+  
+}
+
+.headerContent h2 {
+  font-size: 30px;
+  margin-top: 0px;
   font-weight: bold;
-  color: black; /* Couleur du titre de la colonne des fonctionnalités */
+}
+
+
+
+.tableContainer {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow-x: hidden;
+  box-shadow: 0 3px 5px -2px rgba(var(--default-color-rgb), 0.7);
+
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr); /* Aligner les colonnes */
+  background-color: #ffffff;
+  align-items: center;
+  padding: 10px;
 }
 
 .featureColumn {
-  width: 200px; /* Largeur de la colonne des caractéristiques */
+  padding: 16px;
+  font-weight: bold;
   text-align: left;
+  color: #37517e;
 }
+
+
+.featureColumn1 {
+  padding: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: dark;
+  font-size:15px
+}
+
+
+
 
 .planColumn {
+  padding: 16px;
   text-align: center;
+  border-left: 1px solid #e8e8e8;
+}
+
+.tableContent {
+  overflow-x: auto;
+  overflow-y: hidden; /* Supprimer la barre de défilement verticale */
+  box-shadow: 0 4px 12px rgba(21, 21, 21, 0.1);
+  /* width:80% */
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr); /* Aligner les colonnes */
+  border-top: 1px solid #e8e8e8;
+  padding: 10px 0;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+
+.mobilePlanColumn .icon {
+  font-size: 16px;
+  color: var(--solo);
+
+}
+
+
+.mobilePlanColumn .icon1 {
+  font-size: 16px;
+  color: var(--duo);
+}
+
+
+.mobilePlanColumn .icon2 {
+  font-size: 16px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanColumn .icon3 {
+  font-size: 16px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
+
+.check {
+  color: #52c41a;
+}
+
+.close {
+  color: #ff4d4f;
+}
+
+.mobileCollapse {
+  border: none;
+}
+
+.panelHeader {
   font-weight: bold;
+  font-size: 18px;
+  padding: 0 !important;
+  border: none;
+  flex-wrap: nowrap !important;
 }
 
-.soloTitle {
-  color: var(--solo); /* Couleur de l'offre Solo */
+.headerCard {
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
 }
 
-.standardTitle {
-  color: var(--standard); /* Couleur de l'offre Standard */
+
+
+.headerCard .headerCardTitle0 {
+  font-weight: bold !important;
+  color: var(--solo) !important;
 }
 
-.mediumTitle {
-  color: var(--medium); /* Couleur de l'offre Medium */
+.headerCard .headerCardTitle1 {
+  font-weight: bold !important;
+  color: var(--duo) !important;
 }
 
-.premiumTitle {
-  color: var(--premium); /* Couleur de l'offre Premium */
+.headerCard .headerCardTitle2 {
+  font-weight: bold !important;
+  color: var(--pro) !important;
+
 }
 
-.solo {
-  color: var(--solo); /* Couleur de l'offre Solo */
-  font-size: 18px; /* Taille de police pour Solo */
+.headerCard .headerCardTitle3 {
+  font-weight: bold !important;
+  color: var(--premium) !important;
+
 }
 
-.standard {
-  color: var(--standard); /* Couleur de l'offre Standard */
-  font-size: 18px; /* Taille de police pour Standard */
+
+
+
+.mobileRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  border-top: 1px solid #e8e8e8;
 }
 
-.medium {
-  color: var(--medium); /* Couleur de l'offre Medium */
-  font-size: 18px; /* Taille de police pour Medium */
+.mobileFeatureColumn {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #37517e;
+
 }
 
-.premium {
-  color: var(--premium); /* Couleur de l'offre Premium */
-  font-size: 18px; /* Taille de police pour Premium */
+.mobilePlanColumn {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  width: 100%;
 }
 
-@media (max-width: 567px) {
-  .columnHeader {
-      font-size: 0.9rem;
-      font-weight: bold;
+
+
+.mobilePlanName {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--solo);
+}
+
+.mobilePlanName1 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--duo);
+
+}
+
+.mobilePlanName2 {
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--pro);
+
+}
+
+
+.mobilePlanName3{
+  flex: 1;
+  font-weight: bold;
+  margin-right: 8px;
+  color: var(--premium);
+
+}
+
+
+
+
+
+
+.solo .icon {
+  color: var(--solo);
+  /* font-size: 25px; */
+}
+
+.duo .icon {
+  color: var(--duo);
+}
+
+.pro .icon {
+  color: var(--pro);
+}  
+
+.premium .icon {
+  color: var(--premium);
+}  
+
+
+
+
+
+
+
+.mobilePlanColumn .solo .icon {
+  color: var(--solo);
+}
+
+.mobilePlanColumn .duo .icon {
+  color: var(--duo);
+}
+
+.mobilePlanColumn .pro .icon {
+  color: var(--pro);
+}
+
+.mobilePlanColumn .premium .icon {
+  color: var(--premium);
+}
+
+
+
+
+
+/* Media Queries Originales */
+
+@media (max-width: 767px) {
+  .tableHeader {
+    display: none;
   }
 
-  .container {
-      padding: 1px;
-      max-width: 2000px;
-      width: 100%;
-  }
-
-  .planColumn {
-      text-align: center;
-      font-weight: normal;
-      text-transform: lowercase;
+  .tableRow {
+    grid-template-columns: 1fr;
   }
 
   .featureColumn {
-      width: 80px;
-      font-size: 0.8rem;
+    padding: 8px 0;
   }
 
-  .solo, .standard, .medium, .premium {
-      font-size: 15px; /* Taille de police pour les offres */
+  .planColumn {
+    padding: 8px 0;
+    border-left: none;
   }
 
-  /* Styles pour les cartes */
-  .card {
-      border: 1px solid #e8e8e8;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-  }
 
-  .cardTitle {
-      font-weight: bold;
-      margin-bottom: 5px;
+  .headerContent p{
+    width:100
+ 
   }
-
-  .cardContent {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-  }
-
-  .cardContent span {
-      font-size: 0.9rem;
-  }
-
-  .cardContent span {
-      display: block;
-      margin-bottom: 5px;
-  }
+  
 }
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .planComparisonContainer {
+    width: 100%;
+  }
+} 

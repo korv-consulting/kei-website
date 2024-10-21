@@ -1,0 +1,31 @@
+{
+  "home": {
+    "title": "Home",
+    "description": "Welcome to KEI - Your trusted partner in Estatement Inventory."
+  },
+  "contact": {
+    "title": "Book a Demo",
+    "description": "Contact us to schedule a demo or if you have any other inquiries, please fill out the form below.",
+    "successMessage": "Your message has been sent. Thank you!",
+    "errorMessage": "Oops, an error occurred. Please try again.",
+    "fields": {
+      "lastname": "First Name",
+      "name": "Last Name",
+      "business": "Business",
+      "email": "Professional Email",
+      "phone": "Phone",
+      "date": "Date",
+      "time": "Time",
+      "message": "Have a concern? If so, please send us a message."
+    },
+    "validation": {
+      "business": "Business name is required",
+      "email": "Invalid professional email address",
+      "message": "Please enter your message"
+    },
+    "loading": "Loading",
+    "recaptchaError": "Please verify the reCAPTCHA",
+    "sending": "Sending...",
+    "send": "Send"
+  }
+}

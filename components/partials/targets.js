@@ -1,36 +1,252 @@
+// import React, { useEffect, useRef, useState } from 'react';
+// import Image from 'next/image';
+// import styles from '@/styles/Targets.module.css';
+// import { FaCheck, FaBuilding, FaUserTie, FaHome, FaClipboardList, FaUserGraduate, FaUserCog, FaMoneyBillAlt, FaTools, FaChartLine, FaUniversity, FaUsersCog } from 'react-icons/fa';
 
-import React, { useEffect, useRef } from 'react';
+// const Targets = () => {
+//   const sectionRef = useRef(null);
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+//   const images = [
+//     '/agents/Redbuilding.png',
+//     // '/agents/a1.png',
+//     '/agents/a2.png',
+//     '/agents/8.jpg',
+//     '/agents/3.jpg',
+//     '/agents/7.jpg',
+//     // '/agents/9.jpg',
+//     '/agents/10.jpg',
+//     // '/agents/4.jpg',
+//     '/agents/133.jpg',
+//     '/agents/1.jpg',
+//     '/agents/11.jpg',
+
+
+//   ];
+
+//   const targetIcons = [
+//     <FaCheck className={styles.targetIcon} />,
+//     <FaBuilding className={styles.targetIcon} />,
+//     <FaUserTie className={styles.targetIcon} />,
+//     <FaHome className={styles.targetIcon} />,
+//     <FaClipboardList className={styles.targetIcon} />,
+//     <FaUserGraduate className={styles.targetIcon} />,
+//     <FaUserCog className={styles.targetIcon} />,
+//     <FaMoneyBillAlt className={styles.targetIcon} />,
+//     <FaTools className={styles.targetIcon} />,
+//     <FaChartLine className={styles.targetIcon} />,
+//     <FaUniversity className={styles.targetIcon} />,
+//     <FaUsersCog className={styles.targetIcon} />,
+//   ];
+
+//   const targetList = [
+//     'Inspecteurs en bâtiment',
+//     'Fournisseurs d\'inventaire',
+//     'Gestionnaires de logements',
+//     'Gestionnaires de propriétés',
+//     'Agents immobiliers et de location',
+//     'Autorité et régulation du bâtiment',
+//     'Gestionnaires de blocs résidentiels',
+//     'Sociétés de location',
+//     'Sociétés de construction',
+//     'Investisseurs immobiliers',
+//     'Institutions universitaires',
+//     'Sociétés de gestion de logements',
+//   ];
+
+
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add(styles.animateFadeInUp);
+//             observer.unobserve(entry.target);//Arrête d'observer l'élément pour éviter que l'animation se répète à chaque intersection.
+//           }
+//         });
+//       },
+//       {
+//         threshold: 0.1,//l'animation se declenche lorsque 10% des elements sont visibles
+//       }
+//     );
+
+
+//     //si la reference est non nulle l'observation de la section est initiee,la reference est  nulle par defaut lorsque la page ,n'est pas 
+//     // encore chargee,par consequent lorsque le composant n'est pas encore monte
+//     if (sectionRef.current) {
+//       observer.observe(sectionRef.current);
+//     }
+
+//     //Handling the AUTO SCROLL OF THE REAL ESTATE AGENTS'S IMAGES
+
+//     const intervalId = setInterval(() => {
+//       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);//ensures the rotation of the images
+//     }, 2500);
+
+
+//     //cleaning function to avoid memory losses
+//     return () => {
+//       //for the animation
+//       if (sectionRef.current) {
+//         observer.unobserve(sectionRef.current);
+//       }
+
+//       //for the images's rotation
+//       clearInterval(intervalId);
+//     };
+//   }, []);
+
+
+
+//   return (
+//     <section
+//       id="targets"
+//       className={` ${styles.targets} ${styles.section}`}
+//       ref={sectionRef}
+//     >
+//       <div className="container p-5 mb-3">
+//         <div className="row d-flex justify-content-center">
+//           <div className="text-center">
+//             <h2 className={`mb-20 ${styles.title}`}>
+//               CONÇU ET DÉVELOPPÉ POUR LES PROFESSIONNELS DE L'IMMOBILIER
+//             </h2>
+//           </div>
+//         </div>
+//         <div className="row d-flex justify-content-center mb-8">
+//           <div className="col-md-6">
+//             <div className={`${styles.featureDescription}`}>
+//               <p className={` ${styles.Intro}`}>
+//                 Notre application innovante regorge de fonctionnalités conçues spécifiquement pour répondre aux besoins variés des professionnels de l'immobilier. Parmi nos utilisateurs, nous comptons :
+//               </p>
+//               <div className="row d-flex justify-content-center">
+//                 <div className="col-md-6">
+//                   <ul className={styles.featureText}>
+//                     {targetList.slice(0, 7).map((target, index) => (
+//                       <li key={index} className={styles.targetListItem}>
+//                        <span className="mt-1"> {targetIcons[index]}</span>{target}
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </div>
+//                 <div className={`col-md-6 ${styles.descPart2}`}>
+//                   <ul className={styles.featureText}>
+//                     {targetList.slice(7).map((target, index) => (
+//                       <li key={index + 7} className={styles.targetListItem}>
+//                         <span className="mt-1">{targetIcons[index + 7]}</span> {target}
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-md-6">
+//             <div className={`${styles.featureImageContainer}`}>
+//               <Image
+//                 src={images[currentImageIndex]}
+//                 alt={`Image ${currentImageIndex + 1}`}
+//                 width={790}
+//                 height={570}
+//                 className={styles.carouselImage}
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Targets;
+
+
+
+
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/Targets.module.css';
+import { FaCheck, FaBuilding, FaUserTie, FaHome, FaClipboardList, FaUserGraduate, FaUserCog, FaMoneyBillAlt, FaTools, FaChartLine, FaUniversity, FaUsersCog } from 'react-icons/fa';
+import { useTranslation } from 'next-i18next';
 
 const Targets = () => {
+  const { t } = useTranslation('target');
   const sectionRef = useRef(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
+  
+  const images = [
+    '/agents/Redbuilding.png',
+    // '/agents/a1.png',
+    '/agents/a2.png',
+    '/agents/8.jpg',
+    '/agents/3.jpg',
+    '/agents/7.jpg',
+    // '/agents/9.jpg',
+    '/agents/10.jpg',
+    // '/agents/4.jpg',
+    '/agents/133.jpg',
+    '/agents/1.jpg',
+    '/agents/11.jpg',
+  ];
+
+  const targetIcons = [
+    <FaCheck className={styles.targetIcon} key={targetIcons.length +1} />,
+    <FaBuilding className={styles.targetIcon} key={targetIcons.length +2} />,
+    <FaUserTie className={styles.targetIcon} key={targetIcons.length +3} />,
+    <FaHome className={styles.targetIcon} key={targetIcons.length +4} />,
+    <FaClipboardList className={styles.targetIcon} key={targetIcons.length +4} />,
+    <FaUserGraduate className={styles.targetIcon} key={targetIcons.length +5} />,
+    <FaUserCog className={styles.targetIcon} key={targetIcons.length +6} />,
+    <FaMoneyBillAlt className={styles.targetIcon} key={targetIcons.length +7} />,
+    <FaTools className={styles.targetIcon} key={targetIcons.length +8} />,
+    <FaChartLine className={styles.targetIcon} key={targetIcons.length +9} />,
+    <FaUniversity className={styles.targetIcon} key={targetIcons.length +10} />,
+    <FaUsersCog className={styles.targetIcon} key={targetIcons.length +11} />,
+  ];
+
+  const targetList = t('targets', { returnObjects: true });
+
+    useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add(styles.animateFadeInUp); // Ajouter la classe d'animation lorsque la section est visible
-            observer.unobserve(entry.target); // Arrêter d'observer une fois l'animation appliquée
+            entry.target.classList.add(styles.animateFadeInUp);
+            observer.unobserve(entry.target);//Arrête d'observer l'élément pour éviter que l'animation se répète à chaque intersection.
           }
         });
       },
       {
-        threshold: 0.1, // Déclencher l'observation lorsque 10% de la section est visible
+        threshold: 0.1,//l'animation se declenche lorsque 10% des elements sont visibles
       }
     );
 
+
+    //si la reference est non nulle l'observation de la section est initiee,la reference est  nulle par defaut lorsque la page ,n'est pas 
+    // encore chargee,par consequent lorsque le composant n'est pas encore monte
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
+    //Handling the AUTO SCROLL OF THE REAL ESTATE AGENTS'S IMAGES
+
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);//ensures the rotation of the images
+    }, 2500);
+
+
+    //cleaning function to avoid memory losses
     return () => {
+      //for the animation
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+
+      //for the images's rotation
+      clearInterval(intervalId);
     };
-  }, []); // Effect exécuté une seule fois au montage du composant
+  }, []);
 
   return (
     <section
@@ -42,35 +258,33 @@ const Targets = () => {
         <div className="row d-flex justify-content-center">
           <div className="text-center">
             <h2 className={`mb-20 ${styles.title}`}>
-              CONÇU ET DÉVELOPPÉ POUR LES PROFESSIONNELS DE L'IMMOBILIER
+              {t('title')}
             </h2>
           </div>
         </div>
         <div className="row d-flex justify-content-center mb-8">
           <div className="col-md-6">
-            <div className={`${styles.featureDescription}`}>
+            <div className={`${styles.featureDescription} fs-5`}>
               <p className={` ${styles.Intro}`}>
-                Notre application innovante regorge de fonctionnalités conçues spécifiquement pour répondre aux besoins variés des professionnels de l'immobilier. Parmi nos utilisateurs, nous comptons :
+                {t('intro')}
               </p>
               <div className="row d-flex justify-content-center">
-                <div className="col-md-6">
-                  <ul className={styles.featureText}>
-                    <li>Inspecteurs en bâtiment</li>
-                    <li>Fournisseurs d'inventaire</li>
-                    <li>Gestionnaires de logements</li>
-                    <li>Gestionnaires de propriétés</li>
-                    <li>Agents immobiliers et de location</li>
-                    <li>Autorité et régulation du bâtiment</li>
-                    <li>Gestionnaires de blocs résidentiels</li>
-                  </ul>
-                </div>
                 <div className={`col-md-6 ${styles.descPart2}`}>
                   <ul className={styles.featureText}>
-                    <li>Sociétés de location</li>
-                    <li>Sociétés de construction</li>
-                    <li>Investisseurs immobiliers</li>
-                    <li>Institutions universitaires</li>
-                    <li>Sociétés de gestion de logements</li>
+                    {Array.isArray(targetList) && targetList.slice(7).map((target, index) => (
+                      <li key={index + 7} className={`${styles.targetListItem} `}>
+                        {targetIcons[index + 7]} {target}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="col-md-6">
+                  <ul className={styles.featureText}>
+                    {Array.isArray(targetList) && targetList.slice(8).map((target, index) => (
+                      <li key={index} className={`${styles.targetListItem} `}>
+                        {targetIcons[index]} {target}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -79,10 +293,11 @@ const Targets = () => {
           <div className="col-md-6">
             <div className={`${styles.featureImageContainer}`}>
               <Image
-                src="/target.webp"
-                alt="Ajout et édition des espaces"
-                width={1400}
-                height={800}
+                src={images[currentImageIndex]}
+                alt={`Image ${currentImageIndex + 1}`}
+                width={500}
+                height={400}
+                className={`w-100 ${styles.carouselImage}`}
               />
             </div>
           </div>

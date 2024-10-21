@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BiShow, BiHide } from "react-icons/bi";
 import styles from '../../../styles/Step-four-form-signup.module.css'
@@ -21,7 +20,7 @@ function ShowHideEyeIcon({handleClickPwd, state }) {
                 );
                 
         default:
-                return <>    alert=('Great')</>;
+                return <>   { alert=('Great')}</>;
         }
     },)
 

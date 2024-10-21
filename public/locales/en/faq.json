@@ -1,0 +1,30 @@
+{
+  "title": "Need Help?",
+  "info": "Here are some frequently asked questions",
+  "questions": [
+    {
+      "question": "What is our streamlined property inspection and inventory platform?",
+      "answer": "Our platform allows you to create detailed inspection reports, including property condition, photos, and issues, directly from your mobile or tablet using our inspection app."
+    },
+    {
+      "question": "What types of inspections can I perform with your app?",
+      "answer": "You can perform professional inventories, check-ins, check-outs, interim inspections, building inspections, risk assessments, and much more."
+    },
+    {
+      "question": "How are your services billed?",
+      "answer": "We offer several pricing plans tailored to the needs of individuals and professionals, including monthly and annual subscription options. You can check our pricing page for more details."
+    },
+    {
+      "question": "Are your inspection reports compliant with industry standards?",
+      "answer": "Yes, our reports are designed to comply with industry standards and regulations, ensuring accurate and reliable records."
+    },
+    {
+      "question": "What are the benefits of using your platform for real estate professionals?",
+      "answer": "Our platform simplifies the creation of inspection reports, improves record accuracy, and allows you to manage inspections efficiently and professionally, saving you time and improving client satisfaction."
+    },
+    {
+      "question": "Is your platform secure?",
+      "answer": "Yes, the security of your data is our priority. We use advanced security protocols, including data encryption, to protect your information and ensure its confidentiality."
+    }
+  ]
+}

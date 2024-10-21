@@ -1,62 +1,63 @@
-
 /*--------------------------------------------------------------
   # Global Sections
   --------------------------------------------------------------*/
 
-  .section,
-  .section {
-      color: var(--default-color);
-      background-color: var(--background-color);
-      padding: 60px 0;
-      scroll-margin-top: 88px;
-      overflow: clip;
-  }
-  
-  @media (max-width: 1199px) {
-  
-      .section,
-      .section {
-          scroll-margin-top: 66px;
-      }
-  }
-  
-  
-  /*--------------------------------------------------------------
+.section,
+.section {
+    color: var(--default-color);
+    /* background-color: var(--background-color); */
+    padding: 60px 0;
+    scroll-margin-top: 88px;
+    overflow: clip;
+    margin-left: 0px;
+    margin-right: 0px
+}
+
+@media (max-width: 1199px) {
+
+    .section,
+    .section {
+        scroll-margin-top: 66px;
+    }
+}
+
+
+/*--------------------------------------------------------------
     # Global Section Titles
     --------------------------------------------------------------*/
-  
-  .section_title {
-      text-align: justify;
-      padding-bottom: 60px;
-      position: relative;
-  }
-  
-  .section_title h2 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      text-transform: uppercase;
-      position: relative;
-  }
-  
 
-  .section_title h2::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100px;
-      height: 3px;
-      background: var(--success);
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-  }
-  
-  .section_title p {
-      margin-bottom: 0;
-  }
+.section_title {
+    text-align: justify;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.section_title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+.section_title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--success);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section_title p {
+    margin-bottom: 0;
+}
 
 
 
@@ -76,20 +77,34 @@
   # Pricing Section
   --------------------------------------------------------------*/
 
-  .pricing {
+.pricing {
 
-    background-color: rgba(240, 236, 236, 0.973);
+    /* background-color: rgba(213, 224, 224, 0.3); */
+
+    width: 100%;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
 
     /* --background-color: rgba(var(--heading-color-rgb), .05); */
 }
 
 .pricing .pricing_item {
     background-color: var(--contrast-color);
-    box-shadow: 0 3px 5px -2px rgba(var(--default-color-rgb), 0.1);
+        /* background-color: #171d22; */
+;
+
+    box-shadow: 0 3px 5px -2px rgba(var(--default-color-rgb), 0.5);
     border-top: 4px solid var(--background-color);
     padding: 40px 40px;
     height: 100%;
     border-radius: 20px;
+
+}
+
+
+.pricing .pricing_item:hover {
+    transform: scale(1.09);
+
 
 }
 
@@ -101,13 +116,13 @@
     border-top: 5px solid var(--solo);
 }
 
-.pricing .pricing_item_standard {
-    border-top: 5px solid var(--standard);
+.pricing .pricing_item_duo {
+    border-top: 5px solid var(--duo);
 }
 
-.pricing .pricing_item_medium {
+.pricing .pricing_item_pro {
     /* border-top: 5px solid var(--success); */
-    border-top: 5px solid var(--medium);
+    border-top: 5px solid var(--pro);
 }
 
 .pricing .pricing_item_premium {
@@ -121,6 +136,8 @@
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 20px;
+    text-align: center;
+
     color: var(--primary) !important
 }
 
@@ -128,18 +145,19 @@
     font-size: 48px;
     font-weight: 400;
     margin-bottom: 0;
+    text-align: center
 }
 
 .pricing .solo_title {
     color: var(--solo);
 }
 
-.pricing .standard_title {
-    color: var(--standard);
+.pricing .duo_title {
+    color: var(--duo);
 }
 
-.pricing .medium_title {
-    color: var(--medium);
+.pricing .pro_title {
+    color: var(--pro);
 }
 
 .pricing .premium_title {
@@ -185,12 +203,12 @@
     color: var(--solo);
 }
 
-.pricing .standard_check {
-    color: var(--standard);
+.pricing .duo_check {
+    color: var(--duo);
 }
 
-.pricing .medium_check {
-    color: var(--medium);
+.pricing .pro_check {
+    color: var(--pro);
 }
 
 .pricing .premium_check {
@@ -198,11 +216,63 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pricing_item .title0 {
+    font-size: 24px;
+    font-weight: bold;
+    /* color: #333; */
+    color: var(--solo) !important;
+    margin-bottom: 15px;
+}
+
+.pricing_item .title1 {
+    font-size: 24px;
+    font-weight: bold;
+    /* color: #333; */
+    color: var(--duo) !important;
+    margin-bottom: 15px;
+}
+
+
+.pricing_item .title2 {
+    font-size: 24px;
+    font-weight: bold;
+    /* color: #333; */
+    color: var(--pro) !important;
+    margin-bottom: 15px;
+}
+
+
+.pricing_item .title3 {
+    font-size: 24px;
+    font-weight: bold;
+    /* color: #333; */
+    color: var(--premium) !important;
+    margin-bottom: 15px;
+}
+
+
 .buy_btn {
-    /* color: var(--accent-color);
-    background-color: var(--background-color); */
-    color: var(--primary);
-    background-color: white;
+
+    /*background-color: var(--background-color); */
+    background-color: var(--solo);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,14 +282,104 @@
     padding: 8px 20px;
     /* font-size: 16px; */
     transition: 0.3s;
-    border: 1px solid var(--primary) !important;
+    /* border: 1px solid var(--primary) !important; */
     width: 100%;
+    color: white;
+    font-weight: bold
 }
 
-.pricing .buy_btn:hover {
-    background: var(--primary);
-    color: var(--contrast-color);
+
+.buy_btn1 {
+    color: white;
+    background-color: var(--duo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold
 }
+
+.buy_btn2 {
+    color: white;
+    background-color: var(--pro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold
+}
+
+.buy_btn3 {
+    color: white;
+    background-color: var(--premium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+
+
+
+
+/* buy button hover*/
+
+.pricing .buy_btn:hover {
+
+    background-color: var(--solo);
+    transform: scale(1.05);
+    color: white
+}
+
+.pricing .buy_btn1:hover {
+
+    background-color: var(--azure-blue);
+    transform: scale(1.05);
+    color: white
+}
+
+.pricing .buy_btn2:hover {
+
+    background-color: var(--pro);
+    transform: scale(1.05);
+    color: white
+}
+
+
+.pricing .buy_btn3:hover {
+
+    background-color: var(--premium);
+    transform: scale(1.05);
+    color: white
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 992px) {
@@ -245,31 +405,15 @@
 
 
 
+@media (max-width: 1024px) {
+    .pricing {
+        /* background-color: var(--background-color); */
+        border-top-left-radius:0;
+        border-top-right-radius: 0;
+        background-color: rgb(244, 248, 248);
 
 
 
+    }
 
-
-
-.customSelect {
- 
-    border-radius: 15px;  
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    width: 172px; 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');    background-repeat: no-repeat;
-    background-position: right 1px center;  /* Positionne l'icône à droite */
-    background-size: 12px 12px;  /* Taille de l'icône */
-    margin-left:1px; 
-    background: #ffffff ;
-   padding-left:0.3rem ;
-   font-weight:400;
-color: rgb(114, 109, 109); /* Gris clair, opaque */
 }
-  
-  .customSelect:focus {
-    outline: none;
-    border-color: #D3D3D3;;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  }
-  

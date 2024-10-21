@@ -1,0 +1,13 @@
+{
+  "title1": "GESTIONA TUS TAREAS DE MANERA ÓPTIMA",
+  "descTitle": "GESTIÓN DE TAREAS",
+  "feat1Title": "1. Añadir, editar, archivar, desarchivar y eliminar una tarea",
+  "feat2Title": "2. Ejecución de Tareas",
+  "feat3Title": "3. Vista previa y cierre de una tarea",
+  "feat4Title": "4. Lista de Tareas",
+  "feat5Title": "5. Lista de Tareas",
+  "feat1": "Añadir tareas en nuestra plataforma es simple e intuitivo. Ya sea desde un móvil o una tableta, puedes crear una nueva tarea en unos pocos clics. Proporciona todos los detalles necesarios como título, descripción, fecha límite y asigna la tarea a un miembro del equipo para una organización óptima. Los cambios son inevitables en la gestión de proyectos. Nuestra función de edición te permite modificar todos los aspectos de una tarea en tiempo real. Ajusta prioridades, añade comentarios o archivos adjuntos, y actualiza estados sin problemas. Para mantener una interfaz limpia y ordenada, archiva tareas completadas o de baja prioridad. Las tareas archivadas no se pierden; puedes desarchivarlas en cualquier momento si vuelven a ser relevantes. La gestión efectiva a veces implica eliminar tareas obsoletas o redundantes. Nuestra función de eliminación está diseñada para ser segura y requiere confirmación para evitar eliminaciones accidentales.",
+  "feat2": "Sigue y gestiona el progreso de cada tarea de manera fluida. Cada miembro del equipo puede marcar los pasos de finalización, informar bloqueos o finalizaciones parciales, y recibir notificaciones en tiempo real sobre actualizaciones. Esta trazabilidad asegura total transparencia y una colaboración sin problemas.",
+  "feat3": "Antes de finalizar una tarea, utiliza nuestra función de vista previa para revisar todos los detalles. Generar un PDF de la tarea te permite compartir fácilmente un resumen imprimible y formal del trabajo completado, completo con todas las anotaciones y archivos adjuntos. Una vez que una tarea esté completada, márcala como 'cerrada'. Esta acción activa automáticamente una notificación a las partes interesadas, y la tarea se mueve a los archivos. Cerrar una tarea incluye la opción de añadir comentarios finales y confirmar la satisfacción de todos los requisitos iniciales.",
+  "feat4": "Mantén una visión clara y organizada de todas las tareas en curso, completadas o archivadas con nuestra lista de tareas. Utiliza filtros potentes para clasificar por prioridad, fecha límite, estado o miembro del equipo asignado. Esta función asegura que nunca pierdas un plazo y que todas las tareas sean rastreadas de manera óptima. Con nuestra aplicación, cada aspecto de la gestión de tareas está cubierto, desde el principio hasta el final, asegurando máxima productividad y una organización impecable."
+}

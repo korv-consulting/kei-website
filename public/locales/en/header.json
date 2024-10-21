@@ -1,0 +1,16 @@
+{
+  "home": "Home",
+  "features": "Features",
+  "workspace": "Workspace",
+  "taskTracking": "Task Tracking",
+  "incidentDeclaration": "Incident Declaration",
+  "stateRealization": "State Realization",
+  "statePlanning": "State Planning",
+  "incidentReport": "Incident and Inspection Reports",
+  "demo": "Demo",
+  "pricing": "Pricing",
+  "faq": "FAQ",
+  "contact": "Contact",
+  "getStarted": "Get Started",
+  "signin": "Sign In"
+}

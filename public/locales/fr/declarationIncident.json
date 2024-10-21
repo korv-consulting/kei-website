@@ -1,0 +1,14 @@
+{
+  "title": "INCIDENTS A LA LOUPE",
+  "descriptionTitle": "DECLARATION D'INCIDENTS",
+  "feat1Title": "1. Signalement rapide et intuitif",
+  "feat2Title": "2. Documentation détaillée et centralisée",
+  "feat3Title": "3. Notifications et alertes en temps réel",
+  "feat4Title": "4. Analyse et rapports automatisés",
+  "feat1": "Notre plateforme permet aux utilisateurs de signaler des incidents en quelques clics. Que ce soit via un smartphone, une tablette ou un ordinateur, les utilisateurs peuvent rapidement documenter un problème en y ajoutant des descriptions, des photos et des vidéos. Cette fonctionnalité garantit une réponse rapide et efficace aux incidents, améliorant ainsi la gestion des propriétés.",
+  "feat2": "Chaque incident signalé est automatiquement enregistré dans le système, avec une traçabilité complète des actions entreprises. Les utilisateurs peuvent consulter l'historique des incidents pour chaque propriété, incluant les détails tels que les dates, les descriptions, les médias joints et les mesures correctives prises. Cette documentation centralisée facilite la gestion et le suivi des incidents.",
+  "feat3": "Grâce aux notifications et alertes en temps réel, les parties prenantes sont immédiatement informées lorsqu'un incident est signalé. Cela permet aux gestionnaires de propriétés et aux équipes de maintenance de réagir promptement, réduisant ainsi les temps d'intervention et les potentiels dégâts. Les notifications peuvent être personnalisées selon les préférences de chaque utilisateur, assurant ainsi une communication efficace.",
+  "feat4": "Notre outil génère automatiquement des rapports détaillés sur les incidents, incluant des statistiques et des analyses sur les types d'incidents récurrents, les temps de résolution, et les coûts associés. Ces rapports aident à identifier les tendances et à mettre en place des mesures préventives pour éviter les incidents futurs. Les rapports peuvent être exportés en PDF pour une distribution facile aux parties prenantes.",
+  "metaDescription": "Découvrez notre outil de déclaration d'incidents, offrant un signalement rapide, une documentation détaillée, des notifications en temps réel, et des rapports automatisés.",
+  "metaKeywords": "déclaration d'incidents, gestion des incidents, rapports d'incidents, alertes en temps réel"
+}
