@@ -12,7 +12,7 @@ import Footer from "./component/footer";
 import Faq from "./component/faq";
 import Feature from "./component/feature";
 import ScrollToTopButton from "components/partials/scrollTop";
-import Demo from "./demo";
+import VideoDemo from "./videoDemo";
 import Targets from "./component/targets"
 import FloatingButton from "./component/floatingButton";
 import AOS from 'aos';
@@ -97,8 +97,8 @@ export default function Home() {
           <Feature />
           <Targets />
         
-          {/* <Demo/> */}
-          <FormDemo/>
+          <VideoDemo/>
+          {/* <FormDemo/> */}
           <DownloadApp/>
           <Faq />
           <Ads />

@@ -6,7 +6,7 @@ const Ads = () => {
   return (
     <div className={styles.adsContainer}>
       <div className={styles.adsHeader}>
-        <h2>Pourquoi choisir Kei ?</h2>
+        <h2>Pourquoi choisir KEI ?</h2>
         <h4>Le meilleur choix pour votre entreprise</h4>
       </div>
 

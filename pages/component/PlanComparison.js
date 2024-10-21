@@ -68,7 +68,7 @@ const PlanComparison = () => {
       <div className={styles.tableContainer} data-aos="zoom-in">
         {/* En-tête visible seulement pour desktop */}
         <div className={`${styles.tableHeader}`}>
-          <div className={styles.featureColumn}></div> {/* Empty cell for features */}
+          <div className={styles.featureColumn}></div> 
           <div className={`${styles.planColumn} ${styles.solo}`}>
             <div className={`${styles.headerCard}`}>
               <h3 className={styles.headerCardTitle0}>SOLO</h3>
@@ -101,7 +101,6 @@ const PlanComparison = () => {
               <Panel header={t(category)} key={index} className={styles.panelHeader}>
                 {data[category].map((item, idx) => (
                   <div key={`${index}-${idx}`} className={isMobile ? styles.mobileRow : styles.tableRow}>
-                    {/* Ligne de caractéristiques pour mobile */}
                     {isMobile ? (
                       <>
                         <div className={styles.mobileFeatureColumn}>{item.feature}</div>
@@ -123,7 +122,8 @@ const PlanComparison = () => {
                         </div>
                       </>
                     ) : (
-                      // Ligne de tableau standard pour desktop
+
+                      //desktop display
                       <>
                         <div className={styles.featureColumn1}>{item.feature}</div>
                         <div className={`${styles.planColumn} ${styles.solo} ${item.solo ? styles.check : styles.close}`}>
