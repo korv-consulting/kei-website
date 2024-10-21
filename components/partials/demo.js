@@ -5,6 +5,7 @@ import YouTubePlayer from 'react-youtube';
 import styles from '@/styles/Demo.module.css';
 import style from '@/styles/app.module.css';
 import DownloadApp from "pages/component/DownloadApp";
+import Link from 'next/link';
 
 
 
@@ -36,13 +37,13 @@ const Demo = () => {
               <h2 className={styles.title}>DEMO</h2>
             </center>
             <p className={styles.description}>
-              Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l'industrie.
-              Demandez des fonctionnalités sur mesure et organisez une démonstration de l'application KEI pour vous et votre entreprise.
+              Rejoignez la communauté mondiale croissante des utilisateurs de KEI, qui comprend des individus et des équipes de certains des principaux acteurs de l&apos;industrie.
+              Demandez des fonctionnalités sur mesure et organisez une démonstration de l&apos;application KEI pour vous et votre entreprise.
             </p>
             <center>
-              <a className={`${styles.button} btn rounded-pill`} href="/template/demo">
+              <Link className={`${styles.button} btn rounded-pill`} href="/demo">
                 Obtenir une démo
-              </a>
+              </Link>
             </center>
             
           </div>

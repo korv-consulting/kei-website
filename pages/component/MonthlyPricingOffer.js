@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import styles from "@/styles/PricingOffer.module.css";
 import { GiCheckMark } from "react-icons/gi";
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 const MonthlyPricingOffer = () => {
   const { t } = useTranslation('montly_pricing');
+  const router = useRouter()
 
   const plans = [
     { title: 'solo', price: 10, properties: 100, users: 1, tasks: 5, btnStyle: styles.buy_btn },
@@ -14,7 +16,8 @@ const MonthlyPricingOffer = () => {
   ];
 
   const handleSubscribe = (plan) => {
-    window.location.href = `http://kei-app-frontweb.local/signup?plan=${plan}`;
+    // window.location.href = `${process.env.FRONTEND_Url}?plan=${plan}`;
+    router.push(`${process.env.FRONTEND_Url}/signup?plan=${plan}`);
   };
 
   console.log(plans[0].title);
@@ -26,7 +29,7 @@ const MonthlyPricingOffer = () => {
             <div className={`container ${styles.pricing_item} ${styles[`pricing_item_${plan.title}`]}`}>
               <h3 className={styles[`title${index}`]}>{t(plan.title)}</h3>
               <h4 className={styles[`${plan.title}_title`]}>
-                <sup>£</sup>{plan.price}<span>{t('perMonth')}</span>
+                <sup>€</sup>{plan.price}<span>{t('perMonth')}</span>
               </h4>
               <hr />
               <ul>

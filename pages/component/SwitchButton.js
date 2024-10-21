@@ -74,3 +74,4 @@ const SwitchButton = ({setShowMonthly }) => {
 };
 
 export default SwitchButton;
+/* text-shadow: -40px -40px 4px #4CCE23; */

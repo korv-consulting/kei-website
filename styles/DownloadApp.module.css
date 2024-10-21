@@ -20,7 +20,7 @@
 }
 
 .phone-image {
-  width: 100%; 
+  width: 300px; 
   margin-right: 20px;
 }
 
@@ -38,8 +38,8 @@
 .store-button {
   display: inline-block;
   margin: 10px;
-  padding: 12px 32px;
-  font-size: 15px;
+  padding: 15px 30px;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   color: white;

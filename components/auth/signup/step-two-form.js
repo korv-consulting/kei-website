@@ -81,7 +81,7 @@ function StepTwoFormSignup({ next, preview }) {
 
                         <div className={styles.box_select} >
                             <Form.Select size="lg" className={styles.select} aria-label="Default select example">
-                                <option > Choix de l'offre tarifaire</option>
+                                <option > Choix de l&apos;offre tarifaire</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>

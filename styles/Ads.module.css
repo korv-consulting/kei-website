@@ -5,12 +5,12 @@
   
   .adsHeader {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
   
   .adsHeader h2 {
     font-size: 2.5rem;
-    color: #37517e;
+    color: #333;
     margin-bottom: 10px;
   }
   
@@ -21,14 +21,8 @@
   
   .adsRow {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
-    width:100%;
-    text-align: center;
-    
-
-
-
   }
   
   .adsCol {
@@ -38,16 +32,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-     /* width:50px */
   }
   
-  
   .adsCol img {
-    /* border-radius: 8px;
-    margin-bottom: 15px; */
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
   }

@@ -69,9 +69,9 @@ function StepThreeCompanyFormSignup({ next, preview }) {
                                 <input type="text" id='role' placeholder="Role dans l'application" className={`form-control ${style.input_text_simple}`}  name="role"
                                     title=" Veuillez saisir le  numéro de la société"
                                 />
-                                <label htmlFor='role'  className={style.label}>Role dans l'application</label>
+                                <label htmlFor='role'  className={style.label}>Role dans l&apos;application</label>
                                 <span id="role" className={`invalid-feedback ${styles.errorMsg}`} >
-                                    Veuillez saisir le  role dans l'application
+                                    Veuillez saisir le  role dans l&apos;application
                                 </span>
                             </Col>
  
