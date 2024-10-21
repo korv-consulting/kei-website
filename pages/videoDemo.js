@@ -1,12 +1,19 @@
-import React from 'react';
+
+
+'use client'
+import React,{ useEffect} from 'react';
 import YouTubePlayer from 'react-youtube';
-import styles from '@/styles/Demo.module.css';
-import style from '@/styles/app.module.css';
-import PlanComparison from 'pages/component/PlanComparison';
+import styles from '@/styles/VideoDemo.module.css';
+import style from '@/styles/Targets.module.css';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 
-const Demo = () => {
+const VideoDemo = () => {
+
+
+
+  const router = useRouter()
   const opts = {
     height: '200',
     width: '100%',
@@ -24,6 +31,10 @@ const Demo = () => {
 
   const { t } = useTranslation('demo');
 
+
+  const handleClick = () => {
+router.push('/demo')  };
+
   return (
     <section id="demo" className={styles.demo}>
       <div className="container">
@@ -37,9 +48,9 @@ const Demo = () => {
               {t('description')}
             </p>
             <center>
-              <Link className={`${styles.button} btn rounded-pill`} href="/template/demo">
+              <button className={`${styles.button} btn rounded-pill`} onClick ={handleClick}>
                 {t('btnContact')}
-              </Link>
+              </button>
             </center>
             
           </div>
@@ -49,4 +60,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default VideoDemo;
