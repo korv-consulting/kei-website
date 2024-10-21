@@ -23,7 +23,7 @@
     --heading-color-rgb: 255, 255, 255;
     color: var(--heading-color);
     background-color: white;
-    padding: 15px 0;
+    padding: 0px 0;
     transition: all 0.5s;
     z-index: 997;
 }

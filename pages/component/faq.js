@@ -25,7 +25,7 @@ const Faq = () => {
           <div className="row justify-content-center">
             <div className={`col-md-6 ${styles.faq_2}`}>
               <div className={`accordion ${styles.faq_container}`} id="accordionExample1">
-                {questions.slice(0, 3).map((question, index) => (
+                {Array.isArray(questions) && questions.slice(0, 3).map((question, index) => (
                   <div key={index} className={`accordion-tem py-3 ${styles.faq_item} ${activeIndex === index ? styles.faq_active : ''}`}>
                     <h2 className="accordion-header">
                       <button
@@ -45,7 +45,7 @@ const Faq = () => {
             </div>
             <div className={`col-md-6 ${styles.faq_2}`}>
               <div className={`accordion ${styles.faq_container}`} id="accordionExample2">
-                {questions.slice(3).map((question, index) => (
+                {Array.isArray(questions) && questions.slice(3).map((question, index) => (
                   <div key={index + 3} className={`accordion-item py-3 ${styles.faq_item} ${activeIndex === index + 3 ? styles.faq_active : ''}`}>
                     <h2 className="accordion-header">
                       <button

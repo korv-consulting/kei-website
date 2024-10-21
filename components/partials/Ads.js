@@ -31,7 +31,7 @@ const Ads = () => {
           <Image src="/fees.svg" alt="Les tarifs les plus bas" width={790} height={570} layout="responsive" />
           <h3>Les tarifs les plus bas</h3>
           <p>
-            Nous proposons des tarifs tout compris, avec ou sans contrat pour votre entreprise. N'attendez plus pour vous décider.
+            Nous proposons des tarifs tout compris, avec ou sans contrat pour votre entreprise. N&apos;attendez plus pour vous décider.
           </p>
         </div>
       </div>

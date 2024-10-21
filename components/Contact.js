@@ -159,11 +159,11 @@ function Contact() {
                              
                                 <div>
                                     <input type="text" id='obj' placeholder='Objet du message' className={`form-control ${style.input_text}`} required name="objet"
-                                        title="Veuillez saisir l'objet de votre message"
+                                        title="Veuillez saisir l&apos;objet de votre message"
                                     />
                                     <label htmlFor='obj' id='uobj' className={style.label}>Objet</label>
                                     <span id="objet" className={`invalid-feedback ${styles.errorMsg}`} >
-                                        Veuillez saisir l'objet de votre message
+                                        Veuillez saisir l&apos;objet de votre message
                                     </span>
                                 </div> 
                                 <div>
@@ -178,7 +178,7 @@ function Contact() {
                                 <div className={style.recaptcha_box} >
                                     <Recaptcha onReCAPTCHAChange={onReCAPTCHAChange} />
                                     <span className={recaptcha == false && submitted == true ? `${styles.errorMsg}` : `${styles.disable}`} >
-                                        Veuillez d'abord résoudre l'enygme du recaptcha
+                                        Veuillez d&apos;abord résoudre l&apos;enygme du recaptcha
                                     </span>
                                 </div>
 

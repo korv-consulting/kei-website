@@ -63,8 +63,17 @@ export default async function handler(req, res) {
         replyTo: myEmail,
         subject: `KEI`,
         html: `
-            <p>${content} </p>
-            `
+          <div style="max-width: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px; background-color: #fff;">
+            <div style="text-align: center;">
+              <img src="https://fr.freepik.com/vecteurs-libre/conception-logo-ac-design-plat_28542127.htm#fromView=search&page=1&position=1&uuid=c16baefe-f565-41d6-9758-683f2c986acb" alt="Logo KEI" style="max-width: 150px; height: auto; margin-bottom: 20px;" />
+            </div>
+            <div style="padding: 10px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;">
+              <p style="margin: 0 0 10px 0;"><strong>Nom:</strong> ${name}</p>
+              <p style="margin: 0 0 10px 0;"><strong>Email:</strong> ${email}</p>
+              <p style="margin: 0;"><strong>Message:</strong><br/>${message}</p>
+            </div>
+          </div>
+        `
       });
       res.status(200).json({
         message: "Message envoyé"
